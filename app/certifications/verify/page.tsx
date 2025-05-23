@@ -8,8 +8,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CheckCircle, Search, Shield, AlertTriangle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Verify Certification | Africa Digital Innovation Academy",
-  description: "Verify the authenticity of certifications issued by the Africa Digital Innovation Academy.",
+  title: "Verify Certification | Africa Digital & Innovation Technology Academy",
+  description: "Verify the authenticity of certifications issued by the Africa Digital & Innovation Technology Academy.",
 }
 
 export default function VerifyCertificationPage() {

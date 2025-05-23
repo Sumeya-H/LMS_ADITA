@@ -153,7 +153,7 @@ export default function PaymentForm({ onSubmit, program, enrollmentData }) {
           <div className="mt-4 space-y-2 text-sm">
             <div className="flex justify-between">
               <span className="font-medium">Bank Name:</span>
-              <span>Africa Digital Innovation Bank</span>
+              <span>Africa Digital & Innovation Technology Academy Bank</span>
             </div>
             <div className="flex justify-between">
               <span className="font-medium">Account Name:</span>

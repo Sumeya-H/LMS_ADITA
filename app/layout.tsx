@@ -9,7 +9,7 @@ import Footer from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Africa Digital Innovation Academy (ADITA)",
+  title: "Africa Digital & Innovation Technology Academy (ADITA)",
   description: "Empowering Africa through AI education, training, and innovation",
   icons: {
     icon: "/adita-logo.png",

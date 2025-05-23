@@ -11,9 +11,9 @@ import ImpactStats from "@/components/about/impact-stats"
 import ContactSection from "@/components/about/contact-section"
 
 export const metadata = {
-  title: "About ADITA | Africa Digital Innovation Academy",
+  title: "About ADITA | Africa Digital & Innovation Technology Academy",
   description:
-    "Learn about Africa Digital Innovation Academy's mission, vision, team, and impact in advancing AI education and innovation across Africa.",
+    "Learn about Africa Digital & Innovation Technology Academy's mission, vision, team, and impact in advancing AI education and innovation across Africa.",
 }
 
 export default function AboutPage() {

@@ -21,7 +21,7 @@ export default function Footer() {
               <span className="font-bold text-xl">ADITA</span>
             </div>
             <p className="mt-4 text-sm text-muted-foreground">
-              Africa Digital Innovation Academy (ADITA) is a hub for training, innovation, entrepreneurship, and
+              Africa Digital & Innovation Technology Academy (ADITA) is a hub for training, innovation, entrepreneurship, and
               research in AI and digital technologies.
             </p>
             <div className="mt-6 flex space-x-4">
@@ -113,7 +113,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Africa Digital Innovation Academy (ADITA). All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Africa Digital & Innovation Technology Academy (ADITA). All rights reserved.</p>
         </div>
       </div>
     </footer>

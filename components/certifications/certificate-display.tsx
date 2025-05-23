@@ -37,7 +37,7 @@ export function CertificateDisplay({ certificate }: CertificateDisplayProps) {
 
           <div className="text-center mb-8">
             <h2 className="text-2xl font-semibold mb-1">Certificate of Completion</h2>
-            <p className="text-muted-foreground">Africa Digital Innovation Academy</p>
+            <p className="text-muted-foreground">Africa Digital & Innovation Technology Academy</p>
           </div>
 
           <div className="text-center mb-8">

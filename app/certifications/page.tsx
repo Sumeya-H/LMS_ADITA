@@ -8,9 +8,9 @@ import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Clock, Award, Briefcase, ChevronRight, Search } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Professional Certifications | Africa Digital Innovation Academy",
+  title: "Professional Certifications | Africa Digital & Innovation Technology Academy",
   description:
-    "Explore industry-recognized AI and digital technology certifications offered by the Africa Digital Innovation Academy.",
+    "Explore industry-recognized AI and digital technology certifications offered by the Africa Digital & Innovation Technology Academy.",
 }
 
 export default function CertificationsPage() {

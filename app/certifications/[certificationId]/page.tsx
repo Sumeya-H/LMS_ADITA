@@ -22,8 +22,8 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Certification Details | Africa Digital Innovation Academy",
-  description: "Detailed information about certifications offered by the Africa Digital Innovation Academy.",
+  title: "Certification Details | Africa Digital & Innovation Technology Academy",
+  description: "Detailed information about certifications offered by the Africa Digital & Innovation Technology Academy.",
 }
 
 export default function CertificationDetailPage({ params }: { params: { certificationId: string } }) {

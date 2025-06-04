@@ -10,10 +10,10 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-16 pb-16">
       <Hero />
-      <Stats />
+      {/* <Stats /> */}
       <Features />
       <Programs />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Partners />
       <CallToAction />
     </div>

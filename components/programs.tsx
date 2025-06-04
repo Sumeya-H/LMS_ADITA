@@ -78,14 +78,14 @@ export default function Programs() {
               <CardTitle className="mt-2">{program.title}</CardTitle>
               <CardDescription>{program.description}</CardDescription>
             </CardHeader>
-            <CardFooter>
+            {/* <CardFooter>
               <Button asChild variant="ghost" className="w-full">
                 <Link href={program.href} className="flex items-center justify-between">
                   <span>Learn More</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
-            </CardFooter>
+            </CardFooter> */}
           </Card>
         ))}
       </div>

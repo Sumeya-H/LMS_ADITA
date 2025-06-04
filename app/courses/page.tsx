@@ -32,7 +32,7 @@ export default function CoursesPage() {
       duration: "12 weeks",
       level: "Advanced",
       price: "$349",
-      image: "/placeholder.svg?height=200&width=400&query=neural%20networks%20visualization",
+      image: "/ai-learning.png",
     },
     {
       id: 3,
@@ -42,7 +42,7 @@ export default function CoursesPage() {
       duration: "6 weeks",
       level: "Intermediate",
       price: "$249",
-      image: "/placeholder.svg?height=200&width=400&query=healthcare%20ai%20technology",
+      image: "/ai-learning.png",
     },
     {
       id: 4,
@@ -52,7 +52,7 @@ export default function CoursesPage() {
       duration: "8 weeks",
       level: "Intermediate",
       price: "$299",
-      image: "/placeholder.svg?height=200&width=400&query=financial%20technology%20ai",
+      image: "/ai-learning.png",
     },
     {
       id: 5,
@@ -62,7 +62,7 @@ export default function CoursesPage() {
       duration: "4 weeks",
       level: "Executive",
       price: "$399",
-      image: "/placeholder.svg?height=200&width=400&query=business%20strategy%20meeting",
+      image: "/ai-learning.png",
     },
     {
       id: 6,
@@ -72,7 +72,7 @@ export default function CoursesPage() {
       duration: "10 weeks",
       level: "Advanced",
       price: "$329",
-      image: "/placeholder.svg?height=200&width=400&query=natural%20language%20processing",
+      image: "/ai-learning.png",
     },
     {
       id: 7,
@@ -82,7 +82,7 @@ export default function CoursesPage() {
       duration: "6 weeks",
       level: "Intermediate",
       price: "$249",
-      image: "/placeholder.svg?height=200&width=400&query=agricultural%20technology%20ai",
+      image: "/ai-learning.png",
     },
     {
       id: 8,
@@ -92,7 +92,7 @@ export default function CoursesPage() {
       duration: "8 weeks",
       level: "Beginner",
       price: "$199",
-      image: "/placeholder.svg?height=200&width=400&query=data%20science%20visualization",
+      image: "/ai-learning.png",
     },
   ]
 
@@ -138,17 +138,17 @@ export default function CoursesPage() {
                       <CardTitle className="mt-2">{course.title}</CardTitle>
                       <CardDescription>{course.description}</CardDescription>
                     </CardHeader>
-                    <CardContent>
+                    {/* <CardContent>
                       <p className="text-2xl font-bold text-primary">{course.price}</p>
-                    </CardContent>
-                    <CardFooter className="flex justify-between">
+                    </CardContent> */}
+                    {/* <CardFooter className="flex justify-between">
                       <Button asChild variant="outline">
                         <Link href={`/courses/${course.id}`}>Learn More</Link>
                       </Button>
                       <Button asChild>
                         <Link href={`/courses/${course.id}`}>View Course</Link>
                       </Button>
-                    </CardFooter>
+                    </CardFooter> */}
                   </Card>
                 ))}
             </div>

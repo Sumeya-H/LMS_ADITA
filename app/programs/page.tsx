@@ -130,15 +130,15 @@ function ProgramCard({ program }) {
             <p className="text-sm text-muted-foreground">Target Audience:</p>
             <p className="text-sm font-medium">{program.audience.join(", ")}</p>
           </div>
-          {program.price && (
+          {/* {program.price && (
             <div className="text-right">
               <p className="text-lg font-bold text-primary">{program.price}</p>
               {program.pricePeriod && <p className="text-xs text-muted-foreground">{program.pricePeriod}</p>}
             </div>
-          )}
+          )} */}
         </div>
       </CardContent>
-      <CardFooter className="flex gap-2">
+      {/* <CardFooter className="flex gap-2">
         <Button asChild className="flex-1">
           <Link href={`/programs/${program.id}`} className="flex items-center justify-center gap-2">
             View Details <ArrowRight className="h-4 w-4" />
@@ -150,7 +150,7 @@ function ProgramCard({ program }) {
             <span className="sr-only">Compare</span>
           </Link>
         </Button>
-      </CardFooter>
+      </CardFooter> */}
     </Card>
   )
 }

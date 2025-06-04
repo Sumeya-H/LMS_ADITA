@@ -108,7 +108,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               <li className="text-muted-foreground">Email: info@adita.africa</li>
               <li className="text-muted-foreground">Phone: +123 456 7890</li>
-              <li className="text-muted-foreground">Address: Innovation Hub, Accra, Ghana</li>
+              <li className="text-muted-foreground">Address: ICT Park, Addis Ababa, Ethiopia</li>
             </ul>
           </div>
         </div>

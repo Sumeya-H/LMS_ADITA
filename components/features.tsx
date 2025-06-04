@@ -48,20 +48,22 @@ export default function Features() {
   return (
     <section className="container py-8 md:py-12 lg:py-16">
       <div className="mx-auto max-w-3xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Empowering Africa's Digital Future</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          Empowering Africa's Digital Future
+        </h2>
         <p className="mt-4 text-lg text-muted-foreground">
           Our comprehensive services and programs are designed to build a robust AI ecosystem across Africa.
         </p>
       </div>
       <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {features.map((feature) => (
-          <Card key={feature.name} className="border-2 transition-all hover:border-primary hover:shadow-md">
+          <Card key={feature.name} className="border-2 transition-all hover:border-adita-brown hover:shadow-md bg-card">
             <CardHeader>
-              <feature.icon className="h-10 w-10 text-primary" />
-              <CardTitle className="mt-4">{feature.name}</CardTitle>
+              <feature.icon className="h-10 w-10 text-adita-brown" />
+              <CardTitle className="mt-4 text-foreground">{feature.name}</CardTitle>
             </CardHeader>
             <CardContent>
-              <CardDescription className="text-base">{feature.description}</CardDescription>
+              <CardDescription className="text-base text-muted-foreground">{feature.description}</CardDescription>
             </CardContent>
           </Card>
         ))}

@@ -53,6 +53,9 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Add direct color references
+        "adita-cream": "#F7E8CB",
+        "adita-brown": "#52331E",
       },
       borderRadius: {
         lg: "var(--radius)",

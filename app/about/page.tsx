@@ -32,12 +32,12 @@ export default function AboutPage() {
                 research, and innovation across the African continent.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <Button asChild size="lg">
+                {/* <Button asChild size="lg">
                   <Link href="/programs">Explore Our Programs</Link>
-                </Button>
-                <Button variant="outline" size="lg" asChild>
+                </Button> */}
+                {/* <Button variant="outline" size="lg" asChild>
                   <Link href="#contact">Contact Us</Link>
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>
@@ -54,7 +54,7 @@ export default function AboutPage() {
         </section>
 
         {/* Our Impact */}
-        <section className="bg-muted py-12 md:py-16">
+        {/* <section className="bg-muted py-12 md:py-16">
           <div className="container">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Our Impact</h2>
@@ -67,10 +67,10 @@ export default function AboutPage() {
               <ImpactStats />
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Timeline */}
-        <section className="py-12 md:py-16">
+        {/* <section className="py-12 md:py-16">
           <div className="container">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Our Journey</h2>
@@ -82,10 +82,10 @@ export default function AboutPage() {
               <Timeline />
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Team Section */}
-        <section className="bg-muted py-12 md:py-16">
+        {/* <section className="bg-muted py-12 md:py-16">
           <div className="container">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Our Team</h2>
@@ -97,7 +97,7 @@ export default function AboutPage() {
               <TeamSection />
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Partners */}
         <section className="py-12 md:py-16">
@@ -115,7 +115,7 @@ export default function AboutPage() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="bg-muted py-12 md:py-16">
+        {/* <section id="contact" className="bg-muted py-12 md:py-16">
           <div className="container">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Contact Us</h2>
@@ -127,9 +127,9 @@ export default function AboutPage() {
               <ContactSection />
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

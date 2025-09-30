@@ -17,14 +17,14 @@ export default function CallToAction() {
             <Button asChild size="lg" className="bg-white text-adita-brown hover:bg-white/90">
               <Link href="/programs">Explore Programs</Link>
             </Button>
-            <Button
+            {/* <Button
               asChild
               size="lg"
               variant="outline"
               className="bg-transparent text-white border-white hover:bg-white/10"
             >
               <Link href="/contact">Contact Us</Link>
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

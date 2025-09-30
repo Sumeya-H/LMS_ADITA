@@ -20,17 +20,14 @@ export default function MissionVision() {
           <CardContent className="pt-6">
             <div className="flex flex-col items-center text-center mb-6">
               <h3 className="text-2xl font-bold">Our Mission</h3>
-              <CardDescription className="mt-2 text-lg">
-                To democratize AI education and foster innovation across Africa
-              </CardDescription>
             </div>
             <p className="text-center max-w-2xl mx-auto">
-              ADITA is committed to providing accessible, high-quality AI education and training to individuals and
-              organizations across Africa. We aim to bridge the digital divide by equipping Africans with the skills,
-              knowledge, and resources needed to participate in and lead the global AI revolution. Through our
-              comprehensive programs, cutting-edge research, and strategic partnerships, we strive to create a vibrant
-              ecosystem of AI innovation that addresses Africa's unique challenges and leverages its diverse
-              opportunities.
+            To equip professionals, educators, engineers, and youth with cutting-edge expertise in Applied Data Science, 
+            Machine Learning, and Artificial Intelligence through high-quality training and certification programs. 
+            By providing training in AI-driven solutions we aim to strengthen innovation across industries and service providers including finance,
+             healthcare, agriculture, and public services. We also aim to empower individuals and organizations to use AI for decision-making, 
+             automation and product development. Our mission is to improve the skills of the workforce in digital technologies, enhance career opportunities,
+              support AI education in schools and give the youth the opportunity to actively participate in the digital economy through employment and entrepreneurship.
             </p>
           </CardContent>
         </Card>
@@ -41,17 +38,12 @@ export default function MissionVision() {
           <CardContent className="pt-6">
             <div className="flex flex-col items-center text-center mb-6">
               <h3 className="text-2xl font-bold">Our Vision</h3>
-              <CardDescription className="mt-2 text-lg">
-                An Africa at the forefront of global AI innovation
-              </CardDescription>
             </div>
             <p className="text-center max-w-2xl mx-auto">
-              We envision an Africa where AI technology is developed by Africans, for Africans, addressing the
-              continent's unique challenges and opportunities. Our vision is to position Africa as a global leader in AI
-              innovation, with a thriving ecosystem of startups, research institutions, and industry applications. We
-              see a future where AI drives economic growth, improves public services, and enhances quality of life
-              across the continent, with African talent leading the way in developing ethical, inclusive, and
-              transformative AI solutions.
+            We aim to be a leading academy and center of excellence for AI education and training that drives technological progress and economic growth.
+             We envision a future where AI-powered solutions transform industries, improve public services and create new opportunities for innovation. 
+             By nurturing AI talent across various sectors, we aim to build a skilled workforce that will shape the future of automation,
+              intelligent decision-making and AI-driven research and development in Africa.
             </p>
           </CardContent>
         </Card>

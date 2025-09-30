@@ -86,7 +86,7 @@ export default function ProgramFilters() {
             </div>
           </AccordionContent>
         </AccordionItem>
-
+{/* 
         <AccordionItem value="price">
           <AccordionTrigger>Price Range</AccordionTrigger>
           <AccordionContent>
@@ -102,7 +102,7 @@ export default function ProgramFilters() {
               </div>
             </div>
           </AccordionContent>
-        </AccordionItem>
+        </AccordionItem> */}
       </Accordion>
 
       <Button className="w-full">Apply Filters</Button>

@@ -18,31 +18,31 @@ export default function ProgramsPage() {
         </p>
       </div>
 
-      <div className="mx-auto mt-8 max-w-2xl">
+      {/* <div className="mx-auto mt-8 max-w-2xl">
         <ProgramSearch programs={programs} />
-      </div>
+      </div> */}
 
-      <AudienceSelector />
+      {/* <AudienceSelector /> */}
 
       <div className="mt-12">
         <Tabs defaultValue="all">
           <div className="flex justify-center">
-            <TabsList className="mb-8">
+            {/* <TabsList className="mb-8">
               <TabsTrigger value="all">All Programs</TabsTrigger>
               <TabsTrigger value="certification">Certification</TabsTrigger>
               <TabsTrigger value="workshops">Workshops</TabsTrigger>
               <TabsTrigger value="corporate">Corporate</TabsTrigger>
               <TabsTrigger value="specialized">Specialized</TabsTrigger>
-            </TabsList>
+            </TabsList> */}
           </div>
 
-          <div className="flex justify-end">
+          {/* <div className="flex justify-end">
             <Button variant="outline" size="sm" asChild className="mb-4">
               <Link href="/programs/compare" className="flex items-center gap-2">
                 <ArrowRightLeft className="h-4 w-4" /> Compare Programs
               </Link>
             </Button>
-          </div>
+          </div> */}
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-5">
             <div className="md:col-span-1">

@@ -1,12 +1,12 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
+import { Facebook, Instagram, Linkedin, Send, Twitter, Youtube } from "lucide-react"
 
 export default function Footer() {
   return (
     <footer className="border-t bg-background">
       <div className="container py-12 md:py-16">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-8">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="relative h-10 w-10 overflow-hidden rounded-full bg-orange-400 flex items-center justify-center">
@@ -25,25 +25,25 @@ export default function Footer() {
               research in AI and digital technologies.
             </p>
             <div className="mt-6 flex space-x-4">
-              <Link href="#" className="text-muted-foreground hover:text-primary">
-                <Facebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary">
-                <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary">
+              <Link href="https://www.linkedin.com/company/africantechacademy/" target="_blank" className="text-muted-foreground hover:text-primary">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
+              <Link href="https://www.youtube.com/@aditacademy" target="_blank" className="text-muted-foreground hover:text-primary">
+              <Youtube className="h-5 w-5" />
+                <span className="sr-only">YouTube</span>
+              </Link>
+              <Link href="https://x.com/ADITAcademy" target="_blank" className="text-muted-foreground hover:text-primary">
+              <Twitter className="h-5 w-5" />
+                <span className="sr-only">X</span>
+              </Link>
+              <Link href="https://t.me/adit_academy" target="_blank" className="text-muted-foreground hover:text-primary">
+              <Send className="h-5 w-5" />
+                <span className="sr-only">Telegram</span>
+              </Link>
             </div>
           </div>
-          <div>
+          {/* <div>
             <h3 className="text-lg font-semibold">Programs</h3>
             <ul className="mt-4 space-y-2 text-sm">
               <li>
@@ -102,12 +102,12 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
-          <div>
+          </div> */}
+          <div className="float-right">
             <h3 className="text-lg font-semibold">Contact</h3>
             <ul className="mt-4 space-y-2 text-sm">
-              <li className="text-muted-foreground">Email: info@adita.africa</li>
-              <li className="text-muted-foreground">Phone: +123 456 7890</li>
+              <li className="text-muted-foreground">Email: info@aditacademy.co</li>
+              <li className="text-muted-foreground">Phone: +251 116 679 207</li>
               <li className="text-muted-foreground">Address: ICT Park, Addis Ababa, Ethiopia</li>
             </ul>
           </div>

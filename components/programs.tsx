@@ -41,7 +41,7 @@ const programs = [
     level: "Intermediate",
     format: "Online & Workshops",
     image: "/placeholder.svg?height=400&width=600&query=doctor%20using%20ai%20technology",
-    href: "/programs/healthcare-ai",
+    href: "/programs/ai-fundamentals",
   },
 ]
 

@@ -1,29 +1,14 @@
+import { Card, CardContent } from "./ui/card"
+import Image from "next/image"
 export default function Partners() {
   const partners = [
-    {
-      name: "Google",
-      logo: "/placeholder.svg?height=80&width=160&query=google%20logo",
-    },
-    {
-      name: "Microsoft",
-      logo: "/placeholder.svg?height=80&width=160&query=microsoft%20logo",
-    },
-    {
-      name: "IBM",
-      logo: "/placeholder.svg?height=80&width=160&query=ibm%20logo",
-    },
-    {
-      name: "African Development Bank",
-      logo: "/placeholder.svg?height=80&width=160&query=african%20development%20bank%20logo",
-    },
-    {
-      name: "African Union",
-      logo: "/placeholder.svg?height=80&width=160&query=african%20union%20logo",
-    },
-    {
-      name: "World Bank",
-      logo: "/placeholder.svg?height=80&width=160&query=world%20bank%20logo",
-    },
+    { name: "AIMS Rwanda", logo: "/images/partners/aims.png" },
+    { name: "Darmonel Technologies", logo: "/images/partners/darmonel.png" },
+    { name: "Africom Technologies", logo: "/images/partners/africom.png" },
+    { name: "Perago", logo: "/images/partners/perago.png" },
+    { name: "University of South-Estern Norway", logo: "/images/partners/uosen.png" },
+    { name: "Basic Internet Foundation", logo: "/images/partners/basic-internet.png" },
+    { name: "Noroff School of Technology and Digital Media", logo: "/images/partners/noroff.png" },
   ]
 
   return (
@@ -34,16 +19,94 @@ export default function Partners() {
           We collaborate with leading organizations to deliver world-class AI education and training.
         </p>
       </div>
-      <div className="mx-auto mt-10 grid max-w-7xl grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
-        {partners.map((partner) => (
-          <div
-            key={partner.name}
-            className="flex items-center justify-center rounded-lg border bg-background p-6 grayscale transition-all hover:grayscale-0"
-          >
-            <img src={partner.logo || "/placeholder.svg"} alt={partner.name} className="h-12 object-contain" />
+      <div className="mx-auto mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      {/* {category.partners.map((partner) => ( */}
+              <Card key={'AIMS Rwanda'} className="bg-background">
+                <CardContent className="flex items-center justify-center p-6 h-32">
+                  <div className="relative h-full w-full">
+                    <Image
+                      src={"/images/partners/aims.png"}
+                      alt={'AIMS Rwanda'}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </CardContent>
+              </Card>
+              <Card key={"Darmonel Technologies"} className="bg-background">
+                <CardContent className="flex items-center justify-center p-6 h-32">
+                  <div className="relative h-full w-full">
+                    <Image
+                      src={"/images/partners/darmonel.png"}
+                      alt={"Darmonel Technologies"}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </CardContent>
+              </Card>
+              <Card key={"Africom Technologies"} className="bg-background">
+                <CardContent className="flex items-center justify-center p-6 h-32">
+                  <div className="relative h-full w-full">
+                    <Image
+                      src={"/images/partners/africom.png"}
+                      alt={"Africom Technologies"}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </CardContent>
+              </Card>
+              <Card key={"Perago"} className="bg-background">
+                <CardContent className="flex items-center justify-center p-6 h-32">
+                  <div className="relative h-12 w-full">
+                    <Image
+                      src={"/images/partners/perago.png"}
+                      alt={"Perago"}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </CardContent>
+              </Card>
+              <Card key={"University of South-Estern Norway"} className="bg-background">
+                <CardContent className="flex items-center justify-center p-6 h-32">
+                  <div className="relative h-full w-full">
+                    <Image
+                      src={"/images/partners/uosen.png"}
+                      alt={"University of South-Estern Norway"}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </CardContent>
+              </Card>
+              <Card key={"Basic Internet Foundation"} className="bg-background">
+                <CardContent className="flex items-center justify-center p-6 h-32">
+                  <div className="relative h-full w-full">
+                    <Image
+                      src={"/images/partners/basic-internet.png"}
+                      alt={"Basic Internet Foundation"}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </CardContent>
+              </Card>
+              <Card key={"Noroff School of Technology and Digital Media"} className="bg-background">
+                <CardContent className="flex items-center justify-center p-6 h-32">
+                  <div className="relative h-12 w-full">
+                    <Image
+                      src={"/images/partners/noroff.png"}
+                      alt={"Noroff School of Technology and Digital Media"}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </CardContent>
+              </Card>
+            {/* ))} */}
           </div>
-        ))}
-      </div>
     </section>
   )
 }

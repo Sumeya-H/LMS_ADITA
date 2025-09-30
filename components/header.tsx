@@ -11,8 +11,8 @@ import { useMobile } from "@/hooks/use-mobile"
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "Programs", href: "/programs" },
-  { name: "Courses", href: "/courses" },
+  // { name: "Programs", href: "/programs" },
+  // { name: "Courses", href: "/courses" },
   // { name: "Certifications", href: "/certifications" },
   // { name: "Incubator", href: "/incubator" },
   { name: "About", href: "/about" },
@@ -27,7 +27,7 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-3">
-            <div className="relative h-10 w-10 overflow-hidden rounded-full bg-orange-400 flex items-center justify-center">
+            <div className="relative h-10 w-10 overflow-hidden rounded-full flex items-center justify-center">
               <Image
                 src="/adita-logo.png"
                 alt="ADITA Logo"
@@ -37,7 +37,7 @@ export default function Header() {
                 priority
               />
             </div>
-            <span className="hidden font-bold text-xl sm:inline-block">ADITA</span>
+            <span className="hidden font-bold text-base sm:inline-block">Africa Digital & Innovation Technology Academy</span>
           </Link>
         </div>
 
@@ -61,14 +61,14 @@ export default function Header() {
                     {item.name}
                   </Link>
                 ))}
-                <div className="mt-4 flex flex-col gap-2">
+                {/* <div className="mt-4 flex flex-col gap-2">
                   <Button asChild>
                     <Link href="/login">Log in</Link>
                   </Button>
                   <Button asChild variant="outline">
                     <Link href="/register">Register</Link>
                   </Button>
-                </div>
+                </div> */}
               </nav>
             </SheetContent>
           </Sheet>
@@ -86,7 +86,7 @@ export default function Header() {
           </nav>
         )}
 
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           <div className="hidden md:flex md:gap-2">
             <Button asChild variant="ghost" size="sm">
               <Link href="/login">Log in</Link>
@@ -96,7 +96,7 @@ export default function Header() {
             </Button>
           </div>
           <ModeToggle />
-        </div>
+        </div> */}
       </div>
     </header>
   )

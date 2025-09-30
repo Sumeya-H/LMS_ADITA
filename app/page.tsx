@@ -5,6 +5,7 @@ import Testimonials from "@/components/testimonials"
 import Partners from "@/components/partners"
 import CallToAction from "@/components/call-to-action"
 import Stats from "@/components/stats"
+import UpcomingEvent from "@/components/upcoming-event"
 
 export default function Home() {
   return (
@@ -12,10 +13,11 @@ export default function Home() {
       <Hero />
       {/* <Stats /> */}
       <Features />
-      <Programs />
+      {/* <Programs /> */}
       {/* <Testimonials /> */}
+      <UpcomingEvent/>
       <Partners />
-      <CallToAction />
+      {/* <CallToAction /> */}
     </div>
   )
 }

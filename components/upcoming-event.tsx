@@ -6,7 +6,7 @@ export default function UpcomingEvent() {
   return (
     <section className="py-12 px-4 md:px-6 bg-[#F7E8CB]">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">Upcoming Event</h2>
+        <h2 className="text-3xl font-bold text-center mb-8">Previous Event</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="relative">
@@ -45,14 +45,6 @@ export default function UpcomingEvent() {
                   for Services, Technological Innovation, and Entrepreneurship"
                 </li>
               </ul>
-            </div>
-
-            <div className="pt-4">
-              <Button className="bg-[#52331E] hover:bg-[#3a2416] text-white px-8 py-6 text-lg rounded-full">
-                <PhoneIcon className="h-5 w-5 mr-2" />
-                Register Now: (251) 116 679 207
-              </Button>
-              <p className="mt-4 text-sm text-gray-600">For more information, contact us at: info@aditacademy.co</p>
             </div>
           </div>
         </div>

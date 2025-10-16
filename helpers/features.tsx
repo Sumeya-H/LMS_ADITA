@@ -11,7 +11,7 @@ import {
 
 export const features = [
     {
-        name: "Tech & Soft Skills Training",
+        name: "Accelerated Programs",
         description:
             "We offer AI, Data Science, and Development courses, plus soft skills training to bridge the gap between learning and the workplace.",
         icon: BookOpen,

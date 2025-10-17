@@ -3,39 +3,12 @@ import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight } from "lucide-react"
+import { programs } from "@/helpers/programs"
 
 export default function RelatedPrograms({ currentProgramId }) {
   // In a real application, you would fetch related programs based on the current program
   // For this example, we'll use mock data
-  const relatedPrograms = [
-    {
-      id: "data-science-essentials",
-      title: "Data Science Essentials",
-      description: "Master data analysis, visualization, and statistical methods for AI applications.",
-      duration: "8 weeks",
-      level: "Beginner",
-      format: "Online",
-      image: "/placeholder.svg?height=200&width=400&query=data%20science%20visualization",
-    },
-    {
-      id: "python-for-ai",
-      title: "Python Programming for AI",
-      description: "Learn Python programming fundamentals with a focus on AI and machine learning applications.",
-      duration: "6 weeks",
-      level: "Beginner",
-      format: "Online & In-person",
-      image: "/placeholder.svg?height=200&width=400&query=python%20programming%20code",
-    },
-    {
-      id: "machine-learning-basics",
-      title: "Machine Learning Fundamentals",
-      description: "Build a solid foundation in machine learning algorithms and techniques.",
-      duration: "10 weeks",
-      level: "Intermediate",
-      format: "Online",
-      image: "/placeholder.svg?height=200&width=400&query=machine%20learning%20algorithms",
-    },
-  ].filter((program) => program.id !== currentProgramId)
+  const relatedPrograms = programs.filter((program) => program.type === currentProgramId)
 
   return (
     <div>

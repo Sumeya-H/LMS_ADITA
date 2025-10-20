@@ -50,7 +50,7 @@ export default function ProgramDetailPage({ params }) {
                                 <TabsTrigger value="curriculum" className="flex-1">
                                     Curriculum
                                 </TabsTrigger>
-                                <TabsTrigger value="instructors" className="flex-1">
+                                {/*<TabsTrigger value="instructors" className="flex-1">
                                     Instructors
                                 </TabsTrigger>
                                 <TabsTrigger value="reviews" className="flex-1">
@@ -58,7 +58,7 @@ export default function ProgramDetailPage({ params }) {
                                 </TabsTrigger>
                                 <TabsTrigger value="dates" className="flex-1">
                                     Dates & Registration
-                                </TabsTrigger>
+                                </TabsTrigger>*/}
                             </TabsList>
 
                             <TabsContent value="overview" className="mt-6">

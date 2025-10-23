@@ -220,12 +220,12 @@ function ProgramCard({ program }) {
                         <p className="text-sm text-muted-foreground">Target Audience:</p>
                         <p className="text-sm font-medium">{program.audience.join(", ")}</p>
                     </div>
-                    {program.price && (
+                    {/*program.price && (
                         <div className="text-right">
                             <p className="text-lg font-bold text-primary">{program.price}</p>
                             {program.pricePeriod && <p className="text-xs text-muted-foreground">{program.pricePeriod}</p>}
                         </div>
-                    )}
+                    )*/}
                 </div>
             </CardContent>
             <CardFooter className="flex gap-2">

@@ -10,6 +10,7 @@ import { ArrowLeft, Calendar, Clock, Award, CheckCircle } from "lucide-react"
 import EnrollmentForm from "@/components/programs/enrollment-form"
 import PaymentForm from "@/components/programs/payment-form"
 import { programs } from "@/helpers/programs";
+import NewEnrollmentForm from "@/components/programs/new-enrollment-form";
 
 export default function ProgramEnrollmentPage({ params }) {
     const [enrollmentStep, setEnrollmentStep] = useState("details")
@@ -24,7 +25,7 @@ export default function ProgramEnrollmentPage({ params }) {
 
     const handleEnrollmentSubmit = (data) => {
         setEnrollmentData(data)
-        setEnrollmentStep("payment")
+        setEnrollmentStep("confirmation")
     }
 
     const handlePaymentSubmit = (paymentData) => {
@@ -53,9 +54,9 @@ export default function ProgramEnrollmentPage({ params }) {
                                 <CardTitle>Enrollment Process</CardTitle>
                                 <div className="flex items-center gap-2">
                                     <Badge variant={enrollmentStep === "details" ? "default" : "outline"}>Details</Badge>
-                                    <span className="text-muted-foreground">→</span>
-                                    <Badge variant={enrollmentStep === "payment" ? "default" : "outline"}>Payment</Badge>
-                                    <span className="text-muted-foreground">→</span>
+                                    <span className="text-muted-foreground my-auto">→</span>
+                                    {/*<Badge variant={enrollmentStep === "payment" ? "default" : "outline"}>Payment</Badge>
+                                    <span className="text-muted-foreground my-auto">→</span>*/}
                                     <Badge variant={enrollmentStep === "confirmation" ? "default" : "outline"}>Confirmation</Badge>
                                 </div>
                             </div>
@@ -82,14 +83,10 @@ export default function ProgramEnrollmentPage({ params }) {
                                                 <CheckCircle className="mt-0.5 h-4 w-4 text-primary" />
                                                 <span>Check your email for enrollment confirmation and details</span>
                                             </li>
-                                            <li className="flex items-start gap-2">
+                                            {/*<li className="flex items-start gap-2">
                                                 <CheckCircle className="mt-0.5 h-4 w-4 text-primary" />
                                                 <span>Complete your student profile in the dashboard</span>
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <CheckCircle className="mt-0.5 h-4 w-4 text-primary" />
-                                                <span>Review pre-course materials before your start date</span>
-                                            </li>
+                                            </li>*/}
                                             <li className="flex items-start gap-2">
                                                 <CheckCircle className="mt-0.5 h-4 w-4 text-primary" />
                                                 <span>Join the orientation session (details will be emailed)</span>
@@ -98,9 +95,6 @@ export default function ProgramEnrollmentPage({ params }) {
                                     </div>
                                     <div className="mt-8 flex justify-center gap-4">
                                         <Button asChild>
-                                            <Link href="/dashboard">Go to Dashboard</Link>
-                                        </Button>
-                                        <Button asChild variant="outline">
                                             <Link href="/programs">Browse More Programs</Link>
                                         </Button>
                                     </div>
@@ -157,17 +151,17 @@ export default function ProgramEnrollmentPage({ params }) {
                                 </div>
                             </div>
 
-                            <div className="border-t pt-4">
+                            {/*<div className="border-t pt-4">
                                 <div className="flex items-center justify-between">
                                     <span className="text-muted-foreground">Program Fee:</span>
                                     <span className="text-xl font-bold text-primary">{program.price}</span>
                                 </div>
-                            </div>
+                            </div>*/}
                         </CardContent>
                         <CardFooter>
                             <div className="w-full text-center text-sm text-muted-foreground">
                                 Need help?{" "}
-                                <Link href="/contact" className="text-primary hover:underline">
+                                <Link href="https://mail.google.com/mail/?view=cm&fs=1&to=support@aditacademy.co&su=Course%20Inquiry&body=Hello%20ADITA%20Team%2C%0A%0AI%20would%20like%20to%20ask%20about..." className="text-primary hover:underline">
                                     Contact our support team
                                 </Link>
                             </div>

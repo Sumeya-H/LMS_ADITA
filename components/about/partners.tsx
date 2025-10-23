@@ -38,7 +38,7 @@ const partnerCategories = [
     // },
     {
         id: "ngo",
-        name: "NGOs",
+        name: "NGOS",
         partners: [
             { name: "AIMS Rwanda", logo: "/images/partners/aims.png" },
             { name: "Darmonel Technologies", logo: "/images/partners/darmonel.png" },
@@ -54,8 +54,8 @@ const partnerCategories = [
 export default function Partners() {
     return (
         <div>
-            <Tabs defaultValue="NGOS" className="w-full">
-                /<div className="flex justify-center mb-8">
+            <Tabs defaultValue="ngo" className="w-full">
+                {/*<div className="flex justify-center mb-8">
                     <TabsList>
                         {partnerCategories.map((category) => (
                             <TabsTrigger key={category.id} value={category.id}>
@@ -63,7 +63,7 @@ export default function Partners() {
                             </TabsTrigger>
                         ))}
                     </TabsList>
-                </div>
+                </div>*/}
 
                 {partnerCategories.map((category) => (
                     <TabsContent key={category.id} value={category.id}>

@@ -10,7 +10,7 @@ export const programs = [
         format: "Online & In-person",
         audience: ["Students", "Professionals", "Researchers"],
         price: "$180",
-        startDates: ["June 1, 2025", "August 10, 2025", "October 15, 2025"],
+        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Laila Ahmed",
@@ -78,7 +78,7 @@ export const programs = [
         format: "Online & In-person",
         audience: ["Students", "Aspiring Developers"],
         price: "$200",
-        startDates: ["June 5, 2025", "August 15, 2025", "October 20, 2025"],
+        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Ms. Fatima Bello",
@@ -145,7 +145,7 @@ export const programs = [
         format: "Online & In-person",
         audience: ["Aspiring Developers", "IT Professionals"],
         price: "$220",
-        startDates: ["June 10, 2025", "August 20, 2025", "October 25, 2025"],
+        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Adebayo Okeke",
@@ -212,7 +212,7 @@ export const programs = [
         format: "Online & In-person",
         audience: ["Developers", "Graduates", "IT Professionals"],
         price: "$250",
-        startDates: ["June 15, 2025", "August 25, 2025", "November 1, 2025"],
+        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Miriam Nkosi",
@@ -274,7 +274,7 @@ export const programs = [
         format: "Online & In-person",
         audience: ["Students", "Professionals", "System Administrators"],
         price: "$230",
-        startDates: ["June 20, 2025", "August 30, 2025", "November 5, 2025"],
+        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Ms. Adjoa Ofori",
@@ -341,7 +341,7 @@ export const programs = [
         format: "Online & In-person",
         audience: ["Students", "App Developers"],
         price: "$210",
-        startDates: ["June 25, 2025", "September 5, 2025", "November 10, 2025"],
+        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Ms. Nana Yeboah",
@@ -403,7 +403,7 @@ export const programs = [
         format: "Online & In-person",
         audience: ["Mobile Developers", "Students"],
         price: "$230",
-        startDates: ["July 1, 2025", "September 10, 2025", "November 15, 2025"],
+        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Ms. Zuri Kamanzi",
@@ -465,7 +465,7 @@ export const programs = [
         format: "Online & In-person",
         audience: ["Students", "Artists", "Marketing Professionals"],
         price: "$180",
-        startDates: ["July 5, 2025", "September 15, 2025", "November 20, 2025"],
+        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Ms. Aisha Kamara",
@@ -527,7 +527,7 @@ export const programs = [
         format: "Online & In-person",
         audience: ["Developers", "Entrepreneurs", "Tech Enthusiasts"],
         price: "$240",
-        startDates: ["July 10, 2025", "September 20, 2025", "November 25, 2025"],
+        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Samuel Kofi",
@@ -594,7 +594,7 @@ export const programs = [
         format: "In-person & Online",
         audience: ["Students", "Developers", "Innovators"],
         price: "$250",
-        startDates: ["July 15, 2025", "September 25, 2025", "December 1, 2025"],
+        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",

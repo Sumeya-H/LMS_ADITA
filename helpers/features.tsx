@@ -21,9 +21,7 @@ export const features = [
                     ADITA’s training programs empower learners to build a strong
                     foundation in Artificial Intelligence, Machine Learning, Data
                     Science, and Software Development.
-                </p>
-
-                <p>
+                    <br />
                     Our approach combines theory with practical, hands-on projects
                     aligned with real-world use cases. Learners gain exposure to modern
                     tools such as Python, TensorFlow, cloud platforms, and data
@@ -59,9 +57,7 @@ export const features = [
                 <p>
                     ADITA partners with companies to design and deliver customized
                     digital training solutions for their teams.
-                </p>
-
-                <p>
+                    <br />
                     We align our programs with each organization's strategic goals,
                     focusing on upskilling employees to adopt and deploy AI, data
                     analytics, and digital transformation effectively.
@@ -94,9 +90,7 @@ export const features = [
                 <p>
                     Our certification programs help professionals demonstrate their expertise
                     and stand out in competitive job markets.
-                </p>
-
-                <p>
+                    <br />
                     Certifications integrate academic rigor with applied practice.
                 </p>
 
@@ -128,9 +122,7 @@ export const features = [
                 <p>
                     ADITA organizes flagship summits, hackathons, and conferences that
                     bring together Africa’s digital community.
-                </p>
-
-                <p>
+                    <br />
                     These events foster collaboration, spark innovation, and inspire
                     cross-sector partnerships.
                 </p>
@@ -162,18 +154,16 @@ export const features = [
                 <p>
                     Our workshops and bootcamps focus on rapid skill development through
                     immersive, project-based learning.
-                </p>
-
-                <p>
+                    <br />
                     They’re ideal for learners who want to build practical capabilities
                     in a short time frame.
                 </p>
 
                 <p className="font-semibold"><strong>Highlights Include:</strong></p>
                 <ul className="list-disc list-inside ml-5 space-y-1">
-                    <li>AI for Business Leaders (2 Days)</li>
-                    <li>Python for Data Science Bootcamp (1 Week)</li>
-                    <li>Deep Learning with TensorFlow (2 Weeks)</li>
+                    <li>AI for Business Leaders </li>
+                    <li>Python for Data Science Bootcamp </li>
+                    <li>Deep Learning with TensorFlow </li>
                 </ul>
 
                 <p className="font-semibold"><strong>Structure:</strong></p>
@@ -194,13 +184,11 @@ export const features = [
         detail: (
             <div className="space-y-3">
                 <p>
-                    ADITA bridges the gap between education and employment through our
+                    We bridge the gap between education and employment through our
                     Talent Connect program.
-                </p>
-
-                <p>
+                    <br />
                     We actively match top-performing graduates with companies seeking
-                    digital professionals.
+                    Talented Individuals.
                 </p>
 
                 <p className="font-semibold"><strong>Highlights Include:</strong></p>
@@ -232,9 +220,7 @@ export const features = [
                 <p>
                     The ADITA AI Incubator nurtures early-stage startups leveraging AI,
                     data, and automation to address African challenges.
-                </p>
-
-                <p>
+                    <br />
                     We provide mentorship, workspace access, investor linkages, and
                     technical support to transform ideas into scalable ventures.
                 </p>
@@ -257,53 +243,73 @@ export const features = [
         ),
     },
     {
-        name: "Consultency Services",
+        name: "Consultancy Services",
         description:
-            "Comprehensive consulting services across AI strategy, governance, and implementation, including policymaker training.",
+            "Strategic consulting services that guide organizations through every stage of digital transformation from vision to execution.",
         icon: Globe,
         detail: (
             <div className="space-y-3">
                 <p>
-                    ADITA provides strategic consulting services that help governments,
-                    businesses, and NGOs harness AI responsibly and effectively.
-                </p>
-
-                <p>
-                    Our consultants guide clients through planning, design, deployment,
-                    and governance of AI systems.
+                    ADITA provides expert consulting services that help governments, businesses,
+                    and NGOs plan, execute, and sustain successful Digital Transformation initiatives.
+                    <br />
+                    Our consultants partner with clients to modernize legacy systems, improve digital
+                    capabilities, and build data-driven, resilient organizations prepared for the future.
+                    We focus on ensuring that each transformation aligns with strategic objectives,
+                    regulatory standards, and long-term sustainability goals.
                 </p>
 
                 <p className="font-semibold"><strong>Highlights Include:</strong></p>
                 <ul className="list-disc list-inside ml-5 space-y-1">
-                    <li>AI Policy Development and Ethical Frameworks</li>
-                    <li>Data Strategy and Cloud Architecture</li>
-                    <li>Process Automation and Predictive Analytics</li>
-                    <li>Organizational Change and Digital Governance</li>
+                    <li>Digital Maturity Assessments and Transformation Roadmaps</li>
+                    <li>Cloud Strategy, Migration, and Infrastructure Modernization</li>
+                    <li>Process Automation and Intelligent Workflow Design</li>
+                    <li>Data Strategy, Analytics, and Insight-Driven Decision Making</li>
+                    <li>Cybersecurity Integration and Digital Risk Management</li>
+                    <li>Governance Frameworks and Organizational Change Management</li>
+                </ul>
+                <p className="font-semibold"><strong>Target Clients:</strong></p>
+                <ul className="list-disc list-inside ml-5 space-y-1">
+                    <li>Private Sectors: Banks (Finance), Tech Companies, Agri-Businesses, Healthcare Providers.</li>
+                    <li>Public Sectors: Government Ministries (e.g., Health, Agriculture, Digital Economy).</li>
+                    <li>NGOs & Development Partners</li>
                 </ul>
             </div>
         ),
     },
     {
-        name: "Industry Partnerships",
+        name: "Partnerships",
         description:
-            "Collaborate with leading tech companies and organizations for real-world experience.",
+            "Building impactful collaborations across public, private, and non-profit sectors to drive sustainable digital transformation.",
         icon: Handshake,
         detail: (
             <div className="space-y-3">
                 <p>
-                    ADITA builds strong partnerships with top technology companies,
-                    research institutions, and development organizations.
+                    ADITA partners with organizations across the <strong>private sector</strong> including
+                    <strong> banks and financial institutions</strong>, <strong>technology companies</strong>,
+                    <strong> agri-businesses</strong>, and <strong>healthcare providers</strong> to accelerate
+                    innovation, enhance operational efficiency, and strengthen digital capabilities.
+                    <br />
+                    <br />
+                    In the <strong>public sector</strong>, we collaborate with <strong>government ministries </strong>
+                    such as Health, Agriculture, and Digital Economy to design and implement policies, platforms,
+                    and governance frameworks that drive inclusive and secure digital growth.
+                    <br />
+                    <br />
+                    ADITA also works closely with <strong>NGOs and development partners</strong> to support
+                    social impact initiatives, digital inclusion programs, and data-driven development strategies
+                    that advance community and national objectives.
                 </p>
 
-                <p className="font-semibold"><strong>Partner Benefits:</strong></p>
+                <p className="font-semibold"><strong>Our Collaboration Focus:</strong></p>
                 <ul className="list-disc list-inside ml-5 space-y-1">
-                    <li>Access to skilled graduates and research talent</li>
-                    <li>Co-branded training initiatives</li>
-                    <li>Collaborative research and development projects</li>
-                    <li>CSR and capacity-building collaborations</li>
+                    <li>Joint Digital Transformation Planning and Execution</li>
+                    <li>Policy Design and Implementation Support</li>
+                    <li>Capacity Building and Skills Development Programs</li>
+                    <li>Public–Private Partnership Facilitation</li>
+                    <li>Technology Integration for Sustainable Development</li>
                 </ul>
             </div>
         ),
-    },
-];
+    },];
 

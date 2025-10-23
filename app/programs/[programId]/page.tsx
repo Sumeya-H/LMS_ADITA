@@ -273,7 +273,7 @@ export default function ProgramDetailPage({ params }) {
                                 </div>
 
                                 <div className="mt-6 border-t pt-6">
-                                    <p className="text-center text-2xl font-bold text-primary">{program.price}</p>
+                                    {/*<p className="text-center text-2xl font-bold text-primary">{program.price}</p>*/}
                                     <Button asChild className="mt-4 w-full">
                                         {/*<Link href={`/programs/${programId}/enroll`}>Enroll Now</Link>*/}
                                         <Link href={`/programs/${programId}`}>Enroll Now</Link>
@@ -287,9 +287,11 @@ export default function ProgramDetailPage({ params }) {
                             <p className="mt-2 text-sm text-muted-foreground">
                                 Have questions about this program or need assistance with enrollment?
                             </p>
-                            <Button variant="outline" className="mt-4 w-full">
-                                Contact an Advisor
-                            </Button>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=support@aditacademy.co&su=Course%20Inquiry&body=Hello%20ADITA%20Team%2C%0A%0AI%20would%20like%20to%20ask%20about...">
+                                <Button variant="outline" className="mt-4 w-full">
+                                    Contact us
+                                </Button>
+                            </a>
                         </div>
                     </div>
                 </div>

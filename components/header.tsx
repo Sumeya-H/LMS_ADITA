@@ -16,6 +16,8 @@ const navigation = [
   // { name: "Certifications", href: "/certifications" },
   // { name: "Incubator", href: "/incubator" },
   { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Acclerated Programs", href: "/programs" },
 ]
 
 export default function Header() {

@@ -23,9 +23,24 @@ export default function ProgramEnrollmentPage({ params }) {
         return <div>Program not found</div>;
     }
 
-    const handleEnrollmentSubmit = (data) => {
+    const handleEnrollmentSubmit = async (data) => {
         setEnrollmentData(data)
-        setEnrollmentStep("confirmation")
+	try {
+      	    const res = await fetch("http://localhost:8000/courses/register/", {
+		method: "POST",
+		headers: {
+        	   "Content-Type": "application/json",
+        	},
+        	body: JSON.stringify(data),
+	    });
+      	    console.log("✅ Registration successful:", res.data);
+      	    alert("Course registered successfully!");
+	    console.log(data)
+            setEnrollmentStep("confirmation")
+    	} catch (err) {
+      	    console.error("❌ Error registering course:", err.response?.data || err.message);
+     	    alert("Error registering course");
+    	}
     }
 
     const handlePaymentSubmit = (paymentData) => {

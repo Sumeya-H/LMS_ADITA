@@ -10,6 +10,29 @@ import { Button } from "react-day-picker";
 
 export default function Events() {
     const [enrollmentStep, setEnrollmentStep] = useState("details")
+    const handleEnrollmentSubmit = async (data) => {
+        setEnrollmentStep("confirmation")
+        try {
+            const res = await fetch("http://localhost:8000/courses/register/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+            if (res.ok) {
+                console.log("Registration successful:", res.data);
+                alert("Course registered successfully!");
+                console.log(data)
+                setEnrollmentStep("confirmation")
+            }
+            else
+                console.log("Registration failed:", res.data);
+        } catch (err) {
+            console.error("❌ Error registering course:", err.response?.data || err.message);
+            alert("Error registering course");
+        }
+    }
     return (
         <div className="container py-12">
             <div className="mb-8">
@@ -33,7 +56,7 @@ export default function Events() {
                             <CardDescription>Please complete all required information to enroll in this program.</CardDescription>
                         </CardHeader>
                         <CardContent>
-                            {enrollmentStep === "details" && <NewEnrollmentForm />}
+                            {enrollmentStep === "details" && <NewEnrollmentForm onSubmit={handleEnrollmentSubmit} />}
                             {enrollmentStep === "confirmation" && (
                                 <div className="text-center">
                                     <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">

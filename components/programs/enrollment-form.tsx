@@ -223,7 +223,7 @@ export default function EnrollmentForm({ onSubmit, program }) {
                     <Label htmlFor="agreeTerms" className="text-sm">
                         I agree to the terms and conditions, including the privacy policy and student code of conduct.
                         &nbsp;
-                        <Link href="/" className="text-primary hover:underline">
+                        <Link href="/terms-and-conditions" className="text-primary hover:underline">
                             <strong>Terms and Conditions</strong>
                         </Link>
                     </Label>

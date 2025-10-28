@@ -23,7 +23,7 @@ const teamMembers = [
     },
     {
         name: "Prof. Abebe Geletu",
-        role: "Co-Founder",
+        role: "Co-Founder & Strategic Advisor",
         bio: "Co-founder of ADITA, Phd, Ilmenau University of Technology, Germany D.Sc. (habil.), German Research Chair, AIMS Rwanda",
         image: "/images/teams/abebe_geletu.jpeg",
         linkedin: "#",
@@ -39,7 +39,7 @@ const teamMembers = [
     },
     {
         name: "Mr. Ewnetu Abera",
-        role: "Co-founder",
+        role: "Co-founder & Strategic Advisor",
         bio: "Co-founder of ADITA, CEO at Perago Systems, Cofounder and Board Chairperson at Addispay Financial Technology SC & Addis Systems, Cofounder and Board Chairperson at Muyalogy.com",
         image: "/images/teams/ewnetu_abera.jpeg",
         linkedin: "#",
@@ -47,7 +47,7 @@ const teamMembers = [
     },
     {
         name: "Mr. Teshome Worku",
-        role: "Co-founder",
+        role: "Co-founder & Strategic Advisor",
         bio: "Co-founder of ADITA, Country Director of Wingu Africa Group Data Center-Ethiopia",
         image: "/images/teams/teshome_worku.jpeg",
         linkedin: "#",

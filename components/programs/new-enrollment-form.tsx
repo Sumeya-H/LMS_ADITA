@@ -5,12 +5,13 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import Link from "next/link"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 
-export default function EnrollmentForm() {
+export default function EnrollmentForm({ onSubmit }) {
     const [formData, setFormData] = useState({
         fullName: "",
         email: "",
@@ -70,7 +71,7 @@ export default function EnrollmentForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(formData);
+        onSubmit(formData)
     }
 
     return (
@@ -281,27 +282,34 @@ export default function EnrollmentForm() {
                         onChange={handleChange}
                         placeholder="Write a short answer"
                     />
-                    <div className="flex pt-4 items-start space-x-2">
-                        <Checkbox
-                            id="agreeTerms"
-                            name="agreeTerms"
-                            checked={formData.agreeTerms}
-                            onCheckedChange={(checked) => handleSelectChange("agreeTerms", checked)}
-                            required
-                        />
-                        <Label htmlFor="agreeTerms" className="text-sm">
-                            I confirm that the information provided is accurate and I agree to the program’s terms and conditions.
-                        </Label>
+                    <div className="space-y-2">
+                        <div className="flex items-start space-x-2">
+                            <Checkbox
+                                id="agreeTerms"
+                                name="agreeTerms"
+                                className="my-auto"
+                                checked={formData.agreeTerms}
+                                onCheckedChange={(checked) => handleSelectChange("agreeTerms", checked)}
+                                required
+                            />
+                            <Label htmlFor="agreeTerms" className="text-sm">
+                                I agree to the terms and conditions, including the privacy policy and student code of conduct.
+                                &nbsp;
+                                <Link href="/terms-and-conditions" className="text-primary hover:underline">
+                                    <strong>Terms and Conditions</strong>
+                                </Link>
+                            </Label>
+                        </div>
                     </div>
 
-                    <div>
-                        <Button
-                            type="submit"
-                            className="w-full"
-                        >
+                    {formData.agreeTerms ?
+                        <Button type="submit" className="w-full">
+                            Submit
+                        </Button> :
+                        <Button disabled type="submit" className="w-full">
                             Submit
                         </Button>
-                    </div>
+                    }
                 </CardContent>
             </Card>
 

@@ -85,7 +85,7 @@ export default function AboutPage() {
         </section> */}
 
                 {/* Team Section */}
-                {/*<section className="bg-muted py-12 md:py-16">
+                <section className="bg-muted py-12 md:py-16">
                     <div className="container">
                         <div className="mx-auto max-w-2xl text-center">
                             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Our Team</h2>
@@ -97,7 +97,7 @@ export default function AboutPage() {
                             <TeamSection />
                         </div>
                     </div>
-                </section>*/}
+                </section>
 
                 {/* Partners */}
                 <section className="py-12 md:py-16">

@@ -140,7 +140,7 @@ export const programs = [
         description: "Develop robust server-side applications using Node.js, design and manage databases, and learn to build scalable APIs with strong security and performance considerations.",
         longDescription: "This course provides a deep dive into backend web development. You’ll learn server-side programming using Node.js, database design for SQL and NoSQL systems, API creation, and deployment strategies. Advanced topics include scalability, performance optimization, and securing server-side applications. Practical exercises guide learners to develop and deploy full backend applications.",
         type: "development",
-        duration: "9 weeks",
+        duration: "8 weeks",
         level: "Intermediate",
         format: "Online & In-person",
         audience: ["Aspiring Developers", "IT Professionals"],
@@ -173,7 +173,7 @@ export const programs = [
             },
             {
                 title: "Web Server Setup and API Development",
-                duration: "3 weeks",
+                duration: "2 weeks",
                 topics: ["Setting up web servers", "Building RESTful APIs", "API testing and debugging"]
             },
             {
@@ -398,7 +398,7 @@ export const programs = [
         description: "Develop native mobile applications using Android Studio and Xcode. Learn mobile UI design, data handling, and integration with backend services.",
         longDescription: "This course trains learners in native mobile application development for Android and iOS platforms. You'll use Android Studio and Xcode to build apps with rich interfaces, integrate backend APIs, handle local storage, and deploy apps to devices. Projects emphasize real-world app development and problem solving.",
         type: "development",
-        duration: "9 weeks",
+        duration: "8 weeks",
         level: "Intermediate",
         format: "Online & In-person",
         audience: ["Mobile Developers", "Students"],
@@ -426,7 +426,7 @@ export const programs = [
             },
             {
                 title: "Native App Development",
-                duration: "4 weeks",
+                duration: "3 weeks",
                 topics: ["Android Studio basics", "Xcode basics", "UI design", "Data handling", "Backend integration"]
             },
             {
@@ -522,7 +522,7 @@ export const programs = [
         description: "Understand blockchain architecture, cryptography, and consensus algorithms. Learn real-world applications and hands-on smart contract development.",
         longDescription: "This course explores blockchain technology, including its architecture, components, cryptography, consensus algorithms, and real-world applications. Learners develop practical skills in building smart contracts and deploying blockchain solutions in finance, supply chain, and healthcare scenarios.",
         type: "emerging-tech",
-        duration: "9 weeks",
+        duration: "8 weeks",
         level: "Intermediate",
         format: "Online & In-person",
         audience: ["Developers", "Entrepreneurs", "Tech Enthusiasts"],
@@ -560,7 +560,7 @@ export const programs = [
             },
             {
                 title: "Developing on Blockchain",
-                duration: "3 weeks",
+                duration: "2 weeks",
                 topics: ["Development tools", "Building smart contracts", "Testing and debugging"]
             },
             {

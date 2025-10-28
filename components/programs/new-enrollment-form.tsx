@@ -22,7 +22,7 @@ export default function EnrollmentForm() {
         graduationYear: "",
         background: "",
         selectedCourse: "none", // "marketing" | "ai"
-        // AI-specific
+        // course-specific
         marketingExperience: "",
         programmingExperience: "none", // none | basic | intermediate | advanced
         dataTools: "none", // none | excel | python | r | powerbi
@@ -70,9 +70,7 @@ export default function EnrollmentForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        // Prevent submit if AI selected but not eligible
-        if (formData.selectedCourse === "ai" && !aiEligibility) return
-        //onSubmit(formData)
+        console.log(formData);
     }
 
     return (
@@ -301,7 +299,7 @@ export default function EnrollmentForm() {
                             type="submit"
                             className="w-full"
                         >
-                            Continue
+                            Submit
                         </Button>
                     </div>
                 </CardContent>

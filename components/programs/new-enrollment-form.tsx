@@ -10,14 +10,14 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 
-export default function EnrollmentForm({ onSubmit, program }) {
+export default function EnrollmentForm() {
     const [formData, setFormData] = useState({
-        firstName: "",
-        lastName: "",
+        fullName: "",
         email: "",
         phone: "",
         country: "",
         city: "",
+        subCity: "",
         university: "",
         graduationYear: "",
         background: "",
@@ -72,7 +72,7 @@ export default function EnrollmentForm({ onSubmit, program }) {
         e.preventDefault()
         // Prevent submit if AI selected but not eligible
         if (formData.selectedCourse === "ai" && !aiEligibility) return
-        onSubmit(formData)
+        //onSubmit(formData)
     }
 
     return (
@@ -86,12 +86,8 @@ export default function EnrollmentForm({ onSubmit, program }) {
                 </CardHeader>
                 <CardContent className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                        <Label htmlFor="firstName">First Name</Label>
-                        <Input id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} required />
-                    </div>
-                    <div>
-                        <Label htmlFor="lastName">Last Name</Label>
-                        <Input id="lastName" name="lastName" value={formData.lastName} onChange={handleChange} required />
+                        <Label htmlFor="fullName">Full Name</Label>
+                        <Input id="fullName" name="fullName" value={formData.fullName} onChange={handleChange} required />
                     </div>
                     <div>
                         <Label htmlFor="email">Email</Label>
@@ -102,24 +98,12 @@ export default function EnrollmentForm({ onSubmit, program }) {
                         <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} required />
                     </div>
                     <div>
-                        <Label htmlFor="country">Country</Label>
-                        <Select value={formData.country} onValueChange={(v) => handleSelectChange("country", v)}>
-                            <SelectTrigger id="country">
-                                <SelectValue placeholder="Select your country" />
-                            </SelectTrigger>
-                            <SelectContent>
-                                <SelectItem value="ethiopia">Ethiopia</SelectItem>
-                                <SelectItem value="kenya">Kenya</SelectItem>
-                                <SelectItem value="nigeria">Nigeria</SelectItem>
-                                <SelectItem value="ghana">Ghana</SelectItem>
-                                <SelectItem value="south-africa">South Africa</SelectItem>
-                                <SelectItem value="other">Other</SelectItem>
-                            </SelectContent>
-                        </Select>
-                    </div>
-                    <div>
                         <Label htmlFor="city">City</Label>
                         <Input id="city" name="city" value={formData.city} onChange={handleChange} required />
+                    </div>
+                    <div>
+                        <Label htmlFor="subCity">Sub City</Label>
+                        <Input id="subCity" name="subCity" value={formData.subCity} onChange={handleChange} required />
                     </div>
                 </CardContent>
             </Card>
@@ -131,11 +115,11 @@ export default function EnrollmentForm({ onSubmit, program }) {
                 </CardHeader>
                 <CardContent className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                        <Label htmlFor="university">University / College</Label>
+                        <Label htmlFor="university">University / College / TVET</Label>
                         <Input id="university" name="university" value={formData.university} onChange={handleChange} />
                     </div>
                     <div>
-                        <Label htmlFor="graduationYear">Year of Graduation</Label>
+                        <Label htmlFor="graduationYear">Year of Completion</Label>
                         <Input
                             id="graduationYear"
                             name="graduationYear"
@@ -165,11 +149,11 @@ export default function EnrollmentForm({ onSubmit, program }) {
                         >
                             <div className="flex items-center space-x-2">
                                 <RadioGroupItem value="marketing" id="course-marketing" />
-                                <Label htmlFor="course-marketing">Marketing and Digital Strategy</Label>
+                                <Label htmlFor="course-marketing">Digital Marketing</Label>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <RadioGroupItem value="ai" id="course-ai" />
-                                <Label htmlFor="course-ai">AI, Data Science, and Analysis</Label>
+                                <Label htmlFor="course-ai">AI & Data Analytics</Label>
                             </div>
                         </RadioGroup>
                     </div>
@@ -218,7 +202,7 @@ export default function EnrollmentForm({ onSubmit, program }) {
                             </div>
 
                             <div className="sm:col-span-2">
-                                <Label htmlFor="mathBackground">Math & Statistics Background</Label>
+                                <Label htmlFor="mathBackground">Maths & Statistics Background</Label>
                                 <Select value={formData.mathBackground} onValueChange={(v) => handleSelectChange("mathBackground", v)}>
                                     <SelectTrigger id="mathBackground">
                                         <SelectValue placeholder="Select your background" />
@@ -255,10 +239,9 @@ export default function EnrollmentForm({ onSubmit, program }) {
                                         </SelectTrigger>
                                         <SelectContent>
                                             <SelectItem value="1">1 - Not Familiar</SelectItem>
-                                            <SelectItem value="2">2 - Slightly Familiar</SelectItem>
-                                            <SelectItem value="3">3 - Moderately Familiar</SelectItem>
-                                            <SelectItem value="4">4 - Very Familiar</SelectItem>
-                                            <SelectItem value="5">5 - Expert</SelectItem>
+                                            <SelectItem value="2">2 - Beginner</SelectItem>
+                                            <SelectItem value="3">3 - Moderate</SelectItem>
+                                            <SelectItem value="4">4 - Expert</SelectItem>
                                         </SelectContent>
                                     </Select>
                                 </div>
@@ -272,7 +255,7 @@ export default function EnrollmentForm({ onSubmit, program }) {
             {formData.selectedCourse === "marketing" && (
                 <Card>
                     <CardHeader>
-                        <CardTitle>Marketing Experience</CardTitle>
+                        <CardTitle>Digital Marketing Experience</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <Label>Briefly describe any marketing or business experience (optional)</Label>
@@ -318,7 +301,7 @@ export default function EnrollmentForm({ onSubmit, program }) {
                             type="submit"
                             className="w-full"
                         >
-                            Continue to Payment
+                            Continue
                         </Button>
                     </div>
                 </CardContent>

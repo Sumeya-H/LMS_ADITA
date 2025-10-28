@@ -25,22 +25,26 @@ export default function ProgramEnrollmentPage({ params }) {
 
     const handleEnrollmentSubmit = async (data) => {
         setEnrollmentData(data)
-	try {
-      	    const res = await fetch("http://localhost:8000/courses/register/", {
-		method: "POST",
-		headers: {
-        	   "Content-Type": "application/json",
-        	},
-        	body: JSON.stringify(data),
-	    });
-      	    console.log("✅ Registration successful:", res.data);
-      	    alert("Course registered successfully!");
-	    console.log(data)
-            setEnrollmentStep("confirmation")
-    	} catch (err) {
-      	    console.error("❌ Error registering course:", err.response?.data || err.message);
-     	    alert("Error registering course");
-    	}
+        try {
+            const res = await fetch("http://localhost:8000/courses/register/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+            if (res.ok) {
+                console.log("Registration successful:", res.data);
+                alert("Course registered successfully!");
+                console.log(data)
+                setEnrollmentStep("confirmation")
+            }
+            else
+                console.log("Registration failed:", res.data);
+        } catch (err) {
+            console.error("❌ Error registering course:", err.response?.data || err.message);
+            alert("Error registering course");
+        }
     }
 
     const handlePaymentSubmit = (paymentData) => {

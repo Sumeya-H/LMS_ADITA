@@ -6,10 +6,20 @@ import { Badge } from "@/components/ui/badge"
 import { useState } from "react";
 import Link from "next/link"
 import { ArrowLeft, Calendar, Clock, Award, CheckCircle } from "lucide-react"
+import { envetRegistration } from "@/services/eventRegister";
 import { Button } from "react-day-picker";
 
 export default function Events() {
     const [enrollmentStep, setEnrollmentStep] = useState("details")
+    const handleEnrollmentSubmit = async (data) => {
+        try {
+            const res = await envetRegistration(data);
+            setEnrollmentStep("confirmation")
+        } catch (err) {
+            console.error("❌ Error registering course:", err.response?.data || err.message);
+            alert("Error registering course");
+        }
+    }
     return (
         <div className="container py-12">
             <div className="mb-8">
@@ -33,7 +43,7 @@ export default function Events() {
                             <CardDescription>Please complete all required information to enroll in this program.</CardDescription>
                         </CardHeader>
                         <CardContent>
-                            {enrollmentStep === "details" && <NewEnrollmentForm />}
+                            {enrollmentStep === "details" && <NewEnrollmentForm onSubmit={handleEnrollmentSubmit} />}
                             {enrollmentStep === "confirmation" && (
                                 <div className="text-center">
                                     <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">

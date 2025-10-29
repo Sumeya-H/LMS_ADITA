@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
                     <CardContent className="space-y-6">
                         <div className="text-center">
                             <h1 className="text-3xl font-bold text-[#3D2A1A] mb-2">Privacy Policy</h1>
-                            {/* <p className="text-gray-600">Effective Date: October 27, 2025</p>*/}
+                            <p className="text-gray-600">Effective Date: October 27, 2025</p>
                         </div>
 
                         <p>
@@ -37,7 +37,7 @@ export default function PrivacyPolicy() {
                         </p>
 
                         <h2 className="text-2xl font-semibold text-[#3D2A1A]">2. How We Use Your Information</h2>
-                        <p>We use your personal information for the following purposes:</p>
+                        <p>We use your personal information for the following purposes, relying on the legal bases of <strong>performance of a contract, legitimate interest, and your consent </strong>as per Article 6 of the Data Proclamation: </p>
                         <ul className="list-disc pl-6 space-y-1">
                             <li><strong>To Provide Our Services:</strong> Create and manage your account, enroll you in courses, process payments, and deliver course content.</li>
                             <li><strong>To Communicate With You:</strong> Send you course-related announcements, support responses, and updates.</li>
@@ -47,26 +47,44 @@ export default function PrivacyPolicy() {
                         </ul>
 
                         <h2 className="text-2xl font-semibold text-[#3D2A1A]">3. How We Share Your Information</h2>
+                        <p>We do not sell your personal data. We may share your information with third parties only in the following circumstances:</p>
                         <ul className="list-disc pl-6 space-y-1">
-                            <li><strong>Service Providers:</strong> Trusted vendors for payment, hosting, and LMS operations.</li>
-                            <li><strong>Legal Obligation:</strong> If required by law or a government agency.</li>
-                            <li><strong>With Your Consent:</strong> For any other disclosure, we will request your explicit permission.</li>
+                            <li><strong>Service Providers:</strong> With trusted third-party vendors who perform services on our behalf, such as payment processing (e.g., telebirr, Chapa), data hosting (within Ethiopia, as required by law), and LMS platform maintenance. These partners are contractually bound to protect your data. </li>
+                            <li><strong>Legal Obligation:</strong> If required to do so by law or in response to a valid request by a public authority (e.g., a court or government agency in Ethiopia). </li>
+                            <li><strong>With Your Consent:</strong> For any other purpose, we will disclose only with your explicit consent. </li>
                         </ul>
 
-                        <h2 className="text-2xl font-semibold text-[#3D2A1A]">4. Data Storage and Security</h2>
-                        <p>
-                            In compliance with Ethiopian law, your personal data is stored on servers located within the Federal Democratic
-                            Republic of Ethiopia. We implement encryption and strict access controls to prevent unauthorized access or misuse.
-                        </p>
-
-                        <h2 className="text-2xl font-semibold text-[#3D2A1A]">5. Your Data Protection Rights</h2>
-                        <p>Under the Ethiopian Data Proclamation, you have the right to:</p>
+                        <h2 className="text-2xl font-semibold text-[#3D2A1A]">4. Data Storage and Internaltional Transfer</h2>
                         <ul className="list-disc pl-6 space-y-1">
-                            <li>Access and obtain a copy of your data</li>
-                            <li>Request correction of inaccurate or incomplete data</li>
-                            <li>Request deletion (“right to be forgotten”) under certain conditions</li>
-                            <li>Restrict or object to data processing</li>
-                            <li>Opt out of marketing communications</li>
+                            <li>
+                                <strong>Data Localization:</strong> In compliance with Article 6 of the Ethiopian Data Proclamation, we will store and process your personal data on servers located <strong> within the Federal Democratic Republic of Ethiopia.</strong>
+                            </li>
+                            <li>
+                                <strong>Security:</strong> We implement appropriate technical and organizational measures (e.g., encryption, access controls) to protect your data against unauthorized access, alteration, or destruction.
+                            </li>
+                        </ul>
+                        <h2 className="text-2xl font-semibold text-[#3D2A1A]">5. Your Data Protection Rights (As Per Ethiopian Law)</h2>
+                        <p>Under the Ethiopian Data Proclamation, you have the following rights regarding your personal data:</p>
+                        <ul className="list-disc pl-6 space-y-1">
+
+
+
+
+                            <li>
+                                <strong>Right of Access:</strong> You can request a copy of the personal data we hold about you.
+                            </li>
+                            <li>
+                                <strong>Right to Rectification:</strong> You can request correction of inaccurate or incomplete data.
+                            </li>
+                            <li>
+                                <strong>Right to Erasure (Right to be forgotten):</strong> You can request the deletion of your personal data under certain conditions.
+                            </li>
+                            <li>
+                                <strong>Right to Restrict Processing:</strong> You can request that we temporarily or permanently stop processing all or some of your personal data.
+                            </li>
+                            <li>
+                                <strong>Right to Object:</strong> You can object to the processing of your personal data for specific purposes, such as direct marketing.
+                            </li>
                         </ul>
                         <p>
                             To exercise these rights, contact our Data Protection Officer at{" "}
@@ -75,27 +93,24 @@ export default function PrivacyPolicy() {
 
                         <h2 className="text-2xl font-semibold text-[#3D2A1A]">6. Data Retention</h2>
                         <p>
-                            We retain your data only as long as necessary for educational, legal, or accounting purposes, after which it is
-                            securely deleted or anonymized.
+                            We will retain your personal data only for as long as necessary to fulfill the purposes outlined in this policy, including for academic record-keeping, legal, or accounting requirements. We will securely delete or anonymize your data upon the expiration of the retention period.
                         </p>
 
                         <h2 className="text-2xl font-semibold text-[#3D2A1A]">7. Cookies and Tracking</h2>
                         <p>
-                            Our website uses cookies to enhance your experience. You can disable cookies in your browser settings, but some
-                            site features may not function properly.
+                            Our website uses cookies to distinguish you from other users, which help us provide a better experience. You can set your browser to refuse all or some browser cookies, but this may impair the functionality of our website.
                         </p>
 
                         <h2 className="text-2xl font-semibold text-[#3D2A1A]">8. Contact Us</h2>
                         <p>
-                            For any questions or to exercise your rights, contact our Data Protection Officer: <br />
+                            If you have any questions about this Privacy Policy or wish to exercise your data rights, please contact our Data Protection Officer at: <br />
                             <strong>Email:</strong>{" "}
                             <a href="mailto:info@aditacademy.co" className="text-blue-600 underline">info@aditacademy.co</a>
                         </p>
 
                         <h2 className="text-2xl font-semibold text-[#3D2A1A]">9. Changes to This Privacy Policy</h2>
                         <p>
-                            We may update this policy from time to time. The latest version will always be posted on our website with an updated
-                            “Effective Date.” Continued use of our services signifies your acceptance of these changes.
+                            We may update this policy from time to time. The updated version will be indicated by an updated "Effective Date" and will be effective as soon as it is accessible. We will notify you of any material changes via email or a prominent notice on our service.
                         </p>
                     </CardContent>
                 </Card>

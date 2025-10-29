@@ -13,25 +13,24 @@ import { Checkbox } from "@/components/ui/checkbox"
 
 export default function EnrollmentForm({ onSubmit }) {
     const [formData, setFormData] = useState({
-        fullName: "",
+        event: "7f9e54a8-5be1-4de3-9e28-9db71e687f23",
+        full_name: "",
         email: "",
         phone: "",
-        country: "",
         city: "",
-        subCity: "",
+        sub_city: "",
         university: "",
-        graduationYear: "",
-        background: "",
-        selectedCourse: "none", // "marketing" | "ai"
+        graduation_year: "",
+        field_of_study: "",
+        selected_course: "none", // "marketing" | "ai"
         // course-specific
-        marketingExperience: "",
-        programmingExperience: "none", // none | basic | intermediate | advanced
-        dataTools: "none", // none | excel | python | r | powerbi
-        mathBackground: "none", // none | basic | intermediate | advanced
+        marketing_experience: "",
+        programming_experience: "none", // none | basic | intermediate | advanced
+        data_tools: "none", // none | excel | python | r | powerbi
+        math_background: "none", // none | basic | intermediate | advanced
         familiarity: { ml: "1", visualization: "1", sql: "1" }, // 1-5
         // common
         motivation: "",
-        goals: "",
         referral: "",
         agreeTerms: false,
     })
@@ -57,16 +56,16 @@ export default function EnrollmentForm({ onSubmit }) {
 
     // Simple eligibility check for AI: require at least SOME background in either programming, data tools or math.
     const aiEligibility = useMemo(() => {
-        if (formData.selectedCourse !== "ai") return true // not applicable
-        const hasProg = formData.programmingExperience && formData.programmingExperience !== "none"
-        const hasData = formData.dataTools && formData.dataTools !== "none"
-        const hasMath = formData.mathBackground && formData.mathBackground !== "none"
+        if (formData.selected_course !== "ai") return true // not applicable
+        const hasProg = formData.programming_experience && formData.programming_experience !== "none"
+        const hasData = formData.data_tools && formData.data_tools !== "none"
+        const hasMath = formData.math_background && formData.math_background !== "none"
         return hasProg || hasData || hasMath
     }, [
-        formData.selectedCourse,
-        formData.programmingExperience,
-        formData.dataTools,
-        formData.mathBackground,
+        formData.selected_course,
+        formData.programming_experience,
+        formData.data_tools,
+        formData.math_background,
     ])
 
     const handleSubmit = (e) => {
@@ -85,8 +84,8 @@ export default function EnrollmentForm({ onSubmit }) {
                 </CardHeader>
                 <CardContent className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                        <Label htmlFor="fullName">Full Name</Label>
-                        <Input id="fullName" name="fullName" value={formData.fullName} onChange={handleChange} required />
+                        <Label htmlFor="full_name">Full Name</Label>
+                        <Input id="full_name" name="full_name" value={formData.full_name} onChange={handleChange} required />
                     </div>
                     <div>
                         <Label htmlFor="email">Email</Label>
@@ -101,8 +100,8 @@ export default function EnrollmentForm({ onSubmit }) {
                         <Input id="city" name="city" value={formData.city} onChange={handleChange} required />
                     </div>
                     <div>
-                        <Label htmlFor="subCity">Sub City</Label>
-                        <Input id="subCity" name="subCity" value={formData.subCity} onChange={handleChange} required />
+                        <Label htmlFor="sub_city">Sub City</Label>
+                        <Input id="sub_city" name="sub_city" value={formData.sub_city} onChange={handleChange} required />
                     </div>
                 </CardContent>
             </Card>
@@ -117,16 +116,20 @@ export default function EnrollmentForm({ onSubmit }) {
                         <Label htmlFor="university">University / College / TVET</Label>
                         <Input id="university" name="university" value={formData.university} onChange={handleChange} />
                     </div>
+                    <div className="space-y-2 sm:col-span-2">
+                        <Label htmlFor="field_of_study">Field of Study / Major</Label>
+                        <Input id="field_of_study" name="field_of_study" value={formData.field_of_study} onChange={handleChange} required />
+                    </div>
                     <div>
-                        <Label htmlFor="graduationYear">Year of Completion</Label>
+                        <Label htmlFor="graduation_year">Year of Completion</Label>
                         <Input
-                            id="graduationYear"
-                            name="graduationYear"
+                            id="graduation_year"
+                            name="graduation_year"
                             type="number"
                             min="1900"
                             max={new Date().getFullYear()}
                             placeholder="e.g. 2023"
-                            value={formData.graduationYear}
+                            value={formData.graduation_year}
                             onChange={handleChange}
                         />
                     </div>
@@ -142,8 +145,8 @@ export default function EnrollmentForm({ onSubmit }) {
                     <Label>Select the accelerated program you want to apply for</Label>
                     <div className="mt-3 space-y-3">
                         <RadioGroup
-                            value={formData.selectedCourse}
-                            onValueChange={(value) => handleSelectChange("selectedCourse", value)}
+                            value={formData.selected_course}
+                            onValueChange={(value) => handleSelectChange("selected_course", value)}
                             className="space-y-2"
                         >
                             <div className="flex items-center space-x-2">
@@ -159,7 +162,7 @@ export default function EnrollmentForm({ onSubmit }) {
                 </CardContent>
             </Card>
             {/* Conditional: AI fields (only when AI is selected) */}
-            {formData.selectedCourse === "ai" && (
+            {formData.selected_course === "ai" && (
                 <>
                     <Card>
                         <CardHeader>
@@ -167,12 +170,12 @@ export default function EnrollmentForm({ onSubmit }) {
                         </CardHeader>
                         <CardContent className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div className="sm:col-span-2">
-                                <Label htmlFor="programmingExperience">Programming Experience</Label>
+                                <Label htmlFor="programming_experience">Programming Experience</Label>
                                 <Select
-                                    value={formData.programmingExperience}
-                                    onValueChange={(v) => handleSelectChange("programmingExperience", v)}
+                                    value={formData.programming_experience}
+                                    onValueChange={(v) => handleSelectChange("programming_experience", v)}
                                 >
-                                    <SelectTrigger id="programmingExperience">
+                                    <SelectTrigger id="programming_experience">
                                         <SelectValue placeholder="Select experience level" />
                                     </SelectTrigger>
                                     <SelectContent>
@@ -185,9 +188,9 @@ export default function EnrollmentForm({ onSubmit }) {
                             </div>
 
                             <div className="sm:col-span-2">
-                                <Label htmlFor="dataTools">Data Tools Familiarity</Label>
-                                <Select value={formData.dataTools} onValueChange={(v) => handleSelectChange("dataTools", v)}>
-                                    <SelectTrigger id="dataTools">
+                                <Label htmlFor="data_tools">Data Tools Familiarity</Label>
+                                <Select value={formData.data_tools} onValueChange={(v) => handleSelectChange("data_tools", v)}>
+                                    <SelectTrigger id="data_tools">
                                         <SelectValue placeholder="Select familiarity" />
                                     </SelectTrigger>
                                     <SelectContent>
@@ -201,9 +204,9 @@ export default function EnrollmentForm({ onSubmit }) {
                             </div>
 
                             <div className="sm:col-span-2">
-                                <Label htmlFor="mathBackground">Maths & Statistics Background</Label>
-                                <Select value={formData.mathBackground} onValueChange={(v) => handleSelectChange("mathBackground", v)}>
-                                    <SelectTrigger id="mathBackground">
+                                <Label htmlFor="math_background">Maths & Statistics Background</Label>
+                                <Select value={formData.math_background} onValueChange={(v) => handleSelectChange("math_background", v)}>
+                                    <SelectTrigger id="math_background">
                                         <SelectValue placeholder="Select your background" />
                                     </SelectTrigger>
                                     <SelectContent>
@@ -251,7 +254,7 @@ export default function EnrollmentForm({ onSubmit }) {
             )}
 
             {/* Marketing-specific brief field (optional) */}
-            {formData.selectedCourse === "marketing" && (
+            {formData.selected_course === "marketing" && (
                 <Card>
                     <CardHeader>
                         <CardTitle>Digital Marketing Experience</CardTitle>
@@ -259,8 +262,8 @@ export default function EnrollmentForm({ onSubmit }) {
                     <CardContent>
                         <Label>Briefly describe any marketing or business experience (optional)</Label>
                         <Textarea
-                            name="marketingExperience"
-                            value={formData.marketingExperience}
+                            name="marketing_experience"
+                            value={formData.marketing_experience}
                             onChange={handleChange}
                             placeholder="Internships, projects, courses, tools (Google Ads, Meta, Canva), etc."
                             rows={3}
@@ -282,6 +285,22 @@ export default function EnrollmentForm({ onSubmit }) {
                         onChange={handleChange}
                         placeholder="Write a short answer"
                     />
+                    <div className="sm:col-span-2">
+                        <Label htmlFor="referral">How did you hear about us?</Label>
+                        <Select value={formData.referral} onValueChange={(v) => handleSelectChange("referral", v)}>
+                            <SelectTrigger id="referral">
+                                <SelectValue placeholder="Select an option" />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectItem value="social-media">Social Media</SelectItem>
+                                <SelectItem value="friend">Friend or Colleague</SelectItem>
+                                <SelectItem value="search">Search Engine</SelectItem>
+                                <SelectItem value="event">Event or Conference</SelectItem>
+                                <SelectItem value="advertisement">Advertisement</SelectItem>
+                                <SelectItem value="other">Other</SelectItem>
+                            </SelectContent>
+                        </Select>
+                    </div>
                     <div className="space-y-2">
                         <div className="flex items-start space-x-2">
                             <Checkbox

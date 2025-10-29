@@ -22,26 +22,18 @@ const teamMembers = [
         twitter: "#",
     },
     {
+        name: "Dr. Sultan Feisso",
+        role: "Co-founder & Deputy CEO",
+        bio: "He is Senior Business Development Consultant with a strong background in ICT. He is also Associate Prof. of Electrical & Computer Engineering at AASTU. He is certified ISO/IEC 2700:2022 Lead Implementer.",
+        image: "/images/teams/sultan_meko.jpeg",
+        linkedin: "#",
+        twitter: "#",
+    },
+    {
         name: "Prof. Abebe Geletu",
         role: "Co-Founder & Strategic Advisor",
         bio: "Co-founder of ADITA, Phd, Ilmenau University of Technology, Germany D.Sc. (habil.), German Research Chair, AIMS Rwanda",
         image: "/images/teams/abebe_geletu.jpeg",
-        linkedin: "#",
-        twitter: "#",
-    },
-    {
-        name: "Mr. Ansar Yusuf",
-        role: "Co-Founder & Technical Advisor",
-        bio: "seasoned Technical Advisor in the IT industry, renowned for his deep technical expertise and strategic vision. With a proven track record of guiding companies through complex technological landscapes",
-        image: "/images/teams/ansar_yusuf.jpg",
-        linkedin: "#",
-        twitter: "#",
-    },
-    {
-        name: "Mr. Ewnetu Abera",
-        role: "Co-founder & Strategic Advisor",
-        bio: "Co-founder of ADITA, CEO at Perago Systems, Cofounder and Board Chairperson at Addispay Financial Technology SC & Addis Systems, Cofounder and Board Chairperson at Muyalogy.com",
-        image: "/images/teams/ewnetu_abera.jpeg",
         linkedin: "#",
         twitter: "#",
     },
@@ -54,10 +46,18 @@ const teamMembers = [
         twitter: "#",
     },
     {
-        name: "Dr. Sultan Feisso",
-        role: "Co-founder & Deputy CEO",
-        bio: "Co-founder & Deputy CEO of ADITA, He is Senior Business Development Consultant with a strong background in ICT. He has also strong research experiences and has guided several MSc and PhD students in universities. He is certified ISO/IEC 2700:2022 Lead Implimenter",
-        image: "/images/teams/sultan_meko.jpeg",
+        name: "Mr. Ewnetu Abera",
+        role: "Co-founder & Technical Advisor",
+        bio: "Co-founder of ADITA, CEO at Perago Systems, Cofounder and Board Chairperson at Addispay Financial Technology SC & Addis Systems, Cofounder and Board Chairperson at Muyalogy.com",
+        image: "/images/teams/ewnetu_abera.jpeg",
+        linkedin: "#",
+        twitter: "#",
+    },
+    {
+        name: "Mr. Ansar Yusuf",
+        role: "Co-Founder & Technical Advisor",
+        bio: "seasoned Technical Advisor in the IT industry, renowned for his deep technical expertise and strategic vision. With a proven track record of guiding companies through complex technological landscapes",
+        image: "/images/teams/ansar_yusuf.jpg",
         linkedin: "#",
         twitter: "#",
     },
@@ -65,7 +65,7 @@ const teamMembers = [
 
 export default function TeamSection() {
     return (
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {teamMembers.map((member) => (
                 <Card key={member.name} className="overflow-hidden">
                     <div className="aspect-square relative w-40 mx-auto">

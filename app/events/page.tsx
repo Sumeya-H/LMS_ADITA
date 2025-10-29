@@ -6,28 +6,15 @@ import { Badge } from "@/components/ui/badge"
 import { useState } from "react";
 import Link from "next/link"
 import { ArrowLeft, Calendar, Clock, Award, CheckCircle } from "lucide-react"
+import { envetRegistration } from "@/services/eventRegister";
 import { Button } from "react-day-picker";
 
 export default function Events() {
     const [enrollmentStep, setEnrollmentStep] = useState("details")
     const handleEnrollmentSubmit = async (data) => {
-        setEnrollmentStep("confirmation")
         try {
-            const res = await fetch("http://localhost:8000/courses/register/", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data),
-            });
-            if (res.ok) {
-                console.log("Registration successful:", res.data);
-                alert("Course registered successfully!");
-                console.log(data)
-                setEnrollmentStep("confirmation")
-            }
-            else
-                console.log("Registration failed:", res.data);
+            const res = await envetRegistration(data);
+            setEnrollmentStep("confirmation")
         } catch (err) {
             console.error("❌ Error registering course:", err.response?.data || err.message);
             alert("Error registering course");

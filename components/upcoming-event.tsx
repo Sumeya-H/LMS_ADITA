@@ -76,8 +76,7 @@ export default function UpcomingTrainingEvent() {
                         <div className="pt-4">
                             <Button className="bg-[#52331E] hover:bg-[#3a2416] text-white px-8 py-6 text-lg rounded-full">
                                 <BookOpenIcon className="h-5 w-5 mr-2" />
-                                {/*<Link href={`/events/`}>Register Now</Link>*/}
-                                <Link href={`/`}>Register Now</Link>
+                                <Link href={`/events/`}>Register Now</Link>
                             </Button>
                             <p className="mt-4 text-sm text-gray-600">
                                 For inquiries, contact us at: info@aditacademy.co

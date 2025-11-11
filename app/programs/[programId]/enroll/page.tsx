@@ -26,7 +26,7 @@ export default function ProgramEnrollmentPage({ params }) {
     const handleEnrollmentSubmit = async (data) => {
         setEnrollmentData(data)
         try {
-            const res = await fetch("http://localhost:8000/courses/register/", {
+            const res = await fetch("http://localhost:8000/api/courses/register/", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

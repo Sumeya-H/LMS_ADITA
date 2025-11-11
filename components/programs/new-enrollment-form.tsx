@@ -148,6 +148,7 @@ export default function EnrollmentForm({ onSubmit }) {
                             value={formData.selected_course}
                             onValueChange={(value) => handleSelectChange("selected_course", value)}
                             className="space-y-2"
+                            required
                         >
                             <div className="flex items-center space-x-2">
                                 <RadioGroupItem value="marketing" id="course-marketing" />

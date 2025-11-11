@@ -69,6 +69,8 @@ export default function ProgramsPage() {
                             <TabsTrigger value="infrastructure">Infrastructure</TabsTrigger>
                             <TabsTrigger value="design">Design</TabsTrigger>
                             <TabsTrigger value="emerging-tech">Emerging Technology</TabsTrigger>
+                            <TabsTrigger value="cyber-security">Cyber Security</TabsTrigger>
+                            <TabsTrigger value="digital-marketing">Digital Marketing</TabsTrigger>
                             <TabsTrigger value="soft-skills">Soft Skills</TabsTrigger>
                             <TabsTrigger value="workshops">Workshops</TabsTrigger>
                             <TabsTrigger value="corporate">Corporate</TabsTrigger>
@@ -152,6 +154,27 @@ export default function ProgramsPage() {
                                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                                     {filteredCourses
                                         .filter((program) => program.type === "emerging-tech")
+                                        .map((program) => (
+                                            <ProgramCard key={program.id} program={program} />
+                                        ))}
+                                </div>
+                            </TabsContent>
+
+                            <TabsContent value="cyber-security" className="mt-0">
+                                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                                    {filteredCourses
+                                        .filter((program) => program.type === "cybersecurity")
+                                        .map((program) => (
+                                            <ProgramCard key={program.id} program={program} />
+                                        ))}
+                                </div>
+                            </TabsContent>
+
+
+                            <TabsContent value="digital-marketing" className="mt-0">
+                                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                                    {filteredCourses
+                                        .filter((program) => program.type === "marketing")
                                         .map((program) => (
                                             <ProgramCard key={program.id} program={program} />
                                         ))}
@@ -376,5 +399,71 @@ const programs = [
         price: "$250",
         pricePeriod: "one-time",
         image: "/images/courses/ai-iot-foundations.jpg"
-    }
+    },
+
+    {
+        id: "digital-marketing",
+        title: "Digital Marketing",
+        description: "Gain essential digital marketing skills to excel in today’s online business environment. Learn SEO, content marketing, and analytics to design data-driven campaigns and grow brands effectively.",
+        type: "marketing",
+        duration: "8 weeks",
+        level: "Beginner to Intermediate",
+        format: "Online & In-person",
+        audience: ["Students", "Aspiring Marketers", "Entrepreneurs"],
+        price: "$200",
+        pricePeriod: "one-time",
+        image: "/images/courses/digital-marketing.jpg"
+    },
+    {
+        id: "social-media-marketing",
+        title: "Social Media Marketing",
+        description: "Master social media marketing and performance advertising. Learn to build brands, manage campaigns, and use AI tools for digital growth.",
+        type: "marketing",
+        duration: "12 weeks",
+        level: "Intermediate",
+        format: "Online & In-person",
+        audience: ["Students", "Marketers", "Entrepreneurs", "Freelancers"],
+        price: "$250",
+        pricePeriod: "one-time",
+        image: "/images/courses/social-media-marketing.jpg"
+    },
+    {
+        id: "business-strategy-and-marketing",
+        title: "Business Strategy and Marketing",
+        description: "Learn to build and execute powerful business and marketing strategies that drive sustainable growth, brand strength, and competitive advantage.",
+        type: "marketing",
+        duration: "10 Days (Classroom) / 14 Days (Online)",
+        level: "Intermediate",
+        format: "Online & In-person",
+        audience: ["Entrepreneurs", "Managers", "Marketers", "Consultants"],
+        price: "$300",
+        pricePeriod: "one-time",
+        image: "/images/courses/business-strategy-and-marketing.jpg"
+    },
+    {
+        id: "cyber-security",
+        title: "Cyber Security",
+        description: "Learn how to identify, assess, and mitigate cyber threats through hands-on training in system defense, cryptography, and incident response.",
+        type: "cybersecurity",
+        duration: "7 Days (Online) / 5 Days (Classroom)",
+        level: "Beginner to Intermediate",
+        format: "Online & In-person",
+        audience: ["IT Professionals", "Security Analysts", "Managers"],
+        price: "$250",
+        pricePeriod: "one-time",
+        image: "/images/courses/cyber-security.jpg"
+    },
+    {
+        id: "digital-skills-healthcare",
+        title: "Digital Skills for Healthcare",
+        description: "Equip healthcare professionals with the digital tools and knowledge to improve patient care, data security, and operational efficiency.",
+        type: "corporate",
+        duration: "8 weeks",
+        level: "Beginner to Intermediate",
+        format: "Online & In-person",
+        audience: ["Doctors", "Nurses", "IT Staff", "Managers"],
+        price: "$300",
+        pricePeriod: "one-time",
+        image: "/images/courses/digital-skills-healthcare.jpg"
+    },
 ]

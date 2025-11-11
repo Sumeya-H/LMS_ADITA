@@ -12,6 +12,10 @@ import { Button } from "react-day-picker";
 export default function Events() {
     const [enrollmentStep, setEnrollmentStep] = useState("details")
     const handleEnrollmentSubmit = async (data) => {
+        if (!!data.selected_course) {
+            alert("Choose one of the courses to register");
+            return
+        }
         try {
             const res = await envetRegistration(data);
             setEnrollmentStep("confirmation")

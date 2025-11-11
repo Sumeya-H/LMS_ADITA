@@ -12,8 +12,9 @@ import Link from "next/link"
 
 export default function EnrollmentForm({ onSubmit, program }) {
     const [formData, setFormData] = useState({
-        firstName: "",
-        lastName: "",
+        course: program.reg_id,
+        first_name: "",
+        last_name: "",
         email: "",
         phone: "",
         country: "",
@@ -53,12 +54,12 @@ export default function EnrollmentForm({ onSubmit, program }) {
                 <h3 className="text-lg font-medium">Personal Information</h3>
                 <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div className="space-y-2">
-                        <Label htmlFor="firstName">First Name</Label>
-                        <Input id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} required />
+                        <Label htmlFor="first_name">First Name</Label>
+                        <Input id="first_name" name="first_name" value={formData.first_name} onChange={handleChange} required />
                     </div>
                     <div className="space-y-2">
-                        <Label htmlFor="lastName">Last Name</Label>
-                        <Input id="lastName" name="lastName" value={formData.lastName} onChange={handleChange} required />
+                        <Label htmlFor="last_name">Last Name</Label>
+                        <Input id="last_name" name="last_name" value={formData.last_name} onChange={handleChange} required />
                     </div>
                     <div className="space-y-2">
                         <Label htmlFor="email">Email</Label>

@@ -39,7 +39,7 @@ export default function Header() {
                 priority
               />
             </div>
-            <span className="hidden font-bold text-base sm:inline-block">Africa Digital & Innovation Technology Academy</span>
+            <span className="hidden font-bold text-base sm:inline-block">African Digital & Innovation Technology Academy</span>
           </Link>
         </div>
 

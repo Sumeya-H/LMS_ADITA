@@ -203,7 +203,12 @@ export default function ProgramDetailPage({ params }) {
                                                     </div>
                                                 </div>
                                                 <Button asChild className="mt-4 sm:mt-0">
+<<<<<<< HEAD
                                                     <Link href={enrollHref}>Enroll Now</Link>
+=======
+                                                    <Link href={`/programs/${programId}/enroll`}>Enroll Now</Link>
+                                                    {/* <Link href={`/programs/${programId}`}>Enroll Now</Link>*/}
+>>>>>>> 8c587ad (added a couple of courses)
                                                 </Button>
                                             </CardContent>
                                         </Card>
@@ -279,8 +284,8 @@ export default function ProgramDetailPage({ params }) {
                                 <div className="mt-6 border-t pt-6">
                                     {/*<p className="text-center text-2xl font-bold text-primary">{program.price}</p>*/}
                                     <Button asChild className="mt-4 w-full">
-                                        {/*<Link href={`/programs/${programId}/enroll`}>Enroll Now</Link>*/}
-                                        <Link href={enrollHref}>Enroll Now</Link>
+                                        <Link href={`/programs/${programId}/enroll`}>Enroll Now</Link>
+                                        {/*<Link href={`/programs/${programId}`}>Enroll Now</Link>*/}
                                     </Button>
                                 </div>
                             </CardContent>

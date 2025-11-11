@@ -1,5 +1,6 @@
 export const programs = [
     {
+        reg_id: "5731e4ed-9a5b-427d-9338-c05cb5b417ab",
         id: "data-analysis-visualization",
         title: "Data Analysis and Visualization with Python",
         description: "Learn to analyze and visualize data using Python with Pandas, NumPy, and Matplotlib. Gain practical experience in cleaning datasets, performing analysis, and communicating insights effectively.",
@@ -68,6 +69,7 @@ export const programs = [
         image: "/images/courses/data-analysis-python.webp"
     },
     {
+        reg_id: "",
         id: "frontend-development",
         title: "Frontend Development",
         description: "Master the essentials of web interface design and development using HTML, CSS, and JavaScript. Learn responsive design principles and build modern interfaces with React or Angular.",
@@ -135,6 +137,7 @@ export const programs = [
         image: "/images/courses/frontend-development.webp"
     },
     {
+        reg_id: "",
         id: "backend-development",
         title: "Backend Development",
         description: "Develop robust server-side applications using Node.js, design and manage databases, and learn to build scalable APIs with strong security and performance considerations.",
@@ -202,6 +205,7 @@ export const programs = [
         image: "/images/courses/backend-development.webp"
     },
     {
+        reg_id: "",
         id: "fullstack-development",
         title: "Full Stack Development",
         description: "Integrate frontend and backend technologies to build complete web applications. Learn deployment, continuous integration, and advanced development workflows.",
@@ -264,6 +268,7 @@ export const programs = [
         image: "/images/courses/fullstack-development.webp"
     },
     {
+        reg_id: "",
         id: "cloud-computing",
         title: "Cloud Computing",
         description: "Gain a practical understanding of cloud computing services, storage, deployment, and security. Learn how to build and deploy applications on AWS, Azure, and Google Cloud.",
@@ -331,6 +336,7 @@ export const programs = [
         image: "/images/courses/cloud-computing.webp"
     },
     {
+        reg_id: "",
         id: "mobile-development",
         title: "Mobile Application Development",
         description: "Create powerful cross-platform mobile apps using Flutter or React Native. Learn design, backend integration, and performance optimization techniques.",
@@ -393,6 +399,7 @@ export const programs = [
         image: "/images/courses/mobile-app-dev.webp"
     },
     {
+        reg_id: "",
         id: "android-ios-development",
         title: "Android and iOS Development",
         description: "Develop native mobile applications using Android Studio and Xcode. Learn mobile UI design, data handling, and integration with backend services.",
@@ -455,6 +462,7 @@ export const programs = [
         image: "/images/courses/android-ios-dev.webp"
     },
     {
+        reg_id: "",
         id: "graphic-design",
         title: "Graphic Designing",
         description: "Learn the principles of visual communication and branding. Master Adobe Photoshop and Illustrator to create stunning designs for web and print.",
@@ -517,6 +525,7 @@ export const programs = [
         image: "/images/courses/graphic-design.webp"
     },
     {
+        reg_id: "",
         id: "blockchain-technology",
         title: "Blockchain Technology",
         description: "Understand blockchain architecture, cryptography, and consensus algorithms. Learn real-world applications and hands-on smart contract development.",
@@ -584,6 +593,7 @@ export const programs = [
         image: "/images/courses/blockchain.webp"
     },
     {
+        reg_id: "",
         id: "foundations-ai-iot",
         title: "Foundations of AI and IoT Solutions",
         description: "Explore the integration of Artificial Intelligence and IoT systems. Learn to connect sensors, microcontrollers, and AI models to design smart, connected solutions for real-world problems.",
@@ -1507,10 +1517,148 @@ export const programs = [
                     "Professional online communication",
                     "Netiquette in emails and chats",
                     "Responsible social media use"
+=======
+        image: "/images/courses/ai-iot-foundations.jpg"
+    },
+    {
+        reg_id: "",
+        id: "digital-marketing",
+        title: "Digital Marketing",
+        description: "Gain essential digital marketing skills to excel in today’s online business environment. Learn SEO, content marketing, and analytics to design data-driven campaigns and grow brands effectively.",
+        longDescription: "The Digital Marketing Module Syllabus is designed to equip trainees with the essential skills needed to thrive in the ever-evolving digital landscape. Covering SEO, content marketing, analytics, and strategy, this course helps participants understand how to leverage digital tools to achieve marketing objectives. With the increasing demand for digital marketing experts, trainees will learn how to stay ahead of trends and develop a comprehensive understanding of online marketing strategies.",
+        type: "marketing",
+        duration: "8 weeks",
+        level: "Beginner to Intermediate",
+        format: "Online & In-person",
+        audience: ["Students", "Aspiring Marketers", "Entrepreneurs"],
+        price: "$200",
+        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Ms. Zainab Okoro",
+                title: "Digital Marketing Strategist",
+                bio: "Marketing professional with over 8 years of experience in SEO, SEM, and digital strategy across global brands.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20marketer"
+            },
+            {
+                name: "Mr. Joseph Adeyemi",
+                title: "SEO & Analytics Expert",
+                bio: "Data-driven marketer specializing in search engine optimization, web analytics, and content strategy.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20seo%20expert"
+            }
+        ],
+        modules: [
+            {
+                title: "Fundamentals of Digital Marketing",
+                duration: "1 week",
+                topics: [
+                    "Marketing Objectives",
+                    "Business and Competitive Analysis",
+                    "Customer Engagement",
+                    "Brand Development",
+                    "Campaign Execution",
+                    "Market Analysis"
+                ]
+            },
+            {
+                title: "Market Research",
+                duration: "1 week",
+                topics: [
+                    "Market Understanding",
+                    "Buyer Persona Development",
+                    "Value Proposition Design",
+                    "Survey Development",
+                    "Digital Marketing Strategies"
+                ]
+            },
+            {
+                title: "Introduction to SEO",
+                duration: "1 week",
+                topics: [
+                    "SEO Fundamentals",
+                    "Search Engines and SERPs",
+                    "SEO Practices and Ethics",
+                    "Keyword Essentials",
+                    "Keyword Research Techniques",
+                    "Advanced Keyword Analysis"
+                ]
+            },
+            {
+                title: "On-Page SEO",
+                duration: "1 week",
+                topics: [
+                    "On-Page SEO Basics",
+                    "Meta Tag Optimization",
+                    "Website Structure and Internal Linking",
+                    "Content and SEO Integration",
+                    "Avoiding Common SEO Mistakes",
+                    "Comprehensive On-Page SEO Strategies",
+                    "SEO Authority Factors"
+                ]
+            },
+            {
+                title: "Technical SEO",
+                duration: "1 week",
+                topics: [
+                    "Technical SEO Fundamentals",
+                    "Sitemap Implementation",
+                    "Robots.txt and Access Control",
+                    "Link and Redirection Management",
+                    "Enhancing SEO with Meta Tags",
+                    "Security and SEO",
+                    "Optimizing Site Performance and Mobile Usability",
+                    "Advanced SEO Tools and Extensions",
+                    "Schema Markup: Implementation and Validation"
+                ]
+            },
+            {
+                title: "Web Analytics & Monitoring",
+                duration: "1 week",
+                topics: [
+                    "Introduction to Google Search Console",
+                    "Setup and Configuration of GSC",
+                    "Sitemap Management in GSC",
+                    "URL Inspection Techniques",
+                    "Overview of Google Analytics",
+                    "Setting Up Google Analytics",
+                    "Advanced Reporting in Google Analytics",
+                    "Introduction to Google Analytics 4",
+                    "SEO Performance Reporting"
+                ]
+            },
+            {
+                title: "Off-Page SEO & Reporting",
+                duration: "1 week",
+                topics: [
+                    "Off-Page SEO Basics",
+                    "Understanding Backlinks",
+                    "Backlink Types",
+                    "Backlink Acquisition Strategies",
+                    "Content Submission Techniques",
+                    "Link Building Best Practices",
+                    "The Importance of Site Audits",
+                    "Conducting Site Audits",
+                    "Technical SEO Audits"
+                ]
+            },
+            {
+                title: "Content Marketing",
+                duration: "1 week",
+                topics: [
+                    "Introduction to Content Marketing",
+                    "Benefits of Content Marketing",
+                    "Types of Content Marketing",
+                    "Content Marketing Funnel: TOFU, MOFU, BOFU",
+                    "Audience Research and Strategy",
+                    "Copywriting vs. Content Writing",
+                    "Role of Copywriting in Marketing",
+                    "Effective Copywriting Techniques"
+>>>>>>> 8c587ad (added a couple of courses)
                 ]
             }
         ],
         outcomes: [
+<<<<<<< HEAD
             "Operate computers and essential software applications confidently",
             "Manage files and use digital collaboration tools effectively",
             "Apply safe online practices and protect personal data",
@@ -1610,10 +1758,242 @@ export const programs = [
                     "Connecting Office apps",
                     "Using productivity tools like Notion and Canva",
                     "Basic automation with macros and templates"
+=======
+            "Develop and execute effective digital marketing campaigns",
+            "Apply SEO best practices to improve online visibility",
+            "Analyze web traffic and performance using analytics tools",
+            "Create engaging content strategies aligned with brand goals",
+            "Understand and apply both on-page and off-page SEO techniques"
+        ],
+        requirements: [
+            "Laptop with internet access",
+            "Basic computer literacy",
+            "Interest in marketing or online business",
+            "No prior marketing experience required"
+        ],
+        certification: "ADITA Digital Marketing Certificate",
+        image: "/images/courses/digital-marketing.jpg"
+    },
+
+    {
+        reg_id: "",
+        id: "social-media-marketing",
+        title: "Social Media Marketing",
+        description: "Master the art of social media marketing and advertising. Learn to build brands, manage campaigns, run Meta and Google Ads, and leverage AI tools to create high-performing digital strategies.",
+        longDescription: "The Social Media Marketing Module Syllabus is designed to equip trainees with the essential skills needed to thrive in the ever-evolving digital landscape. Extending from the Fundamentals of Digital Marketing, this course covers advanced topics including content marketing, email campaigns, influencer collaborations, Meta Ads, Google Ads, and data analytics. Trainees will gain practical, hands-on experience in managing paid campaigns, tracking conversions, and using AI tools to optimize marketing workflows for maximum ROI.",
+        type: "marketing",
+        duration: "12 weeks",
+        level: "Intermediate",
+        format: "Online & In-person",
+        audience: ["Students", "Aspiring Marketers", "Business Owners", "Freelancers"],
+        price: "$250",
+        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Ms. Aisha Balogun",
+                title: "Social Media Strategist",
+                bio: "Experienced digital marketing professional specializing in social media strategy, influencer marketing, and performance campaigns.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20social%20media%20expert"
+            },
+            {
+                name: "Mr. David Okeke",
+                title: "Performance Marketing Specialist",
+                bio: "Digital advertising expert with deep knowledge in Meta Ads, Google Ads, and analytics-driven campaign optimization.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20marketing%20specialist"
+            }
+        ],
+        modules: [
+            {
+                title: "Fundamentals of Social Media Marketing",
+                duration: "1 week",
+                topics: [
+                    "Social Media Marketing Basics",
+                    "SMM Strategies and Organic Marketing",
+                    "Social Brand Management",
+                    "Audience Persona Development",
+                    "Facebook Marketing Essentials",
+                    "Utilizing Meta Business Suite",
+                    "YouTube Marketing Strategies",
+                    "Instagram Marketing and Content Planning",
+                    "Content Creation for LinkedIn",
+                    "Social Media Marketing Strategy for Product Launch (B2B & B2C)",
+                    "Key Metrics in Social Media Marketing",
+                    "Utilization of Social Media Management Tools",
+                    "Creation of Social Media Content Calendar and Progress Reports"
+                ]
+            },
+            {
+                title: "Influencer Marketing",
+                duration: "1 week",
+                topics: [
+                    "Introduction to Influencer Marketing",
+                    "Benefits of Influencer Marketing for Brands",
+                    "Successful Influencer Marketing Campaigns",
+                    "Connecting with the Right Influencers",
+                    "Influencer Marketing Platforms",
+                    "Strategies for Paid Promotions, Gifts, and Giveaways",
+                    "Brand Ambassadors and Affiliate Programs",
+                    "Influencer Campaign Strategy and Setup"
+                ]
+            },
+            {
+                title: "Introduction to Meta Ads",
+                duration: "1 week",
+                topics: [
+                    "Performance Marketing Basics",
+                    "Platform Types for Marketing",
+                    "Competitor Analysis in Marketing",
+                    "Platform Selection: B2B, B2C, D2C",
+                    "Meta Ads Introduction",
+                    "Facebook Page Creation and Boosting",
+                    "Ads Manager & Ads Library Features",
+                    "Campaign Structure and Objectives",
+                    "Budgeting, Scheduling, and Detailed Targeting",
+                    "Creating AI-Powered Ad Mockups",
+                    "Campaign Budget Optimization Benefits",
+                    "A/B Testing and Dynamic Creatives",
+                    "Brand Safety and Suitability Insights",
+                    "Setting Up Brand Awareness Campaigns",
+                    "Facebook Engagement and Conversion Strategies",
+                    "Lead Generation: Ads, Forms, and Auto Chat Features"
+                ]
+            },
+            {
+                title: "Meta Ads Conversion Tracking",
+                duration: "1 week",
+                topics: [
+                    "Setting Up Facebook Business and Ads Manager",
+                    "Facebook Pixel Setup and Manual Installation",
+                    "Pixel Integration: GTM and Plugins",
+                    "Live Pixel Tracking via Chrome Extension",
+                    "Pixel Reporting and Troubleshooting Techniques",
+                    "Advanced Pixel Integration through Partners",
+                    "Conversion API Setup with GTM",
+                    "Custom and Lookalike Audience Creation",
+                    "Utilizing Custom Conversion Audiences"
+                ]
+            },
+            {
+                title: "Meta Ads Reporting",
+                duration: "1 week",
+                topics: [
+                    "Understanding Catalogues and Their Types",
+                    "Creating E-commerce Catalogues",
+                    "Introduction to Collection Ads",
+                    "Campaign Performance Analysis",
+                    "Optimizing Campaigns Effectively",
+                    "Ad Automation Techniques",
+                    "Rule and Creative Automation Platforms",
+                    "Executing Campaigns on Meta",
+                    "Managing Instagram Campaigns"
+                ]
+            },
+            {
+                title: "Google Search Ads",
+                duration: "1 week",
+                topics: [
+                    "SEM Marketing Basics",
+                    "Google Ads: Overview and Benefits",
+                    "Google Ads Formats Explained",
+                    "Smart Campaigns Introduction",
+                    "Ad Objectives and Bidding Strategies",
+                    "Setting Up Search Ads",
+                    "Keywords in SEM: Importance and Types",
+                    "Keyword Research Tools (Google Keyword Planner)",
+                    "Using Negative Keywords Effectively"
+                ]
+            },
+            {
+                title: "Google Display Ads",
+                duration: "1 week",
+                topics: [
+                    "Ad Rotation Strategies",
+                    "Ad Scheduling Best Practices",
+                    "Dynamic Search Ads: Settings and Case Studies",
+                    "Crafting Search Ad Copies with AI",
+                    "Ad Extensions: Sitelink, App, Call, Callout, Location, Price",
+                    "Display Campaigns: Setup Guide",
+                    "Targeting Options: Placement, Topics, Demographics"
+                ]
+            },
+            {
+                title: "Google Video Ads & Conversion Tracking",
+                duration: "1 week",
+                topics: [
+                    "Video Campaign Goals and Subtypes",
+                    "Video Ads Network and Frequency Capping",
+                    "YouTube Ads Bid Strategies",
+                    "Ad Scheduling for Video Campaigns",
+                    "Creating Video Ad Sequences",
+                    "Storytelling with Video Ads",
+                    "Conversion Actions: Setup and Integration",
+                    "GTM for Conversion Tracking",
+                    "Using Conversion Linker Effectively"
+                ]
+            },
+            {
+                title: "Google Shopping Ads & Retargeting",
+                duration: "1 week",
+                topics: [
+                    "Remarketing in Google Ads: Overview and Benefits",
+                    "Audience Manager and List Creation",
+                    "Linking GA4 with Google Ads",
+                    "Implementing Remarketing Audiences in Campaigns",
+                    "Shopping Ads Setup with Google Merchant Center",
+                    "Product Listing and Linking Merchant Center",
+                    "Performance Max Campaign: Setup and Advantages",
+                    "Demand Campaign Configuration"
+                ]
+            },
+            {
+                title: "Email, WhatsApp Marketing & Automation",
+                duration: "1 week",
+                topics: [
+                    "Introduction to Email Marketing and Its Benefits",
+                    "Growing and Managing Email Lists",
+                    "Crafting Effective Email Campaigns and Strategies",
+                    "Creating Impactful Email Content",
+                    "Email Marketing Analytics and Optimization",
+                    "Overview of WhatsApp Marketing and Strategies",
+                    "Integrating WhatsApp with Other Marketing Channels",
+                    "Analytics, Optimization, and Compliance in WhatsApp Marketing",
+                    "Marketing Automation: Tools, Workflows, and Importance"
+                ]
+            },
+            {
+                title: "Freelancing",
+                duration: "1 week",
+                topics: [
+                    "Introduction to Google AdSense",
+                    "Setting Up and Managing Google AdSense",
+                    "Ad Units and Placement Best Practices",
+                    "AdSense Reporting and Analytics",
+                    "Getting Started with Freelancing",
+                    "Freelancer Profile Creation and Optimization",
+                    "Finding Your Niche and Domain in Freelancing",
+                    "Client Outreach and Lead Nurturing",
+                    "Freelance Platforms, Proposals, and Portfolio Building",
+                    "Project Pricing, Time Management, and Billing"
+                ]
+            },
+            {
+                title: "ChatGPT & AI Tools",
+                duration: "1 week",
+                topics: [
+                    "Creating Landing Page Copies with AI Tools",
+                    "Developing Marketing Strategies Using AI (ChatGPT and Others)",
+                    "Email Marketing Content Creation with AI",
+                    "Social Media Content Writing Powered by AI Tools",
+                    "Crafting Effective Ad Copies Using AI",
+                    "Generating SEO-Optimized Content with AI Assistance",
+                    "Building Marketing Funnels with AI Tools",
+                    "Writing High-Quality Blog Posts Using AI"
+>>>>>>> 8c587ad (added a couple of courses)
                 ]
             }
         ],
         outcomes: [
+<<<<<<< HEAD
             "Use Microsoft Office applications effectively for business tasks",
             "Organize, analyze, and visualize data in Excel",
             "Create professional documents and reports",
@@ -5146,10 +5526,54 @@ export const programs = [
                 title: "IoT Engineer",
                 bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+=======
+            "Create and manage successful social media marketing campaigns",
+            "Run and optimize Meta, Google, and YouTube Ads",
+            "Track and report digital marketing performance effectively",
+            "Leverage AI tools for marketing automation and content generation",
+            "Develop freelancing skills for digital marketing projects"
+        ],
+        requirements: [
+            "Laptop with internet access",
+            "Basic knowledge of digital marketing concepts",
+            "Interest in advertising and analytics",
+            "No prior social media marketing experience required"
+        ],
+        certification: "ADITA Social Media Marketing Certificate",
+        image: "/images/courses/social-media-marketing.jpg"
+    },
+
+    {
+        reg_id: "",
+        id: "business-strategy-and-marketing",
+        title: "Business Strategy and Marketing",
+        description: "Develop strong business strategies and marketing plans that drive growth and competitive advantage. Learn to analyze markets, build brands, and implement data-driven strategies for long-term success.",
+        longDescription: "In an increasingly complex and competitive global marketplace, businesses must develop robust strategies and marketing plans to achieve sustainable growth and success. Business strategy and marketing are two fundamental pillars that drive an organization’s direction, competitive advantage, and customer engagement. This course equips participants with the essential tools and frameworks to design and execute effective business and marketing strategies. It combines practical case studies, analytical models, and real-world projects to help learners adapt, innovate, and thrive in changing markets.",
+        type: "business",
+        duration: "Classroom: 10 Days / Online: 14 Days",
+        level: "Intermediate",
+        format: "Online & In-person",
+        audience: ["Entrepreneurs", "Business Owners", "Managers", "Marketing Professionals", "Strategy Consultants"],
+        price: "$300",
+        startDates: ["Dec 8, 2025", "Jan 20, 2026", "Mar 3, 2026"],
+        instructors: [
+            {
+                name: "Dr. Ngozi Okafor",
+                title: "Business Strategy Consultant",
+                bio: "Business strategist with over 15 years of experience in corporate strategy, market research, and strategic leadership for global organizations.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20business%20consultant"
+            },
+            {
+                name: "Mr. Emmanuel K. Boateng",
+                title: "Marketing and Brand Strategist",
+                bio: "Expert in brand development, competitive positioning, and integrated marketing communications for international brands.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20marketing%20expert"
+>>>>>>> 8c587ad (added a couple of courses)
             }
         ],
         modules: [
             {
+<<<<<<< HEAD
                 title: "Information Security Fundamentals and Threat Landscape",
                 duration: "3 hours",
                 topics: [
@@ -5249,10 +5673,143 @@ export const programs = [
                 title: "IoT Engineer",
                 bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+=======
+                title: "Introduction to Business Strategy & Marketing",
+                duration: "2 days",
+                topics: [
+                    "Definition and Importance of Business Strategy",
+                    "The Relationship Between Strategy and Marketing",
+                    "Key Strategic Frameworks (SWOT, PESTEL, Porter’s Five Forces)",
+                    "Understanding Business Models and Value Propositions",
+                    "Case Studies of Successful Business Strategies"
+                ]
+            },
+            {
+                title: "Market Research & Consumer Insights",
+                duration: "2 days",
+                topics: [
+                    "Importance of Market Research in Strategic Decision-Making",
+                    "Tools & Techniques for Market Research (Qualitative & Quantitative)",
+                    "Identifying Target Audience and Customer Segmentation",
+                    "Analyzing Competitors and Market Trends",
+                    "Interpreting Data for Strategic Decisions"
+                ]
+            },
+            {
+                title: "Competitive Positioning & Branding",
+                duration: "2 days",
+                topics: [
+                    "Developing a Unique Value Proposition",
+                    "Positioning Strategies for Competitive Advantage",
+                    "Brand Identity, Image, and Equity",
+                    "Creating a Strong Brand Story and Messaging",
+                    "Brand Differentiation in Crowded Markets"
+                ]
+            },
+            {
+                title: "Marketing Strategy & Planning",
+                duration: "2 days",
+                topics: [
+                    "Developing an Integrated Marketing Strategy",
+                    "Product, Price, Place, Promotion (4Ps) in Business Strategy",
+                    "Customer Relationship Management (CRM)",
+                    "B2B vs. B2C Marketing Strategies",
+                    "Go-to-Market Strategies for New Products & Services"
+                ]
+            },
+            {
+                title: "Digital Marketing & Growth Strategies",
+                duration: "2 days",
+                topics: [
+                    "Digital Transformation in Business Strategy",
+                    "Social Media Marketing, SEO, and Content Marketing",
+                    "Email Marketing and Automation Strategies",
+                    "Performance Marketing: PPC, Retargeting, and Ad Campaigns",
+                    "Growth Hacking Techniques for Rapid Expansion"
+                ]
+            },
+            {
+                title: "Financial Aspects of Business Strategy",
+                duration: "2 days",
+                topics: [
+                    "Budgeting and Resource Allocation for Marketing Strategies",
+                    "Measuring ROI and Marketing Effectiveness",
+                    "Revenue Models and Pricing Strategies",
+                    "Financial Planning for Sustainable Business Growth",
+                    "Case Study: Financially Successful Marketing Strategies"
+                ]
+            },
+            {
+                title: "Innovation & Business Sustainability",
+                duration: "2 days",
+                topics: [
+                    "The Role of Innovation in Business Growth",
+                    "Sustainable Business Models and Corporate Social Responsibility (CSR)",
+                    "Adapting to Changing Consumer Behavior and Market Shifts",
+                    "Managing Risks and Uncertainties in Business Strategy",
+                    "Future Trends in Business Strategy & Marketing"
+                ]
+            },
+            {
+                title: "Implementation & Performance Measurement",
+                duration: "2 days",
+                topics: [
+                    "Setting Key Performance Indicators (KPIs) for Business Success",
+                    "Monitoring and Evaluating Strategic Performance",
+                    "Continuous Improvement and Strategy Refinement",
+                    "Creating an Actionable Business Strategy and Marketing Plan",
+                    "Final Project: Developing a Strategic Marketing Plan"
+                ]
+            }
+        ],
+        outcomes: [
+            "Understand key strategic frameworks and how they drive business success",
+            "Identify target audiences and analyze competitors effectively",
+            "Create integrated marketing plans aligned with business goals",
+            "Build strong brands and differentiate in competitive markets",
+            "Leverage digital tools like SEO, content marketing, and analytics",
+            "Develop sustainable business models and measure marketing ROI",
+            "Design and present a real-world strategic marketing plan"
+        ],
+        requirements: [
+            "Laptop or tablet with internet access",
+            "Basic understanding of business operations or marketing principles",
+            "Willingness to engage in practical case study exercises"
+        ],
+        certification: "ADITA Business Strategy and Marketing Certificate",
+        image: "/images/courses/business-strategy-and-marketing.jpg"
+    },
+    {
+        reg_id: "",
+        id: "cyber-security",
+        title: "Cyber Security",
+        description: "Gain essential skills to identify, assess, and mitigate cyber threats. Learn to secure systems, manage risks, and respond to incidents in today’s digital world.",
+        longDescription: "Modern life depends on online services, so understanding cyber security threats is vital. In today’s digital age, cybersecurity is a critical concern for individuals, businesses, and governments alike. This course provides participants with the knowledge and tools needed to identify, assess, and mitigate cyber threats. It covers the principles of data protection, network defense, cryptography, and incident response. Trainees will learn practical techniques for safeguarding sensitive information, maintaining business continuity, and mitigating cyber risks through a hands-on and case study-driven approach.",
+        type: "technology",
+        duration: "Online: 7 Days / Classroom: 5 Days",
+        level: "Beginner to Intermediate",
+        format: "Online & In-person",
+        audience: ["IT Professionals", "Security Analysts", "System Administrators", "Managers", "Executives"],
+        price: "$250",
+        startDates: ["Dec 5, 2025", "Jan 18, 2026", "Feb 25, 2026"],
+        instructors: [
+            {
+                name: "Mr. Tunde Adewale",
+                title: "Cyber Security Analyst",
+                bio: "Certified cybersecurity professional with over 10 years of experience in network defense, incident response, and data protection.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20cybersecurity%20expert"
+            },
+            {
+                name: "Ms. Chidinma Osei",
+                title: "Information Security Specialist",
+                bio: "Expert in risk management, cryptography, and enterprise cybersecurity frameworks for public and private sector organizations.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20information%20security%20specialist"
+>>>>>>> 8c587ad (added a couple of courses)
             }
         ],
         modules: [
             {
+<<<<<<< HEAD
                 title: "Quality Management Foundations and ISO 9001 Overview",
                 duration: "6 hours",
                 topics: [
@@ -5691,10 +6248,141 @@ export const programs = [
                 title: "IoT Engineer",
                 bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+=======
+                title: "Understanding Cybersecurity",
+                duration: "1 day",
+                topics: [
+                    "Definition and Importance",
+                    "Evolution and Current Landscape",
+                    "Understanding Current Threats / Types of Threats",
+                    "Cybersecurity Frameworks"
+                ]
+            },
+            {
+                title: "Fundamentals of Network Security",
+                duration: "1 day",
+                topics: [
+                    "Network Architecture and Protocols",
+                    "Network Defense Mechanisms (Firewalls, VPNs, Secure Remote Access)",
+                    "Threats to Network Security",
+                    "Secure Network Design"
+                ]
+            },
+            {
+                title: "Secure System Administration",
+                duration: "1 day",
+                topics: [
+                    "Password Policies and Authentication Methods",
+                    "Role-Based Access Control (RBAC) and Privilege Management",
+                    "Patch Management",
+                    "Vulnerability Scanning and Remediation Strategies"
+                ]
+            },
+            {
+                title: "Cryptography",
+                duration: "1 day",
+                topics: [
+                    "Cryptography Basics",
+                    "Symmetric vs. Asymmetric Cryptography",
+                    "Encryption Algorithms and Key Management",
+                    "Applications of Cryptography",
+                    "Data Integrity and Non-repudiation"
+                ]
+            },
+            {
+                title: "Incident Response and Disaster Recovery",
+                duration: "1 day",
+                topics: [
+                    "Incident Identification, Containment, Eradication, and Recovery (ICER) Process",
+                    "Incident Response Team Roles and Responsibilities",
+                    "Business Continuity and Disaster Recovery Planning"
+                ]
+            },
+            {
+                title: "Cybersecurity and the Law",
+                duration: "1 day",
+                topics: [
+                    "Overview of Data Protection Laws (GDPR, CCPA)",
+                    "Compliance Requirements and Penalties",
+                    "Understanding the Role of Ethical Hackers",
+                    "Conducting Penetration Tests and Reporting Findings"
+                ]
+            },
+            {
+                title: "Artificial Intelligence and Machine Learning in Security",
+                duration: "1 day",
+                topics: [
+                    "Application of AI/ML for Threat Detection",
+                    "Challenges and Opportunities"
+                ]
+            },
+            {
+                title: "Internet of Things (IoT) Security",
+                duration: "1 day",
+                topics: [
+                    "Managing Security Risks",
+                    "Analyzing Security Risks",
+                    "Implementing Risk Management Strategies"
+                ]
+            }
+        ],
+        outcomes: [
+            "Explain core cybersecurity concepts and terminology",
+            "Understand cryptography and apply it for data and email protection",
+            "Improve password and authentication security practices",
+            "Identify malware propagation methods and prevention techniques",
+            "Implement network defense tools such as firewalls and VPNs",
+            "Apply incident response and disaster recovery procedures",
+            "Comprehend legal and regulatory cybersecurity frameworks",
+            "Assess, analyze, and manage security risks effectively"
+        ],
+        requirements: [
+            "Laptop with internet access",
+            "Basic understanding of IT or computer networks",
+            "Interest in information security or technology management"
+        ],
+        certification: "ADITA Cyber Security Certificate",
+        image: "/images/courses/cyber-security.jpg"
+    },
+
+    {
+        reg_id: "",
+        id: "digital-skills-healthcare",
+        title: "Digital Skills for Healthcare",
+        description: "Empower healthcare professionals with essential digital skills to improve patient care, operational efficiency, and data-driven decision-making through technology adoption.",
+        longDescription: "Delivering digital skills training to healthcare companies is a powerful way for a Tech Academy to support digital transformation, improve patient care, and boost operational efficiency in the healthcare sector. This comprehensive course equips healthcare professionals with the tools and knowledge needed to thrive in a digitally-driven medical environment. Participants will explore topics such as electronic health records, data analytics, cybersecurity compliance, telemedicine, AI in diagnostics, health information systems, and digital collaboration tools. Designed for medical practitioners, administrators, and healthcare IT teams, the training promotes innovation, compliance, and better patient outcomes.",
+        type: "healthcare-technology",
+        duration: "8 weeks",
+        level: "Beginner to Intermediate",
+        format: "Online & In-person",
+        audience: [
+            "Doctors",
+            "Nurses",
+            "IT and Administrative Staff",
+            "Hospital Managers",
+            "Medical Students",
+            "Lab Technicians"
+        ],
+        price: "$300",
+        startDates: ["Dec 8, 2025", "Jan 20, 2026", "Feb 28, 2026"],
+        instructors: [
+            {
+                name: "Dr. Amina Yusuf",
+                title: "Health Informatics Specialist",
+                bio: "Medical doctor and digital health consultant specializing in EHR systems, telemedicine, and health IT adoption.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20health%20informatics%20specialist"
+            },
+            {
+                name: "Mr. Joseph Mwangi",
+                title: "Data Analytics & Health IT Trainer",
+                bio: "Experienced data scientist and health IT professional with expertise in analytics, cybersecurity, and digital transformation in healthcare.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20data%20analytics%20trainer"
+>>>>>>> 8c587ad (added a couple of courses)
             }
         ],
         modules: [
             {
+<<<<<<< HEAD
                 title: "OH&S Fundamentals and ISO 45001 Overview",
                 duration: "8 hours",
                 topics: [

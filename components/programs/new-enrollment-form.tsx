@@ -179,19 +179,24 @@ export default function EnrollmentForm({ onSubmit }) {
                     <CardTitle>Choose Course</CardTitle>
                 </CardHeader>
                 <CardContent>
-                    <RadioGroup
-                        value={formData.selected_course}
-                        onValueChange={(v) => handleSelectChange("selected_course", v)}
-                    >
-                        <div className="flex items-center gap-2">
-                            <RadioGroupItem value="marketing" />
-                            <Label>Digital Marketing</Label>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <RadioGroupItem value="ai" />
-                            <Label>AI & Data Analytics</Label>
-                        </div>
-                    </RadioGroup>
+                    <Label>Select the accelerated program you want to apply for</Label>
+                    <div className="mt-3 space-y-3">
+                        <RadioGroup
+                            value={formData.selected_course}
+                            onValueChange={(value) => handleSelectChange("selected_course", value)}
+                            className="space-y-2"
+                            required
+                        >
+                            <div className="flex items-center space-x-2">
+                                <RadioGroupItem value="marketing" id="course-marketing" />
+                                <Label htmlFor="course-marketing">Digital Marketing</Label>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                                <RadioGroupItem value="ai" id="course-ai" />
+                                <Label htmlFor="course-ai">AI & Data Analytics</Label>
+                            </div>
+                        </RadioGroup>
+                    </div>
                 </CardContent>
             </Card>
 
@@ -342,7 +347,6 @@ export default function EnrollmentForm({ onSubmit }) {
                     </Button>
                 </CardContent>
             </Card>
-
         </form>
     )
 }

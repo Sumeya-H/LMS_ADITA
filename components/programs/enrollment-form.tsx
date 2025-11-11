@@ -32,6 +32,7 @@ const validateEthiopianPhone = (phone) => {
 
 export default function EnrollmentForm({ onSubmit, program }) {
     const [formData, setFormData] = useState({
+        course: program.reg_id,
         first_name: "",
         last_name: "",
         email: "",
@@ -138,25 +139,13 @@ export default function EnrollmentForm({ onSubmit, program }) {
                 <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div className="space-y-2">
                         <Label htmlFor="first_name">First Name</Label>
-                        <Input
-                            id="first_name"
-                            name="first_name"
-                            value={formData.first_name}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
+                        <Input id="first_name" name="first_name" value={formData.first_name} onChange={handleChange} required />
+                    </div >
 
                     <div className="space-y-2">
                         <Label htmlFor="last_name">Last Name</Label>
-                        <Input
-                            id="last_name"
-                            name="last_name"
-                            value={formData.last_name}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
+                        <Input id="last_name" name="last_name" value={formData.last_name} onChange={handleChange} required />
+                    </div >
 
                     <div className="space-y-2">
                         <Label htmlFor="email">Email</Label>
@@ -223,11 +212,11 @@ export default function EnrollmentForm({ onSubmit, program }) {
                             required
                         />
                     </div>
-                </div>
-            </div>
+                </div >
+            </div >
 
             {/* -------------------- Professional Background -------------------- */}
-            <div>
+            < div >
                 <h3 className="text-lg font-medium">Professional Background</h3>
 
                 <div className="mt-4 grid grid-cols-1 gap-4">
@@ -273,10 +262,10 @@ export default function EnrollmentForm({ onSubmit, program }) {
                         </Select>
                     </div>
                 </div>
-            </div>
+            </div >
 
             {/* -------------------- Goals & Referral -------------------- */}
-            <div className="space-y-4">
+            < div className="space-y-4" >
                 <div className="space-y-2">
                     <Label htmlFor="goals">Learning Goals</Label>
                     <Textarea
@@ -309,10 +298,10 @@ export default function EnrollmentForm({ onSubmit, program }) {
                         </SelectContent>
                     </Select>
                 </div>
-            </div>
+            </div >
 
             {/* -------------------- Terms -------------------- */}
-            <div className="flex items-start space-x-2">
+            < div className="flex items-start space-x-2" >
                 <Checkbox
                     id="agreed_terms"
                     checked={formData.agreed_terms}
@@ -327,7 +316,7 @@ export default function EnrollmentForm({ onSubmit, program }) {
                         Terms and Conditions
                     </Link>
                 </Label>
-            </div>
+            </div >
 
             <Button
                 type="submit"
@@ -335,6 +324,6 @@ export default function EnrollmentForm({ onSubmit, program }) {
                 disabled={isSubmitting || !formData.agreed_terms}>
                 {isSubmitting ? "Submitting..." : "Continue"}
             </Button>
-        </form>
+        </form >
     )
 }

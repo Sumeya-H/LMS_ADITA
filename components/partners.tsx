@@ -105,6 +105,30 @@ export default function Partners() {
                         </div>
                     </CardContent>
                 </Card>
+                <Card key={"FDRE Technical & Vocational Training Institute"} className="bg-background">
+                    <CardContent className="flex items-center justify-center p-6 h-32">
+                        <div className="relative h-12 w-full">
+                            <Image
+                                src={"/images/partners/tvet.png"}
+                                alt={"FDRE Technical & Vocational Training Institute"}
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
+                    </CardContent>
+                </Card>
+                <Card key={"University Of Gondar"} className="bg-background">
+                    <CardContent className="flex items-center justify-center p-6 h-32">
+                        <div className="relative h-14 w-full">
+                            <Image
+                                src={"/images/partners/uog.png"}
+                                alt={"University Of Gondar"}
+                                fill
+                                className="object-cover"
+                            />
+                        </div>
+                    </CardContent>
+                </Card>
                 {/* ))} */}
             </div>
         </section>

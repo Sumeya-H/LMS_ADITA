@@ -10,6 +10,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
+import PhoneNumberInput from "@/components/ui/phoneNumberInput"
 
 export default function EnrollmentForm({ onSubmit }) {
     const [formData, setFormData] = useState({
@@ -22,14 +23,12 @@ export default function EnrollmentForm({ onSubmit }) {
         university: "",
         graduation_year: "",
         field_of_study: "",
-        selected_course: "none", // "marketing" | "ai"
-        // course-specific
+        selected_course: "none",
         marketing_experience: "",
-        programming_experience: "none", // none | basic | intermediate | advanced
-        data_tools: "none", // none | excel | python | r | powerbi
-        math_background: "none", // none | basic | intermediate | advanced
-        familiarity: { ml: "1", visualization: "1", sql: "1" }, // 1-5
-        // common
+        programming_experience: "none",
+        data_tools: "none",
+        math_background: "none",
+        familiarity: { ml: "1", visualization: "1", sql: "1" },
         motivation: "",
         referral: "",
         agreeTerms: false,
@@ -40,6 +39,12 @@ export default function EnrollmentForm({ onSubmit }) {
         setFormData((prev) => ({
             ...prev,
             [name]: type === "checkbox" ? checked : value,
+        }))
+    }
+    const setPhoneNumber = (value) => {
+        setFormData((prev) => ({
+            ...prev,
+            phone: value,
         }))
     }
 
@@ -54,13 +59,15 @@ export default function EnrollmentForm({ onSubmit }) {
         }))
     }
 
-    // Simple eligibility check for AI: require at least SOME background in either programming, data tools or math.
+    /* ---------------- VALIDATION LOGIC ---------------- */
+
     const aiEligibility = useMemo(() => {
-        if (formData.selected_course !== "ai") return true // not applicable
-        const hasProg = formData.programming_experience && formData.programming_experience !== "none"
-        const hasData = formData.data_tools && formData.data_tools !== "none"
-        const hasMath = formData.math_background && formData.math_background !== "none"
-        return hasProg || hasData || hasMath
+        if (formData.selected_course !== "ai") return true
+        return (
+            formData.programming_experience !== "none" ||
+            formData.data_tools !== "none" ||
+            formData.math_background !== "none"
+        )
     }, [
         formData.selected_course,
         formData.programming_experience,
@@ -68,14 +75,53 @@ export default function EnrollmentForm({ onSubmit }) {
         formData.math_background,
     ])
 
+    const isFormValid = useMemo(() => {
+        // Basic required fields
+        const basicValid =
+            formData.full_name.trim() &&
+            formData.email.trim() &&
+            formData.phone.trim() &&
+            formData.city.trim() &&
+            formData.sub_city.trim() &&
+            formData.field_of_study.trim() &&
+            formData.university.trim() &&
+            formData.graduation_year.trim() &&
+            formData.selected_course !== "none" &&
+            (
+                (formData.selected_course === "ai" &&
+                    formData.programming_experience !== "No experience" &&
+                    formData.math_background !== "none" &&
+                    formData.data_tools !== "none"
+                )
+                ||
+                (formData.selected_course === "marketing" &&
+                    formData.marketing_experience.trim())
+            ) &&
+
+            formData.motivation.trim() &&
+            formData.agreeTerms
+
+        if (!basicValid) return false
+
+        // AI-specific validation
+        if (formData.selected_course === "ai" && !aiEligibility) {
+            return false
+        }
+
+        return true
+    }, [formData, aiEligibility])
+
     const handleSubmit = (e) => {
         e.preventDefault()
+        if (!isFormValid) return
         onSubmit(formData)
     }
 
+    const [isValid, setIsValid] = useState(false);
+    /* ---------------- UI ---------------- */
+
     return (
         <form onSubmit={handleSubmit} className="space-y-8">
-
 
             {/* Personal Information */}
             <Card>
@@ -84,24 +130,24 @@ export default function EnrollmentForm({ onSubmit }) {
                 </CardHeader>
                 <CardContent className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                        <Label htmlFor="full_name">Full Name</Label>
-                        <Input id="full_name" name="full_name" value={formData.full_name} onChange={handleChange} required />
+                        <Label>Full Name</Label>
+                        <Input name="full_name" value={formData.full_name} onChange={handleChange} />
                     </div>
                     <div>
-                        <Label htmlFor="email">Email</Label>
-                        <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required />
+                        <Label>Email</Label>
+                        <Input type="email" name="email" value={formData.email} onChange={handleChange} />
                     </div>
                     <div>
-                        <Label htmlFor="phone">Phone</Label>
-                        <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} required />
+                        <Label>Phone</Label>
+                        <PhoneNumberInput setNumber={setPhoneNumber} valid={setIsValid} />
                     </div>
                     <div>
-                        <Label htmlFor="city">City</Label>
-                        <Input id="city" name="city" value={formData.city} onChange={handleChange} required />
+                        <Label>City</Label>
+                        <Input name="city" value={formData.city} onChange={handleChange} />
                     </div>
                     <div>
-                        <Label htmlFor="sub_city">Sub City</Label>
-                        <Input id="sub_city" name="sub_city" value={formData.sub_city} onChange={handleChange} required />
+                        <Label>Sub City</Label>
+                        <Input name="sub_city" value={formData.sub_city} onChange={handleChange} />
                     </div>
                 </CardContent>
             </Card>
@@ -113,25 +159,16 @@ export default function EnrollmentForm({ onSubmit }) {
                 </CardHeader>
                 <CardContent className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                        <Label htmlFor="university">University / College / TVET</Label>
-                        <Input id="university" name="university" value={formData.university} onChange={handleChange} />
+                        <Label>University / College</Label>
+                        <Input name="university" value={formData.university} onChange={handleChange} />
                     </div>
-                    <div className="space-y-2 sm:col-span-2">
-                        <Label htmlFor="field_of_study">Field of Study / Major</Label>
-                        <Input id="field_of_study" name="field_of_study" value={formData.field_of_study} onChange={handleChange} required />
+                    <div className="sm:col-span-2">
+                        <Label>Field of Study</Label>
+                        <Input name="field_of_study" value={formData.field_of_study} onChange={handleChange} />
                     </div>
                     <div>
-                        <Label htmlFor="graduation_year">Year of Completion</Label>
-                        <Input
-                            id="graduation_year"
-                            name="graduation_year"
-                            type="number"
-                            min="1900"
-                            max={new Date().getFullYear()}
-                            placeholder="e.g. 2023"
-                            value={formData.graduation_year}
-                            onChange={handleChange}
-                        />
+                        <Label>Graduation Year</Label>
+                        <Input name="graduation_year" type="number" value={formData.graduation_year} onChange={handleChange} />
                     </div>
                 </CardContent>
             </Card>
@@ -142,25 +179,22 @@ export default function EnrollmentForm({ onSubmit }) {
                     <CardTitle>Choose Course</CardTitle>
                 </CardHeader>
                 <CardContent>
-                    <Label>Select the accelerated program you want to apply for</Label>
-                    <div className="mt-3 space-y-3">
-                        <RadioGroup
-                            value={formData.selected_course}
-                            onValueChange={(value) => handleSelectChange("selected_course", value)}
-                            className="space-y-2"
-                        >
-                            <div className="flex items-center space-x-2">
-                                <RadioGroupItem value="marketing" id="course-marketing" />
-                                <Label htmlFor="course-marketing">Digital Marketing</Label>
-                            </div>
-                            <div className="flex items-center space-x-2">
-                                <RadioGroupItem value="ai" id="course-ai" />
-                                <Label htmlFor="course-ai">AI & Data Analytics</Label>
-                            </div>
-                        </RadioGroup>
-                    </div>
+                    <RadioGroup
+                        value={formData.selected_course}
+                        onValueChange={(v) => handleSelectChange("selected_course", v)}
+                    >
+                        <div className="flex items-center gap-2">
+                            <RadioGroupItem value="marketing" />
+                            <Label>Digital Marketing</Label>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <RadioGroupItem value="ai" />
+                            <Label>AI & Data Analytics</Label>
+                        </div>
+                    </RadioGroup>
                 </CardContent>
             </Card>
+
             {/* Conditional: AI fields (only when AI is selected) */}
             {formData.selected_course === "ai" && (
                 <>
@@ -272,68 +306,43 @@ export default function EnrollmentForm({ onSubmit }) {
                 </Card>
             )}
 
-            {/* Program Preferences */}
+
+            {/* Terms */}
             <Card>
                 <CardHeader>
                     <CardTitle>Motivation</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-3">
-                    <Label>Why are you interested in this course?</Label>
+                <CardContent>
                     <Textarea
                         name="motivation"
                         value={formData.motivation}
                         onChange={handleChange}
-                        placeholder="Write a short answer"
+                        placeholder="Why are you interested?"
                     />
-                    <div className="sm:col-span-2">
-                        <Label htmlFor="referral">How did you hear about us?</Label>
-                        <Select value={formData.referral} onValueChange={(v) => handleSelectChange("referral", v)}>
-                            <SelectTrigger id="referral">
-                                <SelectValue placeholder="Select an option" />
-                            </SelectTrigger>
-                            <SelectContent>
-                                <SelectItem value="social-media">Social Media</SelectItem>
-                                <SelectItem value="friend">Friend or Colleague</SelectItem>
-                                <SelectItem value="search">Search Engine</SelectItem>
-                                <SelectItem value="event">Event or Conference</SelectItem>
-                                <SelectItem value="advertisement">Advertisement</SelectItem>
-                                <SelectItem value="other">Other</SelectItem>
-                            </SelectContent>
-                        </Select>
-                    </div>
-                    <div className="space-y-2">
-                        <div className="flex items-start space-x-2">
-                            <Checkbox
-                                id="agreeTerms"
-                                name="agreeTerms"
-                                className="my-auto"
-                                checked={formData.agreeTerms}
-                                onCheckedChange={(checked) => handleSelectChange("agreeTerms", checked)}
-                                required
-                            />
-                            <Label htmlFor="agreeTerms" className="text-sm">
-                                I agree to the terms and conditions, including the privacy policy and student code of conduct.
-                                &nbsp;
-                                <Link href="/terms-and-conditions" className="text-primary hover:underline">
-                                    <strong>Terms and Conditions</strong>
-                                </Link>
-                            </Label>
-                        </div>
+                    <div className="flex items-start mt-4 gap-2">
+                        <Checkbox
+                            checked={formData.agreeTerms}
+                            onCheckedChange={(v) => handleSelectChange("agreeTerms", v)}
+                            required
+                        />
+                        <Label className="text-sm">
+                            I agree to the{" "}
+                            <Link href="/terms-and-conditions" className="text-primary underline">
+                                Terms and Conditions
+                            </Link>
+                        </Label>
                     </div>
 
-                    {formData.agreeTerms ?
-                        <Button type="submit" className="w-full">
-                            Submit
-                        </Button> :
-                        <Button disabled type="submit" className="w-full">
-                            Submit
-                        </Button>
-                    }
+                    <Button
+                        type="submit"
+                        className="w-full mt-4"
+                        disabled={!isFormValid || !isValid}
+                    >
+                        Submit
+                    </Button>
                 </CardContent>
             </Card>
 
-            {/* Terms */}
         </form>
     )
 }
-

@@ -9,6 +9,7 @@ import { ArrowLeft, Calendar, Clock, Award, CheckCircle } from "lucide-react"
 import { envetRegistration } from "@/services/eventRegister";
 import { Button } from "react-day-picker";
 
+
 export default function Events() {
     const [enrollmentStep, setEnrollmentStep] = useState("details")
     const handleEnrollmentSubmit = async (data) => {
@@ -135,27 +136,6 @@ export default function Events() {
                                 </div>
                             </div>
 
-                            {/*<div className="pt-4 space-y-4 border-t">
-                                <h4 className="font-semibold text-lg">A. Foundation Module (2 Weeks - Mandatory)</h4>
-                                <ul className="list-disc list-inside text-sm space-y-1">
-                                    <li>Digital Literacy & Productivity Tools</li>
-                                    <li>Introduction to Emerging Technologies (AI, IoT, Cloud Computing)</li>
-                                    <li>Professional Soft Skills (Communication, Problem-Solving, Teamwork)</li>
-                                    <li>Career Readiness (CV Writing, Interview Skills, LinkedIn Optimization)</li>
-                                </ul>
-
-                                <h4 className="font-semibold text-lg pt-2">B. Specialization Tracks (Choose One)</h4>
-                                <ul className="list-disc list-inside text-sm space-y-1">
-                                    <li>
-                                        <strong>1. Artificial Intelligence & Data Analytics:</strong> Python, Data Wrangling,
-                                        Visualization (Excel, Power BI, Tableau), Machine Learning Basics, and Statistical Analysis.
-                                    </li>
-                                    <li>
-                                        <strong>2. Digital Marketing & E-commerce:</strong> Social Media Marketing (Facebook, Instagram, TikTok),
-                                        SEO & SEM, Content Strategy, E-commerce Management (Shopify, WooCommerce), and Google Analytics.
-                                    </li>
-                                </ul>
-                            </div>*/}
                         </CardContent>
 
                         <CardFooter>

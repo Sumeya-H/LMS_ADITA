@@ -44,7 +44,7 @@ export default function EnrollmentForm({ onSubmit }) {
     const setPhoneNumber = (value) => {
         setFormData((prev) => ({
             ...prev,
-            phone: value,
+            phone: "+251" + value,
         }))
     }
 

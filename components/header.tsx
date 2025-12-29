@@ -17,7 +17,7 @@ const navigation = [
   // { name: "Incubator", href: "/incubator" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "Acclerated Programs", href: "/programs" },
+  { name: "Traning Programs", href: "/programs" },
 ]
 
 export default function Header() {

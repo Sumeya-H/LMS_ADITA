@@ -6,17 +6,17 @@ import { Linkedin, Twitter } from "lucide-react"
 // Team data
 const teamMembers = [
     {
-        name: "Mr. Baheru Zeynu",
+        name: "Mr. Baheru Zeyenu",
         role: "Co-Founder & BoD Chair",
-        bio: "Co-founder and Chair person of BoD of ADITA. Chief Executive Officer @ AFRICOM Technologies Plc | MSc in Computer Science and MBA in Business Administration",
-        image: "/images/teams/baheru_zeynu.jpeg",
+        bio: "He is also founder of AFRICOM Technologies and a tech entrepreneur and thought leader specializing in e-governance and largescale software. He serves on several executive boards, including the Addis Ababa Chamber of Commerce. Holding an MSc and MBA, he leverages his extensive business expertise to drive Ethiopia’s digital transformation.",
+        image: "/images/teams/baheru_zeyenu.png",
         linkedin: "https://www.linkedin.com/in/baheru-zeyenu/?originalSubdomain=et",
         twitter: "#",
     },
     {
         name: "Prof. Shegaw Anagaw",
         role: "Co-Founder & CEO",
-        bio: "CEO of ADITA, Professor at the University of South-Eastern Norway",
+        bio: "He is also founder of IT firm DARMONEL and Professor of Informatics at the University of South-East Norway (USN), he researches digital health, public sector digitalization, and IS/IT innovation. His expertise spans IT governance, AI, Machine Learning, Data Science, and Smart Cities",
         image: "/images/teams/shegaw_anagaw.jpeg",
         linkedin: "https://www.linkedin.com/in/shegaw-a-mengiste-b1737225/",
         twitter: "#",
@@ -24,7 +24,7 @@ const teamMembers = [
     {
         name: "Dr. Sultan Feisso",
         role: "Co-founder & Deputy CEO",
-        bio: "He is Senior Business Development Consultant with a strong background in ICT. He is also Associate Prof. of Electrical & Computer Engineering at AASTU. He is certified ISO/IEC 2700:2022 Lead Implementer.",
+        bio: "He is Senior Business Development Consultant with a strong background in ICT; formerly holding the same role at Zsecurtech PLC. An Associate Professor at AASTU and ISO/IEC 27001 certified, he is an ITC expert with extensive experience in business development and engineering, including the Adama II Wind-farm project.",
         image: "/images/teams/sultan_meko.jpeg",
         linkedin: "#",
         twitter: "#",
@@ -32,7 +32,7 @@ const teamMembers = [
     {
         name: "Prof. Abebe Geletu",
         role: "Co-Founder & Strategic Advisor",
-        bio: "Co-founder of ADITA, Phd, Ilmenau University of Technology, Germany D.Sc. (habil.), German Research Chair, AIMS Rwanda",
+        bio: "He holds a Ph.D. and Habilitation from TU Ilmenau, Germany. Formerly a senior research scientist specializing in applied mathematics and machine learning, he joined AIMS Rwanda in 2021. His current research focuses on AI, data-driven optimization, and sustainable resource utilization across Africa.",
         image: "/images/teams/abebe_geletu.jpeg",
         linkedin: "#",
         twitter: "#",
@@ -40,7 +40,7 @@ const teamMembers = [
     {
         name: "Mr. Teshome Worku",
         role: "Co-founder & Strategic Advisor",
-        bio: "Co-founder of ADITA, Country Director of Wingu Africa Group Data Center-Ethiopia",
+        bio: "He is Country Director for Wingu Africa Group Data Center, holds an MSc from KAIST, South Korea. His extensive leadership includes roles as Director at the Ethiopia Agricultural Transformation Agency and the Ministry of Communication and Information Technology, specializing in IT development, systems design, and industry standards.",
         image: "/images/teams/teshome_worku.jpeg",
         linkedin: "#",
         twitter: "#",
@@ -48,7 +48,7 @@ const teamMembers = [
     {
         name: "Mr. Ewnetu Abera",
         role: "Co-founder & Technical Advisor",
-        bio: "Co-founder of ADITA, CEO at Perago Systems, Cofounder and Board Chairperson at Addispay Financial Technology SC & Addis Systems, Cofounder and Board Chairperson at Muyalogy.com",
+        bio: "He is CEO of Perago Information Systems. A seasoned systems architect, he leads national digital government programs across Africa, including e-procurement in Ethiopia, Malawi, and Sierra Leone. Holding an MBA and Stanford certification, he specializes in strategic leadership and large-scale digital transformation initiatives.",
         image: "/images/teams/ewnetu_abera.jpeg",
         linkedin: "#",
         twitter: "#",
@@ -56,8 +56,8 @@ const teamMembers = [
     {
         name: "Mr. Ansar Yusuf",
         role: "Co-Founder & Technical Advisor",
-        bio: "seasoned Technical Advisor in the IT industry, renowned for his deep technical expertise and strategic vision. With a proven track record of guiding companies through complex technological landscapes",
-        image: "/images/teams/ansar_yusuf.jpg",
+        bio: "He is seasoned Technical Advisor in the IT industry, renowned for his deep technical expertise and strategic vision. With a proven track record of guiding companies through complex technological landscapes",
+        image: "/images/teams/ansar_yusuf.png",
         linkedin: "#",
         twitter: "#",
     },

@@ -10,9 +10,9 @@ import ProgramReviews from "@/components/programs/program-reviews"
 import { programs } from "@/helpers/programs"
 
 export async function generateStaticParams() {
-  return programs.map((p) => ({
-    programId: p.id,
-  }));
+    return programs.map((p) => ({
+        programId: p.id,
+    }));
 }
 
 export default function ProgramDetailPage({ params }) {
@@ -20,7 +20,7 @@ export default function ProgramDetailPage({ params }) {
     // For this example, we'll use a mock program
     const resolvedParmam = React.use(params);
     const { programId } = resolvedParmam;
-    const program = programs.find((p) => p.id === programId);
+    const program = programs?.find((p) => p.id === programId);
     if (!program) {
         return <div>Program not found</div>;
     }

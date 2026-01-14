@@ -65,7 +65,7 @@ export const programs = [
             "No prior programming experience required"
         ],
         certification: "ADITA Data Analysis and Visualization Certificate",
-        image: "/images/courses/data-analysis-python.jpg"
+        image: "/images/courses/data-analysis-python.webp"
     },
     {
         id: "frontend-development",
@@ -132,7 +132,7 @@ export const programs = [
             "No prior programming experience required"
         ],
         certification: "ADITA Frontend Development Certificate",
-        image: "/images/courses/frontend-development.jpg"
+        image: "/images/courses/frontend-development.webp"
     },
     {
         id: "backend-development",
@@ -199,7 +199,7 @@ export const programs = [
             "Internet connection"
         ],
         certification: "ADITA Backend Development Certificate",
-        image: "/images/courses/backend-development.jpg"
+        image: "/images/courses/backend-development.webp"
     },
     {
         id: "fullstack-development",
@@ -261,7 +261,7 @@ export const programs = [
             "Internet access"
         ],
         certification: "ADITA Full Stack Development Certificate",
-        image: "/images/courses/fullstack-development.jpg"
+        image: "/images/courses/fullstack-development.webp"
     },
     {
         id: "cloud-computing",
@@ -328,7 +328,7 @@ export const programs = [
             "Familiarity with server concepts"
         ],
         certification: "ADITA Cloud Computing Certificate",
-        image: "/images/courses/cloud-computing.jpg"
+        image: "/images/courses/cloud-computing.webp"
     },
     {
         id: "mobile-development",
@@ -390,7 +390,7 @@ export const programs = [
             "Internet connection"
         ],
         certification: "ADITA Mobile Application Development Certificate",
-        image: "/images/courses/mobile-app-dev.jpg"
+        image: "/images/courses/mobile-app-dev.webp"
     },
     {
         id: "android-ios-development",
@@ -452,7 +452,7 @@ export const programs = [
             "Internet connection"
         ],
         certification: "ADITA Android & iOS Development Certificate",
-        image: "/images/courses/android-ios-dev.jpg"
+        image: "/images/courses/android-ios-dev.webp"
     },
     {
         id: "graphic-design",
@@ -514,7 +514,7 @@ export const programs = [
             "Creative mindset"
         ],
         certification: "ADITA Graphic Design Certificate",
-        image: "/images/courses/graphic-design.jpg"
+        image: "/images/courses/graphic-design.webp"
     },
     {
         id: "blockchain-technology",
@@ -581,7 +581,7 @@ export const programs = [
             "Familiarity with data structures and algorithms"
         ],
         certification: "ADITA Blockchain Technology Certificate",
-        image: "/images/courses/blockchain.jpg"
+        image: "/images/courses/blockchain.webp"
     },
     {
         id: "foundations-ai-iot",
@@ -660,7 +660,7 @@ export const programs = [
             "Internet connection for cloud integration"
         ],
         certification: "ADITA Foundations of AI & IoT Certificate",
-        image: "/images/courses/ai-iot-foundations.jpg"
+        image: "/images/courses/ai-iot-foundations.webp"
     },
     {
         id: "introduction-to-artificial-intelligence",
@@ -762,7 +762,8 @@ export const programs = [
             "Cloud-based AI demo tools",
             "AI case study library"
         ],
-        certification: "Introduction to Artificial Intelligence Certificate"
+        certification: "Introduction to Artificial Intelligence Certificate",
+        image: "/images/courses/introduction-to-artificial-intelligence.webp"
     },
     {
         id: "machine-learning-for-beginners",
@@ -856,7 +857,8 @@ export const programs = [
             "Sample datasets for practice",
             "Machine learning concept cheat sheets"
         ],
-        certification: "Machine Learning for Beginners Certificate"
+        certification: "Machine Learning for Beginners Certificate",
+        image: "/images/courses/machine-learning-for-beginners.webp"
     },
     {
         id: "data-analytics-visualization-power-bi",
@@ -958,7 +960,8 @@ export const programs = [
             "Sample datasets (Sales, HR, Operations)",
             "DAX formula reference guide"
         ],
-        certification: "Data Analytics and Visualization with Power BI Certificate"
+        certification: "Data Analytics and Visualization with Power BI Certificate",
+        image: "/images/courses/data-analytics-visualization-power-bi.webp"
     },
     {
         id: "generative-ai-chatgpt-productivity",
@@ -1061,7 +1064,8 @@ export const programs = [
             "Prompt library and cheat sheets",
             "Custom instructions templates"
         ],
-        certification: "Generative AI and ChatGPT for Productivity Certificate"
+        certification: "Generative AI and ChatGPT for Productivity Certificate",
+        image: "/images/courses/generative-ai-chatgpt-productivity.webp"
     },
     {
         id: "responsible-ai-ethics",
@@ -1164,7 +1168,8 @@ export const programs = [
             "AI Ethics guidelines from EU, IEEE, and other leading organizations",
             "Case studies (e.g., biased hiring algorithms, predictive policing)"
         ],
-        certification: "Responsible AI and Ethics Certificate"
+        certification: "Responsible AI and Ethics Certificate",
+        image: "/images/courses/responsible-ai-ethics.webp"
     },
     {
         id: "ai-social-good-sustainable-development",
@@ -1266,7 +1271,8 @@ export const programs = [
             "AI4SG project database",
             "Project canvas templates for social innovation"
         ],
-        certification: "AI for Social Good and Sustainable Development Certificate"
+        certification: "AI for Social Good and Sustainable Development Certificate",
+        image: "/images/courses/ai-social-good-sustainable-development.webp"
     },
     {
         id: "prompt-engineering-ai-systems",
@@ -1414,7 +1420,8 @@ export const programs = [
             "Productivity tools (Google Docs, Notion, Excel)",
             "Case studies and scenario datasets"
         ],
-        certification: "Certificate in Prompt Engineering"
+        certification: "Certificate in Prompt Engineering",
+        image: "/images/courses/prompt-engineering-ai-systems.webp"
     },
     {
         id: "digital-literacy-ict-skills",
@@ -1515,7 +1522,8 @@ export const programs = [
             "Web browsers",
             "Online collaboration platforms"
         ],
-        certification: "Digital Literacy and ICT Skills Certificate"
+        certification: "Digital Literacy and ICT Skills Certificate",
+        image: "/images/courses/digital-literacy-ict-skills.webp"
     },
     {
         id: "advanced-microsoft-office-productivity",
@@ -1617,7 +1625,8 @@ export const programs = [
             "Canva",
             "Notion"
         ],
-        certification: "Advanced Microsoft Office and Productivity Tools Certificate"
+        certification: "Advanced Microsoft Office and Productivity Tools Certificate",
+        image: "/images/courses/advanced-microsoft-office-productivity.webp"
     },
     {
         id: "digital-communication-collaboration",
@@ -1720,7 +1729,8 @@ export const programs = [
             "Trello",
             "Google Meet"
         ],
-        certification: "Digital Communication and Collaboration Certificate"
+        certification: "Digital Communication and Collaboration Certificate",
+        image: "/images/courses/digital-communication-collaboration.webp"
     },
     {
         id: "digital-project-management",
@@ -1824,7 +1834,8 @@ export const programs = [
             "MS Project",
             "Google Workspace"
         ],
-        certification: "Digital Project Management Certificate"
+        certification: "Digital Project Management Certificate",
+        image: "/images/courses/digital-project-management.webp"
     },
     {
         id: "digital-financial-literacy",
@@ -1926,7 +1937,8 @@ export const programs = [
             "Budgeting software",
             "Fintech dashboards"
         ],
-        certification: "Digital Financial Literacy Certificate"
+        certification: "Digital Financial Literacy Certificate",
+        image: "/images/courses/digital-financial-literacy.webp"
     },
     {
         id: "professional-digital-communication-skills",
@@ -2073,7 +2085,8 @@ export const programs = [
             "Digital communication guidelines and templates",
             "Case studies and reference materials"
         ],
-        certification: "Certificate of Completion in Professional Digital Communication Skills"
+        certification: "Certificate of Completion in Professional Digital Communication Skills",
+        image: "/images/courses/professional-digital-communication-skills.webp"
     },
 
     {
@@ -2179,7 +2192,8 @@ export const programs = [
             "\"Automate the Boring Stuff with Python\" (online resource)",
             "Exercise and project problem sets"
         ],
-        certification: "Certificate of Completion in Introduction to Python Programming"
+        certification: "Certificate of Completion in Introduction to Python Programming",
+        image: "/images/courses/introduction-to-python-programming.webp"
     },
     {
         id: "web-design-and-development",
@@ -2286,7 +2300,8 @@ export const programs = [
             "Free hosting platforms (GitHub Pages, Netlify)",
             "Design inspiration resources (e.g., Dribbble)"
         ],
-        certification: "Certificate of Completion in Web Design and Development"
+        certification: "Certificate of Completion in Web Design and Development",
+        image: "/images/courses/web-design-and-development.webp"
     },
     {
         id: "software-engineering-fundamentals",
@@ -2388,7 +2403,8 @@ export const programs = [
             "Project management boards (e.g., GitHub Projects, Trello)",
             "Reading materials on Agile Manifesto and SOLID principles"
         ],
-        certification: "Certificate of Completion in Software Engineering Fundamentals"
+        certification: "Certificate of Completion in Software Engineering Fundamentals",
+        image: "/images/courses/software-engineering-fundamentals.webp"
     },
     {
         id: "ui-ux-design-prototyping",
@@ -2490,7 +2506,8 @@ export const programs = [
             "UI kits and icon libraries",
             "Accessibility and contrast checkers"
         ],
-        certification: "Certificate of Completion in UI/UX Design and Prototyping"
+        certification: "Certificate of Completion in UI/UX Design and Prototyping",
+        image: "/images/courses/ui-ux-design-prototyping.webp"
     },
     {
         id: "digital-entrepreneurship-startup-development",
@@ -2594,7 +2611,8 @@ export const programs = [
             "MVP prototyping tools (Figma, Canva)",
             "Checklist of legal and regulatory requirements"
         ],
-        certification: "Certificate of Completion in Digital Entrepreneurship and Startup Development"
+        certification: "Certificate of Completion in Digital Entrepreneurship and Startup Development",
+        image: "/images/courses/digital-entrepreneurship-startup-development.webp"
     },
     {
         id: "innovation-management-design-thinking",
@@ -2697,7 +2715,8 @@ export const programs = [
             "Prototyping materials (post-its, craft supplies, Lego, etc.)",
             "\"The Field Guide to Human-Centered Design\" by IDEO.org"
         ],
-        certification: "Certificate of Completion in Human-Centered Innovation and Design Thinking"
+        certification: "Certificate of Completion in Human-Centered Innovation and Design Thinking",
+        image: "/images/courses/innovation-management-design-thinking.webp"
     },
     {
         id: "ecommerce-digital-marketing",
@@ -2801,7 +2820,8 @@ export const programs = [
             "SEO and social media auditing checklists",
             "Google Analytics demo account"
         ],
-        certification: "Certificate of Completion in E-Commerce and Digital Marketing"
+        certification: "Certificate of Completion in E-Commerce and Digital Marketing",
+        image: "/images/courses/ecommerce-digital-marketing.webp"
     },
     {
         id: "pitch-deck-fundraising",
@@ -2905,7 +2925,8 @@ export const programs = [
             "Have a business idea or early-stage startup",
             "Basic understanding of your market and product"
         ],
-        certification: "Certificate of Completion upon attending all 2 days and delivering a final pitch scoring 70% or higher on the rubric"
+        certification: "Certificate of Completion upon attending all 2 days and delivering a final pitch scoring 70% or higher on the rubric",
+        image: "/images/courses/pitch-deck-fundraising.webp"
     },
     {
         id: "social-innovation-tech",
@@ -3012,7 +3033,8 @@ export const programs = [
             "Interest in social entrepreneurship or impact ventures",
             "Basic understanding of technology or business modeling is helpful"
         ],
-        certification: "Certificate of Completion upon attending all 2 days and submitting all required canvases and plans to a satisfactory standard (70% or higher)"
+        certification: "Certificate of Completion upon attending all 2 days and submitting all required canvases and plans to a satisfactory standard (70% or higher)",
+        image: "/images/courses/social-innovation-tech.webp"
     },
 
     {
@@ -3135,7 +3157,8 @@ export const programs = [
         requirements: [
             "Basic computer literacy"
         ],
-        certification: "Certificate of Completion upon minimum 75% attendance and passing final assessment (≥50%)"
+        certification: "Certificate of Completion upon minimum 75% attendance and passing final assessment (≥50%)",
+        image: "/images/courses/cybersecurity-awareness.webp"
     },
     {
         id: "ethical-hacking-fundamentals",
@@ -3256,7 +3279,8 @@ export const programs = [
             "Basic understanding of computer networks",
             "Familiarity with operating systems"
         ],
-        certification: "Certificate of Completion upon completion of labs and passing the final practical exam"
+        certification: "Certificate of Completion upon completion of labs and passing the final practical exam",
+        image: "/images/courses/ethical-hacking-fundamentals.webp"
     },
     {
         id: "network-security-basics",
@@ -3376,7 +3400,8 @@ export const programs = [
             "Basic knowledge of networking concepts",
             "Familiarity with operating systems"
         ],
-        certification: "Certificate of Completion upon lab completion and passing the final assessment"
+        certification: "Certificate of Completion upon lab completion and passing the final assessment",
+        image: "/images/courses/network-security-basics.webp"
     },
     {
         id: "data-protection-ethiopia",
@@ -3497,7 +3522,8 @@ export const programs = [
             "Basic understanding of organizational data handling",
             "Interest in privacy and cybersecurity laws"
         ],
-        certification: "Certificate of Completion upon ≥75% attendance and passing the final written assessment"
+        certification: "Certificate of Completion upon ≥75% attendance and passing the final written assessment",
+        image: "/images/courses/data-protection-ethiopia.webp"
     },
     {
         id: "cybersecurity-smes",
@@ -3617,7 +3643,8 @@ export const programs = [
             "Basic understanding of business operations",
             "Interest in protecting organizational data"
         ],
-        certification: "Certificate of Completion upon completion of final project and passing assessment"
+        certification: "Certificate of Completion upon completion of final project and passing assessment",
+        image: "/images/courses/cybersecurity-smes.webp"
     },
     {
         id: "iot-fundamentals",
@@ -3724,7 +3751,8 @@ export const programs = [
         requirements: [
             "Basic familiarity with computers and electronics is helpful but not mandatory"
         ],
-        certification: "Certificate of Completion upon attending all 3 days, completing all lab exercises, and achieving ≥70% on final project and quiz"
+        certification: "Certificate of Completion upon attending all 3 days, completing all lab exercises, and achieving ≥70% on final project and quiz",
+        image: "/images/courses/iot-fundamentals.webp"
     },
     {
         id: "blockchain-web3-basics",
@@ -3832,7 +3860,8 @@ export const programs = [
         requirements: [
             "Basic familiarity with computers and the internet"
         ],
-        certification: "Certificate of Completion upon attending all 2 days and achieving ≥70% across all assessments"
+        certification: "Certificate of Completion upon attending all 2 days and achieving ≥70% across all assessments",
+        image: "/images/courses/blockchain-web3-basics.webp"
     },
 
     {
@@ -3943,7 +3972,8 @@ export const programs = [
             "Basic computer literacy",
             "Familiarity with internet usage"
         ],
-        certification: "Certificate of Completion upon attending all 2 days and successfully completing all hands-on lab exercises"
+        certification: "Certificate of Completion upon attending all 2 days and successfully completing all hands-on lab exercises",
+        image: "/images/courses/cloud-computing-beginners.webp"
     },
     {
         id: "robotics-automation-basics",

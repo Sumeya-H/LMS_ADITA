@@ -27,7 +27,8 @@ export default function Programs() {
                             <img
                                 src={program.image || "/placeholder.svg"}
                                 alt={program.title}
-                                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                                loading="lazy"
+                                className="h-full w-full object-cover hover:scale-105"
                             />
                         </div>
                         <CardHeader>

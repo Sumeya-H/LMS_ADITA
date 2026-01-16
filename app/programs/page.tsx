@@ -64,10 +64,13 @@ export default function ProgramsPage() {
                     <div className="flex justify-center">
                         <TabsList className="mb-8">
                             <TabsTrigger value="all">All Programs</TabsTrigger>
-                            <TabsTrigger value="ai">Artificial Intelligence</TabsTrigger>
+                            <TabsTrigger value="artificial-intelligence">Artificial Intelligence</TabsTrigger>
                             <TabsTrigger value="development">Development</TabsTrigger>
+                            <TabsTrigger value="digital-literacy">Digital Literacy</TabsTrigger>
                             <TabsTrigger value="data-science">Data Science</TabsTrigger>
-                            <TabsTrigger value="infrastructure">Infrastructure</TabsTrigger>
+                            <TabsTrigger value="entrepreneurship">Entrepreneurship</TabsTrigger>
+                            <TabsTrigger value="cybersecurity">Cybersecurity</TabsTrigger>
+                            <TabsTrigger value="civic-tech">Tech for Governance</TabsTrigger>
                             <TabsTrigger value="design">Design</TabsTrigger>
                             <TabsTrigger value="emerging-tech">Emerging Technology</TabsTrigger>
                             <TabsTrigger value="soft-skills">Soft Skills</TabsTrigger>
@@ -97,10 +100,20 @@ export default function ProgramsPage() {
                                 </div>
                             </TabsContent>
 
-                            <TabsContent value="ai" className="mt-0">
+                            <TabsContent value="artificial-intelligence" className="mt-0">
                                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                                     {filteredCourses
-                                        .filter((program) => program.type === "ai")
+                                        .filter((program) => program.type === "artificial-intelligence")
+                                        .map((program) => (
+                                            <ProgramCard key={program.id} program={program} />
+                                        ))}
+                                </div>
+                            </TabsContent>
+
+                            <TabsContent value="digital-literacy" className="mt-0">
+                                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                                    {filteredCourses
+                                        .filter((program) => program.type === "digital-literacy")
                                         .map((program) => (
                                             <ProgramCard key={program.id} program={program} />
                                         ))}
@@ -117,6 +130,26 @@ export default function ProgramsPage() {
                                 </div>
                             </TabsContent>
 
+                            <TabsContent value="entrepreneurship" className="mt-0">
+                                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                                    {filteredCourses
+                                        .filter((program) => program.type === "entrepreneurship")
+                                        .map((program) => (
+                                            <ProgramCard key={program.id} program={program} />
+                                        ))}
+                                </div>
+                            </TabsContent>
+
+                            <TabsContent value="cybersecurity" className="mt-0">
+                                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                                    {filteredCourses
+                                        .filter((program) => program.type === "cybersecurity")
+                                        .map((program) => (
+                                            <ProgramCard key={program.id} program={program} />
+                                        ))}
+                                </div>
+                            </TabsContent>
+
                             <TabsContent value="data-science" className="mt-0">
                                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                                     {filteredCourses
@@ -127,10 +160,10 @@ export default function ProgramsPage() {
                                 </div>
                             </TabsContent>
 
-                            <TabsContent value="infrastructure" className="mt-0">
+                            <TabsContent value="civic-tech" className="mt-0">
                                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                                     {filteredCourses
-                                        .filter((program) => program.type === "infrastructure")
+                                        .filter((program) => program.type === "civic-tech")
                                         .map((program) => (
                                             <ProgramCard key={program.id} program={program} />
                                         ))}
@@ -141,6 +174,15 @@ export default function ProgramsPage() {
                                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                                     {filteredCourses
                                         .filter((program) => program.type === "design")
+                                        .map((program) => (
+                                            <ProgramCard key={program.id} program={program} />
+                                        ))}
+                                </div>
+                            </TabsContent>
+                            <TabsContent value="soft-skills" className="mt-0">
+                                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                                    {filteredCourses
+                                        .filter((program) => program.type === "soft-skills")
                                         .map((program) => (
                                             <ProgramCard key={program.id} program={program} />
                                         ))}

@@ -268,7 +268,7 @@ export const programs = [
         title: "Cloud Computing",
         description: "Gain a practical understanding of cloud computing services, storage, deployment, and security. Learn how to build and deploy applications on AWS, Azure, and Google Cloud.",
         longDescription: "This course provides a comprehensive introduction to cloud computing. Learners explore cloud infrastructure, service models, storage solutions, and security considerations. Practical labs include deploying applications on major cloud platforms (AWS, Azure, Google Cloud) and learning how to manage cloud resources efficiently.",
-        type: "infrastructure",
+        type: "emerging-tech",
         duration: "8 weeks",
         level: "Intermediate",
         format: "Online & In-person",
@@ -588,7 +588,7 @@ export const programs = [
         title: "Foundations of AI and IoT Solutions",
         description: "Explore the integration of Artificial Intelligence and IoT systems. Learn to connect sensors, microcontrollers, and AI models to design smart, connected solutions for real-world problems.",
         longDescription: "This course explores the integration of Artificial Intelligence (AI) and the Internet of Things (IoT) to develop smart, adaptive, and connected systems. Learners study hardware components like sensors and microcontrollers, software tools for data collection and communication, and AI techniques including machine learning, image recognition, and decision-making. Practical labs guide students through designing and prototyping AI-powered IoT solutions for applications in smart environments, agriculture, health, and automation.",
-        type: "ai",
+        type: "artificial-intelligence",
         duration: "10 weeks",
         level: "Intermediate",
         format: "In-person & Online",
@@ -772,7 +772,7 @@ export const programs = [
             "A practical, beginner-friendly introduction to Machine Learning, focusing on hands-on experience with the complete ML workflow using no-code and low-code tools.",
         longDescription:
             "This course provides a practical introduction to Machine Learning through hands-on activities and guided labs. Participants will learn the complete machine learning pipeline, from data preparation and feature engineering to model training, evaluation, and interpretation. Using user-friendly, no-code and low-code platforms, learners will build simple classification and regression models without requiring extensive programming experience.",
-        type: "machine-learning",
+        type: "artificial-intelligence",
         duration: "4 days (32 hours)",
         level: "Beginner",
         format: "Online & In-person",
@@ -867,7 +867,7 @@ export const programs = [
             "A hands-on course that teaches participants how to transform raw data into interactive dashboards and reports using Microsoft Power BI.",
         longDescription:
             "This course guides participants through the process of turning raw data into actionable insights using Microsoft Power BI. From importing and transforming data in Power Query to building data models, relationships, and interactive visualizations, students will gain practical experience in creating professional dashboards. The course also covers basic DAX formulas for calculated columns and measures, enabling participants to perform more advanced analyses.",
-        type: "data-analytics",
+        type: "data-science",
         duration: "4 days (32 hours)",
         level: "Beginner to Intermediate",
         format: "Online & In-person",
@@ -970,7 +970,7 @@ export const programs = [
             "A practical course on leveraging Generative AI and large language models like ChatGPT to enhance professional productivity across writing, analysis, coding, and creative tasks.",
         longDescription:
             "This course teaches participants how to use Generative AI, specifically large language models (LLMs) such as ChatGPT, to dramatically increase productivity. Participants will learn advanced prompting techniques for writing, summarizing, brainstorming, data analysis, basic code generation, and workflow automation. The course includes hands-on exercises, competitions, and real-world scenario simulations to apply AI tools effectively and ethically in daily professional tasks.",
-        type: "generative-ai",
+        type: "artificial-intelligence",
         duration: "2 days (16 hours)",
         level: "Beginner to Intermediate",
         format: "Online & In-person",
@@ -1074,7 +1074,7 @@ export const programs = [
             "A critical course examining the ethical challenges of AI systems, focusing on fairness, transparency, accountability, and responsible deployment.",
         longDescription:
             "This course explores the ethical implications of AI, helping participants understand algorithmic bias, data privacy, transparency, and accountability. Participants will learn frameworks for developing and deploying AI responsibly and gain hands-on experience evaluating AI systems for ethical risks. Through case studies, role-playing, and guided projects, learners will be equipped to design fair and accountable AI solutions.",
-        type: "ai-ethics",
+        type: "artificial-intelligence",
         duration: "2 days (16 hours)",
         level: "Beginner to Intermediate",
         format: "Online & In-person",
@@ -1178,7 +1178,7 @@ export const programs = [
             "A project-based course exploring how AI can be harnessed to address global challenges and create positive social and environmental impact.",
         longDescription:
             "This course enables participants to conceptualize and design AI-driven solutions that advance the UN Sustainable Development Goals (SDGs). Through project-based learning, participants analyze real-world use cases in healthcare, agriculture, education, and environmental sustainability. Learners will design AI-for-Social-Good (AI4SG) projects, understand deployment challenges in low-resource settings, and pitch actionable solutions for social impact.",
-        type: "ai-social-good",
+        type: "artificial-intelligence",
         duration: "3 days (24 hours)",
         level: "Beginner to Intermediate",
         format: "Online & In-person",
@@ -1281,7 +1281,7 @@ export const programs = [
             "A practical course on designing, structuring, and optimizing prompts for Large Language Models (LLMs) and generative AI systems across multiple professional domains.",
         longDescription:
             "This course provides a comprehensive introduction to prompt engineering, teaching participants how to craft effective prompts for content creation, coding, data analysis, research, customer service, automation, and decision support. Emphasis is placed on hands-on experimentation, real-world use cases, ethical considerations, and capstone project development to prepare learners for professional applications of generative AI.",
-        type: "ai-prompting",
+        type: "artificial-intelligence",
         duration: "24–30 hours (5 days intensive or 8–10 weeks part-time)",
         level: "Beginner to Intermediate",
         format: "Online / Hybrid / In-person",
@@ -1532,7 +1532,7 @@ export const programs = [
             "Provides advanced skills in Microsoft Word, Excel, and PowerPoint for data management, reporting, and professional presentations.",
         longDescription:
             "This course develops advanced competencies in Microsoft Office applications and other productivity tools. Participants will learn to efficiently manage documents, organize and analyze data in Excel, create compelling presentations, and integrate automation tools to streamline workflows. Hands-on labs and real-world exercises ensure learners can apply these skills directly in professional settings.",
-        type: "digital-skills",
+        type: "digital-literacy",
         duration: "50 hours (5 weeks)",
         level: "Intermediate",
         format: "Online & In-person",
@@ -1635,7 +1635,7 @@ export const programs = [
             "Learn to use digital tools for effective communication, remote collaboration, and project coordination in modern workplaces.",
         longDescription:
             "This course equips participants with the skills to communicate and collaborate effectively in digital environments. Learners will gain hands-on experience using email, chat, video conferencing, and cloud collaboration platforms. Through group projects and simulations, participants will learn best practices for professionalism, security, and productivity in remote and hybrid work settings.",
-        type: "digital-skills",
+        type: "digital-literacy",
         duration: "40 hours (4 weeks)",
         level: "Beginner to Intermediate",
         format: "Online & In-person",
@@ -1739,7 +1739,7 @@ export const programs = [
             "Learn modern project management tools and techniques for planning, tracking, and leading digital projects using Agile and Scrum methodologies.",
         longDescription:
             "This course introduces participants to modern project management in digital environments, focusing on agility, productivity, and effective use of digital tools. Learners will explore project planning, scheduling, team collaboration, risk management, and reporting through hands-on labs, simulations, and group case studies.",
-        type: "digital-skills",
+        type: "digital-literacy",
         duration: "60 hours (6 weeks)",
         level: "Beginner to Intermediate",
         format: "Online & In-person",
@@ -1844,7 +1844,7 @@ export const programs = [
             "Learn to manage personal and business finances using digital tools, including mobile banking, digital payments, and fintech innovations in Africa.",
         longDescription:
             "This course covers digital banking, mobile payment systems, and personal financial management in the context of Africa's growing digital economy. Participants will learn to use digital financial tools responsibly, enhance financial inclusion, and practice safe online financial behavior through simulations, fintech demos, and case studies.",
-        type: "digital-skills",
+        type: "digital-literacy",
         duration: "40 hours (4 weeks)",
         level: "Beginner",
         format: "Online & In-person",
@@ -1947,7 +1947,7 @@ export const programs = [
             "Develop essential competencies to communicate effectively, professionally, and ethically across digital platforms including email, social media, virtual meetings, and collaborative tools.",
         longDescription:
             "This course equips learners with digital communication skills required in academic, corporate, and public-sector contexts. Participants will learn to write professionally, deliver virtual presentations, manage online presence, collaborate using digital tools, and communicate ethically and responsibly across digital platforms.",
-        type: "digital-skills",
+        type: "digital-literacy",
         duration: "30 hours",
         level: "Beginner to Intermediate",
         format: "Hybrid / Online / In-person",
@@ -2096,7 +2096,7 @@ export const programs = [
             "A beginner-friendly introduction to programming using Python, covering fundamental concepts, syntax, and problem-solving through hands-on projects.",
         longDescription:
             "This course is designed for absolute beginners to programming. Participants will learn Python syntax, data structures, control flow, functions, file I/O, and basic error handling through interactive coding sessions, daily challenges, and a final capstone project. By the end, learners will be able to write simple scripts and applications using Python.",
-        type: "programming",
+        type: "development",
         duration: "5 days (40 hours)",
         level: "Beginner",
         format: "Online & In-person",
@@ -2202,7 +2202,7 @@ export const programs = [
             "Learn the fundamentals of web development using HTML, CSS, and JavaScript to build and deploy a fully functional personal portfolio website.",
         longDescription:
             "This hands-on course teaches participants the core technologies of the web: HTML for structuring content, CSS for styling and layouts, and JavaScript for interactivity. Learners will progress through guided workshops and mini-projects to create a responsive website and deploy it online, gaining practical skills in web development and design.",
-        type: "web-development",
+        type: "development",
         duration: "5 days (40 hours)",
         level: "Beginner",
         format: "Online & In-person",
@@ -2310,7 +2310,7 @@ export const programs = [
             "Learn the disciplined process of building software professionally, from version control and Agile workflows to design principles and testing.",
         longDescription:
             "This course introduces participants to professional software engineering practices. Learners will move from a vague idea to a structured software project using Git for version control, collaborative workflows, software design principles, and testing strategies. The course emphasizes teamwork, Agile methodologies, and real-world project management to prepare developers for professional software development environments.",
-        type: "software-engineering",
+        type: "development",
         duration: "4 days (32 hours)",
         level: "Beginner to Intermediate",
         format: "Online & In-person",
@@ -2621,7 +2621,7 @@ export const programs = [
             "A hands-on course teaching the human-centered Design Thinking methodology to solve complex problems and drive innovation within teams.",
         longDescription:
             "This course provides a deep dive into the Design Thinking methodology, a human-centered approach to solving complex problems. Participants learn a structured, five-stage process to understand user needs, challenge assumptions, redefine problems, and create innovative solutions that are desirable, feasible, and viable. Focus is on fostering creativity, experimentation, and collaboration within teams.",
-        type: "innovation",
+        type: "entrepreneurship",
         duration: "2 days (16 hours)",
         level: "Beginner to Intermediate",
         format: "Online & In-person",
@@ -2725,7 +2725,7 @@ export const programs = [
             "A practical, hands-on course teaching participants how to build an e-commerce store and execute a data-driven digital marketing strategy across multiple channels.",
         longDescription:
             "This course covers the end-to-end process of building and marketing an online business. Participants will learn to select an e-commerce platform, set up a store, develop a digital marketing funnel, create content for social media and SEO, run targeted ads, and analyze results to drive customer acquisition and retention. Focus is on actionable strategies and measurable outcomes.",
-        type: "digital-marketing",
+        type: "entrepreneurship",
         duration: "3 days (24 hours)",
         level: "Beginner to Intermediate",
         format: "Online & In-person",
@@ -3651,7 +3651,7 @@ export const programs = [
         title: "Connecting the Physical World: Internet of Things (IoT) Fundamentals",
         description: "Hands-on introduction to IoT, covering sensors, microcontrollers, connectivity, and cloud platforms for building smart devices.",
         longDescription: "This course provides a practical understanding of IoT systems, from sensors and microcontrollers to data transmission and visualization. Participants will build a simple IoT device and explore real-world applications in smart homes, agriculture, and industry.",
-        type: "iot",
+        type: "emerging-tech",
         duration: "3 days (24 hours)",
         level: "Beginner",
         format: "In-person / Hybrid / Online",
@@ -3759,7 +3759,7 @@ export const programs = [
         title: "Demystifying Blockchain and Web3: From Bitcoin to a Decentralized Internet",
         description: "A foundational course introducing blockchain technology, cryptocurrencies, smart contracts, NFTs, and Web3 concepts with practical applications.",
         longDescription: "This course provides a clear understanding of blockchain and the emerging Web3 ecosystem. Participants explore decentralization, distributed ledgers, cryptography, and consensus mechanisms, with hands-on exercises including crypto wallets, dApps, and real-world case studies in supply chain, identity management, and governance.",
-        type: "technology",
+        type: "emerging-tech",
         duration: "2 days (16 hours)",
         level: "Beginner",
         format: "In-person / Hybrid / Online",
@@ -3869,7 +3869,7 @@ export const programs = [
         title: "Cloud Computing for Beginners: Leveraging the Digital Utility",
         description: "A foundational course introducing cloud computing concepts, service models, and practical labs to provision and manage cloud resources.",
         longDescription: "This course provides an introduction to cloud computing, covering IaaS, PaaS, SaaS, and deployment models. Participants gain hands-on experience with cloud consoles (AWS, Azure, or GCP), virtual machines, storage, and cloud security, while understanding the cost and operational models of cloud services.",
-        type: "technology",
+        type: "emerging-tech",
         duration: "2 days (16 hours)",
         level: "Beginner",
         format: "In-person / Hybrid / Online",
@@ -3980,7 +3980,7 @@ export const programs = [
         title: "Robotics and Automation Basics: An Introduction to the Future of Work",
         description: "A foundational course introducing robotics concepts, components, and automation principles, with hands-on simulation exercises.",
         longDescription: "This course provides an overview of robotics and automation systems, covering robot anatomy, sensors, actuators, control systems, and programming basics. Participants explore industrial, mobile, and collaborative robots, gain practical experience with robot simulators, and understand the societal impact of automation.",
-        type: "technology",
+        type: "emerging-tech",
         duration: "2 days (16 hours)",
         level: "Beginner",
         format: "In-person / Hybrid / Online",
@@ -4081,14 +4081,15 @@ export const programs = [
             "Basic computer literacy",
             "Interest in robotics and automation"
         ],
-        certification: "Certificate of Completion upon attending all 2 days and successfully completing the simulation programming task"
+        certification: "Certificate of Completion upon attending all 2 days and successfully completing the simulation programming task",
+        image: "/images/courses/robotics-automation-basics.webp"
     },
     {
         id: "smart-agriculture-agritech",
         title: "Smart Agriculture and AgriTech: Transforming Farming with Technology",
         description: "An introductory course on how digital technologies such as IoT, drones, and data analytics are transforming modern agriculture.",
         longDescription: "This course explores the role of emerging technologies in revolutionizing agriculture, with a strong focus on African farming contexts. Participants learn about precision farming, IoT-based smart irrigation, drone and satellite-based crop monitoring, and data-driven decision-making to improve productivity, sustainability, and resilience. The course combines demonstrations, data analysis workshops, and real-world AgriTech case studies.",
-        type: "technology",
+        type: "emerging-tech",
         duration: "2 days (16 hours)",
         level: "Beginner",
         format: "In-person / Hybrid / Online",
@@ -4189,14 +4190,15 @@ export const programs = [
             "Basic literacy",
             "Interest in agriculture and technology"
         ],
-        certification: "Certificate of Completion upon attending all 2 days and achieving at least 70% across all assessments"
+        certification: "Certificate of Completion upon attending all 2 days and achieving at least 70% across all assessments",
+        image: "/images/courses/smart-agriculture-agritech.webp"
     },
     {
         id: "leadership-emotional-intelligence",
         title: "Leadership and Emotional Intelligence",
         description: "A people-centered leadership course focusing on Emotional Intelligence (EI) as the foundation for effective and influential leadership.",
         longDescription: "This course goes beyond traditional leadership models to focus on Emotional Intelligence as the core driver of impactful leadership. Participants develop self-awareness, self-regulation, motivation, empathy, and social skills to lead teams effectively, manage conflict, and inspire positive change. Grounded in the African context, the course emphasizes inclusive, resilient, and high-performing leadership practices.",
-        type: "leadership",
+        type: "soft-skills",
         duration: "3 days (24 hours)",
         level: "Beginner to Intermediate",
         format: "In-person / Hybrid / Online",
@@ -4299,14 +4301,15 @@ export const programs = [
             "Willingness to engage in self-reflection",
             "Basic professional or team experience"
         ],
-        certification: "Certificate of Completion upon attending all 3 days and achieving at least 70% across all assessments"
+        certification: "Certificate of Completion upon attending all 3 days and achieving at least 70% across all assessments",
+        image: "/images/courses/leadership-emotional-intelligence.webp"
     },
     {
         id: "communication-presentation-skills",
         title: "Powerful Communication and Persuasive Presentation Skills",
         description: "An interactive skills-focused course designed to help professionals communicate clearly, confidently, and persuasively in any professional setting.",
         longDescription: "This highly interactive course equips participants with practical tools for effective communication and impactful presentations. Learners develop structured messaging techniques, master active listening, refine non-verbal communication, and practice delivering persuasive presentations. Through repeated practice, feedback, and real-world simulations, participants build confidence and the ability to handle difficult conversations and high-stakes presentations.",
-        type: "professional-skills",
+        type: "soft-skills",
         duration: "2 days (16 hours)",
         level: "Beginner to Intermediate",
         format: "In-person / Hybrid / Online",
@@ -4408,14 +4411,15 @@ export const programs = [
             "Basic professional communication experience",
             "Willingness to participate in presentations and feedback sessions"
         ],
-        certification: "Certificate of Completion upon attending all 2 days and achieving at least 70% on the final presentation"
+        certification: "Certificate of Completion upon attending all 2 days and achieving at least 70% on the final presentation",
+        image: "/images/courses/communication-presentation-skills.webp"
     },
     {
         id: "time-project-management",
         title: "Strategic Time and Project Management for Peak Performance",
         description: "A practical, hands-on course focused on improving personal productivity and applying essential project management techniques to deliver work efficiently.",
         longDescription: "This course provides participants with proven tools and frameworks to manage time effectively and execute projects successfully. Learners explore techniques for prioritization, goal setting, and overcoming procrastination, while also gaining a solid foundation in project management—from defining scope and objectives to planning, execution, monitoring, and closure. The course emphasizes real-world application using simple project scenarios and digital productivity tools.",
-        type: "professional-skills",
+        type: "soft-skills",
         duration: "2 days (16 hours)",
         level: "Beginner to Intermediate",
         format: "In-person / Hybrid / Online",
@@ -4517,7 +4521,8 @@ export const programs = [
             "Basic computer literacy",
             "Willingness to reflect on personal work habits"
         ],
-        certification: "Certificate of Completion upon attending all 2 days and achieving a minimum overall score of 70%"
+        certification: "Certificate of Completion upon attending all 2 days and achieving a minimum overall score of 70%",
+        image: "/images/courses/time-project-management.webp"
     },
 
     {
@@ -4525,7 +4530,7 @@ export const programs = [
         title: "Critical Thinking and Creative Problem-Solving",
         description: "A skills-focused course that develops structured, analytical, and creative approaches to solving complex problems and making sound decisions.",
         longDescription: "This course equips participants with practical frameworks and tools to analyze information critically, identify root causes of problems, and design effective solutions. Learners move beyond intuition-driven decisions by recognizing cognitive biases, separating facts from assumptions, and applying structured problem-solving models. Through real-world case studies and hands-on exercises, participants build confidence in tackling complex challenges systematically and creatively.",
-        type: "professional-skills",
+        type: "soft-skills",
         duration: "2 days (16 hours)",
         level: "Beginner to Intermediate",
         format: "In-person / Hybrid / Online",
@@ -4625,7 +4630,119 @@ export const programs = [
             "Basic analytical and reasoning skills",
             "Willingness to engage in group discussions and exercises"
         ],
-        certification: "Certificate of Completion upon attending all 2 days and achieving a minimum overall score of 70%"
+        certification: "Certificate of Completion upon attending all 2 days and achieving a minimum overall score of 70%",
+        image: "/images/courses/critical-thinking-problem-solving.webp"
+    },
+    {
+        id: "tech-for-justice-inclusion",
+        title: "Tech for Justice and Inclusion: Building Equitable Digital Futures",
+        description: "A justice-oriented course on designing and deploying technology to reduce inequality, address algorithmic bias, and promote inclusion for marginalized communities.",
+        longDescription: "This course examines how technology can be intentionally designed and governed to advance social justice and inclusion. Moving beyond purely technical solutions, participants explore justice-by-design principles, algorithmic bias, digital divides, and power dynamics embedded in digital systems. Through case studies, bias audits, participatory design exercises, and policy-oriented thinking, learners gain the skills to evaluate, design, and advocate for technologies that repair historical inequities and empower communities.",
+        type: "civic-tech",
+        duration: "3 days (24 hours)",
+        level: "Beginner to Intermediate",
+        format: "In-person / Hybrid / Online",
+        startDates: ["Dec 5, 2025", "Jan 20, 2026", "Mar 5, 2026"],
+        instructors: [
+            {
+                name: "Dr. Abebe Bekele",
+                title: "AI & IoT Solutions Instructor",
+                bio: "PhD in Mechatronics and AI, specializing in ethical technology design, intelligent systems, and inclusive digital transformation.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            },
+            {
+                name: "Ms. Leila Hassan",
+                title: "Technology Policy & Inclusion Specialist",
+                bio: "Expert in civic tech, participatory design, and digital inclusion initiatives across governance and social impact sectors.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            }
+        ],
+        audience: [
+            "Tech developers",
+            "Social entrepreneurs",
+            "NGO leaders",
+            "Policy makers",
+            "Legal professionals",
+            "Government officials involved in digital transformation"
+        ],
+        modules: [
+            {
+                title: "The Landscape of Digital Injustice: Bias, Divides, and Power Dynamics",
+                duration: "4 hours",
+                topics: [
+                    "Algorithmic bias and discrimination",
+                    "The digital divide and digital redlining",
+                    "Power, data, and inequality in digital systems"
+                ]
+            },
+            {
+                title: "Justice-by-Design: Frameworks for Ethical and Inclusive Technology",
+                duration: "4 hours",
+                topics: [
+                    "Justice-by-Design principles",
+                    "Equitable technology development frameworks",
+                    "Ethics, accountability, and inclusion by default"
+                ]
+            },
+            {
+                title: "Tools for Justice: Case Studies in Inclusive Technologies",
+                duration: "5 hours",
+                topics: [
+                    "LegalTech for access to justice",
+                    "EduTech and inclusive learning systems",
+                    "FinTech for financial inclusion"
+                ]
+            },
+            {
+                title: "Data for Empowerment and Community Data Sovereignty",
+                duration: "5 hours",
+                topics: [
+                    "From data extraction to data empowerment",
+                    "Community data ownership and governance",
+                    "Responsible data use in marginalized contexts"
+                ]
+            },
+            {
+                title: "Building an Inclusive Tech Ecosystem: Advocacy, Policy, and Implementation",
+                duration: "6 hours",
+                topics: [
+                    "Community-centered participatory design",
+                    "Policy advocacy for inclusive technology",
+                    "Implementation strategies and stakeholder engagement"
+                ]
+            }
+        ],
+        learningActivities: [
+            "Analysis of real-world justice-focused tech case studies (biased facial recognition, inclusive ID systems)",
+            "Bias Audit workshop of a hypothetical algorithm or digital platform",
+            "Role-playing exercises simulating community engagement and participatory design",
+            "Development of a Justice Impact Assessment for a tech product",
+            "Group project: Designing a concept note for a justice-oriented tech solution"
+        ],
+        assessment: [
+            "Participation in bias audit workshops and case study discussions (30%)",
+            "Individual critical analysis of a technology’s justice impact (30%)",
+            "Final group project: Tech for Justice concept note and presentation (40%)"
+        ],
+        resources: [
+            "Weapons of Math Destruction by Cathy O'Neil (selected excerpts)",
+            "Justice-by-Design framework toolkit",
+            "Case studies: Aadhaar (India), M-Pesa (Kenya), BarefootLaw (Uganda)",
+            "Participatory design and stakeholder mapping tools"
+        ],
+        outcomes: [
+            "Critically assess technologies for justice and inclusion impacts",
+            "Identify and mitigate algorithmic bias and digital exclusion",
+            "Apply justice-by-design frameworks in technology projects",
+            "Design or advocate for inclusive and equitable digital solutions",
+            "Lead community-centered and participatory tech initiatives"
+        ],
+        requirements: [
+            "Basic digital literacy",
+            "Interest in social justice, inclusion, or public-sector innovation"
+        ],
+        certification: "Certificate of Completion upon attending all 3 days and achieving a minimum overall score of 70%",
+        image: "/images/courses/tech-for-justice-inclusion.webp"
     },
     {
         id: "civic-tech-digital-participation",
@@ -4735,7 +4852,8 @@ export const programs = [
             "Basic digital literacy",
             "Interest in governance, civic engagement, or public-sector innovation"
         ],
-        certification: "Certificate of Completion upon attending all 2 days and achieving a minimum overall score of 70%"
+        certification: "Certificate of Completion upon attending all 2 days and achieving a minimum overall score of 70%",
+        image: "/images/courses/civic-tech-digital-participation.webp"
     },
     {
         id: "legaltech-e-governance",
@@ -4845,14 +4963,15 @@ export const programs = [
             "Basic understanding of public administration or legal systems",
             "General digital literacy"
         ],
-        certification: "Certificate of Completion upon attending all 3 days and achieving a minimum overall score of 70%"
+        certification: "Certificate of Completion upon attending all 3 days and achieving a minimum overall score of 70%",
+        image: "/images/courses/legaltech-e-governance.webp"
     },
     {
         id: "green-ict-sustainable-innovation",
         title: "Green ICT and Sustainable Innovation: A Circular Economy Approach",
         description: "A practical course on reducing ICT environmental footprint and leveraging technology for sustainability, emphasizing circular economy and climate-conscious innovation.",
         longDescription: "This course explores the dual role of ICT as both a significant consumer of energy and a powerful enabler of sustainability. Participants learn to measure and reduce the environmental footprint of digital operations (Green IT) and leverage technology (IT for Green) to drive sustainable practices in sectors like energy, agriculture, and manufacturing. Emphasis is placed on circular economy principles, e-waste management, and creating actionable sustainability strategies.",
-        type: "sustainability-tech",
+        type: "civic-tech",
         duration: "2 days (16 hours)",
         level: "Intermediate",
         format: "In-person / Hybrid / Online",
@@ -4955,6 +5074,7 @@ export const programs = [
             "Basic ICT knowledge",
             "Interest in sustainability and environmental innovation"
         ],
-        certification: "Certificate of Completion upon attending all 2 days and achieving a minimum score of 70% across assessments"
+        certification: "Certificate of Completion upon attending all 2 days and achieving a minimum score of 70% across assessments",
+        image: "/images/courses/green-ict-sustainable-innovation.webp"
     },
 ];

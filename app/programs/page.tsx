@@ -44,7 +44,6 @@ export default function ProgramsPage() {
 
         setFilteredCourses(result)
     }
-    useEffect(() => { console.log(filteredCourses); }, [filteredCourses]);
 
     return (
         <div className="container py-12">

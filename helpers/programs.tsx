@@ -672,6 +672,7 @@ export const programs = [
         duration: "3 days (24 hours)",
         level: "Beginner",
         format: "Online & In-person",
+        price: "$250",
         audience: [
             "Non-technical professionals",
             "Managers",
@@ -791,6 +792,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Aspiring data analysts",
             "Students",
@@ -886,6 +888,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Analysts",
             "Accountants",
@@ -989,6 +992,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Professionals",
             "Entrepreneurs",
@@ -1093,6 +1097,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "AI practitioners",
             "Managers",
@@ -1197,6 +1202,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Social entrepreneurs",
             "NGO workers",
@@ -1300,6 +1306,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "University students and researchers",
             "Professionals and managers",
@@ -1449,6 +1456,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Students",
             "Office staff",
@@ -1551,6 +1559,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Students",
             "Professionals",
@@ -1654,6 +1663,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Professionals",
             "Remote teams",
@@ -1758,6 +1768,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Project officers",
             "Team leaders",
@@ -1863,6 +1874,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Entrepreneurs",
             "Students",
@@ -1966,6 +1978,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "University students and graduates",
             "Professionals and managers",
@@ -2115,6 +2128,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Absolute beginners",
             "Students interested in programming",
@@ -2221,6 +2235,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Aspiring web designers",
             "Entrepreneurs",
@@ -2329,6 +2344,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Programmers with basic coding knowledge",
             "Junior software developers",
@@ -2432,6 +2448,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Aspiring UI/UX designers",
             "Product managers",
@@ -2535,6 +2552,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Aspiring entrepreneurs",
             "Students",
@@ -2640,6 +2658,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Product managers",
             "Project leads",
@@ -2744,6 +2763,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Small business owners",
             "Startup founders",
@@ -2847,6 +2867,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Startup founders",
             "Entrepreneurs preparing to raise seed or Series A funding"
@@ -2952,6 +2973,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Social entrepreneurs",
             "NGO leaders",
@@ -3061,6 +3083,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "General public",
             "Students",
@@ -3184,6 +3207,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "ICT students",
             "Junior security professionals",
@@ -3306,6 +3330,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Network technicians",
             "ICT officers",
@@ -3427,6 +3452,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Legal professionals",
             "Government officers",
@@ -3549,6 +3575,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "SME owners",
             "Business managers",
@@ -3670,6 +3697,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Students",
             "Engineers",
@@ -3778,6 +3806,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Business professionals",
             "Entrepreneurs",
@@ -3888,6 +3917,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "IT students",
             "Small business owners",
@@ -3999,6 +4029,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Engineers",
             "Technicians",
@@ -4108,6 +4139,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Farmers",
             "Agronomists",
@@ -4217,6 +4249,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Emerging managers",
             "Team leaders",
@@ -4328,6 +4361,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Professionals in client-facing roles",
             "Managers and team leaders",
@@ -4549,6 +4583,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Analysts",
             "Managers",
@@ -4657,6 +4692,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Tech developers",
             "Social entrepreneurs",
@@ -4768,6 +4804,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Civil society organizers",
             "Government communication officers",
@@ -4879,6 +4916,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "Government IT officers",
             "Public sector project managers",
@@ -4990,6 +5028,7 @@ export const programs = [
                 image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
             }
         ],
+        price: "$250",
         audience: [
             "IT managers",
             "CSR officers",
@@ -5086,6 +5125,7 @@ export const programs = [
         duration: "35 hours",
         level: "Intermediate to Advanced",
         format: "In-person / Online / Hybrid",
+        price: "$250",
         audience: [
             "IT managers",
             "Chief Information Security Officers (CISOs)",
@@ -5189,6 +5229,7 @@ export const programs = [
         duration: "30 hours",
         level: "Beginner to Intermediate",
         format: "In-person / Online / Hybrid",
+        price: "$250",
         audience: [
             "Quality managers",
             "Supervisors",
@@ -5278,6 +5319,7 @@ export const programs = [
         duration: "30 hours",
         level: "Beginner to Intermediate",
         format: "In-person / Online / Hybrid",
+        price: "$250",
         audience: [
             "Quality managers",
             "Supervisors",
@@ -5365,6 +5407,7 @@ export const programs = [
         duration: "30 hours",
         level: "Intermediate",
         format: "In-person / Online / Hybrid",
+        price: "$250",
         audience: [
             "ISMS managers",
             "Quality managers",
@@ -5450,6 +5493,7 @@ export const programs = [
         duration: "30 hours",
         level: "Beginner to Intermediate",
         format: "In-person / Online / Hybrid",
+        price: "$250",
         audience: [
             "Quality managers in education",
             "Academic administrators",
@@ -5537,6 +5581,7 @@ export const programs = [
         duration: "30 hours",
         level: "Intermediate",
         format: "In-person / Online / Hybrid",
+        price: "$250",
         audience: [
             "IMS managers",
             "Quality managers",
@@ -5626,6 +5671,7 @@ export const programs = [
         duration: "40 hours",
         level: "Beginner to Intermediate",
         format: "In-person / Online / Hybrid",
+        price: "$250",
         audience: [
             "Managers",
             "Supervisors",

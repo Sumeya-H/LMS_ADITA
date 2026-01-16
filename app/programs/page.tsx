@@ -8,7 +8,7 @@ import ProgramFilters from "@/components/programs/program-filters"
 import AudienceSelector from "@/components/programs/audience-selector"
 import ProgramSearch from "@/components/programs/program-search"
 import { ArrowRight, ArrowRightLeft } from "lucide-react"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { programs } from "@/helpers/programs"
 
 export default function ProgramsPage() {
@@ -16,8 +16,8 @@ export default function ProgramsPage() {
 
     const handleApplyFilters = (filters) => {
         const result = programs.filter((course) => {
-            const [min, max] = filters.priceRange
-            const price = Number(course.price.replace("$", ""))
+            //const [min, max] = filters.priceRange
+            //const price = Number(course.price.replace("$", ""))
 
             const matchesDuration =
                 filters.duration.length === 0 ||
@@ -36,13 +36,15 @@ export default function ProgramsPage() {
                 filters.format.length === 0 ||
                 filters.format.some((f) => course.format.toLowerCase().includes(f))
 
-            const matchesPrice = price >= min && price <= max
+            // const matchesPrice = price >= min && price <= max
 
-            return matchesDuration && matchesLevel && matchesFormat && matchesPrice
+            //return matchesDuration && matchesLevel && matchesFormat && matchesPrice
+            return matchesDuration && matchesLevel && matchesFormat
         })
 
         setFilteredCourses(result)
     }
+    useEffect(() => { console.log(filteredCourses); }, [filteredCourses]);
 
     return (
         <div className="container py-12">

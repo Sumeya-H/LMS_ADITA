@@ -118,13 +118,25 @@ export default function Partners() {
                     </CardContent>
                 </Card>
                 <Card key={"University Of Gondar"} className="bg-background">
-                    <CardContent className="flex items-center justify-center p-6 h-32">
-                        <div className="relative h-14 w-full">
+                    <CardContent className="flex items-center justify-center p-2 h-32">
+                        <div className="relative h-24 w-full">
                             <Image
                                 src={"/images/partners/uog.png"}
                                 alt={"University Of Gondar"}
                                 fill
                                 className="object-cover"
+                            />
+                        </div>
+                    </CardContent>
+                </Card>
+                <Card key={"ZSecuredTech"} className="bg-background">
+                    <CardContent className="flex items-center justify-center p-6 h-32">
+                        <div className="relative h-24 w-full">
+                            <Image
+                                src={"/images/partners/zsecuredtech.webp"}
+                                alt={"ZSecuredTech"}
+                                fill
+                                className="object-contain"
                             />
                         </div>
                     </CardContent>

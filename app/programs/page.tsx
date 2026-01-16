@@ -74,7 +74,7 @@ export default function ProgramsPage() {
                             <TabsTrigger value="design">Design</TabsTrigger>
                             <TabsTrigger value="emerging-tech">Emerging Technology</TabsTrigger>
                             <TabsTrigger value="soft-skills">Soft Skills</TabsTrigger>
-                            <TabsTrigger value="specialized">Specialized</TabsTrigger>
+                            <TabsTrigger value="iso-training">Specialized</TabsTrigger>
                         </TabsList>
                     </div>
 
@@ -198,10 +198,10 @@ export default function ProgramsPage() {
                                         ))}
                                 </div>
                             </TabsContent>
-                            <TabsContent value="specialized" className="mt-0">
+                            <TabsContent value="iso-training" className="mt-0">
                                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                                     {filteredCourses
-                                        .filter((program) => program.type === "specialized")
+                                        .filter((program) => program.type === "iso-training")
                                         .map((program) => (
                                             <ProgramCard key={program.id} program={program} />
                                         ))}

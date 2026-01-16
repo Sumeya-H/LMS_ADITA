@@ -5077,4 +5077,631 @@ export const programs = [
         certification: "Certificate of Completion upon attending all 2 days and achieving a minimum score of 70% across assessments",
         image: "/images/courses/green-ict-sustainable-innovation.webp"
     },
+    {
+        id: "iso-iec-27001-isms",
+        title: "ISO/IEC 27001 ISMS: Implementation, Internal Auditing & Awareness",
+        description: "In-depth training on implementing, auditing, and maintaining an Information Security Management System (ISMS) based on ISO/IEC 27001.",
+        longDescription: "This course provides comprehensive knowledge and practical skills required to design, implement, audit, and continuously improve an Information Security Management System (ISMS) in accordance with ISO/IEC 27001. Participants gain hands-on experience in information security risk assessment, control selection, documentation development, internal auditing, and preparation for certification and surveillance audits.",
+        type: "iso-training",
+        duration: "35 hours",
+        level: "Intermediate to Advanced",
+        format: "In-person / Online / Hybrid",
+        audience: [
+            "IT managers",
+            "Chief Information Security Officers (CISOs)",
+            "Internal and external auditors",
+            "Compliance officers",
+            "Information security consultants"
+        ],
+        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Dr. Abebe Bekele",
+                title: "AI & IoT Solutions Instructor",
+                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            },
+            {
+                name: "Ms. Leila Hassan",
+                title: "IoT Engineer",
+                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            }
+        ],
+        modules: [
+            {
+                title: "Information Security Fundamentals and Threat Landscape",
+                duration: "3 hours",
+                topics: [
+                    "Information security principles",
+                    "Cyber threat landscape",
+                    "Confidentiality, Integrity, and Availability (CIA)"
+                ]
+            },
+            {
+                title: "ISO/IEC 27001 Structure and Requirements",
+                duration: "4 hours",
+                topics: [
+                    "ISO/IEC 27001 clauses",
+                    "Annex A control framework",
+                    "High-Level Structure (HLS)"
+                ]
+            },
+            {
+                title: "ISMS Scope, Context, and Risk Management",
+                duration: "10 hours",
+                topics: [
+                    "Scope definition",
+                    "Context of the organization",
+                    "Risk assessment methodologies",
+                    "Risk treatment planning",
+                    "Statement of Applicability (SoA)"
+                ]
+            },
+            {
+                title: "ISMS Implementation, Auditing, and Certification",
+                duration: "18 hours",
+                topics: [
+                    "Policy and documentation development",
+                    "ISMS implementation and operations",
+                    "Monitoring, measurement, and KPIs",
+                    "Internal audit process (ISO 19011)",
+                    "Management review",
+                    "Certification and surveillance audits"
+                ]
+            }
+        ],
+        learningActivities: [
+            "Case study analysis",
+            "Information security risk assessment workshops",
+            "ISMS documentation and policy drafting exercises",
+            "Internal audit simulations and role-play"
+        ],
+        assessment: [
+            "Practical ISMS implementation assignments",
+            "Internal audit role-play exercise",
+            "Final knowledge assessment"
+        ],
+        resources: [
+            "ISO/IEC 27001:2022 standard",
+            "Risk registers and audit checklists",
+            "ISMS templates and documentation samples"
+        ],
+        outcomes: [
+            "Understand ISO/IEC 27001 requirements and structure",
+            "Implement an ISMS aligned with organizational objectives",
+            "Conduct effective internal ISMS audits",
+            "Prepare organizations for certification and surveillance audits",
+            "Manage information security risks systematically"
+        ],
+        requirements: [
+            "Basic understanding of IT systems and organizational processes"
+        ],
+        certification: "Certificate of Completion upon 80% attendance, active participation, and passing the final assessment",
+        image: "/images/courses/iso-iec-27001-isms.webp"
+    },
+    {
+        id: "iso-9001-2015-qms",
+        title: "ISO 9001:2015 Quality Management System Implementation & Auditing",
+        description: "Practical training on designing, implementing, and auditing a Quality Management System focused on customer satisfaction and continual improvement.",
+        longDescription: "This course equips participants with the knowledge and practical skills needed to implement, maintain, and audit a Quality Management System (QMS) in accordance with ISO 9001:2015. Emphasis is placed on process-based thinking, risk-based decision-making, performance measurement, and continual improvement to enhance organizational effectiveness and customer satisfaction.",
+        type: "iso-training",
+        duration: "30 hours",
+        level: "Beginner to Intermediate",
+        format: "In-person / Online / Hybrid",
+        audience: [
+            "Quality managers",
+            "Supervisors",
+            "Internal auditors",
+            "Quality consultants"
+        ],
+        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Dr. Abebe Bekele",
+                title: "AI & IoT Solutions Instructor",
+                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            },
+            {
+                name: "Ms. Leila Hassan",
+                title: "IoT Engineer",
+                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            }
+        ],
+        modules: [
+            {
+                title: "Quality Management Foundations and ISO 9001 Overview",
+                duration: "6 hours",
+                topics: [
+                    "Quality management principles",
+                    "Customer focus and leadership",
+                    "ISO 9001:2015 structure and clauses"
+                ]
+            },
+            {
+                title: "Context, Processes, and Risk-Based Thinking",
+                duration: "10 hours",
+                topics: [
+                    "Context of the organization",
+                    "Interested parties and stakeholder needs",
+                    "Process mapping and documentation",
+                    "Risk-based thinking in QMS"
+                ]
+            },
+            {
+                title: "QMS Operations, Evaluation, and Auditing",
+                duration: "14 hours",
+                topics: [
+                    "Operational planning and control",
+                    "Performance evaluation and KPIs",
+                    "Nonconformity and corrective actions",
+                    "Internal audit techniques",
+                    "Management review",
+                    "Certification audit preparation"
+                ]
+            }
+        ],
+        learningActivities: [
+            "Process mapping workshops",
+            "QMS documentation and procedure development exercises",
+            "Internal audit simulations"
+        ],
+        assessment: [
+            "Case study analysis",
+            "Written knowledge assessment"
+        ],
+        resources: [
+            "ISO 9001:2015 standard",
+            "QMS templates and sample documentation"
+        ],
+        outcomes: [
+            "Interpret ISO 9001:2015 requirements accurately",
+            "Apply process-based thinking across organizational functions",
+            "Implement risk-based quality management practices",
+            "Conduct effective internal QMS audits",
+            "Maintain and continually improve a compliant QMS"
+        ],
+        requirements: [
+            "Basic understanding of organizational processes"
+        ],
+        certification: "Certificate of Completion upon meeting attendance requirements and passing the final assessment",
+        image: "/images/courses/iso-9001-2015-qms.webp"
+    },
+    {
+        id: "iso-14001-ems",
+        title: "ISO 14001 Environmental Management System Implementation & Auditing",
+        description: "Structured training on implementing and auditing an Environmental Management System to improve sustainability and regulatory compliance.",
+        longDescription: "This course focuses on managing environmental responsibilities through a systematic Environmental Management System (EMS) aligned with ISO 14001. Participants learn how to identify environmental aspects and impacts, ensure legal compliance, implement operational controls, and drive continual environmental improvement within their organizations.",
+        type: "iso-training",
+        duration: "30 hours",
+        level: "Beginner to Intermediate",
+        format: "In-person / Online / Hybrid",
+        audience: [
+            "Quality managers",
+            "Supervisors",
+            "Environmental officers",
+            "Management system consultants"
+        ],
+        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Dr. Abebe Bekele",
+                title: "AI & IoT Solutions Instructor",
+                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            },
+            {
+                name: "Ms. Leila Hassan",
+                title: "IoT Engineer",
+                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            }
+        ],
+        modules: [
+            {
+                title: "Environmental Management Fundamentals and ISO 14001 Overview",
+                duration: "6 hours",
+                topics: [
+                    "Environmental management principles",
+                    "Sustainability and compliance drivers",
+                    "ISO 14001 structure and requirements"
+                ]
+            },
+            {
+                title: "Environmental Aspects, Risks, and Operational Controls",
+                duration: "12 hours",
+                topics: [
+                    "Identification of environmental aspects and impacts",
+                    "Legal and regulatory compliance",
+                    "Environmental risk controls",
+                    "Operational controls and emergency preparedness"
+                ]
+            },
+            {
+                title: "Monitoring, Auditing, and Continuous Improvement",
+                duration: "12 hours",
+                topics: [
+                    "Monitoring and measurement",
+                    "EMS documentation",
+                    "Internal auditing techniques",
+                    "Management review and continual improvement"
+                ]
+            }
+        ],
+        learningActivities: [
+            "Process mapping workshops",
+            "ISO 14001 documentation exercises",
+            "Internal audit simulations"
+        ],
+        assessment: [
+            "Case study analysis",
+            "Written knowledge assessment"
+        ],
+        resources: [
+            "ISO 14001 standard",
+            "EMS templates and documentation samples"
+        ],
+        outcomes: [
+            "Identify environmental aspects and impacts",
+            "Implement effective EMS controls",
+            "Ensure environmental legal compliance",
+            "Conduct internal EMS audits",
+            "Maintain and improve a compliant EMS"
+        ],
+        requirements: [
+            "Basic understanding of organizational operations"
+        ],
+        certification: "Certificate of Completion upon meeting attendance requirements and passing the assessment",
+        image: "/images/courses/iso-14001-ems.webp"
+    },
+    {
+        id: "iso-27001-2022-transition",
+        title: "ISO/IEC 27001:2022 Transition, Implementation & Auditing",
+        description: "Focused training on transitioning from ISO/IEC 27001:2013 to the 2022 version, including new controls and audit implications.",
+        longDescription: "This course addresses the key changes introduced in ISO/IEC 27001:2022 and provides a structured approach to managing transition projects. Participants learn how to update risk assessments, revise the Statement of Applicability (SoA), adapt documentation, and prepare for transition and certification audits.",
+        type: "iso-training",
+        duration: "30 hours",
+        level: "Intermediate",
+        format: "In-person / Online / Hybrid",
+        audience: [
+            "ISMS managers",
+            "Quality managers",
+            "Internal auditors",
+            "Consultants"
+        ],
+        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Dr. Abebe Bekele",
+                title: "AI & IoT Solutions Instructor",
+                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            },
+            {
+                name: "Ms. Leila Hassan",
+                title: "IoT Engineer",
+                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            }
+        ],
+        modules: [
+            {
+                title: "Overview of ISO/IEC 27001:2022 Changes",
+                duration: "6 hours",
+                topics: [
+                    "Differences between 2013 and 2022 versions",
+                    "Revised control structure",
+                    "Impact on existing ISMS"
+                ]
+            },
+            {
+                title: "Transition Planning and Documentation Updates",
+                duration: "12 hours",
+                topics: [
+                    "Transition project planning",
+                    "Updated risk assessment approach",
+                    "Statement of Applicability (SoA) updates",
+                    "Documentation revisions"
+                ]
+            },
+            {
+                title: "Audit Implications and Certification Strategy",
+                duration: "12 hours",
+                topics: [
+                    "Audit implications of ISO/IEC 27001:2022",
+                    "Internal audit adjustments",
+                    "Certification transition strategy"
+                ]
+            }
+        ],
+        learningActivities: [
+            "Process mapping workshops",
+            "IMS documentation update exercises",
+            "Audit simulations"
+        ],
+        assessment: [
+            "Case study analysis",
+            "Written knowledge assessment"
+        ],
+        resources: [
+            "ISO/IEC 27001:2022 standard",
+            "IMS templates and transition tools"
+        ],
+        outcomes: [
+            "Understand ISO/IEC 27001:2022 control updates",
+            "Plan and manage ISMS transition projects",
+            "Update risk treatment and SoA effectively",
+            "Prepare organizations for transition audits"
+        ],
+        requirements: [
+            "Prior knowledge of ISO/IEC 27001"
+        ],
+        certification: "Certificate of Completion upon meeting attendance requirements and passing the assessment",
+        image: "/images/courses/iso-27001-2022-transition.webp"
+    },
+    {
+        id: "iso-21001-eoms",
+        title: "ISO 21001:2018 Educational Organizations Management System",
+        description: "Specialized training on implementing ISO 21001 to improve governance, learner satisfaction, and educational service quality.",
+        longDescription: "This course is designed for educational institutions seeking to implement an Educational Organizations Management System (EOMS) aligned with ISO 21001:2018. Participants gain practical skills in learner-centered process design, governance, risk management, and continual improvement to enhance educational outcomes and stakeholder satisfaction.",
+        type: "iso-training",
+        duration: "30 hours",
+        level: "Beginner to Intermediate",
+        format: "In-person / Online / Hybrid",
+        audience: [
+            "Quality managers in education",
+            "Academic administrators",
+            "Supervisors",
+            "Education consultants"
+        ],
+        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Dr. Abebe Bekele",
+                title: "AI & IoT Solutions Instructor",
+                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            },
+            {
+                name: "Ms. Leila Hassan",
+                title: "IoT Engineer",
+                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            }
+        ],
+        modules: [
+            {
+                title: "EOMS Fundamentals and ISO 21001 Overview",
+                duration: "6 hours",
+                topics: [
+                    "Education management system principles",
+                    "ISO 21001 structure and requirements",
+                    "Stakeholders in educational organizations"
+                ]
+            },
+            {
+                title: "Learner-Centered Processes and Risk Management",
+                duration: "12 hours",
+                topics: [
+                    "Learner needs and accessibility",
+                    "Curriculum and learning design",
+                    "Educational risk management",
+                    "Governance and leadership"
+                ]
+            },
+            {
+                title: "Evaluation, Auditing, and Continuous Improvement",
+                duration: "12 hours",
+                topics: [
+                    "Performance evaluation",
+                    "EOMS documentation",
+                    "Internal audits",
+                    "Continuous improvement and certification process"
+                ]
+            }
+        ],
+        learningActivities: [
+            "Process mapping workshops",
+            "IMS documentation exercises",
+            "Internal audit simulations"
+        ],
+        assessment: [
+            "Case study analysis",
+            "Written knowledge assessment"
+        ],
+        resources: [
+            "ISO 21001:2018 standard",
+            "EOMS and IMS templates"
+        ],
+        outcomes: [
+            "Implement ISO 21001 in educational institutions",
+            "Improve learner-centered educational processes",
+            "Align educational outcomes with stakeholder needs",
+            "Maintain and continually improve a compliant EOMS"
+        ],
+        requirements: [
+            "Experience or interest in education management"
+        ],
+        certification: "Certificate of Completion upon meeting attendance requirements and passing the assessment",
+        image: "/images/courses/iso-21001-eoms.webp"
+    },
+
+    {
+        id: "integrated-iso-management-systems",
+        title: "Integrated Management Systems (IMS) Implementation & Auditing",
+        description: "Learn how to integrate multiple ISO management system standards into a single, efficient, and cost-effective management system.",
+        longDescription: "This course provides a structured methodology for integrating multiple ISO management system standards—such as ISO 9001, ISO 14001, ISO/IEC 27001, and ISO 45001—into a unified Integrated Management System (IMS). Participants learn how to leverage the High-Level Structure (Annex SL), develop integrated documentation, conduct integrated audits, and reduce duplication while improving organizational efficiency and compliance.",
+        type: "iso-training",
+        duration: "30 hours",
+        level: "Intermediate",
+        format: "In-person / Online / Hybrid",
+        audience: [
+            "IMS managers",
+            "Quality managers",
+            "ICT experts",
+            "Supervisors",
+            "Management system consultants"
+        ],
+        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Dr. Abebe Bekele",
+                title: "AI & IoT Solutions Instructor",
+                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            },
+            {
+                name: "Ms. Leila Hassan",
+                title: "IoT Engineer",
+                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            }
+        ],
+        modules: [
+            {
+                title: "IMS Fundamentals and Annex SL High-Level Structure",
+                duration: "6 hours",
+                topics: [
+                    "Concept of Integrated Management Systems",
+                    "ISO High-Level Structure (Annex SL)",
+                    "Common clauses across ISO standards"
+                ]
+            },
+            {
+                title: "Integration Strategy and Unified Risk Management",
+                duration: "12 hours",
+                topics: [
+                    "Integration planning and roadmap",
+                    "Unified risk management approach",
+                    "Integrated policies and objectives",
+                    "Reducing duplication and operational cost"
+                ]
+            },
+            {
+                title: "Integrated Audits and Performance Improvement",
+                duration: "12 hours",
+                topics: [
+                    "Integrated audit planning and execution",
+                    "Performance measurement and KPIs",
+                    "Management review",
+                    "Continual improvement in an IMS"
+                ]
+            }
+        ],
+        learningActivities: [
+            "Process mapping workshops",
+            "Integrated documentation development exercises",
+            "Integrated audit simulations"
+        ],
+        assessment: [
+            "Case study analysis",
+            "Written knowledge assessment"
+        ],
+        resources: [
+            "ISO management system standards",
+            "IMS and QMS templates"
+        ],
+        outcomes: [
+            "Identify common clauses across ISO standards",
+            "Develop integrated management system documentation",
+            "Conduct integrated internal audits",
+            "Reduce duplication, cost, and administrative overhead",
+            "Implement and maintain an effective IMS"
+        ],
+        requirements: [
+            "Basic understanding of at least one ISO management system standard"
+        ],
+        certification: "Certificate of Completion upon meeting attendance requirements and passing the assessment",
+        image: "/images/courses/integrated-iso-management-systems.webp"
+    },
+
+    {
+        id: "iso-45001-ohs-management-system",
+        title: "ISO 45001 OH&S Management System Implementation & Auditing",
+        description: "Comprehensive training on implementing and auditing an Occupational Health & Safety Management System to prevent injuries and improve workplace safety culture.",
+        longDescription: "This course focuses on implementing an Occupational Health & Safety Management System (OH&SMS) aligned with ISO 45001. Participants learn how to identify workplace hazards, assess and control OH&S risks, comply with legal requirements, investigate incidents, and promote a proactive safety culture through effective monitoring, auditing, and continual improvement.",
+        type: "iso-training",
+        duration: "40 hours",
+        level: "Beginner to Intermediate",
+        format: "In-person / Online / Hybrid",
+        audience: [
+            "Managers",
+            "Supervisors",
+            "Health and safety officers",
+            "Management system consultants"
+        ],
+        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Dr. Abebe Bekele",
+                title: "AI & IoT Solutions Instructor",
+                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            },
+            {
+                name: "Ms. Leila Hassan",
+                title: "IoT Engineer",
+                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            }
+        ],
+        modules: [
+            {
+                title: "OH&S Fundamentals and ISO 45001 Overview",
+                duration: "8 hours",
+                topics: [
+                    "Occupational health and safety principles",
+                    "ISO 45001 structure and requirements",
+                    "Roles and responsibilities in OH&S"
+                ]
+            },
+            {
+                title: "Hazard Identification, Risk Assessment, and Controls",
+                duration: "16 hours",
+                topics: [
+                    "Hazard identification techniques",
+                    "Risk assessment and risk controls",
+                    "Legal and regulatory compliance",
+                    "Emergency preparedness and response"
+                ]
+            },
+            {
+                title: "Monitoring, Auditing, and Certification Readiness",
+                duration: "16 hours",
+                topics: [
+                    "Incident investigation and corrective actions",
+                    "Performance monitoring and KPIs",
+                    "Internal auditing",
+                    "Management review and certification readiness"
+                ]
+            }
+        ],
+        learningActivities: [
+            "Process mapping workshops",
+            "OH&SMS documentation exercises",
+            "Internal audit simulations"
+        ],
+        assessment: [
+            "Case study analysis",
+            "Written knowledge assessment"
+        ],
+        resources: [
+            "ISO 45001 standard",
+            "OH&SMS templates and checklists"
+        ],
+        outcomes: [
+            "Identify workplace health and safety hazards",
+            "Implement effective OH&S risk controls",
+            "Ensure compliance with OH&S legal requirements",
+            "Conduct internal OH&SMS audits",
+            "Maintain and continually improve a compliant OH&SMS"
+        ],
+        requirements: [
+            "Basic understanding of workplace operations"
+        ],
+        certification: "Certificate of Completion upon meeting attendance requirements and passing the assessment",
+        image: "/images/courses/iso-45001-ohs-management-system.webp"
+    }
 ];

@@ -6,7 +6,7 @@ import Footer from "@/components/footer"
 import TeamSection from "@/components/about/team-section"
 import MissionVision from "@/components/about/mission-vision"
 import Timeline from "@/components/about/timeline"
-import Partners from "@/components/about/partners"
+import Partners from "@/components/partners"
 import ImpactStats from "@/components/about/impact-stats"
 import ContactSection from "@/components/about/contact-section"
 
@@ -100,19 +100,9 @@ export default function AboutPage() {
                 </section>
 
                 {/* Partners */}
-                <section className="py-12 md:py-16">
-                    <div className="container">
-                        <div className="mx-auto max-w-2xl text-center">
-                            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Our Partners</h2>
-                            <p className="mt-4 text-lg text-muted-foreground">
-                                We collaborate with leading organizations to deliver world-class AI education and innovation.
-                            </p>
-                        </div>
-                        <div className="mt-12">
-                            <Partners />
-                        </div>
-                    </div>
-                </section>
+                <div className="mt-12">
+                    <Partners />
+                </div>
 
                 {/* Contact Section */}
                 {/* <section id="contact" className="bg-muted py-12 md:py-16">

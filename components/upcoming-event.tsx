@@ -11,7 +11,7 @@ export default function UpcomingTrainingEvent() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                     <div className="relative">
                         <Image
-                            src="/images/programs/upcomming_program.png"
+                            src="/images/programs/upcomming_program.webp"
                             alt="Comprehensive Digital Skills & AI Training Program"
                             width={500}
                             height={500}

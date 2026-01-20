@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 export default function Hero() {
     return (
         <div className="relative isolate overflow-hidden">
-            <div className="absolute inset-0 -z-10 bg-[url('/african-city-skyline.png')] bg-cover bg-center bg-no-repeat " />
+            <div className="absolute inset-0 -z-10 bg-[url('/african-city-skyline.webp')] bg-cover bg-center bg-no-repeat " />
             <div className="absolute inset-0 -z-10 bg-gradient-to-r" />
             <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
                 <div className="mx-auto max-w-2xl text-center">

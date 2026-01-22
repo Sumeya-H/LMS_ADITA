@@ -25,32 +25,25 @@ export default function ProgramEnrollmentPage({ params }) {
 
     const handleEnrollmentSubmit = async (data) => {
         setEnrollmentData(data)
-        try {
-            const res = await fetch("http://localhost:8000/api/events/enrollments/", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    ...data,
-                    program: program.id,
-                }),
-            });
-            if (res.ok) {
-                console.log("Registration successful:", res.data);
-                alert("Course registered successfully!");
-                console.log(data)
-                setEnrollmentStep("confirmation")
-            }
-            else {
-                const result = res.json();
-                console.error(result);
-                alert("Enrollment failed");
-            }
-        } catch (err) {
-            console.error("❌ Error registering course:", err.response?.data || err.message);
-            alert("Error registering course");
+        const res = await fetch("http://localhost:8000/api/events/enrollments/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                ...data,
+                program: program.id,
+            }),
+        });
+        if (res.ok) {
+            console.log("Registration successful:", res.data);
+            alert("Course registered successfully!");
+            console.log(data)
+            setEnrollmentStep("confirmation")
         }
+
+        const error = await res.json();
+        throw error;
     }
 
     const handlePaymentSubmit = (paymentData) => {

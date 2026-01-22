@@ -23,9 +23,10 @@ export default function ProgramEnrollmentPage({ params }) {
         return <div>Program not found</div>;
     }
 
+    const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
     const handleEnrollmentSubmit = async (data) => {
         setEnrollmentData(data)
-        const res = await fetch("http://localhost:8000/api/events/enrollments/", {
+        const res = await fetch(`${apiUrl}/api/events/enrollments/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

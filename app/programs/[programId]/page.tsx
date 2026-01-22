@@ -16,14 +16,14 @@ export async function generateStaticParams() {
 }
 
 export default function ProgramDetailPage({ params }) {
-    // In a real application, you would fetch this data from an API
-    // For this example, we'll use a mock program
     const resolvedParmam = React.use(params);
     const { programId } = resolvedParmam;
     const program = programs?.find((p) => p.id === programId);
     if (!program) {
         return <div>Program not found</div>;
     }
+    const enrollHref = programId === "introduction-to-artificial-intelligence" ? `/programs/${programId}/enroll` : `/programs/${programId}`;
+    console.log(enrollHref);
     return (
         <div className="container py-12">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -203,8 +203,7 @@ export default function ProgramDetailPage({ params }) {
                                                     </div>
                                                 </div>
                                                 <Button asChild className="mt-4 sm:mt-0">
-                                                    {/*<Link href={`/programs/${programId}/enroll`}>Enroll Now</Link>*/}
-                                                    <Link href={`/programs/${programId}`}>Enroll Now</Link>
+                                                    <Link href={enrollHref}>Enroll Now</Link>
                                                 </Button>
                                             </CardContent>
                                         </Card>
@@ -281,7 +280,7 @@ export default function ProgramDetailPage({ params }) {
                                     {/*<p className="text-center text-2xl font-bold text-primary">{program.price}</p>*/}
                                     <Button asChild className="mt-4 w-full">
                                         {/*<Link href={`/programs/${programId}/enroll`}>Enroll Now</Link>*/}
-                                        <Link href={`/programs/${programId}`}>Enroll Now</Link>
+                                        <Link href={enrollHref}>Enroll Now</Link>
                                     </Button>
                                 </div>
                             </CardContent>

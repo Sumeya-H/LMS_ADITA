@@ -37,9 +37,6 @@ export default function ProgramEnrollmentPage({ params }) {
             }),
         });
         if (res.ok) {
-            console.log("Registration successful:", res.data);
-            alert("Course registered successfully!");
-            console.log(data)
             setEnrollmentStep("confirmation")
         }
 
@@ -49,7 +46,6 @@ export default function ProgramEnrollmentPage({ params }) {
 
     const handlePaymentSubmit = (paymentData) => {
         // In a real application, you would process the payment here
-        console.log("Processing payment", { ...enrollmentData, ...paymentData })
         setEnrollmentStep("confirmation")
     }
 

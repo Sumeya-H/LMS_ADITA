@@ -99,10 +99,11 @@ export default function EnrollmentForm({ onSubmit, program }) {
         }
 
         try {
-            await onSubmit({
+            const res = await onSubmit({
                 ...formData,
                 phone: phoneValidation.value,
             })
+            console.log(res)
         } catch (err) {
             const response = err?.response?.data || err;
 

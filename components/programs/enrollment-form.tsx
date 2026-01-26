@@ -108,7 +108,7 @@ export default function EnrollmentForm({ onSubmit, program }) {
 
             const fieldErrors = {}
 
-            console.log("response", response);
+            console.log("response", err);
             if (response?.email) {
                 fieldErrors.email = response.email.message
             }

@@ -103,7 +103,6 @@ export default function EnrollmentForm({ onSubmit, program }) {
                 ...formData,
                 phone: phoneValidation.value,
             })
-            console.log(res)
         } catch (err) {
             const response = err?.response?.data || err;
 

@@ -6,6 +6,7 @@ import Partners from "@/components/partners"
 import CallToAction from "@/components/call-to-action"
 import Stats from "@/components/stats"
 import UpcomingEvent from "@/components/upcoming-event"
+import Footer from "@/components/footer"
 
 export default function Home() {
     return (
@@ -20,6 +21,7 @@ export default function Home() {
             <UpcomingEvent />
             <Partners />
             {/* <CallToAction /> */}
+            <Footer />
         </div>
     )
 }

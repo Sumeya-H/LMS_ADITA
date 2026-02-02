@@ -466,3 +466,19 @@ export async function fetchCourseGradeReport(token: string, courseId: number, us
 
     return res.data.usergrades?.[0] || null;
 }
+
+export async function fetchCourseCompletion(token: string, courseId: number, userId: number) {
+    const url = "http://localhost/webservice/rest/server.php";
+
+    const res = await axios.get(url, {
+        params: {
+            wstoken: token,
+            wsfunction: "core_completion_get_activities_completion_status",
+            moodlewsrestformat: "json",
+            courseid: courseId,
+            userid: userId,
+        },
+    });
+
+    return res.data;
+}

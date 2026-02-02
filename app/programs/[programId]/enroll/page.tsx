@@ -1,6 +1,7 @@
 "use client"
 
-import React from "react";
+import axios from "axios";
+import React, { useEffect } from "react";
 import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -22,35 +23,48 @@ export default function ProgramEnrollmentPage({ params }) {
     if (!program) {
         return <div>Program not found</div>;
     }
+    let token;
+    useEffect(() => {
+        token = localStorage.getItem("access")
+    }, []);
 
-    const handleEnrollmentSubmit = async (data) => {
-        setEnrollmentData(data)
+    const handleEnrollmentSubmit = (data: any) => {
+        setEnrollmentData(data);
+        console.log(data);
+        setEnrollmentStep("payment")
+    }
+
+    const handlePaymentSubmit = async (paymentData: any) => {
+        // In a real application, you would process the payment here
         try {
-            const res = await fetch("http://localhost:8000/api/courses/register/", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data),
-            });
-            if (res.ok) {
+            const res = await axios.post(
+                "http://localhost:8000/api/courses/register/",
+                paymentData,
+                {
+                    headers: {
+                        Authorization: `Bearer ${localStorage.getItem("access")}`,
+                    },
+                }
+            )
+
+            // const res = await fetch("http://localhost:8000/api/courses/register/", {
+            //     method: "POST",
+            //     headers: {
+            //         Authorization: `Bearer ${localStorage.getItem("access")}`,
+            //     },
+            //     body: paymentData,
+            // });
+            if (res.status === 201) {
                 console.log("Registration successful:", res.data);
-                alert("Course registered successfully!");
-                console.log(data)
-                setEnrollmentStep("confirmation")
+                setEnrollmentStep("confirmation");
             }
-            else
+            else {
                 console.log("Registration failed:", res.data);
+            }
         } catch (err) {
             console.error("❌ Error registering course:", err.response?.data || err.message);
             alert("Error registering course");
         }
-    }
-
-    const handlePaymentSubmit = (paymentData) => {
-        // In a real application, you would process the payment here
-        console.log("Processing payment", { ...enrollmentData, ...paymentData })
-        setEnrollmentStep("confirmation")
     }
 
     return (
@@ -74,15 +88,17 @@ export default function ProgramEnrollmentPage({ params }) {
                                 <div className="flex items-center gap-2">
                                     <Badge variant={enrollmentStep === "details" ? "default" : "outline"}>Details</Badge>
                                     <span className="text-muted-foreground my-auto">→</span>
-                                    {/*<Badge variant={enrollmentStep === "payment" ? "default" : "outline"}>Payment</Badge>
-                                    <span className="text-muted-foreground my-auto">→</span>*/}
+                                    <Badge variant={enrollmentStep === "payment" ? "default" : "outline"}>Payment</Badge>
+                                    <span className="text-muted-foreground my-auto">→</span>
                                     <Badge variant={enrollmentStep === "confirmation" ? "default" : "outline"}>Confirmation</Badge>
                                 </div>
                             </div>
                             <CardDescription>Please complete all required information to enroll in this program.</CardDescription>
                         </CardHeader>
                         <CardContent>
-                            {enrollmentStep === "details" && <EnrollmentForm onSubmit={handleEnrollmentSubmit} program={program} />}
+                            {enrollmentStep === "details" &&
+                                <EnrollmentForm onSubmit={handleEnrollmentSubmit} program={program} />
+                            }
                             {enrollmentStep === "payment" && (
                                 <PaymentForm onSubmit={handlePaymentSubmit} program={program} enrollmentData={enrollmentData} />
                             )}

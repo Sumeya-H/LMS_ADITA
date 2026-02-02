@@ -4,7 +4,7 @@ import React from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useEffect, useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react"; // Import LucidReact icons
-import { fetchCourseGrade, fetchCourseGradeReport, fetchModuleActivityCompletion, fetchModuleAssignmentContent, fetchModuleBigBlueButton, fetchModuleBigBlueButtonJoinUrl, fetchModuleContent, fetchModuleForumContent, fetchModuleForumDiscussionContent, fetchModuleQuizAttempt, fetchModuleQuizContent, fetchModuleQuizQuestions, fetchModuleQuizStartAttempt, fetchUserCourses, fetchUserCoursesContent, getGrade, submitAnswers } from "@/lib/userService";
+import { fetchCourseCompletion, fetchCourseGrade, fetchCourseGradeReport, fetchModuleActivityCompletion, fetchModuleAssignmentContent, fetchModuleBigBlueButton, fetchModuleBigBlueButtonJoinUrl, fetchModuleContent, fetchModuleForumContent, fetchModuleForumDiscussionContent, fetchModuleQuizAttempt, fetchModuleQuizContent, fetchModuleQuizQuestions, fetchModuleQuizStartAttempt, fetchUserCourses, fetchUserCoursesContent, getGrade, submitAnswers } from "@/lib/userService";
 import Loading from "./loading";
 import AssignmentDetails from "./assignmentDetail";
 import QuizDetails from "./quizDetail";
@@ -38,6 +38,7 @@ export default function CourseDetailPage({ params }) {
     const [courseGrade, setGradeReport] = useState<any>(null);
     const resolvedParmam = React.use(params);
     const [refresh, setRefresh] = useState<any>(null);
+    const [completionMap, setCompletionMap] = useState<Record<number, number>>({});
     const { courseId } = resolvedParmam;
 
     useEffect(() => {
@@ -69,6 +70,16 @@ export default function CourseDetailPage({ params }) {
             .then(setGradeReport)
             .catch(console.error);
 
+        fetchCourseCompletion(token, courseId, user.userid)
+            .then((data) => {
+                const map: Record<number, number> = {};
+                data.statuses.forEach((s: any) => {
+                    map[s.cmid] = s.state;
+                });
+                setCompletionMap(map);
+                console.log("completion map", map);
+            })
+            .catch(console.error);
         setTimeout(() => {
             setIsLoading(false);
         }, 1000);
@@ -339,7 +350,7 @@ export default function CourseDetailPage({ params }) {
                                             <div className="flex items-center space-x-3" key={module.id}>
                                                 <Checkbox
                                                     id={`done-${module.id}`}
-                                                    checked={true}
+                                                    checked={completionMap[module.id] === 1}
                                                     className="rounded-lg"
                                                 />
                                                 <div onClick={() => handleModuleClick(module)} className="cursor-pointer">

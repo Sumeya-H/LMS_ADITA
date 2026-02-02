@@ -21,6 +21,7 @@ import ProgramRecommendations from "@/components/programs/program-recommendation
 import Loading from "./Loading";
 import ForumList from "./forums";
 import Programs from "@/components/programs";
+import StudentCalendar from "./studentCalander";
 
 export default function DashboardPage() {
     const [user, setUser] = useState<any>(null);
@@ -259,6 +260,7 @@ export default function DashboardPage() {
 
             <div className="mt-12">
                 {/*<ProgramRecommendations userProfile={{ role: "educator", level: "beginner" }} />*/}
+                <StudentCalendar />
                 <Programs />
             </div>
         </div>

@@ -12,7 +12,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import PhoneNumberInput from "@/components/ui/phoneNumberInput"
 
-export default function EnrollmentForm({ onSubmit }) {
+export default function NewEnrollmentForm({ onSubmit }) {
     const [formData, setFormData] = useState({
         event: "7f9e54a8-5be1-4de3-9e28-9db71e687f23",
         full_name: "",

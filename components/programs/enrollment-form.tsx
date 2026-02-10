@@ -125,7 +125,6 @@ export default function EnrollmentForm({ onSubmit, program }) {
 
     return (
         <form onSubmit={handleSubmit} className="space-y-6">
-            {/* -------------------- Personal Information -------------------- */}
             <div>
                 <h3 className="text-lg font-medium">Program Preferences</h3>
                 <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">

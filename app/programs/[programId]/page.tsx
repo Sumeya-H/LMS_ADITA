@@ -203,12 +203,8 @@ export default function ProgramDetailPage({ params }) {
                                                     </div>
                                                 </div>
                                                 <Button asChild className="mt-4 sm:mt-0">
-<<<<<<< HEAD
-                                                    <Link href={enrollHref}>Enroll Now</Link>
-=======
                                                     <Link href={`/programs/${programId}/enroll`}>Enroll Now</Link>
                                                     {/* <Link href={`/programs/${programId}`}>Enroll Now</Link>*/}
->>>>>>> 8c587ad (added a couple of courses)
                                                 </Button>
                                             </CardContent>
                                         </Card>

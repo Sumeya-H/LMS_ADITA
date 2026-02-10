@@ -482,3 +482,24 @@ export async function fetchCourseCompletion(token: string, courseId: number, use
 
     return res.data;
 }
+
+
+export async function fetchCalendarEvents(token: string, courseIds?: number[]) {
+    const url = "http://localhost/webservice/rest/server.php";
+
+    const params: any = {
+        wstoken: token,
+        wsfunction: "core_calendar_get_calendar_events",
+        moodlewsrestformat: "json",
+    };
+
+    if (courseIds && courseIds.length > 0) {
+        courseIds.forEach((id, idx) => {
+            params[`events[courseids][${idx}]`] = id;
+        });
+    }
+
+    const res = await axios.get(url, { params });
+
+    return res.data?.events ?? [];
+}

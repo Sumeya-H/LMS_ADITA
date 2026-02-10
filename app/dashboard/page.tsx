@@ -1,6 +1,6 @@
 "use client"
 
-import { fetchUserCourses, fetchUserCoursesContent, fetchUserData } from "@/lib/userService"; // adjust path
+import { fetchCalendarEvents, fetchUserCourses, fetchUserCoursesContent, fetchUserData } from "@/lib/userService"; // adjust path
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -27,30 +27,125 @@ export default function DashboardPage() {
     const [user, setUser] = useState<any>(null);
     const [isLoading, setIsLoading] = useState(true);
     const [courses, setCourses] = useState<any[]>([]);
+    const [events, setCalendarEvents] = useState<any[]>([]);
+    const [upcomingSchedules, setUpcomingEvents] = useState<any[]>([]);
 
     useEffect(() => {
-        const token = localStorage.getItem("token"); // or wherever you store the token
+        const token = localStorage.getItem("token");
         if (!token) {
-            window.location.href = "/login"; // redirect if not logged in
+            window.location.href = "/login";
             return;
         }
+
+        let firstCourseId: number | undefined;
 
         fetchUserData(token)
             .then((userData) => {
                 setUser(userData);
+                // fetch the courses first
                 return fetchUserCourses(token, userData.userid);
             })
             .then((coursesData) => {
-                console.log("course data", coursesData);
                 setCourses(coursesData);
-                setIsLoading(false);
-                return fetchUserCoursesContent(token, coursesData?.[0]?.id)
+                if (!coursesData || coursesData.length === 0) {
+                    setIsLoading(false);
+                    return [];
+                }
+
+                firstCourseId = coursesData[0].id;
+
+                // now fetch calendar events for this course
+                return fetchCalendarEvents(token, [firstCourseId]);
             })
-            .then((coursesData) => {
-                console.log("course content", coursesData);
+            .then((calendarEvents) => {
+                console.log("raw calendar events", calendarEvents);
+
+                const mappedEvents = (calendarEvents || []).map((e: any) => ({
+                    id: e.id,
+                    title: e.name,
+                    start: new Date(e.timestart * 1000),
+                    end: e.timeduration
+                        ? new Date((e.timestart + e.timeduration) * 1000)
+                        : undefined,
+                    type: e.modulename || e.eventtype,
+                    courseId: e.courseid,
+                }));
+
+                const upcomingEvents = (calendarEvents || [])
+                    .filter((e: any) => e.timestart * 1000 > Date.now()) // only future events
+                    .sort((a: any, b: any) => a.timestart - b.timestart) // soonest first
+                    .map((e: any) => {
+                        let icon, buttonLabel, buttonLink;
+
+                        switch (e.modulename || e.eventtype) {
+                            case "assign":
+                                icon = <FileText className="mt-1 h-5 w-5 text-primary" />;
+                                buttonLabel = "View Assignment";
+                                buttonLink = `/course/${e.courseid}/assignment/${e.id}`;
+                                break;
+                            case "quiz":
+                                icon = <FileText className="mt-1 h-5 w-5 text-primary" />;
+                                buttonLabel = "View Quiz";
+                                buttonLink = `/course/${e.courseid}/quiz/${e.id}`;
+                                break;
+                            case "meeting":
+                            case "zoom":
+                            case "bigbluebutton":
+                                icon = <Calendar className="mt-1 h-5 w-5 text-primary" />;
+                                buttonLabel = "Join Meeting";
+                                buttonLink = e.url || "#"; // depends on how Moodle stores meeting link
+                                break;
+                            default:
+                                icon = <Users className="mt-1 h-5 w-5 text-primary" />;
+                                buttonLabel = "View Details";
+                                buttonLink = "#";
+                        }
+
+                        const startDate = new Date(e.timestart * 1000);
+                        const endDate = e.timeduration
+                            ? new Date((e.timestart + e.timeduration) * 1000)
+                            : null;
+
+                        // Format date string like "Tomorrow, 2:00 PM - 4:00 PM"
+                        const options: Intl.DateTimeFormatOptions = {
+                            weekday: "long",
+                            hour: "numeric",
+                            minute: "numeric",
+                        };
+
+                        const dateText = endDate
+                            ? `${startDate.toLocaleString("en-US", options)} - ${endDate.toLocaleTimeString(
+                                "en-US",
+                                { hour: "numeric", minute: "numeric" }
+                            )}`
+                            : `${startDate.toLocaleString("en-US", options)}`;
+
+                        return {
+                            id: e.id,
+                            title: e.name,
+                            dateText,
+                            icon,
+                            buttonLabel,
+                            buttonLink,
+                        };
+                    });
+                setUpcomingEvents(upcomingEvents);
+                setCalendarEvents(mappedEvents);
+                setIsLoading(false);
+
+                // optional: fetch course content
+                if (firstCourseId) {
+                    return fetchUserCoursesContent(token, firstCourseId);
+                }
+                return null;
+            })
+            .then((courseContent) => {
+                if (courseContent) {
+                    console.log("course content", courseContent);
+                }
             })
             .catch((err) => {
-                console.error("Failed to fetch user data:", err);
+                console.error("Failed to fetch data:", err);
                 setIsLoading(false);
             });
     }, []);
@@ -180,36 +275,18 @@ export default function DashboardPage() {
                         </CardHeader>
                         <CardContent>
                             <div className="space-y-4">
-                                <div className="flex items-start gap-4 rounded-lg border p-4">
-                                    <Calendar className="mt-1 h-5 w-5 text-primary" />
-                                    <div>
-                                        <h4 className="font-medium">Neural Networks Live Workshop</h4>
-                                        <p className="text-sm text-muted-foreground">Tomorrow, 2:00 PM - 4:00 PM</p>
-                                        <Button variant="link" className="mt-1 h-auto p-0 text-primary">
-                                            Join Meeting
-                                        </Button>
+                                {upcomingSchedules.map((event) => (
+                                    <div key={event.id} className="flex items-start gap-4 rounded-lg border p-4">
+                                        {event.icon}
+                                        <div>
+                                            <h4 className="font-medium">{event.title}</h4>
+                                            <p className="text-sm text-muted-foreground">{event.dateText}</p>
+                                            <Button variant="link" className="mt-1 h-auto p-0 text-primary" href={event.buttonLink}>
+                                                {event.buttonLabel}
+                                            </Button>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="flex items-start gap-4 rounded-lg border p-4">
-                                    <FileText className="mt-1 h-5 w-5 text-primary" />
-                                    <div>
-                                        <h4 className="font-medium">Data Analysis Project Submission</h4>
-                                        <p className="text-sm text-muted-foreground">Due in 3 days</p>
-                                        <Button variant="link" className="mt-1 h-auto p-0 text-primary">
-                                            View Assignment
-                                        </Button>
-                                    </div>
-                                </div>
-                                <div className="flex items-start gap-4 rounded-lg border p-4">
-                                    <Users className="mt-1 h-5 w-5 text-primary" />
-                                    <div>
-                                        <h4 className="font-medium">AI Ethics Discussion Group</h4>
-                                        <p className="text-sm text-muted-foreground">Friday, 3:00 PM - 4:30 PM</p>
-                                        <Button variant="link" className="mt-1 h-auto p-0 text-primary">
-                                            View Details
-                                        </Button>
-                                    </div>
-                                </div>
+                                ))}
                             </div>
                         </CardContent>
                     </Card>
@@ -260,7 +337,7 @@ export default function DashboardPage() {
 
             <div className="mt-12">
                 {/*<ProgramRecommendations userProfile={{ role: "educator", level: "beginner" }} />*/}
-                <StudentCalendar />
+                <StudentCalendar events={events} />
                 <Programs />
             </div>
         </div>

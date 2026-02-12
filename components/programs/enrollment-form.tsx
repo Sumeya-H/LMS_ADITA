@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import Link from "next/link"
+import { RadioGroup, RadioGroupItem } from "../ui/radio-group"
 
 /* -------------------- Phone Validation Helper -------------------- */
 const validateEthiopianPhone = (phone) => {
@@ -82,20 +83,9 @@ export default function EnrollmentForm({ onSubmit, program }) {
         setFormError("")
         setErrors({})
 
-        const phoneValidation = validateEthiopianPhone(formData.phone)
-
-        if (!phoneValidation.valid) {
-            setErrors({
-                phone:
-                    "Invalid Ethiopian phone number. Use +2519XXXXXXXX, +2517XXXXXXXX, 09XXXXXXXX, or 07XXXXXXXX.",
-            })
-            return
-        }
-
         try {
             const res = await onSubmit({
-                ...formData,
-                phone: phoneValidation.value,
+                ...formData
             })
             console.log(res)
         } catch (err) {
@@ -104,13 +94,6 @@ export default function EnrollmentForm({ onSubmit, program }) {
             const fieldErrors = {}
 
             console.log("response", err);
-            if (response?.email) {
-                fieldErrors.email = response.email.message
-            }
-
-            if (response?.phone) {
-                fieldErrors.phone = response.phone.message
-            }
 
             if (Object.keys(fieldErrors).length > 0) {
                 setErrors(fieldErrors)
@@ -185,17 +168,6 @@ export default function EnrollmentForm({ onSubmit, program }) {
             </div>
 
             <div className="space-y-2">
-                <div className="flex items-start space-x-2">
-                    <Checkbox
-                        id="agreeTerms"
-                        name="agreeTerms"
-                        className="my-auto"
-                        checked={formData.agreeTerms}
-                        onCheckedChange={(checked) => handleSelectChange("agreeTerms", checked)}
-                        required
-                    />
-                </div>
-
                 <div className="space-y-2">
                     <Label htmlFor="referral">How did you hear about us?</Label>
                     <Select

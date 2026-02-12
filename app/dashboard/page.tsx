@@ -32,27 +32,31 @@ export default function DashboardPage() {
 
     useEffect(() => {
         const token = localStorage.getItem("token");
+        let user = localStorage.getItem("user");
+
         if (!token) {
             window.location.href = "/login";
             return;
         }
 
+        if (!user)
+            return;
+
+        user = JSON.parse(user);
+        setUser(user);
+
         let firstCourseId: number | undefined;
 
-        fetchUserData(token)
-            .then((userData) => {
-                setUser(userData);
-                // fetch the courses first
-                return fetchUserCourses(token, userData.userid);
-            })
+        fetchUserCourses(token, user.userid)
             .then((coursesData) => {
+                console.log("course data", coursesData);
                 setCourses(coursesData);
                 if (!coursesData || coursesData.length === 0) {
                     setIsLoading(false);
                     return [];
                 }
 
-                firstCourseId = coursesData[0].id;
+                firstCourseId = coursesData[0]?.id;
 
                 // now fetch calendar events for this course
                 return fetchCalendarEvents(token, [firstCourseId]);
@@ -149,6 +153,19 @@ export default function DashboardPage() {
                 setIsLoading(false);
             });
     }, []);
+
+    //if (!courses?.[0]) {
+    //    return (
+
+    //        <div className="container py-8">
+    //            <div className="flex flex-col justify-between gap-4 md:flex-row md:items-center">
+    //                <div>
+    //                    <h1 className="text-3xl font-bold tracking-tight">Couldn't fetch Any data from LMS</h1>
+    //                </div>
+    //            </div>
+    //        </div>
+    //    );
+    //}
 
     const overallProgress = Math.round(
         courses.reduce((total, course) => total + course.progress, 0) / courses.length

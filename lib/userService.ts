@@ -36,7 +36,7 @@ export async function fetchUserCourses(token: string, userId: number) {
                 userid: userId,
             },
         });
-
+        console.log(res);
         return res.data;
     } catch (error) {
         console.error("Failed to fetch user courses:", error);

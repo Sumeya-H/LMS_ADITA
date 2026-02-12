@@ -9,12 +9,6 @@ import RelatedPrograms from "@/components/programs/related-programs"
 import ProgramReviews from "@/components/programs/program-reviews"
 import { programs } from "@/helpers/programs"
 
-export async function generateStaticParams() {
-    return programs.map((p) => ({
-        programId: p.id,
-    }));
-}
-
 export default function ProgramDetailPage({ params }) {
     const resolvedParmam = React.use(params);
     const { programId } = resolvedParmam;

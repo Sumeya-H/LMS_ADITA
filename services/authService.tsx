@@ -48,3 +48,14 @@ export const refreshToken = async () => {
     return data.access;
 }
 
+export async function signupUser(requestData: any) {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/users/students/`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(requestData),
+    });
+    const data = res.json()
+    console.log(data);
+    localStorage.setItem("user", JSON.stringify(data))
+    return data
+}

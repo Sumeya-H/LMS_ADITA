@@ -86,7 +86,10 @@ export default function RegisterPage() {
             })
 
             console.log(res);
-            window.location.href = "/dashboard"
+            console.log(res.status);
+            if (res.status == 201) {
+                window.location.href = "/dashboard"
+            }
         } catch (err: any) {
             setError("Registration failed. Email or username may already exist.")
         } finally {

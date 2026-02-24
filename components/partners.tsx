@@ -1,5 +1,6 @@
 import { Card, CardContent } from "./ui/card"
 import Image from "next/image"
+
 export default function Partners() {
     const partners = [
         { name: "AIMS Rwanda", logo: "/images/partners/aims.png" },
@@ -9,6 +10,14 @@ export default function Partners() {
         { name: "University of South-Estern Norway", logo: "/images/partners/uosen.png" },
         { name: "Basic Internet Foundation", logo: "/images/partners/basic-internet.png" },
         { name: "Noroff School of Technology and Digital Media", logo: "/images/partners/noroff.png" },
+        { name: "FDRE Technical & Vocational Training Institute", logo: "/images/partners/tvet.png" },
+        { name: "University Of Gondar", logo: "/images/partners/uog.png" },
+        { name: "ZSecuredTech", logo: "/images/partners/zsecuredtech.webp" },
+        { name: "Mohas Consult", logo: "/images/partners/mohas.webp" },
+        { name: "AASTU", logo: "/images/partners/aastu.webp" },
+        { name: "Wollo University", logo: "/images/partners/wollo.webp" },
+        { name: "Hawassa University", logo: "/images/partners/hawassa.webp" },
+        { name: "EMY Technologies", logo: "/images/partners/emy.webp" },
     ]
 
     return (
@@ -19,129 +28,22 @@ export default function Partners() {
                     We collaborate with leading organizations to deliver world-class AI education and training.
                 </p>
             </div>
+
             <div className="mx-auto mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                {/* {category.partners.map((partner) => ( */}
-                <Card key={'AIMS Rwanda'} className="bg-background">
-                    <CardContent className="flex items-center justify-center p-6 h-32">
-                        <div className="relative h-full w-full">
-                            <Image
-                                src={"/images/partners/aims.png"}
-                                alt={'AIMS Rwanda'}
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-                    </CardContent>
-                </Card>
-                <Card key={"Darmonel Technologies"} className="bg-background">
-                    <CardContent className="flex items-center justify-center p-6 h-32">
-                        <div className="relative h-full w-full">
-                            <Image
-                                src={"/images/partners/darmonel.png"}
-                                alt={"Darmonel Technologies"}
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-                    </CardContent>
-                </Card>
-                <Card key={"Africom Technologies"} className="bg-background">
-                    <CardContent className="flex items-center justify-center p-6 h-32">
-                        <div className="relative h-full w-full">
-                            <Image
-                                src={"/images/partners/africom.png"}
-                                alt={"Africom Technologies"}
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-                    </CardContent>
-                </Card>
-                <Card key={"Perago"} className="bg-background">
-                    <CardContent className="flex items-center justify-center p-6 h-32">
-                        <div className="relative h-12 w-full">
-                            <Image
-                                src={"/images/partners/perago.png"}
-                                alt={"Perago"}
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-                    </CardContent>
-                </Card>
-                <Card key={"University of South-Estern Norway"} className="bg-background">
-                    <CardContent className="flex items-center justify-center p-6 h-32">
-                        <div className="relative h-full w-full">
-                            <Image
-                                src={"/images/partners/uosen.png"}
-                                alt={"University of South-Estern Norway"}
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-                    </CardContent>
-                </Card>
-                <Card key={"Basic Internet Foundation"} className="bg-background">
-                    <CardContent className="flex items-center justify-center p-6 h-32">
-                        <div className="relative h-full w-full">
-                            <Image
-                                src={"/images/partners/basic-internet.png"}
-                                alt={"Basic Internet Foundation"}
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-                    </CardContent>
-                </Card>
-                <Card key={"Noroff School of Technology and Digital Media"} className="bg-background">
-                    <CardContent className="flex items-center justify-center p-6 h-32">
-                        <div className="relative h-12 w-full">
-                            <Image
-                                src={"/images/partners/noroff.png"}
-                                alt={"Noroff School of Technology and Digital Media"}
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-                    </CardContent>
-                </Card>
-                <Card key={"FDRE Technical & Vocational Training Institute"} className="bg-background">
-                    <CardContent className="flex items-center justify-center p-6 h-32">
-                        <div className="relative h-12 w-full">
-                            <Image
-                                src={"/images/partners/tvet.png"}
-                                alt={"FDRE Technical & Vocational Training Institute"}
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-                    </CardContent>
-                </Card>
-                <Card key={"University Of Gondar"} className="bg-background">
-                    <CardContent className="flex items-center justify-center p-2 h-32">
-                        <div className="relative h-24 w-full">
-                            <Image
-                                src={"/images/partners/uog.png"}
-                                alt={"University Of Gondar"}
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-                    </CardContent>
-                </Card>
-                <Card key={"ZSecuredTech"} className="bg-background">
-                    <CardContent className="flex items-center justify-center p-6 h-32">
-                        <div className="relative h-24 w-full">
-                            <Image
-                                src={"/images/partners/zsecuredtech.webp"}
-                                alt={"ZSecuredTech"}
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-                    </CardContent>
-                </Card>
-                {/* ))} */}
+                {partners.map((partner) => (
+                    <Card key={partner.name} className="bg-background">
+                        <CardContent className="flex items-center justify-center p-6 h-32">
+                            <div className="relative h-full w-full">
+                                <Image
+                                    src={partner.logo}
+                                    alt={partner.name}
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
+                        </CardContent>
+                    </Card>
+                ))}
             </div>
         </section>
     )

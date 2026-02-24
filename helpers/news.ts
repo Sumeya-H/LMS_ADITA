@@ -16,11 +16,10 @@ export const news: NewsType[] = [
         summary:
             "ADITA and University of Gondar formalized a strategic partnership to advance digital innovation, research collaboration, and student capacity development.",
         content:
-            "African Digital & Innovation Technology Academy (ADITA) officially signed a Memorandum of Understanding with Gondar University. The partnership aims to strengthen collaboration in digital skills development, joint research initiatives, innovation programs, and technology-driven academic exchange. Further details of the collaboration framework will be announced in upcoming phases.",
+            "African Digital & Innovation Technology Academy (ADITA) officially signed a Memorandum of Understanding with University of Gondar. The partnership aims to strengthen collaboration in digital skills development, joint research initiatives, innovation programs, and technology-driven academic exchange. Further details of the collaboration framework will be announced in upcoming phases.",
         date: "November 2025",
         category: "MoU",
         images: [
-            "/images/news/gondor_mou.jpeg",
             "/images/news/gondor_mou_2.jpeg",
             "/images/news/gondor_mou_3.jpeg",
         ],

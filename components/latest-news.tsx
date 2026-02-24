@@ -1,7 +1,7 @@
-import { news } from "@/helpers/events"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { news } from "@/helpers/news"
 
 export default function LatestNews() {
     const featuredNews = news.filter((item) => item.featured)
@@ -13,7 +13,7 @@ export default function LatestNews() {
                 <Button asChild>
                     <Link
                         href="/news"
-                        className="text-primary font-medium hover:underline"
+                        className="text-primary font-medium"
                     >
                         View All
                     </Link>

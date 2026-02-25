@@ -46,7 +46,7 @@ export default function UpcomingTrainingEvent() {
                             <div className="flex items-center gap-2">
                                 <CalendarIcon className="h-5 w-5 text-[#52331E]" />
                                 <p className="text-lg">
-                                    <strong>Registeration Deadline:</strong> Feb 10, 2026
+                                    <strong>Registeration Deadline Extended To:</strong> Mar 05, 2026
                                 </p>
                             </div>
 

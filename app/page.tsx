@@ -18,7 +18,7 @@ export default function Home() {
             </div>
             <Programs />
             {/* <Testimonials /> */}
-            {/* <UpcomingEvent /> */}
+            <UpcomingEvent />
             <LatestNews />
             <Partners />
             {/* <CallToAction /> */}

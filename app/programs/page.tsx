@@ -9,11 +9,23 @@ import AudienceSelector from "@/components/programs/audience-selector"
 import ProgramSearch from "@/components/programs/program-search"
 import { ArrowRight, ArrowRightLeft } from "lucide-react"
 import { useEffect, useState } from "react"
-import { programs } from "@/helpers/programs"
+import { fetchCourses } from "@/services/courseService"
 
 export default function ProgramsPage() {
-    const [filteredCourses, setFilteredCourses] = useState(programs)
+    const [filteredCourses, setFilteredCourses] = useState([]);
 
+    useEffect(() => {
+        const loadCourses = async () => {
+            try {
+                const data = await fetchCourses()
+                setFilteredCourses(data)
+            } catch (error) {
+                console.error(error)
+            }
+        }
+
+        loadCourses()
+    }, [])
     const handleApplyFilters = (filters) => {
         const result = programs.filter((course) => {
             //const [min, max] = filters.priceRange

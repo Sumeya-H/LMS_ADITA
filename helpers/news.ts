@@ -115,5 +115,20 @@ export const news: NewsType[] = [
         images: [
             "/images/news/emy_mou.png",
         ],
+    },
+    {
+        slug: "mou-signing-adita-faana-mikaa'inna",
+        title: "MoU Signing Between ADITA and  Faana Milkaa'inaa",
+        summary:
+            "ADITA - African Digital and Innovation Technology Academy and Faana Milkaa'inaa (TAGs) have signed an MoU to establish a strategic partnership focused on digital innovation and capacity building.",
+        content:
+            "ADITA - African Digital and Innovation Technology Academy and Faana Milkaa'inaa (TAGs) have signed an MoU to establish a strategic partnership focused on digital innovation and capacity building. This collaboration will deliver joint training, startup incubation, and AI-integrated business curricula to empower entrepreneurs and professionals for the modern digital economy.This partnership bridges the gap between business strategy and tech innovation.We look forward to building a transformative future together!",
+        date: "March 2026",
+        category: "MoU",
+        images: [
+            "/images/news/faana_mou.webp",
+            "/images/news/faana_mou_2.webp",
+            "/images/news/faana_mou_3.webp",
+        ],
     }
 ]

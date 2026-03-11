@@ -68,6 +68,240 @@ export const programs = [
         image: "/images/courses/data-analysis-python.webp"
     },
     {
+        id: "graphic-design",
+        title: "Graphic Designing",
+        description: "Learn the principles of visual communication and branding. Master Adobe Photoshop and Illustrator to create stunning designs for web and print.",
+        longDescription: "This course provides a comprehensive foundation in graphic design, covering design principles, Adobe Creative Suite tools, branding, and layouts for web and mobile. Learners will work on hands-on projects that simulate real-world design challenges, culminating in a complete branding and design portfolio.",
+        type: "design",
+        duration: "7 weeks",
+        level: "Beginner",
+        format: "Online & In-person",
+        audience: ["Students", "Artists", "Marketing Professionals"],
+        price: "$180",
+        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Ms. Aisha Kamara",
+                title: "Graphic Design Instructor",
+                bio: "Professional graphic designer with 12 years of experience in branding, print, and digital media.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            },
+            {
+                name: "Mr. Joseph Ncube",
+                title: "Visual Design Specialist",
+                bio: "Experienced designer in Adobe Creative Suite with focus on web and mobile graphics.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            }
+        ],
+        modules: [
+            {
+                title: "Introduction to Graphic Design",
+                duration: "1 week",
+                topics: ["Design principles", "Color theory", "Typography basics"]
+            },
+            {
+                title: "Adobe Creative Suite",
+                duration: "3 weeks",
+                topics: ["Photoshop fundamentals", "Illustrator fundamentals", "Image editing and vector graphics"]
+            },
+            {
+                title: "Advanced Graphic Techniques",
+                duration: "2 weeks",
+                topics: ["Branding", "Layout design", "Design for web and mobile"]
+            },
+            {
+                title: "Final Project",
+                duration: "1 week",
+                topics: ["Create a full branding package", "Design multiple deliverables", "Prepare portfolio presentation"]
+            }
+        ],
+        outcomes: [
+            "Understand core design principles and color theory",
+            "Use Adobe Creative Suite tools effectively",
+            "Design layouts for web, mobile, and print",
+            "Develop a complete branding and design portfolio"
+        ],
+        requirements: [
+            "Laptop with Adobe Creative Suite installed",
+            "Basic computer literacy",
+            "Creative mindset"
+        ],
+        certification: "ADITA Graphic Design Certificate",
+        image: "/images/courses/graphic-design.webp"
+    },
+    {
+        id: "introduction-to-artificial-intelligence",
+        title: "Introduction to Artificial Intelligence: Concepts and Applications",
+        description: "A non-technical introduction to Artificial Intelligence, covering its core concepts, history, real-world applications, and ethical implications.",
+        longDescription:
+            "This course demystifies Artificial Intelligence by providing a comprehensive overview of its core concepts, historical evolution, and practical applications. Participants will explore different types of AI, understand how machine learning works at a conceptual level, and examine how AI is transforming industries such as healthcare, finance, and agriculture. The course also addresses the societal and ethical implications of AI adoption, making it suitable for learners without a technical background.",
+        type: "artificial-intelligence",
+        duration: "44 hours",
+        level: "Beginner",
+        format: "Online & In-person",
+        price: "$250",
+        audience: [
+            "Non-technical professionals",
+            "Managers",
+            "Students",
+            "General learners"
+        ],
+        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Dr. Abebe Bekele",
+                title: "AI & IoT Solutions Instructor",
+                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            },
+            {
+                name: "Ms. Leila Hassan",
+                title: "IoT Engineer",
+                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            }
+        ],
+        modules: [
+            {
+                title: "What is Artificial Intelligence?",
+                duration: "0.5 day",
+                topics: [
+                    "Definition of AI",
+                    "History and evolution of AI",
+                    "Key milestones in AI development"
+                ]
+            },
+            {
+                title: "How Machines Learn",
+                duration: "0.5 day",
+                topics: [
+                    "Core concepts of machine learning",
+                    "AI vs Machine Learning vs Deep Learning",
+                    "Examples of learning systems"
+                ]
+            },
+            {
+                title: "Seeing, Reading, and Listening",
+                duration: "0.5 day",
+                topics: [
+                    "Neural networks overview",
+                    "Natural language processing",
+                    "Computer vision"
+                ]
+            },
+            {
+                title: "AI in Action",
+                duration: "1 day",
+                topics: [
+                    "AI in healthcare",
+                    "AI in finance",
+                    "AI in agriculture",
+                    "Case studies of real-world AI systems"
+                ]
+            },
+            {
+                title: "The Future of AI",
+                duration: "0.5 day",
+                topics: [
+                    "Future trends in AI",
+                    "Societal impact of AI",
+                    "Ethical considerations and challenges"
+                ]
+            }
+        ],
+        outcomes: [
+            "Define Artificial Intelligence and distinguish it from Machine Learning and Deep Learning",
+            "Identify key AI concepts such as neural networks, NLP, and computer vision",
+            "Evaluate real-world AI applications across multiple industries",
+            "Discuss ethical and societal implications of AI adoption",
+            "Identify opportunities for applying AI in their own field"
+        ],
+        requirements: [
+            "Basic computer literacy",
+            "No prior technical or programming experience required"
+        ],
+        assessment: [
+            "Quiz on fundamental AI concepts (30%)",
+            "Group presentation on an AI use case (40%)",
+            "Participation in ethics debate (30%)"
+        ],
+        resources: [
+            "AI for Everyone by Andrew Ng (video series)",
+            "Cloud-based AI demo tools",
+            "AI case study library"
+        ],
+        certification: "Introduction to Artificial Intelligence Certificate",
+        image: "/images/courses/introduction-to-artificial-intelligence.webp"
+    },
+    {
+        id: "digital-marketing-strategy",
+        title: "Digital Marketing Strategy and Analytics",
+        description: "Learn how to promote brands and products online using modern digital marketing tools including social media, SEO, content marketing, and analytics.",
+        longDescription: "This course introduces the fundamentals of digital marketing and equips learners with the skills needed to build and execute effective online marketing strategies. You will explore key channels such as social media marketing, search engine optimization (SEO), email marketing, and content marketing. The course also covers digital advertising, campaign planning, and performance tracking using analytics tools. Through hands-on activities and real-world case studies, you'll learn how to create engaging marketing campaigns, measure results, and optimize strategies to reach the right audience. By the end of the course, you will have the practical knowledge to plan, launch, and analyze digital marketing campaigns across multiple platforms.",
+        type: "marketing",
+        duration: "40 hours",
+        level: "Beginner",
+        format: "Online & In-person",
+        audience: ["Students", "Entrepreneurs", "Marketing Professionals"],
+        price: "$160",
+        startDates: ["Dec 5, 2025", "Jan 20, 2026", "Mar 1, 2026"],
+        instructors: [
+            {
+                name: "Ms. Hana Bekele",
+                title: "Digital Marketing Strategist",
+                bio: "Digital marketing specialist with 9 years of experience in social media campaigns, SEO strategy, and online brand growth.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20marketing%20expert"
+            },
+            {
+                name: "Mr. Daniel Tesfaye",
+                title: "Marketing Analyst",
+                bio: "Marketing analyst with extensive experience in campaign analytics, paid advertising, and performance optimization.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20marketing%20professional"
+            }
+        ],
+        modules: [
+            {
+                title: "Introduction to Digital Marketing",
+                duration: "1 week",
+                topics: ["Overview of digital marketing channels", "Understanding target audiences", "Digital marketing strategy basics"]
+            },
+            {
+                title: "Content and Social Media Marketing",
+                duration: "2 weeks",
+                topics: ["Content marketing strategies", "Social media platforms and campaigns", "Creating engaging posts and visuals"]
+            },
+            {
+                title: "Search Engine Optimization (SEO)",
+                duration: "2 weeks",
+                topics: ["Keyword research", "On-page and off-page SEO", "Improving website visibility in search engines"]
+            },
+            {
+                title: "Digital Advertising and Email Marketing",
+                duration: "1 week",
+                topics: ["Google Ads and social media ads", "Email campaign strategies", "Lead generation techniques"]
+            },
+            {
+                title: "Marketing Analytics and Final Project",
+                duration: "1 week",
+                topics: ["Using analytics tools (Google Analytics basics)", "Tracking campaign performance", "Creating and presenting a digital marketing campaign"]
+            }
+        ],
+        outcomes: [
+            "Understand key digital marketing channels and strategies",
+            "Create effective social media and content marketing campaigns",
+            "Improve website visibility using SEO techniques",
+            "Launch and manage online advertising campaigns",
+            "Analyze marketing performance using analytics tools"
+        ],
+        requirements: [
+            "Basic computer and internet skills",
+            "Laptop or smartphone with internet access",
+            "No prior marketing experience required"
+        ],
+        certification: "ADITA Digital Marketing Strategy Certificate",
+        image: "/images/courses/digital-marketing.webp"
+    },
+    {
         id: "frontend-development",
         title: "Frontend Development",
         description: "Master the essentials of web interface design and development using HTML, CSS, and JavaScript. Learn responsive design principles and build modern interfaces with React or Angular.",
@@ -455,68 +689,6 @@ export const programs = [
         image: "/images/courses/android-ios-dev.webp"
     },
     {
-        id: "graphic-design",
-        title: "Graphic Designing",
-        description: "Learn the principles of visual communication and branding. Master Adobe Photoshop and Illustrator to create stunning designs for web and print.",
-        longDescription: "This course provides a comprehensive foundation in graphic design, covering design principles, Adobe Creative Suite tools, branding, and layouts for web and mobile. Learners will work on hands-on projects that simulate real-world design challenges, culminating in a complete branding and design portfolio.",
-        type: "design",
-        duration: "7 weeks",
-        level: "Beginner",
-        format: "Online & In-person",
-        audience: ["Students", "Artists", "Marketing Professionals"],
-        price: "$180",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
-        instructors: [
-            {
-                name: "Ms. Aisha Kamara",
-                title: "Graphic Design Instructor",
-                bio: "Professional graphic designer with 12 years of experience in branding, print, and digital media.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
-            },
-            {
-                name: "Mr. Joseph Ncube",
-                title: "Visual Design Specialist",
-                bio: "Experienced designer in Adobe Creative Suite with focus on web and mobile graphics.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
-            }
-        ],
-        modules: [
-            {
-                title: "Introduction to Graphic Design",
-                duration: "1 week",
-                topics: ["Design principles", "Color theory", "Typography basics"]
-            },
-            {
-                title: "Adobe Creative Suite",
-                duration: "3 weeks",
-                topics: ["Photoshop fundamentals", "Illustrator fundamentals", "Image editing and vector graphics"]
-            },
-            {
-                title: "Advanced Graphic Techniques",
-                duration: "2 weeks",
-                topics: ["Branding", "Layout design", "Design for web and mobile"]
-            },
-            {
-                title: "Final Project",
-                duration: "1 week",
-                topics: ["Create a full branding package", "Design multiple deliverables", "Prepare portfolio presentation"]
-            }
-        ],
-        outcomes: [
-            "Understand core design principles and color theory",
-            "Use Adobe Creative Suite tools effectively",
-            "Design layouts for web, mobile, and print",
-            "Develop a complete branding and design portfolio"
-        ],
-        requirements: [
-            "Laptop with Adobe Creative Suite installed",
-            "Basic computer literacy",
-            "Creative mindset"
-        ],
-        certification: "ADITA Graphic Design Certificate",
-        image: "/images/courses/graphic-design.webp"
-    },
-    {
         id: "blockchain-technology",
         title: "Blockchain Technology",
         description: "Understand blockchain architecture, cryptography, and consensus algorithms. Learn real-world applications and hands-on smart contract development.",
@@ -661,110 +833,6 @@ export const programs = [
         ],
         certification: "ADITA Foundations of AI & IoT Certificate",
         image: "/images/courses/ai-iot-foundations.webp"
-    },
-    {
-        id: "introduction-to-artificial-intelligence",
-        title: "Introduction to Artificial Intelligence: Concepts and Applications",
-        description: "A non-technical introduction to Artificial Intelligence, covering its core concepts, history, real-world applications, and ethical implications.",
-        longDescription:
-            "This course demystifies Artificial Intelligence by providing a comprehensive overview of its core concepts, historical evolution, and practical applications. Participants will explore different types of AI, understand how machine learning works at a conceptual level, and examine how AI is transforming industries such as healthcare, finance, and agriculture. The course also addresses the societal and ethical implications of AI adoption, making it suitable for learners without a technical background.",
-        type: "artificial-intelligence",
-        duration: "44 hours",
-        level: "Beginner",
-        format: "Online & In-person",
-        price: "$250",
-        audience: [
-            "Non-technical professionals",
-            "Managers",
-            "Students",
-            "General learners"
-        ],
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
-        instructors: [
-            {
-                name: "Dr. Abebe Bekele",
-                title: "AI & IoT Solutions Instructor",
-                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
-            },
-            {
-                name: "Ms. Leila Hassan",
-                title: "IoT Engineer",
-                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
-            }
-        ],
-        modules: [
-            {
-                title: "What is Artificial Intelligence?",
-                duration: "0.5 day",
-                topics: [
-                    "Definition of AI",
-                    "History and evolution of AI",
-                    "Key milestones in AI development"
-                ]
-            },
-            {
-                title: "How Machines Learn",
-                duration: "0.5 day",
-                topics: [
-                    "Core concepts of machine learning",
-                    "AI vs Machine Learning vs Deep Learning",
-                    "Examples of learning systems"
-                ]
-            },
-            {
-                title: "Seeing, Reading, and Listening",
-                duration: "0.5 day",
-                topics: [
-                    "Neural networks overview",
-                    "Natural language processing",
-                    "Computer vision"
-                ]
-            },
-            {
-                title: "AI in Action",
-                duration: "1 day",
-                topics: [
-                    "AI in healthcare",
-                    "AI in finance",
-                    "AI in agriculture",
-                    "Case studies of real-world AI systems"
-                ]
-            },
-            {
-                title: "The Future of AI",
-                duration: "0.5 day",
-                topics: [
-                    "Future trends in AI",
-                    "Societal impact of AI",
-                    "Ethical considerations and challenges"
-                ]
-            }
-        ],
-        outcomes: [
-            "Define Artificial Intelligence and distinguish it from Machine Learning and Deep Learning",
-            "Identify key AI concepts such as neural networks, NLP, and computer vision",
-            "Evaluate real-world AI applications across multiple industries",
-            "Discuss ethical and societal implications of AI adoption",
-            "Identify opportunities for applying AI in their own field"
-        ],
-        requirements: [
-            "Basic computer literacy",
-            "No prior technical or programming experience required"
-        ],
-        assessment: [
-            "Quiz on fundamental AI concepts (30%)",
-            "Group presentation on an AI use case (40%)",
-            "Participation in ethics debate (30%)"
-        ],
-        resources: [
-            "AI for Everyone by Andrew Ng (video series)",
-            "Cloud-based AI demo tools",
-            "AI case study library"
-        ],
-        certification: "Introduction to Artificial Intelligence Certificate",
-        image: "/images/courses/introduction-to-artificial-intelligence.webp"
     },
     {
         id: "machine-learning-for-beginners",

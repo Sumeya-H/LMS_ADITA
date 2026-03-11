@@ -23,7 +23,6 @@ export const news: NewsType[] = [
             "/images/news/gondor_mou_2.jpeg",
             "/images/news/gondor_mou_3.jpeg",
         ],
-        featured: true,
     },
 
     {
@@ -130,5 +129,6 @@ export const news: NewsType[] = [
             "/images/news/faana_mou_2.webp",
             "/images/news/faana_mou_3.webp",
         ],
+        featured: true,
     }
 ]

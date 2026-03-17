@@ -101,7 +101,7 @@ export default function AfricomCard() {
                     {/* Actions */}
                     <div className="flex gap-2 mt-4">
                         <a
-                            href="mailto:shegawa@aditacademy.co"
+                            href="mailto:shegawa@africom.et"
                             className="flex-1 text-center py-2 rounded-lg bg-[#234489] text-white text-xs"
                         >
                             Email

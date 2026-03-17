@@ -1,1352 +1,163 @@
 export const programs = [
     {
-        id: "data-analysis-visualization",
-        title: "Data Analysis and Visualization with Python",
-        description: "Learn to analyze and visualize data using Python with Pandas, NumPy, and Matplotlib. Gain practical experience in cleaning datasets, performing analysis, and communicating insights effectively.",
-        longDescription: "This course provides a hands-on introduction to programming and data analysis using Python. You'll start with foundational programming concepts, including data types, operators, and control structures, before progressing to practical applications in data manipulation and visualization. Using powerful libraries such as Pandas, NumPy, and Matplotlib, you'll learn how to clean, process, and analyze datasets. You'll also gain experience in visualizing data through charts, graphs, and reports, helping you communicate insights effectively. Throughout the course, you'll work with Jupyter Notebook to document your code and present findings in a structured format.",
-        type: "data-science",
-        duration: "50 hours",
-        level: "Beginner",
-        format: "Online & In-person",
-        audience: ["Students", "Professionals", "Researchers"],
-        price: "$180",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
-        instructors: [
-            {
-                name: "Dr. Laila Ahmed",
-                title: "Data Science Instructor",
-                bio: "PhD in Data Analytics with 8 years of teaching and industry experience, specializing in Python-based data analysis.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
-            },
-            {
-                name: "Mr. Samuel Tadesse",
-                title: "Python Developer & Analyst",
-                bio: "Experienced Python developer with 7 years in analytics and visualization projects across multiple sectors.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
-            }
-        ],
-        modules: [
-            {
-                title: "Introduction to Analytics",
-                duration: "1 week",
-                topics: ["Data types and structures", "Introduction to data analysis", "Tools setup (Python, Jupyter)"]
-            },
-            {
-                title: "Data Collection and Storage",
-                duration: "2 weeks",
-                topics: ["Data gathering techniques", "Data cleaning and preprocessing", "Using CSV, JSON, and databases"]
-            },
-            {
-                title: "Data Analysis and Visualization",
-                duration: "3 weeks",
-                topics: ["NumPy and Pandas for analysis", "Matplotlib and Seaborn for visualization", "Creating charts and reports"]
-            },
-            {
-                title: "Advanced Analytics Techniques",
-                duration: "1 week",
-                topics: ["Introduction to machine learning", "Predictive modeling basics", "Scenario analysis"]
-            },
-            {
-                title: "Final Project",
-                duration: "1 week",
-                topics: ["Collect and clean a real-world dataset", "Analyze and visualize insights", "Present findings professionally"]
-            }
-        ],
-        outcomes: [
-            "Understand foundational programming and data analysis concepts",
-            "Analyze datasets using Python libraries",
-            "Visualize data effectively through charts and reports",
-            "Apply basic predictive modeling techniques",
-            "Document and present data insights professionally"
-        ],
-        requirements: [
-            "Basic computer literacy",
-            "Laptop with Python and Jupyter installed",
-            "No prior programming experience required"
-        ],
-        certification: "ADITA Data Analysis and Visualization Certificate",
-        image: "/images/courses/data-analysis-python.webp"
-    },
-    {
-        id: "graphic-design",
-        title: "Graphic Designing",
-        description: "Learn the principles of visual communication and branding. Master Adobe Photoshop and Illustrator to create stunning designs for web and print.",
-        longDescription: "This course provides a comprehensive foundation in graphic design, covering design principles, Adobe Creative Suite tools, branding, and layouts for web and mobile. Learners will work on hands-on projects that simulate real-world design challenges, culminating in a complete branding and design portfolio.",
-        type: "design",
-        duration: "7 weeks",
-        level: "Beginner",
-        format: "Online & In-person",
-        audience: ["Students", "Artists", "Marketing Professionals"],
-        price: "$180",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
-        instructors: [
-            {
-                name: "Ms. Aisha Kamara",
-                title: "Graphic Design Instructor",
-                bio: "Professional graphic designer with 12 years of experience in branding, print, and digital media.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
-            },
-            {
-                name: "Mr. Joseph Ncube",
-                title: "Visual Design Specialist",
-                bio: "Experienced designer in Adobe Creative Suite with focus on web and mobile graphics.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
-            }
-        ],
-        modules: [
-            {
-                title: "Introduction to Graphic Design",
-                duration: "1 week",
-                topics: ["Design principles", "Color theory", "Typography basics"]
-            },
-            {
-                title: "Adobe Creative Suite",
-                duration: "3 weeks",
-                topics: ["Photoshop fundamentals", "Illustrator fundamentals", "Image editing and vector graphics"]
-            },
-            {
-                title: "Advanced Graphic Techniques",
-                duration: "2 weeks",
-                topics: ["Branding", "Layout design", "Design for web and mobile"]
-            },
-            {
-                title: "Final Project",
-                duration: "1 week",
-                topics: ["Create a full branding package", "Design multiple deliverables", "Prepare portfolio presentation"]
-            }
-        ],
-        outcomes: [
-            "Understand core design principles and color theory",
-            "Use Adobe Creative Suite tools effectively",
-            "Design layouts for web, mobile, and print",
-            "Develop a complete branding and design portfolio"
-        ],
-        requirements: [
-            "Laptop with Adobe Creative Suite installed",
-            "Basic computer literacy",
-            "Creative mindset"
-        ],
-        certification: "ADITA Graphic Design Certificate",
-        image: "/images/courses/graphic-design.webp"
-    },
-    {
-        id: "introduction-to-artificial-intelligence",
-        title: "Introduction to Artificial Intelligence: Concepts and Applications",
-        description: "A non-technical introduction to Artificial Intelligence, covering its core concepts, history, real-world applications, and ethical implications.",
+        id: "ai-for-content-creators",
+        title: "AI for Content Creators: Intelligent Content Creation, Automation, and Growth",
+        description:
+            "A practical, industry-focused course that equips content creators with the skills to use AI tools for content production, visual creation, video editing, and audience growth.",
         longDescription:
-            "This course demystifies Artificial Intelligence by providing a comprehensive overview of its core concepts, historical evolution, and practical applications. Participants will explore different types of AI, understand how machine learning works at a conceptual level, and examine how AI is transforming industries such as healthcare, finance, and agriculture. The course also addresses the societal and ethical implications of AI adoption, making it suitable for learners without a technical background.",
+            "This course provides a structured and practical introduction to the use of Artificial Intelligence in modern content creation. Participants will learn how to integrate AI into their workflows to ideate, produce, and optimize high-quality digital content across platforms such as YouTube, TikTok, and Instagram. The course emphasizes efficiency, creativity, and scalability—enabling creators to reduce production time, enhance visual quality, and maintain consistent output. Through hands-on exercises and real-world applications, learners will develop a complete AI-powered content system for sustainable growth.",
         type: "artificial-intelligence",
-        duration: "44 hours",
-        level: "Beginner",
-        format: "Online & In-person",
-        price: "$250",
-        audience: [
-            "Non-technical professionals",
-            "Managers",
-            "Students",
-            "General learners"
-        ],
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        duration: "30–36 hours",
+        level: "Beginner to Intermediate",
+        format: "Online / Hybrid / In-person",
+        startDates: ["Mar 25, 2026", "Apr 20, 2026", "May 10, 2026"],
         instructors: [
             {
-                name: "Dr. Abebe Bekele",
-                title: "AI & IoT Solutions Instructor",
-                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
-            },
-            {
-                name: "Ms. Leila Hassan",
-                title: "IoT Engineer",
-                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+                name: "Mr. Samuel Tesfaye",
+                title: "Digital Content Strategist & AI Trainer",
+                bio: "Specialist in AI-driven content systems, digital growth strategies, and workflow automation for creators and brands.",
+                image: "/placeholder.svg?height=200&width=200"
             }
         ],
-        modules: [
-            {
-                title: "What is Artificial Intelligence?",
-                duration: "0.5 day",
-                topics: [
-                    "Definition of AI",
-                    "History and evolution of AI",
-                    "Key milestones in AI development"
-                ]
-            },
-            {
-                title: "How Machines Learn",
-                duration: "0.5 day",
-                topics: [
-                    "Core concepts of machine learning",
-                    "AI vs Machine Learning vs Deep Learning",
-                    "Examples of learning systems"
-                ]
-            },
-            {
-                title: "Seeing, Reading, and Listening",
-                duration: "0.5 day",
-                topics: [
-                    "Neural networks overview",
-                    "Natural language processing",
-                    "Computer vision"
-                ]
-            },
-            {
-                title: "AI in Action",
-                duration: "1 day",
-                topics: [
-                    "AI in healthcare",
-                    "AI in finance",
-                    "AI in agriculture",
-                    "Case studies of real-world AI systems"
-                ]
-            },
-            {
-                title: "The Future of AI",
-                duration: "0.5 day",
-                topics: [
-                    "Future trends in AI",
-                    "Societal impact of AI",
-                    "Ethical considerations and challenges"
-                ]
-            }
-        ],
-        outcomes: [
-            "Define Artificial Intelligence and distinguish it from Machine Learning and Deep Learning",
-            "Identify key AI concepts such as neural networks, NLP, and computer vision",
-            "Evaluate real-world AI applications across multiple industries",
-            "Discuss ethical and societal implications of AI adoption",
-            "Identify opportunities for applying AI in their own field"
-        ],
-        requirements: [
-            "Basic computer literacy",
-            "No prior technical or programming experience required"
-        ],
-        assessment: [
-            "Quiz on fundamental AI concepts (30%)",
-            "Group presentation on an AI use case (40%)",
-            "Participation in ethics debate (30%)"
-        ],
-        resources: [
-            "AI for Everyone by Andrew Ng (video series)",
-            "Cloud-based AI demo tools",
-            "AI case study library"
-        ],
-        certification: "Introduction to Artificial Intelligence Certificate",
-        image: "/images/courses/introduction-to-artificial-intelligence.webp"
-    },
-    {
-        id: "digital-marketing-strategy",
-        title: "Digital Marketing Strategy and Analytics",
-        description: "Learn how to promote brands and products online using modern digital marketing tools including social media, SEO, content marketing, and analytics.",
-        longDescription: "This course introduces the fundamentals of digital marketing and equips learners with the skills needed to build and execute effective online marketing strategies. You will explore key channels such as social media marketing, search engine optimization (SEO), email marketing, and content marketing. The course also covers digital advertising, campaign planning, and performance tracking using analytics tools. Through hands-on activities and real-world case studies, you'll learn how to create engaging marketing campaigns, measure results, and optimize strategies to reach the right audience. By the end of the course, you will have the practical knowledge to plan, launch, and analyze digital marketing campaigns across multiple platforms.",
-        type: "marketing",
-        duration: "40 hours",
-        level: "Beginner",
-        format: "Online & In-person",
-        audience: ["Students", "Entrepreneurs", "Marketing Professionals"],
-        price: "$160",
-        startDates: ["Dec 5, 2025", "Jan 20, 2026", "Mar 1, 2026"],
-        instructors: [
-            {
-                name: "Ms. Hana Bekele",
-                title: "Digital Marketing Strategist",
-                bio: "Digital marketing specialist with 9 years of experience in social media campaigns, SEO strategy, and online brand growth.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20marketing%20expert"
-            },
-            {
-                name: "Mr. Daniel Tesfaye",
-                title: "Marketing Analyst",
-                bio: "Marketing analyst with extensive experience in campaign analytics, paid advertising, and performance optimization.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20man%20marketing%20professional"
-            }
-        ],
-        modules: [
-            {
-                title: "Introduction to Digital Marketing",
-                duration: "1 week",
-                topics: ["Overview of digital marketing channels", "Understanding target audiences", "Digital marketing strategy basics"]
-            },
-            {
-                title: "Content and Social Media Marketing",
-                duration: "2 weeks",
-                topics: ["Content marketing strategies", "Social media platforms and campaigns", "Creating engaging posts and visuals"]
-            },
-            {
-                title: "Search Engine Optimization (SEO)",
-                duration: "2 weeks",
-                topics: ["Keyword research", "On-page and off-page SEO", "Improving website visibility in search engines"]
-            },
-            {
-                title: "Digital Advertising and Email Marketing",
-                duration: "1 week",
-                topics: ["Google Ads and social media ads", "Email campaign strategies", "Lead generation techniques"]
-            },
-            {
-                title: "Marketing Analytics and Final Project",
-                duration: "1 week",
-                topics: ["Using analytics tools (Google Analytics basics)", "Tracking campaign performance", "Creating and presenting a digital marketing campaign"]
-            }
-        ],
-        outcomes: [
-            "Understand key digital marketing channels and strategies",
-            "Create effective social media and content marketing campaigns",
-            "Improve website visibility using SEO techniques",
-            "Launch and manage online advertising campaigns",
-            "Analyze marketing performance using analytics tools"
-        ],
-        requirements: [
-            "Basic computer and internet skills",
-            "Laptop or smartphone with internet access",
-            "No prior marketing experience required"
-        ],
-        certification: "ADITA Digital Marketing Strategy Certificate",
-        image: "/images/courses/digital-marketing.webp"
-    },
-    {
-        id: "frontend-development",
-        title: "Frontend Development",
-        description: "Master the essentials of web interface design and development using HTML, CSS, and JavaScript. Learn responsive design principles and build modern interfaces with React or Angular.",
-        longDescription: "This course introduces learners to the essentials of frontend development. You’ll start with HTML and CSS fundamentals, then progress to JavaScript and DOM manipulation. The course also covers modern frontend frameworks such as React and Angular, enabling you to build dynamic, responsive web applications. Emphasis is placed on practical, hands-on projects that simulate real-world web development scenarios.",
-        type: "development",
-        duration: "40 hours",
-        level: "Beginner",
-        format: "Online & In-person",
-        audience: ["Students", "Aspiring Developers"],
         price: "$200",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
-        instructors: [
-            {
-                name: "Ms. Fatima Bello",
-                title: "Frontend Development Specialist",
-                bio: "Senior web developer with 10 years of experience in frontend frameworks and UI/UX design.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
-            },
-            {
-                name: "Mr. Daniel Mensah",
-                title: "Software Engineer",
-                bio: "Frontend engineer with extensive experience in building responsive web applications using modern frameworks.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
-            }
-        ],
-        modules: [
-            {
-                title: "Introduction to Frontend Development",
-                duration: "1 week",
-                topics: ["HTML and CSS fundamentals", "Responsive design principles", "Basic web layout"]
-            },
-            {
-                title: "JavaScript Basics",
-                duration: "2 weeks",
-                topics: ["Variables, data types, operators", "Control structures and functions", "DOM manipulation"]
-            },
-            {
-                title: "Advanced CSS Techniques",
-                duration: "2 weeks",
-                topics: ["CSS frameworks (Bootstrap)", "Flexbox and Grid", "Animations and transitions"]
-            },
-            {
-                title: "Single-page Application Development",
-                duration: "2 weeks",
-                topics: ["React basics", "Component design", "State management", "Routing"]
-            },
-            {
-                title: "Final Project",
-                duration: "1 week",
-                topics: ["Build a fully functional frontend web application", "Responsive design implementation", "Code review and presentation"]
-            }
-        ],
-        outcomes: [
-            "Develop responsive and interactive web interfaces",
-            "Implement frontend applications using JavaScript and frameworks",
-            "Apply advanced CSS techniques to design modern layouts",
-            "Build a complete single-page web application"
-        ],
-        requirements: [
-            "Laptop with web browser and code editor",
-            "Basic understanding of computers",
-            "No prior programming experience required"
-        ],
-        certification: "ADITA Frontend Development Certificate",
-        image: "/images/courses/frontend-development.webp"
-    },
-    {
-        id: "backend-development",
-        title: "Backend Development",
-        description: "Develop robust server-side applications using Node.js, design and manage databases, and learn to build scalable APIs with strong security and performance considerations.",
-        longDescription: "This course provides a deep dive into backend web development. You’ll learn server-side programming using Node.js, database design for SQL and NoSQL systems, API creation, and deployment strategies. Advanced topics include scalability, performance optimization, and securing server-side applications. Practical exercises guide learners to develop and deploy full backend applications.",
-        type: "development",
-        duration: "40 hours",
-        level: "Intermediate",
-        format: "Online & In-person",
-        audience: ["Aspiring Developers", "IT Professionals"],
-        price: "$220",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
-        instructors: [
-            {
-                name: "Dr. Adebayo Okeke",
-                title: "Backend Development Instructor",
-                bio: "PhD in Computer Science with expertise in server-side technologies, databases, and API development.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
-            },
-            {
-                name: "Ms. Zainab Abebe",
-                title: "Software Engineer",
-                bio: "Experienced backend developer focusing on Node.js, databases, and web security for enterprise applications.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
-            }
-        ],
-        modules: [
-            {
-                title: "Introduction to Backend Development",
-                duration: "1 week",
-                topics: ["Server-side programming basics", "Node.js setup", "Understanding backend architecture"]
-            },
-            {
-                title: "Database Design and Management",
-                duration: "2 weeks",
-                topics: ["SQL vs NoSQL databases", "Database schema design", "Data CRUD operations"]
-            },
-            {
-                title: "Web Server Setup and API Development",
-                duration: "2 weeks",
-                topics: ["Setting up web servers", "Building RESTful APIs", "API testing and debugging"]
-            },
-            {
-                title: "Advanced Server-side Concepts",
-                duration: "2 weeks",
-                topics: ["Performance optimization", "Security best practices", "Scalability techniques"]
-            },
-            {
-                title: "Final Project",
-                duration: "1 week",
-                topics: ["Build a complete backend web application", "Integrate APIs with database", "Test and deploy the application"]
-            }
-        ],
-        outcomes: [
-            "Develop scalable server-side applications",
-            "Design and manage relational and non-relational databases",
-            "Implement and secure APIs",
-            "Deploy backend systems for real-world use"
-        ],
-        requirements: [
-            "Laptop with Node.js installed",
-            "Basic programming knowledge (preferably JavaScript)",
-            "Internet connection"
-        ],
-        certification: "ADITA Backend Development Certificate",
-        image: "/images/courses/backend-development.webp"
-    },
-    {
-        id: "fullstack-development",
-        title: "Full Stack Development",
-        description: "Integrate frontend and backend technologies to build complete web applications. Learn deployment, continuous integration, and advanced development workflows.",
-        longDescription: "This course combines frontend and backend development skills to train you as a full stack developer. You'll review frontend concepts (HTML, CSS, JavaScript, React/Angular) and backend technologies (Node.js, databases), then learn to integrate them into fully functional applications. Advanced topics cover deployment, continuous integration, and modern development practices.",
-        type: "development",
-        duration: "10 weeks",
-        level: "Advanced",
-        format: "Online & In-person",
-        audience: ["Developers", "Graduates", "IT Professionals"],
-        price: "$250",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
-        instructors: [
-            {
-                name: "Dr. Miriam Nkosi",
-                title: "Full Stack Lead Instructor",
-                bio: "PhD in Computer Science with 12 years of full stack development experience, specializing in scalable web applications.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
-            },
-            {
-                name: "Mr. Kwame Boateng",
-                title: "Senior Web Developer",
-                bio: "Expert in frontend-backend integration with 10 years of practical experience in full stack projects.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
-            }
-        ],
-        modules: [
-            {
-                title: "Introduction to Full Stack Development",
-                duration: "1 week",
-                topics: ["Frontend review", "Backend review", "Full stack architecture overview"]
-            },
-            {
-                title: "Frontend-Backend Integration",
-                duration: "3 weeks",
-                topics: ["Connecting frontend to backend", "RESTful APIs", "Authentication and sessions"]
-            },
-            {
-                title: "Advanced Full Stack Concepts",
-                duration: "3 weeks",
-                topics: ["Deployment strategies", "Continuous integration/continuous deployment", "Performance optimization"]
-            },
-            {
-                title: "Capstone Project",
-                duration: "3 weeks",
-                topics: ["Plan a full stack application", "Implement, test, and deploy", "Document and present the project"]
-            }
-        ],
-        outcomes: [
-            "Build fully functional full stack web applications",
-            "Integrate frontend and backend components",
-            "Deploy applications using modern workflows",
-            "Apply CI/CD practices in web development"
-        ],
-        requirements: [
-            "Basic frontend and backend development knowledge",
-            "Laptop with development tools installed",
-            "Internet access"
-        ],
-        certification: "ADITA Full Stack Development Certificate",
-        image: "/images/courses/fullstack-development.webp"
-    },
-    {
-        id: "cloud-computing",
-        title: "Cloud Computing",
-        description: "Gain a practical understanding of cloud computing services, storage, deployment, and security. Learn how to build and deploy applications on AWS, Azure, and Google Cloud.",
-        longDescription: "This course provides a comprehensive introduction to cloud computing. Learners explore cloud infrastructure, service models, storage solutions, and security considerations. Practical labs include deploying applications on major cloud platforms (AWS, Azure, Google Cloud) and learning how to manage cloud resources efficiently.",
-        type: "emerging-tech",
-        duration: "40 hours",
-        level: "Intermediate",
-        format: "Online & In-person",
-        audience: ["Students", "Professionals", "System Administrators"],
-        price: "$230",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
-        instructors: [
-            {
-                name: "Ms. Adjoa Ofori",
-                title: "Cloud Computing Specialist",
-                bio: "Cloud architect with 10 years of experience designing and deploying scalable cloud solutions for enterprises.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
-            },
-            {
-                name: "Mr. Bekele Solomon",
-                title: "DevOps Engineer",
-                bio: "Expert in cloud deployment, infrastructure automation, and security best practices for cloud environments.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
-            }
-        ],
-        modules: [
-            {
-                title: "Introduction to Cloud Computing",
-                duration: "1 week",
-                topics: ["Cloud fundamentals", "Types of cloud services", "Benefits and challenges"]
-            },
-            {
-                title: "Cloud Storage and Data Management",
-                duration: "2 weeks",
-                topics: ["Object, file, and block storage", "Databases in the cloud", "Backup and recovery"]
-            },
-            {
-                title: "Cloud Platforms and Deployment",
-                duration: "3 weeks",
-                topics: ["AWS, Azure, Google Cloud overview", "Deploying applications", "Monitoring and scaling"]
-            },
-            {
-                title: "Cloud Security and Compliance",
-                duration: "1 week",
-                topics: ["Access control", "Encryption", "Regulatory compliance"]
-            },
-            {
-                title: "Final Project",
-                duration: "1 week",
-                topics: ["Design and deploy a cloud-based application", "Implement security measures", "Test and document project"]
-            }
-        ],
-        outcomes: [
-            "Understand cloud service models and platforms",
-            "Deploy applications on cloud infrastructure",
-            "Manage cloud resources securely and efficiently",
-            "Apply best practices in cloud computing"
-        ],
-        requirements: [
-            "Basic knowledge of programming and networks",
-            "Laptop with internet access",
-            "Familiarity with server concepts"
-        ],
-        certification: "ADITA Cloud Computing Certificate",
-        image: "/images/courses/cloud-computing.webp"
-    },
-    {
-        id: "mobile-development",
-        title: "Mobile Application Development",
-        description: "Create powerful cross-platform mobile apps using Flutter or React Native. Learn design, backend integration, and performance optimization techniques.",
-        longDescription: "This course focuses on designing and developing mobile applications using cross-platform frameworks. Learners will explore UI/UX principles, backend integration, offline support, and performance optimization. Hands-on projects guide students to build complete mobile applications ready for deployment.",
-        type: "development",
-        duration: "40 hours",
-        level: "Intermediate",
-        format: "Online & In-person",
-        audience: ["Students", "App Developers"],
-        price: "$210",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
-        instructors: [
-            {
-                name: "Ms. Nana Yeboah",
-                title: "Mobile App Development Instructor",
-                bio: "Specialist in cross-platform mobile app development with 8 years of experience in Flutter and React Native.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
-            },
-            {
-                name: "Mr. Tesfaye Alemu",
-                title: "Software Engineer",
-                bio: "Mobile application developer with experience in backend integration and optimization for iOS and Android platforms.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
-            }
-        ],
-        modules: [
-            {
-                title: "Introduction to Mobile Application Development",
-                duration: "1 week",
-                topics: ["Cross-platform frameworks overview", "Mobile app lifecycle", "UI/UX basics"]
-            },
-            {
-                title: "Designing and Prototyping Mobile Apps",
-                duration: "2 weeks",
-                topics: ["Wireframing", "Prototyping tools", "User interface design"]
-            },
-            {
-                title: "Advanced Mobile Development",
-                duration: "3 weeks",
-                topics: ["Offline support", "Performance optimization", "Backend API integration"]
-            },
-            {
-                title: "Final Project",
-                duration: "2 weeks",
-                topics: ["Build a complete mobile application", "Test functionality and performance", "Deploy to app stores"]
-            }
-        ],
-        outcomes: [
-            "Design and implement cross-platform mobile apps",
-            "Integrate mobile apps with backend services",
-            "Optimize performance and user experience",
-            "Deploy fully functional mobile applications"
-        ],
-        requirements: [
-            "Laptop with Flutter or React Native installed",
-            "Basic programming experience (JavaScript/Dart preferred)",
-            "Internet connection"
-        ],
-        certification: "ADITA Mobile Application Development Certificate",
-        image: "/images/courses/mobile-app-dev.webp"
-    },
-    {
-        id: "android-ios-development",
-        title: "Android and iOS Development",
-        description: "Develop native mobile applications using Android Studio and Xcode. Learn mobile UI design, data handling, and integration with backend services.",
-        longDescription: "This course trains learners in native mobile application development for Android and iOS platforms. You'll use Android Studio and Xcode to build apps with rich interfaces, integrate backend APIs, handle local storage, and deploy apps to devices. Projects emphasize real-world app development and problem solving.",
-        type: "development",
-        duration: "40 hours",
-        level: "Intermediate",
-        format: "Online & In-person",
-        audience: ["Mobile Developers", "Students"],
-        price: "$230",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
-        instructors: [
-            {
-                name: "Ms. Zuri Kamanzi",
-                title: "Mobile Development Specialist",
-                bio: "Expert in native mobile development for Android and iOS with 9 years of experience delivering apps for businesses.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
-            },
-            {
-                name: "Mr. Abraham Tesfaye",
-                title: "Software Engineer",
-                bio: "Specialist in mobile app architecture, backend integration, and deployment for Android and iOS platforms.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
-            }
-        ],
-        modules: [
-            {
-                title: "Introduction to Mobile Development",
-                duration: "1 week",
-                topics: ["Android and iOS fundamentals", "Mobile platform differences", "Development environment setup"]
-            },
-            {
-                title: "Native App Development",
-                duration: "3 weeks",
-                topics: ["Android Studio basics", "Xcode basics", "UI design", "Data handling", "Backend integration"]
-            },
-            {
-                title: "Advanced Mobile Concepts",
-                duration: "2 weeks",
-                topics: ["Cross-platform considerations", "Responsive UI", "App optimization techniques"]
-            },
-            {
-                title: "Final Project",
-                duration: "2 weeks",
-                topics: ["Build a complete native mobile application", "Test, optimize, and deploy", "Prepare project presentation"]
-            }
-        ],
-        outcomes: [
-            "Develop native Android and iOS applications",
-            "Design responsive mobile interfaces",
-            "Integrate backend APIs and handle data efficiently",
-            "Deploy apps to devices and stores"
-        ],
-        requirements: [
-            "Laptop with Android Studio and Xcode installed",
-            "Basic programming knowledge (Java/Kotlin/Swift preferred)",
-            "Internet connection"
-        ],
-        certification: "ADITA Android & iOS Development Certificate",
-        image: "/images/courses/android-ios-dev.webp"
-    },
-    {
-        id: "blockchain-technology",
-        title: "Blockchain Technology",
-        description: "Understand blockchain architecture, cryptography, and consensus algorithms. Learn real-world applications and hands-on smart contract development.",
-        longDescription: "This course explores blockchain technology, including its architecture, components, cryptography, consensus algorithms, and real-world applications. Learners develop practical skills in building smart contracts and deploying blockchain solutions in finance, supply chain, and healthcare scenarios.",
-        type: "emerging-tech",
-        duration: "40 hours",
-        level: "Intermediate",
-        format: "Online & In-person",
-        audience: ["Developers", "Entrepreneurs", "Tech Enthusiasts"],
-        price: "$240",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
-        instructors: [
-            {
-                name: "Dr. Samuel Kofi",
-                title: "Blockchain Instructor",
-                bio: "PhD in Computer Science, specializing in blockchain and distributed ledger technologies.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
-            },
-            {
-                name: "Ms. Nnenna Obi",
-                title: "Smart Contract Developer",
-                bio: "Blockchain developer with 8 years of experience designing smart contracts and decentralized applications.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
-            }
-        ],
-        modules: [
-            {
-                title: "Introduction to Blockchain",
-                duration: "1 week",
-                topics: ["History and evolution", "Key concepts (decentralization, consensus)", "Blockchain vs traditional databases"]
-            },
-            {
-                title: "Blockchain Architecture and Components",
-                duration: "2 weeks",
-                topics: ["Structure of blockchain", "Cryptography and security", "Consensus algorithms"]
-            },
-            {
-                title: "Applications of Blockchain",
-                duration: "2 weeks",
-                topics: ["Finance, supply chain, healthcare", "Advantages and challenges", "Case studies"]
-            },
-            {
-                title: "Developing on Blockchain",
-                duration: "2 weeks",
-                topics: ["Development tools", "Building smart contracts", "Testing and debugging"]
-            },
-            {
-                title: "Ethics and Governance",
-                duration: "1 week",
-                topics: ["Ethical considerations", "Regulatory and legal frameworks", "Governance models"]
-            }
-        ],
-        outcomes: [
-            "Understand blockchain architecture and principles",
-            "Develop and deploy smart contracts",
-            "Apply blockchain solutions to real-world problems",
-            "Evaluate ethical and regulatory implications"
-        ],
-        requirements: [
-            "Laptop with internet access",
-            "Basic programming knowledge",
-            "Familiarity with data structures and algorithms"
-        ],
-        certification: "ADITA Blockchain Technology Certificate",
-        image: "/images/courses/blockchain.webp"
-    },
-    {
-        id: "foundations-ai-iot",
-        title: "Foundations of AI and IoT Solutions",
-        description: "Explore the integration of Artificial Intelligence and IoT systems. Learn to connect sensors, microcontrollers, and AI models to design smart, connected solutions for real-world problems.",
-        longDescription: "This course explores the integration of Artificial Intelligence (AI) and the Internet of Things (IoT) to develop smart, adaptive, and connected systems. Learners study hardware components like sensors and microcontrollers, software tools for data collection and communication, and AI techniques including machine learning, image recognition, and decision-making. Practical labs guide students through designing and prototyping AI-powered IoT solutions for applications in smart environments, agriculture, health, and automation.",
-        type: "artificial-intelligence",
-        duration: "60 hours",
-        level: "Intermediate",
-        format: "In-person & Online",
-        audience: ["Students", "Developers", "Innovators"],
-        price: "$250",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
-        instructors: [
-            {
-                name: "Dr. Abebe Bekele",
-                title: "AI & IoT Solutions Instructor",
-                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
-            },
-            {
-                name: "Ms. Leila Hassan",
-                title: "IoT Engineer",
-                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
-            }
-        ],
-        modules: [
-            {
-                title: "Introduction to IoT and AI",
-                duration: "1 week",
-                topics: ["What is IoT?", "What is AI?", "Applications and challenges", "Microcontroller basics"]
-            },
-            {
-                title: "IoT Hardware Components",
-                duration: "2 weeks",
-                topics: ["Sensors and actuators", "Analog vs digital sensors", "Power management", "Interfacing modules"]
-            },
-            {
-                title: "IoT Software Layers and Communication Protocols",
-                duration: "2 weeks",
-                topics: ["IoT stack overview", "HTTP, MQTT, BLE, Zigbee", "Edge vs cloud processing", "Cloud integration"]
-            },
-            {
-                title: "Fundamentals of AI and Machine Learning",
-                duration: "2 weeks",
-                topics: ["Supervised and unsupervised learning", "Feature extraction", "Model training with Python"]
-            },
-            {
-                title: "AI Applications in IoT",
-                duration: "2 weeks",
-                topics: ["Predictive maintenance", "Computer vision basics", "NLP in IoT", "Use case analysis"]
-            },
-            {
-                title: "Integration and System Implementation",
-                duration: "1 week",
-                topics: ["System architecture design", "Real-time control", "Actuator interfacing", "Scalability considerations"]
-            },
-            {
-                title: "Final Project: Smart System Design",
-                duration: "1 week",
-                topics: ["Project planning", "Component selection", "Integrate sensing, AI, communication layers", "Presentation and documentation"]
-            }
-        ],
-        outcomes: [
-            "Understand AI-IoT integration principles",
-            "Design IoT systems with sensors and actuators",
-            "Train and deploy basic AI models for IoT applications",
-            "Build functional prototypes of smart systems",
-            "Address security, privacy, and ethical issues in connected devices"
-        ],
-        requirements: [
-            "Basic Python and C++ programming knowledge",
-            "Familiarity with electronics fundamentals",
-            "Laptop and IoT development kits",
-            "Internet connection for cloud integration"
-        ],
-        certification: "ADITA Foundations of AI & IoT Certificate",
-        image: "/images/courses/ai-iot-foundations.webp"
-    },
-    {
-        id: "machine-learning-for-beginners",
-        title: "Machine Learning for Beginners: A Hands-On Approach",
-        description:
-            "A practical, beginner-friendly introduction to Machine Learning, focusing on hands-on experience with the complete ML workflow using no-code and low-code tools.",
-        longDescription:
-            "This course provides a practical introduction to Machine Learning through hands-on activities and guided labs. Participants will learn the complete machine learning pipeline, from data preparation and feature engineering to model training, evaluation, and interpretation. Using user-friendly, no-code and low-code platforms, learners will build simple classification and regression models without requiring extensive programming experience.",
-        type: "artificial-intelligence",
-        duration: "52 hours",
-        level: "Beginner",
-        format: "Online & In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
-        instructors: [
-            {
-                name: "Dr. Abebe Bekele",
-                title: "AI & IoT Solutions Instructor",
-                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
-            },
-            {
-                name: "Ms. Leila Hassan",
-                title: "IoT Engineer",
-                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
-            }
-        ],
-        price: "$250",
         audience: [
-            "Aspiring data analysts",
-            "Students",
-            "Professionals with basic math skills"
+            "Content creators and influencers",
+            "YouTubers, TikTok and Instagram creators",
+            "Digital marketers and social media managers",
+            "Entrepreneurs and personal brands",
+            "Media and communication students",
+            "Individuals interested in AI-powered content creation"
         ],
         modules: [
             {
-                title: "ML Fundamentals",
-                duration: "1 day",
+                title: "Foundations of AI in Content Creation",
+                duration: "3 hours",
                 topics: [
-                    "What is machine learning?",
-                    "Supervised learning",
-                    "Unsupervised learning",
-                    "Reinforcement learning"
+                    "Introduction to Artificial Intelligence and generative AI",
+                    "Key AI tools for content creators",
+                    "Capabilities and limitations of AI systems",
+                    "Overview of AI-driven content workflows",
+                    "Setting up a creator-focused AI toolkit"
                 ]
             },
             {
-                title: "Data Preprocessing and Feature Engineering",
-                duration: "1 day",
+                title: "AI-Powered Content Ideation and Strategy",
+                duration: "3–4 hours",
                 topics: [
-                    "Data cleaning",
-                    "Handling missing values",
-                    "Feature selection and transformation"
+                    "Generating high-performing content ideas",
+                    "Analyzing trends and audience behavior",
+                    "Developing content strategies using AI",
+                    "Creating structured content calendars",
+                    "Niche positioning and competitive analysis"
                 ]
             },
             {
-                title: "Your First Machine Learning Models",
-                duration: "1 day",
+                title: "AI for Scriptwriting and Copy Development",
+                duration: "3–4 hours",
                 topics: [
-                    "Linear regression",
-                    "Logistic regression",
-                    "Model training workflow",
-                    "Overfitting and underfitting"
+                    "Writing scripts for short-form and long-form content",
+                    "Developing strong hooks and storytelling structures",
+                    "AI-assisted caption and title generation",
+                    "Content optimization for engagement and retention",
+                    "Maintaining brand voice and originality"
                 ]
             },
             {
-                title: "Model Evaluation and Project",
-                duration: "1 day",
+                title: "AI-Based Visual Content Creation",
+                duration: "3–4 hours",
                 topics: [
-                    "Evaluation metrics for regression and classification",
-                    "Interpreting model results",
-                    "Building a complete ML project"
+                    "Generating high-quality and photo-realistic images",
+                    "Creating personalized visual assets",
+                    "Designing thumbnails and social media graphics",
+                    "Building a consistent visual identity",
+                    "Applications in branding and digital storytelling"
+                ]
+            },
+            {
+                title: "AI Video Production and Enhancement",
+                duration: "4–5 hours",
+                topics: [
+                    "AI-assisted video creation and editing tools",
+                    "Automating captions, cuts, and transitions",
+                    "Background replacement and virtual studio creation",
+                    "Improving video and audio quality using AI",
+                    "Reducing production time and complexity"
+                ]
+            },
+            {
+                title: "Workflow Automation and Productivity",
+                duration: "3 hours",
+                topics: [
+                    "Automating repetitive content tasks",
+                    "Batch content production strategies",
+                    "AI tools for scheduling and publishing",
+                    "Integrating AI into daily workflows",
+                    "Maximizing efficiency and reducing burnout"
+                ]
+            },
+            {
+                title: "Audience Growth and Content Optimization",
+                duration: "3 hours",
+                topics: [
+                    "Understanding viral content principles",
+                    "Using AI for performance analysis",
+                    "Optimizing content for platform algorithms",
+                    "Audience targeting and personalization",
+                    "Scaling content output sustainably"
+                ]
+            },
+            {
+                title: "Ethical, Legal, and Responsible AI Use",
+                duration: "2–3 hours",
+                topics: [
+                    "Ethical considerations in AI-generated content",
+                    "Copyright, ownership, and attribution",
+                    "Transparency and disclosure practices",
+                    "Managing bias and misinformation",
+                    "Responsible use of AI in media production"
+                ]
+            },
+            {
+                title: "Capstone Project: AI-Driven Content System",
+                duration: "6–8 hours",
+                topics: [
+                    "Designing a complete AI-powered content workflow",
+                    "Producing multi-platform content assets",
+                    "Developing a personal or brand content strategy",
+                    "Portfolio creation and presentation",
+                    "Performance evaluation and refinement"
                 ]
             }
         ],
         outcomes: [
-            "Explain the differences between supervised, unsupervised, and reinforcement learning",
-            "Prepare datasets for machine learning tasks",
-            "Train and evaluate basic classification and regression models",
-            "Interpret model results and performance metrics",
-            "Understand and avoid overfitting and underfitting"
+            "Understand AI concepts in a practical, creator-focused context",
+            "Generate high-quality content ideas, scripts, and captions using AI",
+            "Create professional visual and video content with AI tools",
+            "Automate editing and production processes to save time",
+            "Design and implement scalable content workflows",
+            "Enhance audience engagement and content performance",
+            "Apply AI tools strategically for content growth",
+            "Use AI responsibly and ethically in digital content creation"
         ],
         requirements: [
-            "Basic computer literacy",
-            "Basic mathematics knowledge",
-            "No prior machine learning experience required"
+            "Basic computer or smartphone proficiency",
+            "Familiarity with social media platforms",
+            "No prior experience with AI required"
         ],
         assessment: [
-            "Practical lab assignments (50%)",
-            "Final project: complete ML model with short report (50%)"
+            "Continuous assessment (40%): practical exercises and participation",
+            "Assignments (30%): content creation tasks and mini-projects",
+            "Final project (30%): AI-powered content portfolio and presentation"
         ],
         resources: [
-            "No-code and low-code machine learning platforms",
-            "Sample datasets for practice",
-            "Machine learning concept cheat sheets"
+            "Generative AI tools for text, image, and video creation",
+            "Content creation platforms (YouTube, TikTok, Instagram)",
+            "Design and editing tools",
+            "Content planning templates and frameworks",
+            "Case studies and real-world examples"
         ],
-        certification: "Machine Learning for Beginners Certificate",
-        image: "/images/courses/machine-learning-for-beginners.webp"
-    },
-    {
-        id: "data-analytics-visualization-power-bi",
-        title: "Data Analytics and Visualization with Power BI",
-        description:
-            "A hands-on course that teaches participants how to transform raw data into interactive dashboards and reports using Microsoft Power BI.",
-        longDescription:
-            "This course guides participants through the process of turning raw data into actionable insights using Microsoft Power BI. From importing and transforming data in Power Query to building data models, relationships, and interactive visualizations, students will gain practical experience in creating professional dashboards. The course also covers basic DAX formulas for calculated columns and measures, enabling participants to perform more advanced analyses.",
-        type: "data-science",
-        duration: "50 hours",
-        level: "Beginner to Intermediate",
-        format: "Online & In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
-        instructors: [
-            {
-                name: "Dr. Abebe Bekele",
-                title: "AI & IoT Solutions Instructor",
-                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
-            },
-            {
-                name: "Ms. Leila Hassan",
-                title: "IoT Engineer",
-                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
-            }
-        ],
-        price: "$250",
-        audience: [
-            "Analysts",
-            "Accountants",
-            "Marketers",
-            "Professionals working with data"
-        ],
-        modules: [
-            {
-                title: "Introduction to Power BI and Data Import",
-                duration: "1 day",
-                topics: [
-                    "Overview of Power BI",
-                    "Connecting to various data sources",
-                    "Importing and previewing datasets"
-                ]
-            },
-            {
-                title: "Data Transformation with Power Query",
-                duration: "1 day",
-                topics: [
-                    "Cleaning and transforming data",
-                    "Using Power Query Editor",
-                    "Merging and appending datasets"
-                ]
-            },
-            {
-                title: "Data Modeling and Relationships",
-                duration: "0.5 day",
-                topics: [
-                    "Creating data models",
-                    "Defining relationships",
-                    "Using calculated columns and tables"
-                ]
-            },
-            {
-                title: "Visualization and Dashboard Design",
-                duration: "1 day",
-                topics: [
-                    "Designing interactive dashboards",
-                    "Choosing the right visualizations",
-                    "Dashboard layout and optimization"
-                ]
-            },
-            {
-                title: "Introduction to DAX Formulas",
-                duration: "0.5 day",
-                topics: [
-                    "Basic DAX syntax and functions",
-                    "Calculated columns and measures",
-                    "Simple aggregations and calculations"
-                ]
-            }
-        ],
-        outcomes: [
-            "Connect to various data sources and transform data using Power Query",
-            "Build data models and define relationships",
-            "Design interactive reports and dashboards",
-            "Write basic DAX formulas for calculated columns and measures",
-            "Communicate actionable insights effectively using Power BI"
-        ],
-        requirements: [
-            "Basic computer literacy",
-            "Familiarity with Excel is helpful but not required",
-            "No prior Power BI experience required"
-        ],
-        assessment: [
-            "Weekly practical assignments (40%)",
-            "Final capstone project: building a comprehensive dashboard (60%)"
-        ],
-        resources: [
-            "Microsoft Power BI Desktop (Free)",
-            "Sample datasets (Sales, HR, Operations)",
-            "DAX formula reference guide"
-        ],
-        certification: "Data Analytics and Visualization with Power BI Certificate",
-        image: "/images/courses/data-analytics-visualization-power-bi.webp"
-    },
-    {
-        id: "generative-ai-chatgpt-productivity",
-        title: "Generative AI and ChatGPT for Productivity",
-        description:
-            "A practical course on leveraging Generative AI and large language models like ChatGPT to enhance professional productivity across writing, analysis, coding, and creative tasks.",
-        longDescription:
-            "This course teaches participants how to use Generative AI, specifically large language models (LLMs) such as ChatGPT, to dramatically increase productivity. Participants will learn advanced prompting techniques for writing, summarizing, brainstorming, data analysis, basic code generation, and workflow automation. The course includes hands-on exercises, competitions, and real-world scenario simulations to apply AI tools effectively and ethically in daily professional tasks.",
-        type: "artificial-intelligence",
-        duration: "36 hours",
-        level: "Beginner to Intermediate",
-        format: "Online & In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
-        instructors: [
-            {
-                name: "Dr. Abebe Bekele",
-                title: "AI & IoT Solutions Instructor",
-                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
-            },
-            {
-                name: "Ms. Leila Hassan",
-                title: "IoT Engineer",
-                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
-            }
-        ],
-        price: "$250",
-        audience: [
-            "Professionals",
-            "Entrepreneurs",
-            "Writers",
-            "Students",
-            "Anyone looking to enhance productivity with AI"
-        ],
-        modules: [
-            {
-                title: "Introduction to Generative AI and LLMs",
-                duration: "0.5 day",
-                topics: [
-                    "Overview of Generative AI",
-                    "How large language models work",
-                    "Capabilities and limitations of AI tools"
-                ]
-            },
-            {
-                title: "The Art of the Prompt",
-                duration: "0.5 day",
-                topics: [
-                    "Zero-shot, one-shot, few-shot prompting",
-                    "Chain-of-Thought prompting",
-                    "Advanced prompt design strategies"
-                ]
-            },
-            {
-                title: "GPT for Content Creation and Communication",
-                duration: "0.5 day",
-                topics: [
-                    "Writing, summarizing, and brainstorming with GPT",
-                    "Content generation for professional and creative tasks",
-                    "Best practices for output quality"
-                ]
-            },
-            {
-                title: "GPT for Data Analysis and Problem-Solving",
-                duration: "0.5 day",
-                topics: [
-                    "Using GPT for data interpretation",
-                    "Basic code generation",
-                    "Automating workflow tasks"
-                ]
-            },
-            {
-                title: "Ethical Use and Limitations of Generative AI",
-                duration: "0.5 day",
-                topics: [
-                    "Ethical AI usage",
-                    "Avoiding misuse and bias",
-                    "Integrating AI responsibly in professional workflows"
-                ]
-            }
-        ],
-        outcomes: [
-            "Master advanced prompting techniques for complex tasks",
-            "Use GPT effectively for writing, summarizing, and brainstorming",
-            "Apply GPT for data analysis and basic code generation",
-            "Integrate AI tools ethically into daily workflows",
-            "Increase productivity across professional and creative tasks"
-        ],
-        requirements: [
-            "Basic computer literacy",
-            "Access to ChatGPT Plus or a similar advanced LLM",
-            "No prior AI experience required"
-        ],
-        assessment: [
-            "Portfolio of generated outputs from various prompts (60%)",
-            "Final practical exam: solving a complex task using GPT (40%)"
-        ],
-        resources: [
-            "Access to ChatGPT Plus or similar LLM",
-            "Prompt library and cheat sheets",
-            "Custom instructions templates"
-        ],
-        certification: "Generative AI and ChatGPT for Productivity Certificate",
-        image: "/images/courses/generative-ai-chatgpt-productivity.webp"
-    },
-    {
-        id: "responsible-ai-ethics",
-        title: "Responsible AI and Ethics: Building Fair and Accountable Systems",
-        description:
-            "A critical course examining the ethical challenges of AI systems, focusing on fairness, transparency, accountability, and responsible deployment.",
-        longDescription:
-            "This course explores the ethical implications of AI, helping participants understand algorithmic bias, data privacy, transparency, and accountability. Participants will learn frameworks for developing and deploying AI responsibly and gain hands-on experience evaluating AI systems for ethical risks. Through case studies, role-playing, and guided projects, learners will be equipped to design fair and accountable AI solutions.",
-        type: "artificial-intelligence",
-        duration: "36 hours",
-        level: "Beginner to Intermediate",
-        format: "Online & In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
-        instructors: [
-            {
-                name: "Dr. Abebe Bekele",
-                title: "AI & IoT Solutions Instructor",
-                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
-            },
-            {
-                name: "Ms. Leila Hassan",
-                title: "IoT Engineer",
-                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
-            }
-        ],
-        price: "$250",
-        audience: [
-            "AI practitioners",
-            "Managers",
-            "Policymakers",
-            "Lawyers",
-            "Anyone involved in deploying AI systems"
-        ],
-        modules: [
-            {
-                title: "The Ethical Imperative",
-                duration: "0.5 day",
-                topics: [
-                    "Why AI ethics matter",
-                    "Societal and organizational impact",
-                    "Ethical frameworks overview"
-                ]
-            },
-            {
-                title: "Algorithmic Bias and Fairness",
-                duration: "0.5 day",
-                topics: [
-                    "Identifying sources of bias",
-                    "Measuring and mitigating bias",
-                    "Fairness in AI models"
-                ]
-            },
-            {
-                title: "Transparency, Explainability, and Accountability",
-                duration: "0.5 day",
-                topics: [
-                    "Explainable AI principles",
-                    "Accountability mechanisms",
-                    "Documenting AI decisions"
-                ]
-            },
-            {
-                title: "Privacy and Security in AI Systems",
-                duration: "0.25 day",
-                topics: [
-                    "Data privacy regulations",
-                    "Secure AI system design",
-                    "Protecting sensitive information"
-                ]
-            },
-            {
-                title: "Implementing an AI Ethics Framework",
-                duration: "0.25 day",
-                topics: [
-                    "Developing ethical guidelines",
-                    "Conducting bias audits",
-                    "AI ethics governance and policy"
-                ]
-            }
-        ],
-        outcomes: [
-            "Identify sources of bias in AI systems and data",
-            "Understand principles of fairness, accountability, and transparency (FAT)",
-            "Evaluate AI systems for ethical risks",
-            "Apply frameworks for ethical AI design and governance",
-            "Design AI solutions that are fair, transparent, and accountable"
-        ],
-        requirements: [
-            "Basic computer literacy",
-            "Awareness of AI systems",
-            "No prior ethics training required"
-        ],
-        assessment: [
-            "Written analysis of an AI ethics case study (50%)",
-            "Group project: Presentation of an AI Ethics Charter (50%)"
-        ],
-        resources: [
-            "MIT Moral Machine platform",
-            "AI Ethics guidelines from EU, IEEE, and other leading organizations",
-            "Case studies (e.g., biased hiring algorithms, predictive policing)"
-        ],
-        certification: "Responsible AI and Ethics Certificate",
-        image: "/images/courses/responsible-ai-ethics.webp"
-    },
-    {
-        id: "ai-social-good-sustainable-development",
-        title: "AI for Social Good and Sustainable Development",
-        description:
-            "A project-based course exploring how AI can be harnessed to address global challenges and create positive social and environmental impact.",
-        longDescription:
-            "This course enables participants to conceptualize and design AI-driven solutions that advance the UN Sustainable Development Goals (SDGs). Through project-based learning, participants analyze real-world use cases in healthcare, agriculture, education, and environmental sustainability. Learners will design AI-for-Social-Good (AI4SG) projects, understand deployment challenges in low-resource settings, and pitch actionable solutions for social impact.",
-        type: "artificial-intelligence",
-        duration: "44 hours",
-        level: "Beginner to Intermediate",
-        format: "Online & In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
-        instructors: [
-            {
-                name: "Dr. Abebe Bekele",
-                title: "AI & IoT Solutions Instructor",
-                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
-            },
-            {
-                name: "Ms. Leila Hassan",
-                title: "IoT Engineer",
-                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
-                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
-            }
-        ],
-        price: "$250",
-        audience: [
-            "Social entrepreneurs",
-            "NGO workers",
-            "Public sector officials",
-            "Technologists passionate about impact"
-        ],
-        modules: [
-            {
-                title: "AI and the Sustainable Development Goals",
-                duration: "0.5 day",
-                topics: [
-                    "Overview of UN SDGs",
-                    "AI’s role in achieving global goals",
-                    "Identifying social and environmental problems"
-                ]
-            },
-            {
-                title: "Case Studies: AI in Healthcare, Agriculture, and Education",
-                duration: "0.5 day",
-                topics: [
-                    "AI-driven disease prediction and management",
-                    "Precision agriculture for smallholders",
-                    "AI in educational initiatives"
-                ]
-            },
-            {
-                title: "AI for Environmental Sustainability and Climate Action",
-                duration: "0.5 day",
-                topics: [
-                    "Climate monitoring with AI",
-                    "Environmental risk prediction",
-                    "Sustainable AI interventions"
-                ]
-            },
-            {
-                title: "Human-Centered Design for Social Impact AI",
-                duration: "0.5 day",
-                topics: [
-                    "Human-centered design principles",
-                    "Field problem definition and needs assessment",
-                    "Stakeholder engagement"
-                ]
-            },
-            {
-                title: "Project Scoping and Impact Measurement",
-                duration: "1 day",
-                topics: [
-                    "Designing AI4SG project proposals",
-                    "Defining measurable impact metrics",
-                    "Pitching projects for implementation"
-                ]
-            }
-        ],
-        outcomes: [
-            "Analyze how AI can advance UN Sustainable Development Goals",
-            "Identify social and environmental problems suitable for AI solutions",
-            "Design AI-for-Social-Good project concepts",
-            "Understand challenges of AI deployment in low-resource settings",
-            "Plan and present actionable AI solutions for social impact"
-        ],
-        requirements: [
-            "Basic computer literacy",
-            "Interest in social impact and technology",
-            "No prior AI experience required"
-        ],
-        assessment: [
-            "Participation in case study discussions (30%)",
-            "Final group project: detailed AI4SG proposal and pitch (70%)"
-        ],
-        resources: [
-            "UN SDG framework",
-            "AI4SG project database",
-            "Project canvas templates for social innovation"
-        ],
-        certification: "AI for Social Good and Sustainable Development Certificate",
-        image: "/images/courses/ai-social-good-sustainable-development.webp"
+        certification: "Certificate in AI for Content Creation",
+        image: "/images/courses/ai-for-content-creators.webp"
     },
     {
         id: "prompt-engineering-ai-systems",
@@ -1359,7 +170,7 @@ export const programs = [
         duration: "30 hours",
         level: "Beginner to Intermediate",
         format: "Online / Hybrid / In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -1499,6 +310,1355 @@ export const programs = [
         image: "/images/courses/prompt-engineering-ai-systems.webp"
     },
     {
+        id: "data-analysis-visualization",
+        title: "Data Analysis and Visualization with Python",
+        description: "Learn to analyze and visualize data using Python with Pandas, NumPy, and Matplotlib. Gain practical experience in cleaning datasets, performing analysis, and communicating insights effectively.",
+        longDescription: "This course provides a hands-on introduction to programming and data analysis using Python. You'll start with foundational programming concepts, including data types, operators, and control structures, before progressing to practical applications in data manipulation and visualization. Using powerful libraries such as Pandas, NumPy, and Matplotlib, you'll learn how to clean, process, and analyze datasets. You'll also gain experience in visualizing data through charts, graphs, and reports, helping you communicate insights effectively. Throughout the course, you'll work with Jupyter Notebook to document your code and present findings in a structured format.",
+        type: "data-science",
+        duration: "50 hours",
+        level: "Beginner",
+        format: "Online & In-person",
+        audience: ["Students", "Professionals", "Researchers"],
+        price: "$180",
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Dr. Laila Ahmed",
+                title: "Data Science Instructor",
+                bio: "PhD in Data Analytics with 8 years of teaching and industry experience, specializing in Python-based data analysis.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            },
+            {
+                name: "Mr. Samuel Tadesse",
+                title: "Python Developer & Analyst",
+                bio: "Experienced Python developer with 7 years in analytics and visualization projects across multiple sectors.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            }
+        ],
+        modules: [
+            {
+                title: "Introduction to Analytics",
+                duration: "1 week",
+                topics: ["Data types and structures", "Introduction to data analysis", "Tools setup (Python, Jupyter)"]
+            },
+            {
+                title: "Data Collection and Storage",
+                duration: "2 weeks",
+                topics: ["Data gathering techniques", "Data cleaning and preprocessing", "Using CSV, JSON, and databases"]
+            },
+            {
+                title: "Data Analysis and Visualization",
+                duration: "3 weeks",
+                topics: ["NumPy and Pandas for analysis", "Matplotlib and Seaborn for visualization", "Creating charts and reports"]
+            },
+            {
+                title: "Advanced Analytics Techniques",
+                duration: "1 week",
+                topics: ["Introduction to machine learning", "Predictive modeling basics", "Scenario analysis"]
+            },
+            {
+                title: "Final Project",
+                duration: "1 week",
+                topics: ["Collect and clean a real-world dataset", "Analyze and visualize insights", "Present findings professionally"]
+            }
+        ],
+        outcomes: [
+            "Understand foundational programming and data analysis concepts",
+            "Analyze datasets using Python libraries",
+            "Visualize data effectively through charts and reports",
+            "Apply basic predictive modeling techniques",
+            "Document and present data insights professionally"
+        ],
+        requirements: [
+            "Basic computer literacy",
+            "Laptop with Python and Jupyter installed",
+            "No prior programming experience required"
+        ],
+        certification: "ADITA Data Analysis and Visualization Certificate",
+        image: "/images/courses/data-analysis-python.webp"
+    },
+    {
+        id: "graphic-design",
+        title: "Graphic Designing",
+        description: "Learn the principles of visual communication and branding. Master Adobe Photoshop and Illustrator to create stunning designs for web and print.",
+        longDescription: "This course provides a comprehensive foundation in graphic design, covering design principles, Adobe Creative Suite tools, branding, and layouts for web and mobile. Learners will work on hands-on projects that simulate real-world design challenges, culminating in a complete branding and design portfolio.",
+        type: "design",
+        duration: "7 weeks",
+        level: "Beginner",
+        format: "Online & In-person",
+        audience: ["Students", "Artists", "Marketing Professionals"],
+        price: "$180",
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Ms. Aisha Kamara",
+                title: "Graphic Design Instructor",
+                bio: "Professional graphic designer with 12 years of experience in branding, print, and digital media.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            },
+            {
+                name: "Mr. Joseph Ncube",
+                title: "Visual Design Specialist",
+                bio: "Experienced designer in Adobe Creative Suite with focus on web and mobile graphics.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            }
+        ],
+        modules: [
+            {
+                title: "Introduction to Graphic Design",
+                duration: "1 week",
+                topics: ["Design principles", "Color theory", "Typography basics"]
+            },
+            {
+                title: "Adobe Creative Suite",
+                duration: "3 weeks",
+                topics: ["Photoshop fundamentals", "Illustrator fundamentals", "Image editing and vector graphics"]
+            },
+            {
+                title: "Advanced Graphic Techniques",
+                duration: "2 weeks",
+                topics: ["Branding", "Layout design", "Design for web and mobile"]
+            },
+            {
+                title: "Final Project",
+                duration: "1 week",
+                topics: ["Create a full branding package", "Design multiple deliverables", "Prepare portfolio presentation"]
+            }
+        ],
+        outcomes: [
+            "Understand core design principles and color theory",
+            "Use Adobe Creative Suite tools effectively",
+            "Design layouts for web, mobile, and print",
+            "Develop a complete branding and design portfolio"
+        ],
+        requirements: [
+            "Laptop with Adobe Creative Suite installed",
+            "Basic computer literacy",
+            "Creative mindset"
+        ],
+        certification: "ADITA Graphic Design Certificate",
+        image: "/images/courses/graphic-design.webp"
+    },
+    {
+        id: "introduction-to-artificial-intelligence",
+        title: "Introduction to Artificial Intelligence: Concepts and Applications",
+        description: "A non-technical introduction to Artificial Intelligence, covering its core concepts, history, real-world applications, and ethical implications.",
+        longDescription:
+            "This course demystifies Artificial Intelligence by providing a comprehensive overview of its core concepts, historical evolution, and practical applications. Participants will explore different types of AI, understand how machine learning works at a conceptual level, and examine how AI is transforming industries such as healthcare, finance, and agriculture. The course also addresses the societal and ethical implications of AI adoption, making it suitable for learners without a technical background.",
+        type: "artificial-intelligence",
+        duration: "44 hours",
+        level: "Beginner",
+        format: "Online & In-person",
+        price: "$250",
+        audience: [
+            "Non-technical professionals",
+            "Managers",
+            "Students",
+            "General learners"
+        ],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Dr. Abebe Bekele",
+                title: "AI & IoT Solutions Instructor",
+                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            },
+            {
+                name: "Ms. Leila Hassan",
+                title: "IoT Engineer",
+                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            }
+        ],
+        modules: [
+            {
+                title: "What is Artificial Intelligence?",
+                duration: "0.5 day",
+                topics: [
+                    "Definition of AI",
+                    "History and evolution of AI",
+                    "Key milestones in AI development"
+                ]
+            },
+            {
+                title: "How Machines Learn",
+                duration: "0.5 day",
+                topics: [
+                    "Core concepts of machine learning",
+                    "AI vs Machine Learning vs Deep Learning",
+                    "Examples of learning systems"
+                ]
+            },
+            {
+                title: "Seeing, Reading, and Listening",
+                duration: "0.5 day",
+                topics: [
+                    "Neural networks overview",
+                    "Natural language processing",
+                    "Computer vision"
+                ]
+            },
+            {
+                title: "AI in Action",
+                duration: "1 day",
+                topics: [
+                    "AI in healthcare",
+                    "AI in finance",
+                    "AI in agriculture",
+                    "Case studies of real-world AI systems"
+                ]
+            },
+            {
+                title: "The Future of AI",
+                duration: "0.5 day",
+                topics: [
+                    "Future trends in AI",
+                    "Societal impact of AI",
+                    "Ethical considerations and challenges"
+                ]
+            }
+        ],
+        outcomes: [
+            "Define Artificial Intelligence and distinguish it from Machine Learning and Deep Learning",
+            "Identify key AI concepts such as neural networks, NLP, and computer vision",
+            "Evaluate real-world AI applications across multiple industries",
+            "Discuss ethical and societal implications of AI adoption",
+            "Identify opportunities for applying AI in their own field"
+        ],
+        requirements: [
+            "Basic computer literacy",
+            "No prior technical or programming experience required"
+        ],
+        assessment: [
+            "Quiz on fundamental AI concepts (30%)",
+            "Group presentation on an AI use case (40%)",
+            "Participation in ethics debate (30%)"
+        ],
+        resources: [
+            "AI for Everyone by Andrew Ng (video series)",
+            "Cloud-based AI demo tools",
+            "AI case study library"
+        ],
+        certification: "Introduction to Artificial Intelligence Certificate",
+        image: "/images/courses/introduction-to-artificial-intelligence.webp"
+    },
+    {
+        id: "digital-marketing-strategy",
+        title: "Digital Marketing Strategy and Analytics",
+        description: "Learn how to promote brands and products online using modern digital marketing tools including social media, SEO, content marketing, and analytics.",
+        longDescription: "This course introduces the fundamentals of digital marketing and equips learners with the skills needed to build and execute effective online marketing strategies. You will explore key channels such as social media marketing, search engine optimization (SEO), email marketing, and content marketing. The course also covers digital advertising, campaign planning, and performance tracking using analytics tools. Through hands-on activities and real-world case studies, you'll learn how to create engaging marketing campaigns, measure results, and optimize strategies to reach the right audience. By the end of the course, you will have the practical knowledge to plan, launch, and analyze digital marketing campaigns across multiple platforms.",
+        type: "marketing",
+        duration: "40 hours",
+        level: "Beginner",
+        format: "Online & In-person",
+        audience: ["Students", "Entrepreneurs", "Marketing Professionals"],
+        price: "$160",
+        startDates: ["Mar 5, 2025", "Jan 20, 2026", "Mar 1, 2026"],
+        instructors: [
+            {
+                name: "Ms. Hana Bekele",
+                title: "Digital Marketing Strategist",
+                bio: "Digital marketing specialist with 9 years of experience in social media campaigns, SEO strategy, and online brand growth.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20marketing%20expert"
+            },
+            {
+                name: "Mr. Daniel Tesfaye",
+                title: "Marketing Analyst",
+                bio: "Marketing analyst with extensive experience in campaign analytics, paid advertising, and performance optimization.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20marketing%20professional"
+            }
+        ],
+        modules: [
+            {
+                title: "Introduction to Digital Marketing",
+                duration: "1 week",
+                topics: ["Overview of digital marketing channels", "Understanding target audiences", "Digital marketing strategy basics"]
+            },
+            {
+                title: "Content and Social Media Marketing",
+                duration: "2 weeks",
+                topics: ["Content marketing strategies", "Social media platforms and campaigns", "Creating engaging posts and visuals"]
+            },
+            {
+                title: "Search Engine Optimization (SEO)",
+                duration: "2 weeks",
+                topics: ["Keyword research", "On-page and off-page SEO", "Improving website visibility in search engines"]
+            },
+            {
+                title: "Digital Advertising and Email Marketing",
+                duration: "1 week",
+                topics: ["Google Ads and social media ads", "Email campaign strategies", "Lead generation techniques"]
+            },
+            {
+                title: "Marketing Analytics and Final Project",
+                duration: "1 week",
+                topics: ["Using analytics tools (Google Analytics basics)", "Tracking campaign performance", "Creating and presenting a digital marketing campaign"]
+            }
+        ],
+        outcomes: [
+            "Understand key digital marketing channels and strategies",
+            "Create effective social media and content marketing campaigns",
+            "Improve website visibility using SEO techniques",
+            "Launch and manage online advertising campaigns",
+            "Analyze marketing performance using analytics tools"
+        ],
+        requirements: [
+            "Basic computer and internet skills",
+            "Laptop or smartphone with internet access",
+            "No prior marketing experience required"
+        ],
+        certification: "ADITA Digital Marketing Strategy Certificate",
+        image: "/images/courses/digital-marketing.webp"
+    },
+    {
+        id: "frontend-development",
+        title: "Frontend Development",
+        description: "Master the essentials of web interface design and development using HTML, CSS, and JavaScript. Learn responsive design principles and build modern interfaces with React or Angular.",
+        longDescription: "This course introduces learners to the essentials of frontend development. You’ll start with HTML and CSS fundamentals, then progress to JavaScript and DOM manipulation. The course also covers modern frontend frameworks such as React and Angular, enabling you to build dynamic, responsive web applications. Emphasis is placed on practical, hands-on projects that simulate real-world web development scenarios.",
+        type: "development",
+        duration: "40 hours",
+        level: "Beginner",
+        format: "Online & In-person",
+        audience: ["Students", "Aspiring Developers"],
+        price: "$200",
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Ms. Fatima Bello",
+                title: "Frontend Development Specialist",
+                bio: "Senior web developer with 10 years of experience in frontend frameworks and UI/UX design.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            },
+            {
+                name: "Mr. Daniel Mensah",
+                title: "Software Engineer",
+                bio: "Frontend engineer with extensive experience in building responsive web applications using modern frameworks.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            }
+        ],
+        modules: [
+            {
+                title: "Introduction to Frontend Development",
+                duration: "1 week",
+                topics: ["HTML and CSS fundamentals", "Responsive design principles", "Basic web layout"]
+            },
+            {
+                title: "JavaScript Basics",
+                duration: "2 weeks",
+                topics: ["Variables, data types, operators", "Control structures and functions", "DOM manipulation"]
+            },
+            {
+                title: "Advanced CSS Techniques",
+                duration: "2 weeks",
+                topics: ["CSS frameworks (Bootstrap)", "Flexbox and Grid", "Animations and transitions"]
+            },
+            {
+                title: "Single-page Application Development",
+                duration: "2 weeks",
+                topics: ["React basics", "Component design", "State management", "Routing"]
+            },
+            {
+                title: "Final Project",
+                duration: "1 week",
+                topics: ["Build a fully functional frontend web application", "Responsive design implementation", "Code review and presentation"]
+            }
+        ],
+        outcomes: [
+            "Develop responsive and interactive web interfaces",
+            "Implement frontend applications using JavaScript and frameworks",
+            "Apply advanced CSS techniques to design modern layouts",
+            "Build a complete single-page web application"
+        ],
+        requirements: [
+            "Laptop with web browser and code editor",
+            "Basic understanding of computers",
+            "No prior programming experience required"
+        ],
+        certification: "ADITA Frontend Development Certificate",
+        image: "/images/courses/frontend-development.webp"
+    },
+    {
+        id: "backend-development",
+        title: "Backend Development",
+        description: "Develop robust server-side applications using Node.js, design and manage databases, and learn to build scalable APIs with strong security and performance considerations.",
+        longDescription: "This course provides a deep dive into backend web development. You’ll learn server-side programming using Node.js, database design for SQL and NoSQL systems, API creation, and deployment strategies. Advanced topics include scalability, performance optimization, and securing server-side applications. Practical exercises guide learners to develop and deploy full backend applications.",
+        type: "development",
+        duration: "40 hours",
+        level: "Intermediate",
+        format: "Online & In-person",
+        audience: ["Aspiring Developers", "IT Professionals"],
+        price: "$220",
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Dr. Adebayo Okeke",
+                title: "Backend Development Instructor",
+                bio: "PhD in Computer Science with expertise in server-side technologies, databases, and API development.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            },
+            {
+                name: "Ms. Zainab Abebe",
+                title: "Software Engineer",
+                bio: "Experienced backend developer focusing on Node.js, databases, and web security for enterprise applications.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            }
+        ],
+        modules: [
+            {
+                title: "Introduction to Backend Development",
+                duration: "1 week",
+                topics: ["Server-side programming basics", "Node.js setup", "Understanding backend architecture"]
+            },
+            {
+                title: "Database Design and Management",
+                duration: "2 weeks",
+                topics: ["SQL vs NoSQL databases", "Database schema design", "Data CRUD operations"]
+            },
+            {
+                title: "Web Server Setup and API Development",
+                duration: "2 weeks",
+                topics: ["Setting up web servers", "Building RESTful APIs", "API testing and debugging"]
+            },
+            {
+                title: "Advanced Server-side Concepts",
+                duration: "2 weeks",
+                topics: ["Performance optimization", "Security best practices", "Scalability techniques"]
+            },
+            {
+                title: "Final Project",
+                duration: "1 week",
+                topics: ["Build a complete backend web application", "Integrate APIs with database", "Test and deploy the application"]
+            }
+        ],
+        outcomes: [
+            "Develop scalable server-side applications",
+            "Design and manage relational and non-relational databases",
+            "Implement and secure APIs",
+            "Deploy backend systems for real-world use"
+        ],
+        requirements: [
+            "Laptop with Node.js installed",
+            "Basic programming knowledge (preferably JavaScript)",
+            "Internet connection"
+        ],
+        certification: "ADITA Backend Development Certificate",
+        image: "/images/courses/backend-development.webp"
+    },
+    {
+        id: "fullstack-development",
+        title: "Full Stack Development",
+        description: "Integrate frontend and backend technologies to build complete web applications. Learn deployment, continuous integration, and advanced development workflows.",
+        longDescription: "This course combines frontend and backend development skills to train you as a full stack developer. You'll review frontend concepts (HTML, CSS, JavaScript, React/Angular) and backend technologies (Node.js, databases), then learn to integrate them into fully functional applications. Advanced topics cover deployment, continuous integration, and modern development practices.",
+        type: "development",
+        duration: "10 weeks",
+        level: "Advanced",
+        format: "Online & In-person",
+        audience: ["Developers", "Graduates", "IT Professionals"],
+        price: "$250",
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Dr. Miriam Nkosi",
+                title: "Full Stack Lead Instructor",
+                bio: "PhD in Computer Science with 12 years of full stack development experience, specializing in scalable web applications.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            },
+            {
+                name: "Mr. Kwame Boateng",
+                title: "Senior Web Developer",
+                bio: "Expert in frontend-backend integration with 10 years of practical experience in full stack projects.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            }
+        ],
+        modules: [
+            {
+                title: "Introduction to Full Stack Development",
+                duration: "1 week",
+                topics: ["Frontend review", "Backend review", "Full stack architecture overview"]
+            },
+            {
+                title: "Frontend-Backend Integration",
+                duration: "3 weeks",
+                topics: ["Connecting frontend to backend", "RESTful APIs", "Authentication and sessions"]
+            },
+            {
+                title: "Advanced Full Stack Concepts",
+                duration: "3 weeks",
+                topics: ["Deployment strategies", "Continuous integration/continuous deployment", "Performance optimization"]
+            },
+            {
+                title: "Capstone Project",
+                duration: "3 weeks",
+                topics: ["Plan a full stack application", "Implement, test, and deploy", "Document and present the project"]
+            }
+        ],
+        outcomes: [
+            "Build fully functional full stack web applications",
+            "Integrate frontend and backend components",
+            "Deploy applications using modern workflows",
+            "Apply CI/CD practices in web development"
+        ],
+        requirements: [
+            "Basic frontend and backend development knowledge",
+            "Laptop with development tools installed",
+            "Internet access"
+        ],
+        certification: "ADITA Full Stack Development Certificate",
+        image: "/images/courses/fullstack-development.webp"
+    },
+    {
+        id: "cloud-computing",
+        title: "Cloud Computing",
+        description: "Gain a practical understanding of cloud computing services, storage, deployment, and security. Learn how to build and deploy applications on AWS, Azure, and Google Cloud.",
+        longDescription: "This course provides a comprehensive introduction to cloud computing. Learners explore cloud infrastructure, service models, storage solutions, and security considerations. Practical labs include deploying applications on major cloud platforms (AWS, Azure, Google Cloud) and learning how to manage cloud resources efficiently.",
+        type: "emerging-tech",
+        duration: "40 hours",
+        level: "Intermediate",
+        format: "Online & In-person",
+        audience: ["Students", "Professionals", "System Administrators"],
+        price: "$230",
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Ms. Adjoa Ofori",
+                title: "Cloud Computing Specialist",
+                bio: "Cloud architect with 10 years of experience designing and deploying scalable cloud solutions for enterprises.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            },
+            {
+                name: "Mr. Bekele Solomon",
+                title: "DevOps Engineer",
+                bio: "Expert in cloud deployment, infrastructure automation, and security best practices for cloud environments.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            }
+        ],
+        modules: [
+            {
+                title: "Introduction to Cloud Computing",
+                duration: "1 week",
+                topics: ["Cloud fundamentals", "Types of cloud services", "Benefits and challenges"]
+            },
+            {
+                title: "Cloud Storage and Data Management",
+                duration: "2 weeks",
+                topics: ["Object, file, and block storage", "Databases in the cloud", "Backup and recovery"]
+            },
+            {
+                title: "Cloud Platforms and Deployment",
+                duration: "3 weeks",
+                topics: ["AWS, Azure, Google Cloud overview", "Deploying applications", "Monitoring and scaling"]
+            },
+            {
+                title: "Cloud Security and Compliance",
+                duration: "1 week",
+                topics: ["Access control", "Encryption", "Regulatory compliance"]
+            },
+            {
+                title: "Final Project",
+                duration: "1 week",
+                topics: ["Design and deploy a cloud-based application", "Implement security measures", "Test and document project"]
+            }
+        ],
+        outcomes: [
+            "Understand cloud service models and platforms",
+            "Deploy applications on cloud infrastructure",
+            "Manage cloud resources securely and efficiently",
+            "Apply best practices in cloud computing"
+        ],
+        requirements: [
+            "Basic knowledge of programming and networks",
+            "Laptop with internet access",
+            "Familiarity with server concepts"
+        ],
+        certification: "ADITA Cloud Computing Certificate",
+        image: "/images/courses/cloud-computing.webp"
+    },
+    {
+        id: "mobile-development",
+        title: "Mobile Application Development",
+        description: "Create powerful cross-platform mobile apps using Flutter or React Native. Learn design, backend integration, and performance optimization techniques.",
+        longDescription: "This course focuses on designing and developing mobile applications using cross-platform frameworks. Learners will explore UI/UX principles, backend integration, offline support, and performance optimization. Hands-on projects guide students to build complete mobile applications ready for deployment.",
+        type: "development",
+        duration: "40 hours",
+        level: "Intermediate",
+        format: "Online & In-person",
+        audience: ["Students", "App Developers"],
+        price: "$210",
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Ms. Nana Yeboah",
+                title: "Mobile App Development Instructor",
+                bio: "Specialist in cross-platform mobile app development with 8 years of experience in Flutter and React Native.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            },
+            {
+                name: "Mr. Tesfaye Alemu",
+                title: "Software Engineer",
+                bio: "Mobile application developer with experience in backend integration and optimization for iOS and Android platforms.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            }
+        ],
+        modules: [
+            {
+                title: "Introduction to Mobile Application Development",
+                duration: "1 week",
+                topics: ["Cross-platform frameworks overview", "Mobile app lifecycle", "UI/UX basics"]
+            },
+            {
+                title: "Designing and Prototyping Mobile Apps",
+                duration: "2 weeks",
+                topics: ["Wireframing", "Prototyping tools", "User interface design"]
+            },
+            {
+                title: "Advanced Mobile Development",
+                duration: "3 weeks",
+                topics: ["Offline support", "Performance optimization", "Backend API integration"]
+            },
+            {
+                title: "Final Project",
+                duration: "2 weeks",
+                topics: ["Build a complete mobile application", "Test functionality and performance", "Deploy to app stores"]
+            }
+        ],
+        outcomes: [
+            "Design and implement cross-platform mobile apps",
+            "Integrate mobile apps with backend services",
+            "Optimize performance and user experience",
+            "Deploy fully functional mobile applications"
+        ],
+        requirements: [
+            "Laptop with Flutter or React Native installed",
+            "Basic programming experience (JavaScript/Dart preferred)",
+            "Internet connection"
+        ],
+        certification: "ADITA Mobile Application Development Certificate",
+        image: "/images/courses/mobile-app-dev.webp"
+    },
+    {
+        id: "android-ios-development",
+        title: "Android and iOS Development",
+        description: "Develop native mobile applications using Android Studio and Xcode. Learn mobile UI design, data handling, and integration with backend services.",
+        longDescription: "This course trains learners in native mobile application development for Android and iOS platforms. You'll use Android Studio and Xcode to build apps with rich interfaces, integrate backend APIs, handle local storage, and deploy apps to devices. Projects emphasize real-world app development and problem solving.",
+        type: "development",
+        duration: "40 hours",
+        level: "Intermediate",
+        format: "Online & In-person",
+        audience: ["Mobile Developers", "Students"],
+        price: "$230",
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Ms. Zuri Kamanzi",
+                title: "Mobile Development Specialist",
+                bio: "Expert in native mobile development for Android and iOS with 9 years of experience delivering apps for businesses.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            },
+            {
+                name: "Mr. Abraham Tesfaye",
+                title: "Software Engineer",
+                bio: "Specialist in mobile app architecture, backend integration, and deployment for Android and iOS platforms.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            }
+        ],
+        modules: [
+            {
+                title: "Introduction to Mobile Development",
+                duration: "1 week",
+                topics: ["Android and iOS fundamentals", "Mobile platform differences", "Development environment setup"]
+            },
+            {
+                title: "Native App Development",
+                duration: "3 weeks",
+                topics: ["Android Studio basics", "Xcode basics", "UI design", "Data handling", "Backend integration"]
+            },
+            {
+                title: "Advanced Mobile Concepts",
+                duration: "2 weeks",
+                topics: ["Cross-platform considerations", "Responsive UI", "App optimization techniques"]
+            },
+            {
+                title: "Final Project",
+                duration: "2 weeks",
+                topics: ["Build a complete native mobile application", "Test, optimize, and deploy", "Prepare project presentation"]
+            }
+        ],
+        outcomes: [
+            "Develop native Android and iOS applications",
+            "Design responsive mobile interfaces",
+            "Integrate backend APIs and handle data efficiently",
+            "Deploy apps to devices and stores"
+        ],
+        requirements: [
+            "Laptop with Android Studio and Xcode installed",
+            "Basic programming knowledge (Java/Kotlin/Swift preferred)",
+            "Internet connection"
+        ],
+        certification: "ADITA Android & iOS Development Certificate",
+        image: "/images/courses/android-ios-dev.webp"
+    },
+    {
+        id: "blockchain-technology",
+        title: "Blockchain Technology",
+        description: "Understand blockchain architecture, cryptography, and consensus algorithms. Learn real-world applications and hands-on smart contract development.",
+        longDescription: "This course explores blockchain technology, including its architecture, components, cryptography, consensus algorithms, and real-world applications. Learners develop practical skills in building smart contracts and deploying blockchain solutions in finance, supply chain, and healthcare scenarios.",
+        type: "emerging-tech",
+        duration: "40 hours",
+        level: "Intermediate",
+        format: "Online & In-person",
+        audience: ["Developers", "Entrepreneurs", "Tech Enthusiasts"],
+        price: "$240",
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Dr. Samuel Kofi",
+                title: "Blockchain Instructor",
+                bio: "PhD in Computer Science, specializing in blockchain and distributed ledger technologies.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            },
+            {
+                name: "Ms. Nnenna Obi",
+                title: "Smart Contract Developer",
+                bio: "Blockchain developer with 8 years of experience designing smart contracts and decentralized applications.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            }
+        ],
+        modules: [
+            {
+                title: "Introduction to Blockchain",
+                duration: "1 week",
+                topics: ["History and evolution", "Key concepts (decentralization, consensus)", "Blockchain vs traditional databases"]
+            },
+            {
+                title: "Blockchain Architecture and Components",
+                duration: "2 weeks",
+                topics: ["Structure of blockchain", "Cryptography and security", "Consensus algorithms"]
+            },
+            {
+                title: "Applications of Blockchain",
+                duration: "2 weeks",
+                topics: ["Finance, supply chain, healthcare", "Advantages and challenges", "Case studies"]
+            },
+            {
+                title: "Developing on Blockchain",
+                duration: "2 weeks",
+                topics: ["Development tools", "Building smart contracts", "Testing and debugging"]
+            },
+            {
+                title: "Ethics and Governance",
+                duration: "1 week",
+                topics: ["Ethical considerations", "Regulatory and legal frameworks", "Governance models"]
+            }
+        ],
+        outcomes: [
+            "Understand blockchain architecture and principles",
+            "Develop and deploy smart contracts",
+            "Apply blockchain solutions to real-world problems",
+            "Evaluate ethical and regulatory implications"
+        ],
+        requirements: [
+            "Laptop with internet access",
+            "Basic programming knowledge",
+            "Familiarity with data structures and algorithms"
+        ],
+        certification: "ADITA Blockchain Technology Certificate",
+        image: "/images/courses/blockchain.webp"
+    },
+    {
+        id: "foundations-ai-iot",
+        title: "Foundations of AI and IoT Solutions",
+        description: "Explore the integration of Artificial Intelligence and IoT systems. Learn to connect sensors, microcontrollers, and AI models to design smart, connected solutions for real-world problems.",
+        longDescription: "This course explores the integration of Artificial Intelligence (AI) and the Internet of Things (IoT) to develop smart, adaptive, and connected systems. Learners study hardware components like sensors and microcontrollers, software tools for data collection and communication, and AI techniques including machine learning, image recognition, and decision-making. Practical labs guide students through designing and prototyping AI-powered IoT solutions for applications in smart environments, agriculture, health, and automation.",
+        type: "artificial-intelligence",
+        duration: "60 hours",
+        level: "Intermediate",
+        format: "In-person & Online",
+        audience: ["Students", "Developers", "Innovators"],
+        price: "$250",
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Dr. Abebe Bekele",
+                title: "AI & IoT Solutions Instructor",
+                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            },
+            {
+                name: "Ms. Leila Hassan",
+                title: "IoT Engineer",
+                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            }
+        ],
+        modules: [
+            {
+                title: "Introduction to IoT and AI",
+                duration: "1 week",
+                topics: ["What is IoT?", "What is AI?", "Applications and challenges", "Microcontroller basics"]
+            },
+            {
+                title: "IoT Hardware Components",
+                duration: "2 weeks",
+                topics: ["Sensors and actuators", "Analog vs digital sensors", "Power management", "Interfacing modules"]
+            },
+            {
+                title: "IoT Software Layers and Communication Protocols",
+                duration: "2 weeks",
+                topics: ["IoT stack overview", "HTTP, MQTT, BLE, Zigbee", "Edge vs cloud processing", "Cloud integration"]
+            },
+            {
+                title: "Fundamentals of AI and Machine Learning",
+                duration: "2 weeks",
+                topics: ["Supervised and unsupervised learning", "Feature extraction", "Model training with Python"]
+            },
+            {
+                title: "AI Applications in IoT",
+                duration: "2 weeks",
+                topics: ["Predictive maintenance", "Computer vision basics", "NLP in IoT", "Use case analysis"]
+            },
+            {
+                title: "Integration and System Implementation",
+                duration: "1 week",
+                topics: ["System architecture design", "Real-time control", "Actuator interfacing", "Scalability considerations"]
+            },
+            {
+                title: "Final Project: Smart System Design",
+                duration: "1 week",
+                topics: ["Project planning", "Component selection", "Integrate sensing, AI, communication layers", "Presentation and documentation"]
+            }
+        ],
+        outcomes: [
+            "Understand AI-IoT integration principles",
+            "Design IoT systems with sensors and actuators",
+            "Train and deploy basic AI models for IoT applications",
+            "Build functional prototypes of smart systems",
+            "Address security, privacy, and ethical issues in connected devices"
+        ],
+        requirements: [
+            "Basic Python and C++ programming knowledge",
+            "Familiarity with electronics fundamentals",
+            "Laptop and IoT development kits",
+            "Internet connection for cloud integration"
+        ],
+        certification: "ADITA Foundations of AI & IoT Certificate",
+        image: "/images/courses/ai-iot-foundations.webp"
+    },
+    {
+        id: "machine-learning-for-beginners",
+        title: "Machine Learning for Beginners: A Hands-On Approach",
+        description:
+            "A practical, beginner-friendly introduction to Machine Learning, focusing on hands-on experience with the complete ML workflow using no-code and low-code tools.",
+        longDescription:
+            "This course provides a practical introduction to Machine Learning through hands-on activities and guided labs. Participants will learn the complete machine learning pipeline, from data preparation and feature engineering to model training, evaluation, and interpretation. Using user-friendly, no-code and low-code platforms, learners will build simple classification and regression models without requiring extensive programming experience.",
+        type: "artificial-intelligence",
+        duration: "52 hours",
+        level: "Beginner",
+        format: "Online & In-person",
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Dr. Abebe Bekele",
+                title: "AI & IoT Solutions Instructor",
+                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            },
+            {
+                name: "Ms. Leila Hassan",
+                title: "IoT Engineer",
+                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            }
+        ],
+        price: "$250",
+        audience: [
+            "Aspiring data analysts",
+            "Students",
+            "Professionals with basic math skills"
+        ],
+        modules: [
+            {
+                title: "ML Fundamentals",
+                duration: "1 day",
+                topics: [
+                    "What is machine learning?",
+                    "Supervised learning",
+                    "Unsupervised learning",
+                    "Reinforcement learning"
+                ]
+            },
+            {
+                title: "Data Preprocessing and Feature Engineering",
+                duration: "1 day",
+                topics: [
+                    "Data cleaning",
+                    "Handling missing values",
+                    "Feature selection and transformation"
+                ]
+            },
+            {
+                title: "Your First Machine Learning Models",
+                duration: "1 day",
+                topics: [
+                    "Linear regression",
+                    "Logistic regression",
+                    "Model training workflow",
+                    "Overfitting and underfitting"
+                ]
+            },
+            {
+                title: "Model Evaluation and Project",
+                duration: "1 day",
+                topics: [
+                    "Evaluation metrics for regression and classification",
+                    "Interpreting model results",
+                    "Building a complete ML project"
+                ]
+            }
+        ],
+        outcomes: [
+            "Explain the differences between supervised, unsupervised, and reinforcement learning",
+            "Prepare datasets for machine learning tasks",
+            "Train and evaluate basic classification and regression models",
+            "Interpret model results and performance metrics",
+            "Understand and avoid overfitting and underfitting"
+        ],
+        requirements: [
+            "Basic computer literacy",
+            "Basic mathematics knowledge",
+            "No prior machine learning experience required"
+        ],
+        assessment: [
+            "Practical lab assignments (50%)",
+            "Final project: complete ML model with short report (50%)"
+        ],
+        resources: [
+            "No-code and low-code machine learning platforms",
+            "Sample datasets for practice",
+            "Machine learning concept cheat sheets"
+        ],
+        certification: "Machine Learning for Beginners Certificate",
+        image: "/images/courses/machine-learning-for-beginners.webp"
+    },
+    {
+        id: "data-analytics-visualization-power-bi",
+        title: "Data Analytics and Visualization with Power BI",
+        description:
+            "A hands-on course that teaches participants how to transform raw data into interactive dashboards and reports using Microsoft Power BI.",
+        longDescription:
+            "This course guides participants through the process of turning raw data into actionable insights using Microsoft Power BI. From importing and transforming data in Power Query to building data models, relationships, and interactive visualizations, students will gain practical experience in creating professional dashboards. The course also covers basic DAX formulas for calculated columns and measures, enabling participants to perform more advanced analyses.",
+        type: "data-science",
+        duration: "50 hours",
+        level: "Beginner to Intermediate",
+        format: "Online & In-person",
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Dr. Abebe Bekele",
+                title: "AI & IoT Solutions Instructor",
+                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            },
+            {
+                name: "Ms. Leila Hassan",
+                title: "IoT Engineer",
+                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            }
+        ],
+        price: "$250",
+        audience: [
+            "Analysts",
+            "Accountants",
+            "Marketers",
+            "Professionals working with data"
+        ],
+        modules: [
+            {
+                title: "Introduction to Power BI and Data Import",
+                duration: "1 day",
+                topics: [
+                    "Overview of Power BI",
+                    "Connecting to various data sources",
+                    "Importing and previewing datasets"
+                ]
+            },
+            {
+                title: "Data Transformation with Power Query",
+                duration: "1 day",
+                topics: [
+                    "Cleaning and transforming data",
+                    "Using Power Query Editor",
+                    "Merging and appending datasets"
+                ]
+            },
+            {
+                title: "Data Modeling and Relationships",
+                duration: "0.5 day",
+                topics: [
+                    "Creating data models",
+                    "Defining relationships",
+                    "Using calculated columns and tables"
+                ]
+            },
+            {
+                title: "Visualization and Dashboard Design",
+                duration: "1 day",
+                topics: [
+                    "Designing interactive dashboards",
+                    "Choosing the right visualizations",
+                    "Dashboard layout and optimization"
+                ]
+            },
+            {
+                title: "Introduction to DAX Formulas",
+                duration: "0.5 day",
+                topics: [
+                    "Basic DAX syntax and functions",
+                    "Calculated columns and measures",
+                    "Simple aggregations and calculations"
+                ]
+            }
+        ],
+        outcomes: [
+            "Connect to various data sources and transform data using Power Query",
+            "Build data models and define relationships",
+            "Design interactive reports and dashboards",
+            "Write basic DAX formulas for calculated columns and measures",
+            "Communicate actionable insights effectively using Power BI"
+        ],
+        requirements: [
+            "Basic computer literacy",
+            "Familiarity with Excel is helpful but not required",
+            "No prior Power BI experience required"
+        ],
+        assessment: [
+            "Weekly practical assignments (40%)",
+            "Final capstone project: building a comprehensive dashboard (60%)"
+        ],
+        resources: [
+            "Microsoft Power BI Desktop (Free)",
+            "Sample datasets (Sales, HR, Operations)",
+            "DAX formula reference guide"
+        ],
+        certification: "Data Analytics and Visualization with Power BI Certificate",
+        image: "/images/courses/data-analytics-visualization-power-bi.webp"
+    },
+    {
+        id: "generative-ai-chatgpt-productivity",
+        title: "Generative AI and ChatGPT for Productivity",
+        description:
+            "A practical course on leveraging Generative AI and large language models like ChatGPT to enhance professional productivity across writing, analysis, coding, and creative tasks.",
+        longDescription:
+            "This course teaches participants how to use Generative AI, specifically large language models (LLMs) such as ChatGPT, to dramatically increase productivity. Participants will learn advanced prompting techniques for writing, summarizing, brainstorming, data analysis, basic code generation, and workflow automation. The course includes hands-on exercises, competitions, and real-world scenario simulations to apply AI tools effectively and ethically in daily professional tasks.",
+        type: "artificial-intelligence",
+        duration: "36 hours",
+        level: "Beginner to Intermediate",
+        format: "Online & In-person",
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Dr. Abebe Bekele",
+                title: "AI & IoT Solutions Instructor",
+                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            },
+            {
+                name: "Ms. Leila Hassan",
+                title: "IoT Engineer",
+                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            }
+        ],
+        price: "$250",
+        audience: [
+            "Professionals",
+            "Entrepreneurs",
+            "Writers",
+            "Students",
+            "Anyone looking to enhance productivity with AI"
+        ],
+        modules: [
+            {
+                title: "Introduction to Generative AI and LLMs",
+                duration: "0.5 day",
+                topics: [
+                    "Overview of Generative AI",
+                    "How large language models work",
+                    "Capabilities and limitations of AI tools"
+                ]
+            },
+            {
+                title: "The Art of the Prompt",
+                duration: "0.5 day",
+                topics: [
+                    "Zero-shot, one-shot, few-shot prompting",
+                    "Chain-of-Thought prompting",
+                    "Advanced prompt design strategies"
+                ]
+            },
+            {
+                title: "GPT for Content Creation and Communication",
+                duration: "0.5 day",
+                topics: [
+                    "Writing, summarizing, and brainstorming with GPT",
+                    "Content generation for professional and creative tasks",
+                    "Best practices for output quality"
+                ]
+            },
+            {
+                title: "GPT for Data Analysis and Problem-Solving",
+                duration: "0.5 day",
+                topics: [
+                    "Using GPT for data interpretation",
+                    "Basic code generation",
+                    "Automating workflow tasks"
+                ]
+            },
+            {
+                title: "Ethical Use and Limitations of Generative AI",
+                duration: "0.5 day",
+                topics: [
+                    "Ethical AI usage",
+                    "Avoiding misuse and bias",
+                    "Integrating AI responsibly in professional workflows"
+                ]
+            }
+        ],
+        outcomes: [
+            "Master advanced prompting techniques for complex tasks",
+            "Use GPT effectively for writing, summarizing, and brainstorming",
+            "Apply GPT for data analysis and basic code generation",
+            "Integrate AI tools ethically into daily workflows",
+            "Increase productivity across professional and creative tasks"
+        ],
+        requirements: [
+            "Basic computer literacy",
+            "Access to ChatGPT Plus or a similar advanced LLM",
+            "No prior AI experience required"
+        ],
+        assessment: [
+            "Portfolio of generated outputs from various prompts (60%)",
+            "Final practical exam: solving a complex task using GPT (40%)"
+        ],
+        resources: [
+            "Access to ChatGPT Plus or similar LLM",
+            "Prompt library and cheat sheets",
+            "Custom instructions templates"
+        ],
+        certification: "Generative AI and ChatGPT for Productivity Certificate",
+        image: "/images/courses/generative-ai-chatgpt-productivity.webp"
+    },
+    {
+        id: "responsible-ai-ethics",
+        title: "Responsible AI and Ethics: Building Fair and Accountable Systems",
+        description:
+            "A critical course examining the ethical challenges of AI systems, focusing on fairness, transparency, accountability, and responsible deployment.",
+        longDescription:
+            "This course explores the ethical implications of AI, helping participants understand algorithmic bias, data privacy, transparency, and accountability. Participants will learn frameworks for developing and deploying AI responsibly and gain hands-on experience evaluating AI systems for ethical risks. Through case studies, role-playing, and guided projects, learners will be equipped to design fair and accountable AI solutions.",
+        type: "artificial-intelligence",
+        duration: "36 hours",
+        level: "Beginner to Intermediate",
+        format: "Online & In-person",
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Dr. Abebe Bekele",
+                title: "AI & IoT Solutions Instructor",
+                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            },
+            {
+                name: "Ms. Leila Hassan",
+                title: "IoT Engineer",
+                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            }
+        ],
+        price: "$250",
+        audience: [
+            "AI practitioners",
+            "Managers",
+            "Policymakers",
+            "Lawyers",
+            "Anyone involved in deploying AI systems"
+        ],
+        modules: [
+            {
+                title: "The Ethical Imperative",
+                duration: "0.5 day",
+                topics: [
+                    "Why AI ethics matter",
+                    "Societal and organizational impact",
+                    "Ethical frameworks overview"
+                ]
+            },
+            {
+                title: "Algorithmic Bias and Fairness",
+                duration: "0.5 day",
+                topics: [
+                    "Identifying sources of bias",
+                    "Measuring and mitigating bias",
+                    "Fairness in AI models"
+                ]
+            },
+            {
+                title: "Transparency, Explainability, and Accountability",
+                duration: "0.5 day",
+                topics: [
+                    "Explainable AI principles",
+                    "Accountability mechanisms",
+                    "Documenting AI decisions"
+                ]
+            },
+            {
+                title: "Privacy and Security in AI Systems",
+                duration: "0.25 day",
+                topics: [
+                    "Data privacy regulations",
+                    "Secure AI system design",
+                    "Protecting sensitive information"
+                ]
+            },
+            {
+                title: "Implementing an AI Ethics Framework",
+                duration: "0.25 day",
+                topics: [
+                    "Developing ethical guidelines",
+                    "Conducting bias audits",
+                    "AI ethics governance and policy"
+                ]
+            }
+        ],
+        outcomes: [
+            "Identify sources of bias in AI systems and data",
+            "Understand principles of fairness, accountability, and transparency (FAT)",
+            "Evaluate AI systems for ethical risks",
+            "Apply frameworks for ethical AI design and governance",
+            "Design AI solutions that are fair, transparent, and accountable"
+        ],
+        requirements: [
+            "Basic computer literacy",
+            "Awareness of AI systems",
+            "No prior ethics training required"
+        ],
+        assessment: [
+            "Written analysis of an AI ethics case study (50%)",
+            "Group project: Presentation of an AI Ethics Charter (50%)"
+        ],
+        resources: [
+            "MIT Moral Machine platform",
+            "AI Ethics guidelines from EU, IEEE, and other leading organizations",
+            "Case studies (e.g., biased hiring algorithms, predictive policing)"
+        ],
+        certification: "Responsible AI and Ethics Certificate",
+        image: "/images/courses/responsible-ai-ethics.webp"
+    },
+    {
+        id: "ai-social-good-sustainable-development",
+        title: "AI for Social Good and Sustainable Development",
+        description:
+            "A project-based course exploring how AI can be harnessed to address global challenges and create positive social and environmental impact.",
+        longDescription:
+            "This course enables participants to conceptualize and design AI-driven solutions that advance the UN Sustainable Development Goals (SDGs). Through project-based learning, participants analyze real-world use cases in healthcare, agriculture, education, and environmental sustainability. Learners will design AI-for-Social-Good (AI4SG) projects, understand deployment challenges in low-resource settings, and pitch actionable solutions for social impact.",
+        type: "artificial-intelligence",
+        duration: "44 hours",
+        level: "Beginner to Intermediate",
+        format: "Online & In-person",
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        instructors: [
+            {
+                name: "Dr. Abebe Bekele",
+                title: "AI & IoT Solutions Instructor",
+                bio: "PhD in Mechatronics and AI, specializing in IoT system design and intelligent automation solutions.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20man%20professor"
+            },
+            {
+                name: "Ms. Leila Hassan",
+                title: "IoT Engineer",
+                bio: "Experienced IoT and embedded systems engineer with a focus on AI integration and smart environment projects.",
+                image: "/placeholder.svg?height=200&width=200&query=african%20woman%20professor"
+            }
+        ],
+        price: "$250",
+        audience: [
+            "Social entrepreneurs",
+            "NGO workers",
+            "Public sector officials",
+            "Technologists passionate about impact"
+        ],
+        modules: [
+            {
+                title: "AI and the Sustainable Development Goals",
+                duration: "0.5 day",
+                topics: [
+                    "Overview of UN SDGs",
+                    "AI’s role in achieving global goals",
+                    "Identifying social and environmental problems"
+                ]
+            },
+            {
+                title: "Case Studies: AI in Healthcare, Agriculture, and Education",
+                duration: "0.5 day",
+                topics: [
+                    "AI-driven disease prediction and management",
+                    "Precision agriculture for smallholders",
+                    "AI in educational initiatives"
+                ]
+            },
+            {
+                title: "AI for Environmental Sustainability and Climate Action",
+                duration: "0.5 day",
+                topics: [
+                    "Climate monitoring with AI",
+                    "Environmental risk prediction",
+                    "Sustainable AI interventions"
+                ]
+            },
+            {
+                title: "Human-Centered Design for Social Impact AI",
+                duration: "0.5 day",
+                topics: [
+                    "Human-centered design principles",
+                    "Field problem definition and needs assessment",
+                    "Stakeholder engagement"
+                ]
+            },
+            {
+                title: "Project Scoping and Impact Measurement",
+                duration: "1 day",
+                topics: [
+                    "Designing AI4SG project proposals",
+                    "Defining measurable impact metrics",
+                    "Pitching projects for implementation"
+                ]
+            }
+        ],
+        outcomes: [
+            "Analyze how AI can advance UN Sustainable Development Goals",
+            "Identify social and environmental problems suitable for AI solutions",
+            "Design AI-for-Social-Good project concepts",
+            "Understand challenges of AI deployment in low-resource settings",
+            "Plan and present actionable AI solutions for social impact"
+        ],
+        requirements: [
+            "Basic computer literacy",
+            "Interest in social impact and technology",
+            "No prior AI experience required"
+        ],
+        assessment: [
+            "Participation in case study discussions (30%)",
+            "Final group project: detailed AI4SG proposal and pitch (70%)"
+        ],
+        resources: [
+            "UN SDG framework",
+            "AI4SG project database",
+            "Project canvas templates for social innovation"
+        ],
+        certification: "AI for Social Good and Sustainable Development Certificate",
+        image: "/images/courses/ai-social-good-sustainable-development.webp"
+    },
+    {
         id: "digital-literacy-ict-skills",
         title: "Digital Literacy and Essential ICT Skills",
         description:
@@ -1509,7 +1669,7 @@ export const programs = [
         duration: "40 hours",
         level: "Beginner",
         format: "Online & In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -1612,7 +1772,7 @@ export const programs = [
         duration: "50 hours",
         level: "Intermediate",
         format: "Online & In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -1716,7 +1876,7 @@ export const programs = [
         duration: "40 hours",
         level: "Beginner to Intermediate",
         format: "Online & In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -1821,7 +1981,7 @@ export const programs = [
         duration: "60 hours",
         level: "Beginner to Intermediate",
         format: "Online & In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -1927,7 +2087,7 @@ export const programs = [
         duration: "40 hours",
         level: "Beginner",
         format: "Online & In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -2031,7 +2191,7 @@ export const programs = [
         duration: "30 hours",
         level: "Beginner to Intermediate",
         format: "Hybrid / Online / In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -2181,7 +2341,7 @@ export const programs = [
         duration: "60 hours",
         level: "Beginner",
         format: "Online & In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -2288,7 +2448,7 @@ export const programs = [
         duration: "60 hours",
         level: "Beginner",
         format: "Online & In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -2397,7 +2557,7 @@ export const programs = [
         duration: "52 hours",
         level: "Beginner to Intermediate",
         format: "Online & In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -2501,7 +2661,7 @@ export const programs = [
         duration: "52 hours",
         level: "Beginner to Intermediate",
         format: "Online & In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -2605,7 +2765,7 @@ export const programs = [
         duration: "44 hours",
         level: "Beginner",
         format: "Online & In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -2711,7 +2871,7 @@ export const programs = [
         duration: "36 hours",
         level: "Beginner to Intermediate",
         format: "Online & In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -2816,7 +2976,7 @@ export const programs = [
         duration: "44 hours",
         level: "Beginner to Intermediate",
         format: "Online & In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -2920,7 +3080,7 @@ export const programs = [
         duration: "36 hours",
         level: "Beginner to Intermediate",
         format: "In-person / Hybrid / Online",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -2960,7 +3120,7 @@ export const programs = [
                 ]
             },
             {
-                title: "Building the Perfect Pitch Deck",
+                title: "Building the Perfect Pitch Mark",
                 duration: "0.5 day",
                 topics: [
                     "Standard 10-slide pitch deck structure",
@@ -3026,7 +3186,7 @@ export const programs = [
         duration: "36 hours",
         level: "Beginner to Intermediate",
         format: "In-person / Hybrid / Online",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -3136,7 +3296,7 @@ export const programs = [
         duration: "20 hours",
         level: "Beginner",
         format: "Online / Hybrid / In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -3260,7 +3420,7 @@ export const programs = [
         duration: "60 hours",
         level: "Beginner to Intermediate",
         format: "Online / Hybrid / In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -3383,7 +3543,7 @@ export const programs = [
         duration: "50 hours",
         level: "Beginner to Intermediate",
         format: "Online / Hybrid / In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -3505,7 +3665,7 @@ export const programs = [
         duration: "40 hours",
         level: "Beginner to Intermediate",
         format: "Online / Hybrid / In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -3628,7 +3788,7 @@ export const programs = [
         duration: "45 hours",
         level: "Beginner to Intermediate",
         format: "Online / Hybrid / In-person",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -3750,7 +3910,7 @@ export const programs = [
         duration: "44 hours",
         level: "Beginner",
         format: "In-person / Hybrid / Online",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -3852,14 +4012,14 @@ export const programs = [
     },
     {
         id: "blockchain-web3-basics",
-        title: "Demystifying Blockchain and Web3: From Bitcoin to a Decentralized Internet",
+        title: "Demystifying Blockchain and Web3: From Bitcoin to a Marentralized Internet",
         description: "A foundational course introducing blockchain technology, cryptocurrencies, smart contracts, NFTs, and Web3 concepts with practical applications.",
         longDescription: "This course provides a clear understanding of blockchain and the emerging Web3 ecosystem. Participants explore decentralization, distributed ledgers, cryptography, and consensus mechanisms, with hands-on exercises including crypto wallets, dApps, and real-world case studies in supply chain, identity management, and governance.",
         type: "emerging-tech",
         duration: "36 hours",
         level: "Beginner",
         format: "In-person / Hybrid / Online",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -3888,7 +4048,7 @@ export const programs = [
                 duration: "3 hours",
                 topics: [
                     "Introduction to blockchain and its significance",
-                    "Decentralization and distributed ledger concepts",
+                    "Marentralization and distributed ledger concepts",
                     "Key terminology and ecosystem overview"
                 ]
             },
@@ -3915,7 +4075,7 @@ export const programs = [
                 duration: "3 hours",
                 topics: [
                     "Smart contract basics and applications",
-                    "Decentralized applications (dApps)",
+                    "Marentralized applications (dApps)",
                     "Vision and principles of Web3"
                 ]
             },
@@ -3970,7 +4130,7 @@ export const programs = [
         duration: "36 hours",
         level: "Beginner",
         format: "In-person / Hybrid / Online",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -4082,7 +4242,7 @@ export const programs = [
         duration: "36 hours",
         level: "Beginner",
         format: "In-person / Hybrid / Online",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -4192,7 +4352,7 @@ export const programs = [
         duration: "36 hours",
         level: "Beginner",
         format: "In-person / Hybrid / Online",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -4302,7 +4462,7 @@ export const programs = [
         duration: "44 hours",
         level: "Beginner to Intermediate",
         format: "In-person / Hybrid / Online",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -4414,7 +4574,7 @@ export const programs = [
         duration: "36 hours",
         level: "Beginner to Intermediate",
         format: "In-person / Hybrid / Online",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -4525,7 +4685,7 @@ export const programs = [
         duration: "36 hours",
         level: "Beginner to Intermediate",
         format: "In-person / Hybrid / Online",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -4636,7 +4796,7 @@ export const programs = [
         duration: "36 hours",
         level: "Beginner to Intermediate",
         format: "In-person / Hybrid / Online",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -4697,7 +4857,7 @@ export const programs = [
                 ]
             },
             {
-                title: "Decision-Making and Implementation Planning",
+                title: "Marision-Making and Implementation Planning",
                 duration: "3 hours",
                 topics: [
                     "Evaluating options using decision matrices",
@@ -4745,7 +4905,7 @@ export const programs = [
         duration: "44 hours",
         level: "Beginner to Intermediate",
         format: "In-person / Hybrid / Online",
-        startDates: ["Dec 5, 2025", "Jan 20, 2026", "Mar 5, 2026"],
+        startDates: ["Mar 5, 2025", "Jan 20, 2026", "Mar 5, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -4857,7 +5017,7 @@ export const programs = [
         duration: "36 hours",
         level: "Beginner to Intermediate",
         format: "In-person / Hybrid / Online",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -4969,7 +5129,7 @@ export const programs = [
         duration: "44 hours",
         level: "Intermediate",
         format: "In-person / Hybrid / Online",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -5081,7 +5241,7 @@ export const programs = [
         duration: "36 hours",
         level: "Intermediate",
         format: "In-person / Hybrid / Online",
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -5201,7 +5361,7 @@ export const programs = [
             "Compliance officers",
             "Information security consultants"
         ],
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -5304,7 +5464,7 @@ export const programs = [
             "Internal auditors",
             "Quality consultants"
         ],
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -5394,7 +5554,7 @@ export const programs = [
             "Environmental officers",
             "Management system consultants"
         ],
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -5482,7 +5642,7 @@ export const programs = [
             "Internal auditors",
             "Consultants"
         ],
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -5568,7 +5728,7 @@ export const programs = [
             "Supervisors",
             "Education consultants"
         ],
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -5657,7 +5817,7 @@ export const programs = [
             "Supervisors",
             "Management system consultants"
         ],
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",
@@ -5746,7 +5906,7 @@ export const programs = [
             "Health and safety officers",
             "Management system consultants"
         ],
-        startDates: ["Dec 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
+        startDates: ["Mar 1, 2025", "Jan 10, 2026", "Feb 15, 2026"],
         instructors: [
             {
                 name: "Dr. Abebe Bekele",

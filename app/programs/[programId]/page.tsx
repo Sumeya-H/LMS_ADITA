@@ -22,7 +22,7 @@ export default function ProgramDetailPage({ params }) {
     if (!program) {
         return <div>Program not found</div>;
     }
-    const enrollHref = programId === "introduction-to-artificial-intelligence" || programId === "data-analysis-visualization" || programId === "graphic-design" || programId === "digital-marketing-strategy" ? `/programs/${programId}/enroll` : `/programs/${programId}`;
+    const enrollHref = programId === "ai-for-content-creators" || programId === "prompt-engineering-ai-systems" || programId === "introduction-to-artificial-intelligence" || programId === "data-analysis-visualization" || programId === "graphic-design" || programId === "digital-marketing-strategy" ? `/programs/${programId}/enroll` : `/programs/${programId}`;
     console.log(enrollHref);
     return (
         <div className="container py-12">

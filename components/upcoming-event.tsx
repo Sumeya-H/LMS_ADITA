@@ -20,8 +20,8 @@ export default function UpcomingTrainingEvent() {
                     {/* Image */}
                     <div className="relative">
                         <Image
-                            src="/images/courses/introduction-to-artificial-intelligence.webp"
-                            alt="Introduction to Artificial Intelligence Training"
+                            src="/images/courses/ai-for-content-creators.webp"
+                            alt="AI for Content Creators Training"
                             width={800}
                             height={800}
                             className="rounded-lg shadow-lg mx-auto"
@@ -32,13 +32,11 @@ export default function UpcomingTrainingEvent() {
                     {/* Content */}
                     <div className="space-y-6">
                         <h3 className="text-2xl md:text-3xl font-bold">
-                            Introduction to Artificial Intelligence
+                            AI for Content Creators: Intelligent Content Creation, Automation, and Growth
                         </h3>
 
                         <p className="text-lg text-gray-700">
-                            A beginner-friendly, non-technical course designed to help you
-                            understand Artificial Intelligence, how it works, and how it is
-                            transforming industries like healthcare, finance, and agriculture.
+                            A practical, industry-focused course designed to help creators use AI tools to produce high-quality content, streamline workflows, and grow their digital presence across platforms.
                         </p>
 
                         {/* Key Info */}
@@ -46,21 +44,21 @@ export default function UpcomingTrainingEvent() {
                             <div className="flex items-center gap-2">
                                 <CalendarIcon className="h-5 w-5 text-[#52331E]" />
                                 <p className="text-lg">
-                                    <strong>Registeration Deadline:</strong> Feb 10, 2026
+                                    <strong>Start Dates:</strong> Mar 25, 2026 · Apr 20, 2026 · May 10, 2026
                                 </p>
                             </div>
 
                             <div className="flex items-center gap-2">
                                 <BookIcon className="h-5 w-5 text-[#52331E]" />
                                 <p className="text-lg">
-                                    <strong>Level:</strong> Beginner · No technical background required
+                                    <strong>Level:</strong> Beginner to Intermediate
                                 </p>
                             </div>
 
                             <div className="flex items-center gap-2">
                                 <MapIcon className="h-5 w-5 text-[#52331E]" />
                                 <p className="text-lg">
-                                    <strong>Format:</strong> Online & In-Person · 44 Hours
+                                    <strong>Format:</strong> Online / Hybrid / In-Person · 30–36 Hours
                                 </p>
                             </div>
                         </div>
@@ -71,10 +69,12 @@ export default function UpcomingTrainingEvent() {
                                 What You’ll Gain
                             </h4>
                             <ul className="list-disc list-inside space-y-2 ml-2 text-gray-700">
-                                <li>Clear understanding of AI, Machine Learning & Deep Learning</li>
-                                <li>Real-world AI applications across industries</li>
-                                <li>Awareness of ethical and societal implications of AI</li>
-                                <li>An official AI course certificate</li>
+                                <li>Develop high-quality content using AI tools</li>
+                                <li>Generate scripts, captions, and creative ideas efficiently</li>
+                                <li>Create professional visuals and video content with AI</li>
+                                <li>Automate editing and streamline content production workflows</li>
+                                <li>Enhance audience engagement and content performance</li>
+                                <li>Build scalable and consistent content creation systems</li>
                             </ul>
                         </div>
 
@@ -91,7 +91,7 @@ export default function UpcomingTrainingEvent() {
                             </Button>
 
                             <p className="mt-4 text-sm text-gray-600">
-                                Certificate awarded upon completion
+                                Certificate in AI for Content Creation awarded upon completion
                             </p>
                         </div>
                     </div>

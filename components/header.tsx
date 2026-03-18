@@ -10,9 +10,14 @@ import { Skeleton } from "@/components/ui/skeleton"
 
 const navigation = [
     { name: "Home", href: "/" },
+    // { name: "Programs", href: "/programs" },
+    // { name: "Courses", href: "/courses" },
+    // { name: "Certifications", href: "/certifications" },
+    // { name: "Incubator", href: "/incubator" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "Training Programs", href: "/programs" },
+    { name: "News", href: "/news" },
+    { name: "Traning Programs", href: "/programs" },
 ]
 
 export default function Header() {

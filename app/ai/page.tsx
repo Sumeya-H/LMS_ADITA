@@ -8,7 +8,7 @@ export default function AiRedirectPage() {
 
     useEffect(() => {
         router.replace(
-            "/programs/introduction-to-artificial-intelligence/enroll"
+            "/programs/ai-for-content-creators/enroll"
         )
     }, [router])
 

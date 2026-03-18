@@ -37,7 +37,10 @@ export default function EnrollmentForm({ onSubmit, program }) {
         startDate: "",
         format: "",
         goals: "",
-        agreeTerms: false,
+        referral: "",
+        mode: "",
+        location: "",
+        agreed_terms: false,
     })
 
     const emailRef = useRef(null)
@@ -68,6 +71,9 @@ export default function EnrollmentForm({ onSubmit, program }) {
             ...prev,
             [name]: type === "checkbox" ? checked : value,
         }))
+        if (name === "mode" && value === "online") {
+            setFormData(prev => ({ ...prev, location: "" }))
+        }
     }
 
     const handleSelectChange = (name, value) => {
@@ -83,11 +89,37 @@ export default function EnrollmentForm({ onSubmit, program }) {
         setFormError("")
         setErrors({})
 
+        const phoneValidation = validateEthiopianPhone(formData.phone)
+
+        if (!phoneValidation.valid) {
+            setErrors({
+                phone:
+                    "Invalid Ethiopian phone number. Use +2519XXXXXXXX, +2517XXXXXXXX, 09XXXXXXXX, or 07XXXXXXXX.",
+            })
+            setIsSubmitting(false)
+            return
+        }
+        // Validate learning mode
+        if (!formData.mode) {
+            setFormError("Please select your preferred learning mode.")
+            setIsSubmitting(false)
+            return
+        }
+
+        // Validate location if needed
+        if (
+            (formData.mode === "hybrid" || formData.mode === "in-person") &&
+            !formData.location
+        ) {
+            setFormError("Please select your preferred training location.")
+            setIsSubmitting(false)
+            return
+        }
+
         try {
             const res = await onSubmit({
                 ...formData
             })
-            console.log(res)
         } catch (err) {
             const response = err?.response?.data || err;
 
@@ -166,6 +198,60 @@ export default function EnrollmentForm({ onSubmit, program }) {
                     rows={3}
                 />
             </div>
+            {/* -------------------- Learning Preference -------------------- */}
+            <div>
+                <h3 className="text-lg font-medium">Learning Preference</h3>
+
+                <div className="mt-4 grid grid-cols-1 gap-4">
+                    {/* Mode Selection */}
+                    <div className="space-y-2">
+                        <Label htmlFor="mode">Preferred Learning Mode</Label>
+                        <Select
+                            value={formData.mode}
+                            onValueChange={(value) =>
+                                handleSelectChange("mode", value)
+                            }
+                        >
+                            <SelectTrigger id="mode">
+                                <SelectValue placeholder="Select learning mode" />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectItem value="online">Online</SelectItem>
+                                <SelectItem value="hybrid">Hybrid (Online + In-Person)</SelectItem>
+                                <SelectItem value="in-person">In-Person</SelectItem>
+                            </SelectContent>
+                        </Select>
+                    </div>
+
+                    {/* Location Selection (Conditional) */}
+                    {(formData.mode === "hybrid" || formData.mode === "in-person") && (
+                        <div className="space-y-2">
+                            <Label htmlFor="location">Preferred Training Location</Label>
+                            <Select
+                                value={formData.location}
+                                onValueChange={(value) =>
+                                    handleSelectChange("location", value)
+                                }
+                            >
+                                <SelectTrigger id="location">
+                                    <SelectValue placeholder="Select training location" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectItem value="aastu">
+                                        Addis Ababa Science and Technology University
+                                    </SelectItem>
+                                    <SelectItem value="ict-park">
+                                        ICT Park
+                                    </SelectItem>
+                                    <SelectItem value="fdre-tvt">
+                                        FDRE TVT Institute
+                                    </SelectItem>
+                                </SelectContent>
+                            </Select>
+                        </div>
+                    )}
+                </div>
+            </div>
 
             <div className="space-y-2">
                 <div className="space-y-2">
@@ -207,8 +293,10 @@ export default function EnrollmentForm({ onSubmit, program }) {
                         Terms and Conditions
                     </Link>
                 </Label>
-            </div >
-
+            </div>
+            {formError && (
+                <p className="text-sm text-red-500">{formError}</p>
+            )}
             <Button
                 type="submit"
                 className="w-full"

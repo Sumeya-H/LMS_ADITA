@@ -86,7 +86,6 @@ export default function ProgramsPage() {
                             <TabsTrigger value="civic-tech">Tech for Governance</TabsTrigger>
                             <TabsTrigger value="design">Design</TabsTrigger>
                             <TabsTrigger value="emerging-tech">Emerging Technology</TabsTrigger>
-                            <TabsTrigger value="cyber-security">Cyber Security</TabsTrigger>
                             <TabsTrigger value="digital-marketing">Digital Marketing</TabsTrigger>
                             <TabsTrigger value="soft-skills">Soft Skills</TabsTrigger>
                             <TabsTrigger value="iso-training">Specialized</TabsTrigger>

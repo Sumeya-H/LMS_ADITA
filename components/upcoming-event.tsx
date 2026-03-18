@@ -44,7 +44,7 @@ export default function UpcomingTrainingEvent() {
                             <div className="flex items-center gap-2">
                                 <CalendarIcon className="h-5 w-5 text-[#52331E]" />
                                 <p className="text-lg">
-                                    <strong>Start Dates:</strong> Jan 5, 2026 · Feb 20, 2026 · Apr 10, 2026
+                                    <strong>Start Dates:</strong> Mar 25, 2026 · Apr 20, 2026 · May 10, 2026
                                 </p>
                             </div>
 

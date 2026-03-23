@@ -8,7 +8,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import Link from "next/link"
-import { RadioGroup, RadioGroupItem } from "../ui/radio-group"
 
 /* -------------------- Phone Validation Helper -------------------- */
 const validateEthiopianPhone = (phone) => {
@@ -33,9 +32,14 @@ const validateEthiopianPhone = (phone) => {
 
 export default function EnrollmentForm({ onSubmit, program }) {
     const [formData, setFormData] = useState({
-        course: program.reg_id,
-        startDate: "",
-        format: "",
+        first_name: "",
+        last_name: "",
+        email: "",
+        phone: "",
+        country: "",
+        city: "",
+        background: "",
+        experience: "",
         goals: "",
         referral: "",
         mode: "",
@@ -118,7 +122,8 @@ export default function EnrollmentForm({ onSubmit, program }) {
 
         try {
             const res = await onSubmit({
-                ...formData
+                ...formData,
+                phone: phoneValidation.value,
             })
         } catch (err) {
             const response = err?.response?.data || err;
@@ -126,6 +131,13 @@ export default function EnrollmentForm({ onSubmit, program }) {
             const fieldErrors = {}
 
             console.log("response", err);
+            if (response?.email) {
+                fieldErrors.email = response.email.message
+            }
+
+            if (response?.phone) {
+                fieldErrors.phone = response.phone.message
+            }
 
             if (Object.keys(fieldErrors).length > 0) {
                 setErrors(fieldErrors)
@@ -140,63 +152,148 @@ export default function EnrollmentForm({ onSubmit, program }) {
 
     return (
         <form onSubmit={handleSubmit} className="space-y-6">
+            {/* -------------------- Personal Information -------------------- */}
             <div>
-                <h3 className="text-lg font-medium">Program Preferences</h3>
+                <h3 className="text-lg font-medium">Personal Information</h3>
+
                 <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                    <div className="space-y-2 sm:col-span-2">
-                        <Label htmlFor="startDate">Preferred Start Date</Label>
-                        <Select
-                            value={formData.startDate}
-                            onValueChange={(value) => handleSelectChange("startDate", value)}
+                    <div className="space-y-2">
+                        <Label htmlFor="first_name">First Name</Label>
+                        <Input
+                            id="first_name"
+                            name="first_name"
+                            value={formData.first_name}
+                            onChange={handleChange}
                             required
+                        />
+                    </div>
+
+                    <div className="space-y-2">
+                        <Label htmlFor="last_name">Last Name</Label>
+                        <Input
+                            id="last_name"
+                            name="last_name"
+                            value={formData.last_name}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+
+                    <div className="space-y-2">
+                        <Label htmlFor="email">Email</Label>
+                        <Input
+                            id="email"
+                            name="email"
+                            type="email"
+                            ref={emailRef}
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                        />
+                        {errors.email && (
+                            <p className="text-sm text-red-500">{errors.email}</p>
+                        )}
+                    </div>
+
+                    <div className="space-y-2">
+                        <Label htmlFor="phone">Phone Number</Label>
+                        <Input
+                            id="phone"
+                            name="phone"
+                            type="tel"
+                            ref={phoneRef}
+                            placeholder="+2519XXXXXXXX or 09XXXXXXXX"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            required
+                        />
+                        {errors.phone && (
+                            <p className="text-sm text-red-500">{errors.phone}</p>
+                        )}
+                    </div>
+
+                    <div className="space-y-2">
+                        <Label htmlFor="country">Country</Label>
+                        <Select
+                            value={formData.country}
+                            onValueChange={(value) =>
+                                handleSelectChange("country", value)
+                            }
                         >
-                            <SelectTrigger id="startDate">
-                                <SelectValue placeholder="Select a start date" />
+                            <SelectTrigger id="country">
+                                <SelectValue placeholder="Select your country" />
                             </SelectTrigger>
                             <SelectContent>
-                                {program.startDates.map((date) => (
-                                    <SelectItem key={date} value={date}>
-                                        {date}
-                                    </SelectItem>
-                                ))}
+                                <SelectItem value="ethiopia">Ethiopia</SelectItem>
+                                <SelectItem value="ghana">Ghana</SelectItem>
+                                <SelectItem value="kenya">Kenya</SelectItem>
+                                <SelectItem value="nigeria">Nigeria</SelectItem>
+                                <SelectItem value="south-africa">South Africa</SelectItem>
+                                <SelectItem value="other">Other</SelectItem>
                             </SelectContent>
                         </Select>
                     </div>
 
-                    <div className="space-y-2 sm:col-span-2">
-                        <Label>Preferred Format</Label>
-                        <RadioGroup
-                            value={formData.format}
-                            onValueChange={(value) => handleSelectChange("format", value)}
-                            className="mt-2"
+                    <div className="space-y-2">
+                        <Label htmlFor="city">City</Label>
+                        <Input
+                            id="city"
+                            name="city"
+                            value={formData.city}
+                            onChange={handleChange}
                             required
-                        >
-                            {program.format.includes("Online") && (
-                                <div className="flex items-center space-x-2">
-                                    <RadioGroupItem value="online" id="format-online" />
-                                    <Label htmlFor="format-online">Online</Label>
-                                </div>
-                            )}
-                            {program.format.includes("In-person") && (
-                                <div className="flex items-center space-x-2">
-                                    <RadioGroupItem value="in-person" id="format-in-person" />
-                                    <Label htmlFor="format-in-person">In-person</Label>
-                                </div>
-                            )}
-                        </RadioGroup>
+                        />
                     </div>
                 </div>
             </div>
-            <div className="space-y-2 sm:col-span-2">
-                <Label htmlFor="goals">Learning Goals</Label>
-                <Textarea
-                    id="goals"
-                    name="goals"
-                    placeholder="What do you hope to achieve through this program?"
-                    value={formData.goals}
-                    onChange={handleChange}
-                    rows={3}
-                />
+
+            {/* -------------------- Professional Background -------------------- */}
+            <div>
+                <h3 className="text-lg font-medium">Professional Background</h3>
+
+                <div className="mt-4 grid grid-cols-1 gap-4">
+                    <div className="space-y-2">
+                        <Label htmlFor="background">Professional Background</Label>
+                        <Select
+                            value={formData.background}
+                            onValueChange={(value) =>
+                                handleSelectChange("background", value)
+                            }
+                        >
+                            <SelectTrigger id="background">
+                                <SelectValue placeholder="Select your background" />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectItem value="engineer">Engineer</SelectItem>
+                                <SelectItem value="educator">Educator</SelectItem>
+                                <SelectItem value="healthcare">Healthcare</SelectItem>
+                                <SelectItem value="finance">Finance/Banking</SelectItem>
+                                <SelectItem value="it">IT Professional</SelectItem>
+                                <SelectItem value="other">Other</SelectItem>
+                            </SelectContent>
+                        </Select>
+                    </div>
+
+                    <div className="space-y-2">
+                        <Label htmlFor="experience">Experience with AI/ML</Label>
+                        <Select
+                            value={formData.experience}
+                            onValueChange={(value) =>
+                                handleSelectChange("experience", value)
+                            }
+                        >
+                            <SelectTrigger id="experience">
+                                <SelectValue placeholder="Select your experience level" />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectItem value="none">No experience</SelectItem>
+                                <SelectItem value="beginner">Beginner</SelectItem>
+                                <SelectItem value="intermediate">Intermediate</SelectItem>
+                                <SelectItem value="advanced">Advanced</SelectItem>
+                            </SelectContent>
+                        </Select>
+                    </div>
+                </div>
             </div>
             {/* -------------------- Learning Preference -------------------- */}
             <div>
@@ -253,7 +350,19 @@ export default function EnrollmentForm({ onSubmit, program }) {
                 </div>
             </div>
 
-            <div className="space-y-2">
+            {/* -------------------- Goals & Referral -------------------- */}
+            <div className="space-y-4">
+                <div className="space-y-2">
+                    <Label htmlFor="goals">Learning Goals</Label>
+                    <Textarea
+                        id="goals"
+                        name="goals"
+                        rows={3}
+                        value={formData.goals}
+                        onChange={handleChange}
+                    />
+                </div>
+
                 <div className="space-y-2">
                     <Label htmlFor="referral">How did you hear about us?</Label>
                     <Select
@@ -275,10 +384,10 @@ export default function EnrollmentForm({ onSubmit, program }) {
                         </SelectContent>
                     </Select>
                 </div>
-            </div >
+            </div>
 
             {/* -------------------- Terms -------------------- */}
-            < div className="flex items-start space-x-2" >
+            <div className="flex items-start space-x-2">
                 <Checkbox
                     id="agreed_terms"
                     checked={formData.agreed_terms}
@@ -303,6 +412,6 @@ export default function EnrollmentForm({ onSubmit, program }) {
                 disabled={isSubmitting || !formData.agreed_terms}>
                 {isSubmitting ? "Submitting..." : "Continue"}
             </Button>
-        </form >
+        </form>
     )
 }

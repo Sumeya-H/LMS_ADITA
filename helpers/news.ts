@@ -11,6 +11,20 @@ export interface NewsType {
 
 export const news: NewsType[] = [
     {
+        slug: "mou-signing-adita-landmark-training-investment",
+        title: "MoU Signing Between ADITA and Landmark Training & Investment Consultancy",
+        summary:
+            "ADITA signed a strategic partnership with Landmark Training & Investment Consultancy to collaborate on capacity building, training programs, and innovation-driven development initiatives.",
+        content:
+            "African Digital & Innovation Technology Academy (ADITA) officially signed a Memorandum of Understanding with Landmark Training & Investment Consultancy Service, a training and consultancy organization based in Adama, Ethiopia. The company is actively engaged in delivering capacity-building programs, professional training, and educational development initiatives in collaboration with government institutions and organizations such as the Oromia Education Bureau and the Ministry of Education. \n\nThrough this partnership, both institutions aim to strengthen collaboration in digital skills development, leadership training, innovation programs, and investment-oriented capacity building. Landmark Training & Investment has demonstrated experience in organizing training programs on pedagogy, soft skills, mindset development, and sector-focused investment areas such as water and energy. \n\nThe MoU establishes a framework for joint initiatives including training delivery, research collaboration, and innovation ecosystem development. Further implementation details and program rollouts will be announced in subsequent phases.",
+        date: "March 2026",
+        category: "MoU",
+        images: [
+            "/images/news/adita_landmark_mou_1.jpg",
+            "/images/news/adita_landmark_mou_2.jpg"
+        ],
+    },
+    {
         slug: "mou-signing-adita-gondar-university",
         title: "MoU Signing Between ADITA and University of Gondar",
         summary:

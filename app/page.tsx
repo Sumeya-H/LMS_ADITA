@@ -12,22 +12,18 @@ import Header from "@/components/header"
 
 export default function Home() {
     return (
-        <div>
-            <Header />
-            <div className="flex flex-col gap-16 pb-16">
-                <Hero />
-                {/* <Stats /> */}
-                <div id="services">
-                    <Features />
-                </div>
-                <Programs />
-                {/* <Testimonials /> */}
-                <UpcomingEvent />
-                <LatestNews />
-                <Partners />
-                {/* <CallToAction /> */}
+        <div className="flex flex-col gap-16 pb-16">
+            <Hero />
+            {/* <Stats /> */}
+            <div id="services">
+                <Features />
             </div>
-            <Footer />
+            <Programs />
+            {/* <Testimonials /> */}
+            <UpcomingEvent />
+            <LatestNews />
+            <Partners />
+            {/* <CallToAction /> */}
         </div>
     )
 }

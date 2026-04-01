@@ -31,15 +31,19 @@ export default function LoginPage() {
                 return
 
             if (res.user.is_staff) {
-                if (res.user.staff_role === "finance")
+                if (res.user.role === "finance")
                     window.location.href = "/finance/approvals/"
-                else if (res.user.staff_role === "manager")
+                else if (res.user.role === "manager")
                     window.location.href = "/management/approvals/"
-                console.log("staff:", res.user.staff_role)
+                console.log("staff:", res.user.role)
             }
             else if (res.user.is_student) {
                 window.location.href = "/dashboard"
                 console.log("student:", res.user.is_student)
+            }
+            else if (res.user.is_instructor) {
+                window.location.href = "/dashboard"
+                console.log("instructor:", res.user.is_instructor)
             }
             else
                 console.log("Login response:", res.user)

@@ -12,6 +12,8 @@ import EnrollmentForm from "@/components/programs/enrollment-form"
 import PaymentForm from "@/components/programs/payment-form"
 import { programs } from "@/helpers/programs";
 import NewEnrollmentForm from "@/components/programs/new-enrollment-form";
+import { fetchCoursesById } from "@/services/courseService";
+import EnrollmentSkeleton from "./enrollment-skeleton";
 
 export default function ProgramEnrollmentPage({ params }) {
     const [enrollmentStep, setEnrollmentStep] = useState("details")
@@ -19,50 +21,54 @@ export default function ProgramEnrollmentPage({ params }) {
 
     const resolvedParmam = React.use(params);
     const { programId } = resolvedParmam;
-    const program = programs.find((p) => p.id === programId);
-    if (!program) {
-        return <div>Program not found</div>;
-    }
+
+    const [program, SetProgram] = useState();
+    const [loading, setLoading] = useState(true);
     let token;
+
     useEffect(() => {
         token = localStorage.getItem("access")
-    }, []);
+        const loadCourses = async () => {
+            try {
+                const data = await fetchCoursesById(programId);
+                SetProgram(data);
+            } catch (error) {
+                console.error(error)
+            } finally {
+                setLoading(false);
+            }
+        }
+        loadCourses()
+    }, [])
+
+    if (loading) {
+        return <EnrollmentSkeleton />;
+    }
 
     const handleEnrollmentSubmit = (data: any) => {
         setEnrollmentData(data);
-        console.log(data);
         setEnrollmentStep("payment")
     }
 
     const handlePaymentSubmit = async (paymentData: any) => {
-        // In a real application, you would process the payment here
         try {
-            const res = await axios.post(
-                "http://localhost:8000/api/courses/register/",
-                paymentData,
-                {
-                    headers: {
-                        Authorization: `Bearer ${localStorage.getItem("access")}`,
-                    },
-                }
-            )
-
-            // const res = await fetch("http://localhost:8000/api/courses/register/", {
-            //     method: "POST",
-            //     headers: {
-            //         Authorization: `Bearer ${localStorage.getItem("access")}`,
-            //     },
-            //     body: paymentData,
-            // });
+            const res = await fetch("http://localhost:8000/api/courses/register/", {
+                method: "POST",
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem("access")}`,
+                },
+                body: paymentData,
+            });
+            const data = await res.json();
             if (res.status === 201) {
-                console.log("Registration successful:", res.data);
+                console.log("Registration successful:", data);
                 setEnrollmentStep("confirmation");
             }
             else {
-                console.log("Registration failed:", res.data);
+                console.log("Registration failed:", data);
             }
         } catch (err) {
-            console.error("❌ Error registering course:", err.response?.data || err.message);
+            console.error("❌ Error registering course:", err.message);
             alert("Error registering course");
         }
     }

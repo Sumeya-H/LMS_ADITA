@@ -25,7 +25,8 @@ export default function ProgramsPage() {
         }
 
         loadCourses()
-    }, [])
+    }, []);
+
     const handleApplyFilters = (filters) => {
         const result = programs.filter((course) => {
             //const [min, max] = filters.priceRange

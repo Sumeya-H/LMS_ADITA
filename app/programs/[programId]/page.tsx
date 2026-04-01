@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -7,17 +8,35 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Calendar, Clock, Users, GraduationCap, BookOpen, CheckCircle, Award, Building, Briefcase } from "lucide-react"
 import RelatedPrograms from "@/components/programs/related-programs"
 import ProgramReviews from "@/components/programs/program-reviews"
-import { programs } from "@/helpers/programs"
+import { fetchCoursesById } from "@/services/courseService";
+import ProgramDetailSkeleton from "./loading";
 
 export default function ProgramDetailPage({ params }) {
     const resolvedParmam = React.use(params);
     const { programId } = resolvedParmam;
-    const program = programs?.find((p) => p.id === programId);
-    if (!program) {
+    const [program, SetProgram] = useState();
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const loadCourses = async () => {
+            try {
+                const data = await fetchCoursesById(programId);
+                SetProgram(data);
+            } catch (error) {
+                console.error(error)
+            } finally {
+                setLoading(false);
+            }
+        }
+        loadCourses()
+    }, [])
+
+    if (loading) {
+        return <ProgramDetailSkeleton />;
+    }
+    else if (!program) {
         return <div>Program not found</div>;
     }
-    const enrollHref = programId === "ai-for-content-creators" || programId === "prompt-engineering-ai-systems" || programId === "introduction-to-artificial-intelligence" || programId === "data-analysis-visualization" || programId === "graphic-design" || programId === "digital-marketing-strategy" ? `/programs/${programId}/enroll` : `/programs/${programId}`;
-    console.log(enrollHref);
     return (
         <div className="container py-12">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -154,7 +173,7 @@ export default function ProgramDetailPage({ params }) {
                                 </p>
 
                                 <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
-                                    {program.instructors.map((instructor) => (
+                                    {program?.instructors?.map((instructor) => (
                                         <Card key={instructor.name}>
                                             <CardContent className="p-6">
                                                 <div className="flex flex-col items-center sm:flex-row sm:items-start sm:gap-4">
@@ -198,7 +217,6 @@ export default function ProgramDetailPage({ params }) {
                                                 </div>
                                                 <Button asChild className="mt-4 sm:mt-0">
                                                     <Link href={`/programs/${programId}/enroll`}>Enroll Now</Link>
-                                                    {/* <Link href={`/programs/${programId}`}>Enroll Now</Link>*/}
                                                 </Button>
                                             </CardContent>
                                         </Card>

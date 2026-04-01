@@ -22,11 +22,13 @@ import Loading from "./Loading";
 import ForumList from "./forums";
 import Programs from "@/components/programs";
 import StudentCalendar from "./studentCalander";
+import { fetchCoursesByStudent } from "@/services/courseService";
 
 export default function DashboardPage() {
     const [user, setUser] = useState<any>(null);
     const [isLoading, setIsLoading] = useState(true);
     const [courses, setCourses] = useState<any[]>([]);
+    const [pendingCourses, setPendingCourses] = useState<any[]>([]);
     const [events, setCalendarEvents] = useState<any[]>([]);
     const [upcomingSchedules, setUpcomingEvents] = useState<any[]>([]);
 
@@ -46,6 +48,32 @@ export default function DashboardPage() {
         setUser(user);
 
         let firstCourseId: number | undefined;
+
+        if (user.is_student) {
+            fetchCoursesByStudent(token)
+                .then((coursesData) => {
+                    if (!coursesData || coursesData.length === 0) {
+                        setIsLoading(false);
+                        return [];
+                    }
+                    const approvedCourses = [];
+                    const pending = [];
+
+                    console.log(coursesData);
+                    coursesData.forEach((courseData) => {
+                        if (courseData.status !== "pending")
+                            approvedCourses.push(courseData);
+                        else
+                            pending.push(courseData);
+                    });
+
+                    firstCourseId = approvedCourses[0]?.id;
+
+                    setPendingCourses(pending);
+                    // now fetch calendar events for this course
+                    return fetchCalendarEvents(token, [firstCourseId]);
+                })
+        }
 
         fetchUserCourses(token, user.userid)
             .then((coursesData) => {
@@ -179,7 +207,7 @@ export default function DashboardPage() {
         <div className="container py-8">
             <div className="flex flex-col justify-between gap-4 md:flex-row md:items-center">
                 <div>
-                    <h1 className="text-3xl font-bold tracking-tight">Student Dashboard</h1>
+                    <h1 className="text-3xl font-bold tracking-tight">{user.is_student ? "Student" : "Instructors"} Dashboard</h1>
                     <p className="text-muted-foreground">
                         Welcome back, {user.fullname} Track your learning progress and upcoming events.
                     </p>
@@ -234,14 +262,40 @@ export default function DashboardPage() {
                 </Card>
             </div>
 
-            <Tabs defaultValue="courses" className="mt-8">
-                {courses.length > 0 &&
-                    <TabsList>
-                        <TabsTrigger value="courses">My Courses</TabsTrigger>
-                        <TabsTrigger value="schedule">Schedule</TabsTrigger>
-                        {/* <TabsTrigger value="resources">Resources</TabsTrigger>*/}
-                    </TabsList>
-                }
+            <Tabs defaultValue={courses.length > 0 ? "courses" : "pending"} className="mt-8">
+                <TabsList>
+                    {courses.length > 0 && (
+                        <>
+                            <TabsTrigger value="courses">My Courses</TabsTrigger>
+                            <TabsTrigger value="schedule">Schedule</TabsTrigger>
+                            {/* <TabsTrigger value="resources">Resources</TabsTrigger>*/}
+                        </>
+                    )}
+                    <TabsTrigger value="pending">Pending Courses</TabsTrigger>
+                </TabsList>
+                <TabsContent value="pending" className="mt-6">
+                    {pendingCourses.length === 0 ? (
+                        <p className="text-muted-foreground">You have no pending courses.</p>
+                    ) : (
+                        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                            {pendingCourses.map((course) => (
+                                <Card key={course.id} className="flex flex-col">
+                                    <CardHeader>
+                                        <CardTitle>{course.title}</CardTitle>
+                                        <CardDescription dangerouslySetInnerHTML={{ __html: course.summary }} />
+                                    </CardHeader>
+                                    <CardContent className="mt-auto">
+                                        <p className="text-sm text-muted-foreground">Status: Pending approval</p>
+                                        <Progress value={course.progress || 0} className="mb-2" />
+                                        <Button asChild className="mt-4 w-full" disabled>
+                                            <span>Pending...</span>
+                                        </Button>
+                                    </CardContent>
+                                </Card>
+                            ))}
+                        </div>
+                    )}
+                </TabsContent>
                 <TabsContent value="courses" className="mt-6">
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                         {courses.map((course) => {
@@ -355,7 +409,7 @@ export default function DashboardPage() {
             <div className="mt-12">
                 {/*<ProgramRecommendations userProfile={{ role: "educator", level: "beginner" }} />*/}
                 <StudentCalendar events={events} />
-                <Programs />
+                {user.is_student && <Programs />}
             </div>
         </div>
     )

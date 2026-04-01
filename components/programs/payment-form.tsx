@@ -17,6 +17,11 @@ export default function PaymentForm({ onSubmit, program, enrollmentData }) {
         }
     }
 
+    const formatDateForDjango = (dateStr: string) => {
+        const date = new Date(dateStr);
+        return date.toISOString().split("T")[0]; // "YYYY-MM-DD"
+    };
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
 
@@ -28,9 +33,10 @@ export default function PaymentForm({ onSubmit, program, enrollmentData }) {
         const formData = new FormData()
         formData.append("receipt_image", receipt)
         formData.append("course", enrollmentData.course)
-        // formData.append("goals", enrollmentData.goals)
-        // formData.append("startDate", enrollmentData.startDate)
-        // formData.append("format", enrollmentData.format)
+        formData.append("goal", enrollmentData.goals)
+        formData.append("startDate", formatDateForDjango(enrollmentData.startDate))
+        formData.append("format", enrollmentData.mode)
+        formData.append("location", enrollmentData.location)
 
         onSubmit(formData)
     }

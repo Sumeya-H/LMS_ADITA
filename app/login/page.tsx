@@ -38,11 +38,11 @@ export default function LoginPage() {
                 console.log("staff:", res.user.role)
             }
             else if (res.user.is_student) {
-                window.location.href = "/dashboard"
+                window.location.href = "/student/dashboard"
                 console.log("student:", res.user.is_student)
             }
             else if (res.user.is_instructor) {
-                window.location.href = "/dashboard"
+                window.location.href = "/instructor/dashboard"
                 console.log("instructor:", res.user.is_instructor)
             }
             else

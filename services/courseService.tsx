@@ -63,13 +63,16 @@ export const fetchCoursesByStudent = async (id: string) => {
     return response.json();
 };
 
-export async function fetchInstructorStats(token: string) {
-    const response = await fetch("/api/instructor/stats/", {
+export async function fetchInstructorStats() {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/instructor/stats/`, {
+        method: "GET",
         headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: `Bearer ${localStorage.getItem("access")}`,
+            "Content-Type": "application/json",
         },
     });
 
+    console.log("Courses instructor: ", response.json);
     if (!response.ok) {
         throw new Error("Failed to fetch instructor stats");
     }

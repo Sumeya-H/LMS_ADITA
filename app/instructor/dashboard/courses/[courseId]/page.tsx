@@ -1,27 +1,18 @@
 "use client"
 
 import React from "react";
-import { Checkbox } from "@/components/ui/checkbox";
 import { useEffect, useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react"; // Import LucidReact icons
-import { fetchCourseCompletion, fetchCourseGrade, fetchCourseGradeReport, fetchModuleActivityCompletion, fetchModuleAssignmentContent, fetchModuleBigBlueButton, fetchModuleBigBlueButtonJoinUrl, fetchModuleContent, fetchModuleForumContent, fetchModuleForumDiscussionContent, fetchModuleQuizAttempt, fetchModuleQuizContent, fetchModuleQuizQuestions, fetchModuleQuizStartAttempt, fetchUserCourses, fetchUserCoursesContent, getGrade, submitAnswers } from "@/lib/userService";
+import { fetchModuleActivityCompletion, fetchModuleAssignmentContent, fetchModuleBigBlueButton, fetchModuleBigBlueButtonJoinUrl, fetchModuleContent, fetchModuleForumContent, fetchModuleForumDiscussionContent, fetchModuleQuizAttempt, fetchModuleQuizContent, fetchModuleQuizQuestions, fetchModuleQuizStartAttempt, getGrade, submitAnswers } from "@/lib/userService";
 import Loading from "./loading";
-import AssignmentDetails from "./assignmentDetail";
-import QuizDetails from "./quizDetail";
-import QuizView from "./quizView";
-import PageView from "./pageView";
-import QuizCompleted from "./quizCompleted";
-import DiscussionList from "./forum/discussionList";
-import DiscussionPosts from "./forum/discussionPosts";
-import MeetingDetails from "./meetingDetails";
-import CourseOverview from "./courseOverview";
+import CourseSidebar from "./courseSidebar";
+import CourseContent from "./courseContent";
+import { useCourseData } from "./useCourseData";
+import AddSectionModal from "./addSectionModal";
 
 
 export default function CourseDetailPage({ params }) {
-    const [courseData, setCourseData] = useState<any>(null);
-    const [course, setCourse] = useState<any>(null);
     const [content, setContent] = useState<any>(null);
-    const [isLoading, setIsLoading] = useState<boolean>(true);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
     const [activeTab, setActiveTab] = useState<string>("overview");
     const [expandedSections, setExpandedSections] = useState<Set<number>>(new Set());
     const [selectedModule, setSelectedModule] = useState<any>(null);
@@ -35,55 +26,17 @@ export default function CourseDetailPage({ params }) {
     const [currentPage, setCurrentPage] = useState<number>(selectedQuizAttempt?.attempts?.[0]?.currentpage | selectedQuizAttempt?.attempt?.currentpage);
     const [currentQuiz, setCurrentQuiz] = useState<any>(null);
     const [currentQuizGrade, setCurrentQuizGrade] = useState<any>(null);
-    const [courseGrade, setGradeReport] = useState<any>(null);
-    const resolvedParmam = React.use(params);
     const [refresh, setRefresh] = useState<any>(null);
-    const [completionMap, setCompletionMap] = useState<Record<number, number>>({});
+
+    const resolvedParmam = React.use(params);
     const { courseId } = resolvedParmam;
+    const { course, courseData, loading, courseGrade, completionMap } = useCourseData(courseId);
 
-    useEffect(() => {
-        if (!courseId) return;
-        const token = localStorage.getItem("token"); // or wherever you store the token
-        let user = localStorage.getItem("user"); // or wherever you store the token
-        if (user)
-            user = JSON.parse(user);
-        if (!token) {
-            window.location.href = "/login"; // redirect if not logged in
-            return;
-        }
 
-        fetchUserCourses(token, user.userid)
-            .then((courses) => {
-                setCourse(courses.find((course) => course.id == courseId));
-                return fetchUserCoursesContent(token, courseId);
-            })
-            .then((coursesData) => {
-                setCourseData(coursesData);
-                console.log(coursesData);
-            })
-            .catch((err) => {
-                console.error("Failed to fetch user data:", err);
-                setIsLoading(false);
-            });
-
-        fetchCourseGradeReport(token, courseId, user.userid)
-            .then(setGradeReport)
-            .catch(console.error);
-
-        fetchCourseCompletion(token, courseId, user.userid)
-            .then((data) => {
-                const map: Record<number, number> = {};
-                data.statuses.forEach((s: any) => {
-                    map[s.cmid] = s.state;
-                });
-                setCompletionMap(map);
-                console.log("completion map", map);
-            })
-            .catch(console.error);
-        setTimeout(() => {
-            setIsLoading(false);
-        }, 1000);
-    }, [setCourseData, courseId]);
+    const [isSectionModalOpen, setIsSectionModalOpen] = useState(false);
+    const openAddSectionModal = () => {
+        setIsSectionModalOpen(true);
+    };
 
     const toggleSection = (sectionId: number) => {
         const updatedSections = new Set(expandedSections);
@@ -145,11 +98,11 @@ export default function CourseDetailPage({ params }) {
         onSubmit(answers, 0);
     };
 
+    const submitSection = () => { };
+
     const onSubmit = (answers: { [questionId: number]: { value: string, sequencecheck: number } }, finished: number) => {
-        // Retrieve the token from localStorage
         const token = localStorage.getItem("token");
 
-        // If no token is found, redirect to login
         if (!token) {
             window.location.href = "/login";
             return;
@@ -313,102 +266,46 @@ export default function CourseDetailPage({ params }) {
         console.log("selectedAssignment", selectedAssignment)
     }, [selectedModule, content]);
 
-    if (isLoading) return <Loading />; // Show loading state
+    if (isLoading || loading) return <Loading />; // Show loading state
 
     return (
         <div className="flex flex-1 overflow-y-auto hide-scrollbar">
-            {/* Left Side Panel (Navigation) */}
-            <div className="w-84 space-y-6 border-r hide-scrollbar overflow-y-auto transition-colors duration-300">
-                <nav className="space-y-2">
-                    {/* Course Header */}
-                    <h3 className="p-4 border-b font-semibold text-lg">{course?.fullname}</h3>
-
-                    {/* Course Sections */}
-                    {courseData?.map((section: any, index: number) => (
-                        <div key={section.id} className="space-y-4">
-                            <div
-                                className="px-4 py-2 w-full text-left border-b cursor-pointer"
-                                onClick={() => toggleSection(section.id)}
-                            >
-                                <div className="flex w-full justify-between">
-                                    <div>
-                                        <p className="text-sm">Module {index + 1}</p>
-                                        <p className="text-base font-semibold">{new DOMParser().parseFromString(section.name, 'text/html').body.textContent}</p>
-                                    </div>
-
-                                    {/* Chevron icon for collapsed/expanded state */}
-                                    {expandedSections.has(section.id) ? (
-                                        <ChevronUp className="h-5 w-5" />
-                                    ) : (
-                                        <ChevronDown className="h-5 w-5" />
-                                    )}
-                                </div>
-                                {/* Expanded Modules */}
-                                {expandedSections.has(section.id) && section.modules.length > 0 && (
-                                    <div className="px-4 pt-6 pb-4 space-y-2">
-                                        {section.modules.map((module: any) => (
-                                            <div className="flex items-center space-x-3" key={module.id}>
-                                                <Checkbox
-                                                    id={`done-${module.id}`}
-                                                    checked={completionMap[module.id] === 1}
-                                                    className="rounded-lg"
-                                                />
-                                                <div onClick={() => handleModuleClick(module)} className="cursor-pointer">
-                                                    <p className="text-sm font-semibold">{module.name}</p>
-                                                    <p className="text-sm">
-                                                        {module.modname.charAt(0).toUpperCase() + module.modname.slice(1)} • 10 min
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                )}
-                            </div>
-                        </div>
-                    ))}
-                </nav>
-            </div>
-
+            <CourseSidebar
+                course={course}
+                courseData={courseData}
+                expandedSections={expandedSections}
+                toggleSection={toggleSection}
+                handleModuleClick={handleModuleClick}
+                addSection={openAddSectionModal}
+            />
             {/* Main Content (Right Side) */}
             <div className="flex-1 overflow-y-auto hide-scrollbar p-8">
-                {/* Module Detail Content */}
-                <div className="mt-6 flex flex-col items-center text-base">
-                    <div className="w-[60%]">
-                        {selectedModule?.modname === "page" ?
-                            <PageView pageData={content} /> :
-                            selectedModule?.modname === "forum" ?
-                                content?.discussions && !selectedDiscussionPost?.posts && <DiscussionList setId={setSelectedDiscussion} discussions={content?.discussions} forumTitle={selectedModule?.modname} /> :
-                                selectedModule?.modname === "assign" ?
-                                    selectedAssignment && <AssignmentDetails assignment={selectedAssignment} /> :
-                                    selectedModule?.modname === "quiz" && selectedQuizAttempt?.attempts?.[0]?.state !== "finished" ?
-                                        !currentQuiz?.questions && <QuizDetails quiz={selectedQuiz} onGotoQuiz={handleGotoQuiz} /> :
-                                        selectedModule?.modname === "quiz" && selectedQuizAttempt.attempts?.[0].state === "finished" ?
-                                            currentQuizGrade?.hasgrade && <QuizCompleted quiz={selectedQuiz} grade={currentQuizGrade.grade} /> :
-                                            selectedModule?.modname === "bigbluebuttonbn" ? <MeetingDetails meeting={selectedMeeting} meetingUrl={meetingUrl} /> :
-                                                <></>
-                        }
-                        {selectedModule?.modname === "forum" && selectedDiscussionPost?.posts && <DiscussionPosts posts={selectedDiscussionPost.posts} onReply={handleReply} />}
-                    </div>
-                    <div className="w-[80%]">
-                        {selectedModule?.modname === "quiz" && currentQuiz?.questions &&
-                            <QuizView
-                                currentPage={currentPage}
-                                pages={currentQuiz.attempt.layout.split(',').length / 2}
-                                quiz={currentQuiz}
-                                timelimit={selectedQuiz?.timelimit}
-                                questions={currentQuiz?.questions}
-                                onNavigate={handleQuizPage}
-                                onSubmit={onSubmit}
-                            />}
-                    </div>
-                    {!selectedModule && (
-                        <CourseOverview
-                            course={course}
-                            gradeReport={courseGrade}
-                        />
-                    )}
-                </div>
+                <CourseContent
+                    selectedModule={selectedModule}
+                    content={content}
+                    selectedDiscussionPost={selectedDiscussionPost}
+                    setSelectedDiscussion={setSelectedDiscussion}
+                    selectedAssignment={selectedAssignment}
+                    selectedQuizAttempt={selectedQuizAttempt}
+                    selectedQuiz={selectedQuiz}
+                    handleGotoQuiz={handleGotoQuiz}
+                    currentQuiz={currentQuiz}
+                    currentQuizGrade={currentQuizGrade}
+                    selectedMeeting={selectedMeeting}
+                    meetingUrl={meetingUrl}
+                    handleReply={handleReply}
+                    currentPage={currentPage}
+                    handleQuizPage={handleQuizPage}
+                    onSubmit={onSubmit}
+                    course={course}
+                    courseGrade={courseGrade}
+                />
             </div>
+            <AddSectionModal
+                open={isSectionModalOpen}
+                onClose={() => setIsSectionModalOpen(false)}
+                onSubmit={submitSection}
+            />
         </div>
     );
 }

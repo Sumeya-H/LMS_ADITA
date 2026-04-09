@@ -26,6 +26,7 @@ import { fetchCoursesByStudent, fetchInstructorStats } from "@/services/courseSe
 
 export default function DashboardPage() {
     const [user, setUser] = useState<any>(null);
+    const [noStudents, setNoStudents] = useState<number>(0);
     const [isLoading, setIsLoading] = useState(true);
     const [courses, setCourses] = useState<any[]>([]);
     const [pendingCourses, setPendingCourses] = useState<any[]>([]);
@@ -75,9 +76,10 @@ export default function DashboardPage() {
                 })
         }
         else {
-            fetchInstructorStats(token)
+            fetchInstructorStats()
                 .then((response) => {
                     console.log("Instructor stats:", response);
+                    setNoStudents(response.student_count);
                 })
                 .catch((error) => {
                     console.error(error);
@@ -256,7 +258,7 @@ export default function DashboardPage() {
                         <Users className="h-4 w-4 text-muted-foreground" />
                     </CardHeader>
                     <CardContent>
-                        <div className="text-2xl font-bold">--</div>
+                        <div className="text-2xl font-bold">{noStudents}</div>
                         <p className="text-xs text-muted-foreground">
                             Across all courses
                         </p>

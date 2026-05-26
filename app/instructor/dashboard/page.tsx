@@ -4,7 +4,6 @@ import { fetchCalendarEvents, fetchUserCourses, fetchUserCoursesContent, fetchUs
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Progress } from "@/components/ui/progress"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Link from "next/link"
 import {
@@ -13,14 +12,9 @@ import {
     BadgeIcon as Certificate,
     Clock,
     FileText,
-    GraduationCap,
-    BarChart,
     Users,
 } from "lucide-react"
-import ProgramRecommendations from "@/components/programs/program-recommendations"
 import Loading from "./Loading";
-import ForumList from "./forums";
-import Programs from "@/components/programs";
 import StudentCalendar from "./studentCalander";
 import { fetchCoursesByStudent, fetchInstructorStats } from "@/services/courseService";
 

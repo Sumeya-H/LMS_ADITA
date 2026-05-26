@@ -316,61 +316,75 @@ export default function CourseDetailPage({ params }) {
     if (isLoading) return <Loading />; // Show loading state
 
     return (
-        <div className="flex flex-1 overflow-y-auto hide-scrollbar">
-            {/* Left Side Panel (Navigation) */}
-            <div className="w-84 space-y-6 border-r hide-scrollbar overflow-y-auto transition-colors duration-300">
-                <nav className="space-y-2">
-                    {/* Course Header */}
-                    <h3 className="p-4 border-b font-semibold text-lg">{course?.fullname}</h3>
+        <div className="flex h-screen overflow-hidden">
+            {/* Left Side Panel (Navigation) - Full height, narrower width */}
+            <div className="w-72 flex-shrink-0 border-r overflow-y-auto transition-colors duration-300">
+                <nav className="h-full">
+                    {/* Course Header - Sticky */}
+                    <div className="sticky top-0 z-10">
+                        <h3 className="px-4 py-4 border-b font-semibold text-lg truncate">
+                            {course?.fullname}
+                        </h3>
+                    </div>
 
                     {/* Course Sections */}
-                    {courseData?.map((section: any, index: number) => (
-                        <div key={section.id} className="space-y-4">
+                    {courseData?.slice(1).map((section: any, index: number) => (
+                        <div key={section.id} className="border-b last:border-b-0">
                             <div
-                                className="px-4 py-2 w-full text-left border-b cursor-pointer"
+                                className="px-4 py-3 w-full text-left cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
                                 onClick={() => toggleSection(section.id)}
                             >
-                                <div className="flex w-full justify-between">
-                                    <div>
-                                        <p className="text-sm">Module {index + 1}</p>
-                                        <p className="text-base font-semibold">{new DOMParser().parseFromString(section.name, 'text/html').body.textContent}</p>
+                                <div className="flex w-full justify-between items-start gap-2">
+                                    <div className="flex-1 min-w-0">
+                                        <p className="text-xs text-gray-500 dark:text-gray-400">Module {index + 1}</p>
+                                        <p className="text-sm font-semibold truncate">
+                                            {new DOMParser().parseFromString(section.name, 'text/html').body.textContent}
+                                        </p>
                                     </div>
 
                                     {/* Chevron icon for collapsed/expanded state */}
                                     {expandedSections.has(section.id) ? (
-                                        <ChevronUp className="h-5 w-5" />
+                                        <ChevronUp className="h-4 w-4 flex-shrink-0 mt-1" />
                                     ) : (
-                                        <ChevronDown className="h-5 w-5" />
+                                        <ChevronDown className="h-4 w-4 flex-shrink-0 mt-1" />
                                     )}
                                 </div>
-                                {/* Expanded Modules */}
-                                {expandedSections.has(section.id) && section.modules.length > 0 && (
-                                    <div className="px-4 pt-6 pb-4 space-y-2">
-                                        {section.modules.map((module: any) => (
-                                            <div className="flex items-center space-x-3" key={module.id}>
-                                                <Checkbox
-                                                    id={`done-${module.id}`}
-                                                    checked={completionMap[module.id] === 1}
-                                                    className="rounded-lg"
-                                                />
-                                                <div onClick={() => handleModuleClick(module)} className="cursor-pointer">
-                                                    <p className="text-sm font-semibold">{module.name}</p>
-                                                    <p className="text-sm">
-                                                        {module.modname.charAt(0).toUpperCase() + module.modname.slice(1)} • 10 min
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                )}
                             </div>
+
+                            {/* Expanded Modules */}
+                            {expandedSections.has(section.id) && section.modules.length > 0 && (
+                                <div className="px-4 pb-3 space-y-2">
+                                    {section.modules.map((module: any) => (
+                                        <div
+                                            key={module.id}
+                                            className="flex items-start space-x-3 py-2 px-2 rounded-md cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 group"
+                                            onClick={() => handleModuleClick(module)}
+                                        >
+                                            <Checkbox
+                                                id={`done-${module.id}`}
+                                                checked={completionMap[module.id] === 1}
+                                                className="rounded-lg mt-0.5"
+                                                onClick={(e) => e.stopPropagation()}
+                                            />
+                                            <div className="flex-1 min-w-0">
+                                                <p className="text-sm font-medium truncate group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                                                    {module.name}
+                                                </p>
+                                                <p className="text-xs text-gray-500 dark:text-gray-400">
+                                                    {module.modname.charAt(0).toUpperCase() + module.modname.slice(1)} • 10 min
+                                                </p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
                         </div>
                     ))}
                 </nav>
             </div>
 
             {/* Main Content (Right Side) */}
-            <div className="flex-1 overflow-y-auto hide-scrollbar p-8">
+            <div className="flex-1 overflow-y-auto p-8">
                 {/* Module Detail Content */}
                 <div className="mt-6 flex flex-col items-center text-base">
                     <div className="w-[60%]">

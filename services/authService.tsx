@@ -18,7 +18,8 @@ export const login = async (email: string, password: string) => {
     localStorage.setItem("user", JSON.stringify(data.user))
 
     if (data.user.is_student || data.user.is_instructor) {
-        localStorage.setItem("token", data.moodle_token)
+        localStorage.setItem("token", data.moodle_token);
+        console.log("moodle token", data.moodle_token);
     }
     return data;
 }

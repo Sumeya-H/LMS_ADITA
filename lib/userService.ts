@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export async function fetchUserData(token: string) {
-    const url = "http://localhost/webservice/rest/server.php";
+    const url = "http://localhost:8080/webservice/rest/server.php";
 
     try {
         const res = await axios.get(url, {
@@ -25,8 +25,7 @@ export async function fetchUserData(token: string) {
 }
 
 export async function fetchUserCourses(token: string, userId: number) {
-    const url = "http://localhost/webservice/rest/server.php";
-
+    const url = "http://localhost:8080/webservice/rest/server.php";
     try {
         const res = await axios.get(url, {
             params: {
@@ -36,7 +35,6 @@ export async function fetchUserCourses(token: string, userId: number) {
                 userid: userId,
             },
         });
-        console.log(res);
         return res.data;
     } catch (error) {
         console.error("Failed to fetch user courses:", error);
@@ -45,7 +43,7 @@ export async function fetchUserCourses(token: string, userId: number) {
 }
 
 export async function fetchUserCoursesByTimeline(token: string, timeline: string) {
-    const url = "http://localhost/webservice/rest/server.php";
+    const url = "http://localhost:8080/webservice/rest/server.php";
 
     try {
         const res = await axios.get(url, {
@@ -65,7 +63,7 @@ export async function fetchUserCoursesByTimeline(token: string, timeline: string
 }
 
 export async function fetchUserCoursesContent(token: string, courseid: number) {
-    const url = "http://localhost/webservice/rest/server.php";
+    const url = "http://localhost:8080/webservice/rest/server.php";
 
     try {
         const res = await axios.get(url, {
@@ -85,7 +83,7 @@ export async function fetchUserCoursesContent(token: string, courseid: number) {
 }
 
 export async function fetchModuleContent(token: string, courseid: number) {
-    const url = "http://localhost/webservice/rest/server.php";
+    const url = "http://localhost:8080/webservice/rest/server.php";
 
     try {
         const res = await axios.get(url, {
@@ -105,7 +103,7 @@ export async function fetchModuleContent(token: string, courseid: number) {
 }
 
 export async function fetchModuleForumContent(token: string, forumId: number) {
-    const url = "http://localhost/webservice/rest/server.php";
+    const url = "http://localhost:8080/webservice/rest/server.php";
 
     try {
         const res = await axios.get(url, {
@@ -125,8 +123,8 @@ export async function fetchModuleForumContent(token: string, forumId: number) {
 }
 
 export async function fetchModuleForumDiscussionContent(token: string, discussionId: number) {
-    const url = "http://localhost/webservice/rest/server.php";
-
+    const url = "http://localhost:8080/webservice/rest/server.php";
+    console.log("forumdiscussion", discussionId)
     try {
         const res = await axios.get(url, {
             params: {
@@ -145,7 +143,7 @@ export async function fetchModuleForumDiscussionContent(token: string, discussio
 }
 
 export async function fetchModuleAssignmentContent(token: string, courseids: number) {
-    const url = "http://localhost/webservice/rest/server.php";
+    const url = "http://localhost:8080/webservice/rest/server.php";
 
     try {
         const res = await axios.get(url, {
@@ -165,7 +163,7 @@ export async function fetchModuleAssignmentContent(token: string, courseids: num
 }
 
 export async function fetchModuleQuizContent(token: string, courseids: number) {
-    const url = "http://localhost/webservice/rest/server.php";
+    const url = "http://localhost:8080/webservice/rest/server.php";
 
     try {
         const res = await axios.get(url, {
@@ -185,7 +183,7 @@ export async function fetchModuleQuizContent(token: string, courseids: number) {
 }
 
 export async function fetchModuleQuizAttempt(token: string, quizid: number, status: string) {
-    const url = "http://localhost/webservice/rest/server.php";
+    const url = "http://localhost:8080/webservice/rest/server.php";
 
     try {
         const res = await axios.get(url, {
@@ -206,7 +204,7 @@ export async function fetchModuleQuizAttempt(token: string, quizid: number, stat
 }
 
 export async function fetchModuleQuizStartAttempt(token: string, quizid: number) {
-    const url = "http://localhost/webservice/rest/server.php";
+    const url = "http://localhost:8080/webservice/rest/server.php";
 
     try {
         const res = await axios.get(url, {
@@ -226,7 +224,7 @@ export async function fetchModuleQuizStartAttempt(token: string, quizid: number)
 }
 
 export async function fetchModuleQuizQuestions(token: string, attemptid: number, page: number) {
-    const url = "http://localhost/webservice/rest/server.php";
+    const url = "http://localhost:8080/webservice/rest/server.php";
 
     try {
         const res = await axios.get(url, {
@@ -247,7 +245,7 @@ export async function fetchModuleQuizQuestions(token: string, attemptid: number,
 }
 
 export async function fetchModuleActivityCompletion(token: string, courseid: number, userid: any) {
-    const url = "http://localhost/webservice/rest/server.php";
+    const url = "http://localhost:8080/webservice/rest/server.php";
 
     try {
         const res = await axios.get(url, {
@@ -268,7 +266,7 @@ export async function fetchModuleActivityCompletion(token: string, courseid: num
 }
 
 export async function fetchModuleBigBlueButton(token: string, bigbluebuttonbnid: number) {
-    const url = "http://localhost/webservice/rest/server.php";
+    const url = "http://localhost:8080/webservice/rest/server.php";
 
     try {
         const res = await axios.get(url, {
@@ -288,7 +286,7 @@ export async function fetchModuleBigBlueButton(token: string, bigbluebuttonbnid:
 }
 
 export async function fetchModuleBigBlueButtonJoinUrl(token: string, cmid: number) {
-    const url = "http://localhost/webservice/rest/server.php";
+    const url = "http://localhost:8080/webservice/rest/server.php";
 
     try {
         const res = await axios.get(url, {
@@ -308,7 +306,7 @@ export async function fetchModuleBigBlueButtonJoinUrl(token: string, cmid: numbe
 }
 
 export async function addPost(token: string, postid: number, message: string) {
-    const url = "http://localhost/webservice/rest/server.php";
+    const url = "http://localhost:8080/webservice/rest/server.php";
 
     try {
         const res = await axios.get(url, {
@@ -331,7 +329,7 @@ export async function addPost(token: string, postid: number, message: string) {
 }
 
 export async function submitAnswers(token: string, attemptid: number, data: any, finished: number) {
-    const url = "http://localhost/webservice/rest/server.php";
+    const url = "http://localhost:8080/webservice/rest/server.php";
 
     try {
         const res = await axios.get(url, {
@@ -353,7 +351,7 @@ export async function submitAnswers(token: string, attemptid: number, data: any,
 }
 
 export async function getGrade(token: string, quizid: number) {
-    const url = "http://localhost/webservice/rest/server.php";
+    const url = "http://localhost:8080/webservice/rest/server.php";
 
     try {
         const res = await axios.get(url, {
@@ -373,7 +371,7 @@ export async function getGrade(token: string, quizid: number) {
 }
 
 export async function uploadToDraft(token: string, file: File, userId: number) {
-    const url = "http://localhost/webservice/rest/server.php";
+    const url = "http://localhost:8080/webservice/rest/server.php";
 
     // Convert file to base64
     const fileBase64 = await new Promise<string>((resolve, reject) => {
@@ -410,7 +408,7 @@ export async function uploadToDraft(token: string, file: File, userId: number) {
 }
 
 export async function submitAssignment(token: string, file: File, assignmentId: number, draftItemId: number) {
-    const url = "http://localhost/webservice/rest/server.php";
+    const url = "http://localhost:8080/webservice/rest/server.php";
 
     try {
         const res = await axios.get(url, {
@@ -432,7 +430,7 @@ export async function submitAssignment(token: string, file: File, assignmentId: 
 }
 
 export async function getSubmission(token: string, assignmentId: number) {
-    const url = "http://localhost/webservice/rest/server.php";
+    const url = "http://localhost:8080/webservice/rest/server.php";
 
     try {
         const res = await axios.get(url, {
@@ -452,7 +450,7 @@ export async function getSubmission(token: string, assignmentId: number) {
 }
 
 export async function fetchCourseGradeReport(token: string, courseId: number, userId: number) {
-    const url = "http://localhost/webservice/rest/server.php";
+    const url = "http://localhost:8080/webservice/rest/server.php";
 
     const res = await axios.get(url, {
         params: {
@@ -468,7 +466,7 @@ export async function fetchCourseGradeReport(token: string, courseId: number, us
 }
 
 export async function fetchCourseCompletion(token: string, courseId: number, userId: number) {
-    const url = "http://localhost/webservice/rest/server.php";
+    const url = "http://localhost:8080/webservice/rest/server.php";
 
     const res = await axios.get(url, {
         params: {
@@ -485,7 +483,7 @@ export async function fetchCourseCompletion(token: string, courseId: number, use
 
 
 export async function fetchCalendarEvents(token: string, courseIds?: number[]) {
-    const url = "http://localhost/webservice/rest/server.php";
+    const url = "http://localhost:8080/webservice/rest/server.php";
 
     const params: any = {
         wstoken: token,
@@ -502,4 +500,322 @@ export async function fetchCalendarEvents(token: string, courseIds?: number[]) {
     const res = await axios.get(url, { params });
 
     return res.data?.events ?? [];
+}
+
+export async function createCourseSection(
+    token: string,
+    courseId: number,
+    sectionData: { name: string; summary: string; section_number?: number }
+) {
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/${courseId}/sections/`;
+
+    try {
+        const response = await axios.post(
+            url,
+            {
+                name: sectionData.name,
+                summary: sectionData.summary,
+                visible: true,
+                section_number: sectionData.section_number,
+            },
+            {
+                headers: {
+                    "Authorization": `Bearer ${token}`,
+                    "Content-Type": "application/json",
+                },
+            }
+        );
+
+        return response.data;
+    } catch (error: any) {
+        console.error("Failed to create course section:", error);
+        const errorMessage = error.response?.data?.error || error.message || "Failed to create section";
+        throw new Error(errorMessage);
+    }
+}
+
+export async function deleteCourseSection(
+    token: string,
+    courseId: number,
+    sectionId: number
+) {
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/${courseId}/sections/${sectionId}/`;
+
+    try {
+        const response = await axios.delete(url, {
+            headers: {
+                "Authorization": `Bearer ${token}`,
+            },
+        });
+
+        return response.data;
+    } catch (error: any) {
+        console.error("Failed to delete course section:", error);
+        const errorMessage = error.response?.data?.error || error.message || "Failed to delete section";
+        throw new Error(errorMessage);
+    }
+}
+
+export async function updateCourseSection(
+    token: string,
+    courseId: number,
+    sectionId: number,
+    sectionData: { name?: string; summary?: string; visible?: boolean }
+) {
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/${courseId}/sections/${sectionId}/`;
+
+    try {
+        const response = await axios.patch(url, sectionData, {
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json",
+            },
+        });
+
+        return response.data;
+    } catch (error: any) {
+        console.error("Failed to update course section:", error);
+        const errorMessage = error.response?.data?.error || error.message || "Failed to update section";
+        throw new Error(errorMessage);
+    }
+}
+
+export async function createCourseModule(
+    token: string,
+    courseId: number,
+    moduleData: {
+        name: string;
+        module_type: string;
+        description?: string;
+        section_position?: number;
+        visible?: boolean;
+        url?: string;
+        grade?: number;
+        due_date?: number;
+    }
+) {
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/${courseId}/modules/`;
+
+    try {
+        const response = await axios.post(url, moduleData, {
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json",
+            },
+        });
+
+        return response.data;
+    } catch (error: any) {
+        console.error("Failed to create course module:", error);
+        const errorMessage = error.response?.data?.error || error.message || "Failed to create module";
+        throw new Error(errorMessage);
+    }
+}
+
+export async function deleteCourseModule(
+    token: string,
+    courseId: number,
+    moduleId: number
+) {
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/${courseId}/modules/${moduleId}/`;
+
+    try {
+        const response = await axios.delete(url, {
+            headers: {
+                "Authorization": `Bearer ${token}`,
+            },
+        });
+
+        return response.data;
+    } catch (error: any) {
+        console.error("Failed to delete course module:", error);
+        const errorMessage = error.response?.data?.error || error.message || "Failed to delete module";
+        throw new Error(errorMessage);
+    }
+}
+
+export async function fetchCourseSections(token: string, courseId: number) {
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/${courseId}/sections/`;
+
+    try {
+        const response = await axios.get(url, {
+            headers: {
+                "Authorization": `Bearer ${token}`,
+            },
+        });
+
+        return response.data;
+    } catch (error: any) {
+        console.error("Failed to fetch course sections:", error);
+        throw new Error(error.response?.data?.error || "Failed to fetch sections");
+    }
+}
+
+export async function fetchCourseModules(token: string, courseId: number, sectionId?: number) {
+    let url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/${courseId}/modules/`;
+
+    if (sectionId) {
+        url += `?section_id=${sectionId}`;
+    }
+
+    try {
+        const response = await axios.get(url, {
+            headers: {
+                "Authorization": `Bearer ${token}`,
+            },
+        });
+
+        return response.data;
+    } catch (error: any) {
+        console.error("Failed to fetch course modules:", error);
+        throw new Error(error.response?.data?.error || "Failed to fetch modules");
+    }
+}
+
+export async function updateCoursePage(
+    token: string,
+    courseId: number,
+    pageId: number,
+    pageData: { name: string; content: string }
+) {
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/${courseId}/pages/${pageId}/`;
+
+    try {
+        const response = await axios.put(url, pageData, {
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json",
+            },
+        });
+
+        return response.data;
+    } catch (error: any) {
+        console.error("Failed to update course page:", error);
+        const errorMessage = error.response?.data?.error || error.message || "Failed to update page";
+        throw new Error(errorMessage);
+    }
+}
+
+export async function createForumDiscussion(
+    token: string,
+    forumId: number,
+    data: { subject: string; message: string }
+) {
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/forums/${forumId}/discussions/`;
+
+    try {
+        const response = await axios.post(url, data, {
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json",
+            },
+        });
+
+        return response.data;
+    } catch (error: any) {
+        console.error("Failed to create forum discussion:", error);
+        const errorMessage = error.response?.data?.error || error.message || "Failed to create discussion";
+        throw new Error(errorMessage);
+    }
+}
+
+export async function updateSectionName(
+    token: string,
+    courseId: number,
+    sectionNumber: number,
+    newName: string
+) {
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/${courseId}/sections/${sectionNumber}/`;
+
+    try {
+        const response = await axios.put(url, {
+            name: newName,
+        }, {
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json",
+            },
+        });
+
+        return response.data;
+    } catch (error: any) {
+        console.error("Failed to update section name:", error);
+        const errorMessage = error.response?.data?.error || error.message || "Failed to update section name";
+        throw new Error(errorMessage);
+    }
+}
+
+export async function getSubmissions(token: string, assignmentId: number) {
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/assignments/${assignmentId}/submissions/`;
+
+    try {
+        const response = await axios.get(url, {
+            headers: {
+                "Authorization": `Bearer ${token}`,
+            },
+        });
+        return response.data;
+    } catch (error: any) {
+        console.error("Failed to fetch submissions:", error);
+        throw new Error(error.response?.data?.error || "Failed to fetch submissions");
+    }
+}
+
+export async function getSubmissionByUserId(token: string, assignmentId: number, userId: number) {
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/assignments/${assignmentId}/submissions/${userId}/`;
+
+    try {
+        const response = await axios.get(url, {
+            headers: {
+                "Authorization": `Bearer ${token}`,
+            },
+        });
+        return response.data;
+    } catch (error: any) {
+        console.error("Failed to fetch submission:", error);
+        throw new Error(error.response?.data?.error || "Failed to fetch submission");
+    }
+}
+
+export async function gradeSubmission(
+    token: string,
+    assignmentId: number,
+    userId: number,
+    grade: number,
+    feedback: string
+) {
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/assignments/${assignmentId}/grade/`;
+
+    try {
+        const response = await axios.post(url, {
+            userid: userId,
+            grade: grade,
+            feedback: feedback,
+        }, {
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json",
+            },
+        });
+        return response.data;
+    } catch (error: any) {
+        console.error("Failed to submit grade:", error);
+        throw new Error(error.response?.data?.error || "Failed to submit grade");
+    }
+}
+
+export async function getAssignmentGrades(token: string, assignmentId: number) {
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/assignments/${assignmentId}/grades/`;
+
+    try {
+        const response = await axios.get(url, {
+            headers: {
+                "Authorization": `Bearer ${token}`,
+            },
+        });
+        return response.data;
+    } catch (error: any) {
+        console.error("Failed to fetch grades:", error);
+        throw new Error(error.response?.data?.error || "Failed to fetch grades");
+    }
 }

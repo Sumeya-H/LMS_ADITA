@@ -2,12 +2,13 @@
 
 import React from "react";
 import { useEffect, useState } from "react";
-import { fetchModuleActivityCompletion, fetchModuleAssignmentContent, fetchModuleBigBlueButton, fetchModuleBigBlueButtonJoinUrl, fetchModuleContent, fetchModuleForumContent, fetchModuleForumDiscussionContent, fetchModuleQuizAttempt, fetchModuleQuizContent, fetchModuleQuizQuestions, fetchModuleQuizStartAttempt, getGrade, submitAnswers } from "@/lib/userService";
+import { createCourseSection, createCourseModule, fetchModuleActivityCompletion, fetchModuleAssignmentContent, fetchModuleBigBlueButton, fetchModuleBigBlueButtonJoinUrl, fetchModuleContent, fetchModuleForumContent, fetchModuleForumDiscussionContent, fetchModuleQuizAttempt, fetchModuleQuizContent, fetchModuleQuizQuestions, fetchModuleQuizStartAttempt, getGrade, submitAnswers, updateCoursePage, updateSectionName } from "@/lib/userService";
 import Loading from "./loading";
 import CourseSidebar from "./courseSidebar";
 import CourseContent from "./courseContent";
 import { useCourseData } from "./useCourseData";
 import AddSectionModal from "./addSectionModal";
+import AddActivityModal from "./addActivityModal";
 
 
 export default function CourseDetailPage({ params }) {
@@ -27,15 +28,22 @@ export default function CourseDetailPage({ params }) {
     const [currentQuiz, setCurrentQuiz] = useState<any>(null);
     const [currentQuizGrade, setCurrentQuizGrade] = useState<any>(null);
     const [refresh, setRefresh] = useState<any>(null);
+    const [selectedSectionNumber, setSelectedSectionNumber] = useState<number | undefined>();
 
     const resolvedParmam = React.use(params);
     const { courseId } = resolvedParmam;
     const { course, courseData, loading, courseGrade, completionMap } = useCourseData(courseId);
 
-
     const [isSectionModalOpen, setIsSectionModalOpen] = useState(false);
+    const [isActivityModalOpen, setIsActivityModalOpen] = useState(false);
+
     const openAddSectionModal = () => {
         setIsSectionModalOpen(true);
+    };
+
+    const openAddActivityModal = (sectionNumber?: number) => {
+        setSelectedSectionNumber(sectionNumber);
+        setIsActivityModalOpen(true);
     };
 
     const toggleSection = (sectionId: number) => {
@@ -49,8 +57,8 @@ export default function CourseDetailPage({ params }) {
     };
 
     const handleModuleClick = (module: any) => {
-        console.log(module);
         setSelectedModule(module);
+        console.log("set selected module: ", module);
     };
 
     const handleGotoQuiz = () => {
@@ -98,7 +106,90 @@ export default function CourseDetailPage({ params }) {
         onSubmit(answers, 0);
     };
 
-    const submitSection = () => { };
+    const submitActivity = async (data: {
+        name: string;
+        description: string;
+        module_type: string;
+        section_id?: number;
+        url?: string;
+        grade?: number;
+        due_date?: number;
+    }) => {
+        const token = localStorage.getItem("access");
+        if (!token) {
+            window.location.href = "/login";
+            return;
+        }
+
+        try {
+            console.log("section Id:", data.section_id || selectedSectionNumber)
+            const newModule = await createCourseModule(token, courseId, {
+                name: data.name,
+                description: data.description,
+                module_type: data.module_type,
+                section_position: data.section_id || selectedSectionNumber,
+                visible: true,
+                url: data.url,
+                grade: data.grade,
+                due_date: data.due_date,
+            });
+
+            console.log("Activity created successfully:", newModule);
+
+            // Refresh course data to show the new module
+            window.location.reload();
+
+        } catch (error: any) {
+            console.error("Error creating activity:", error);
+            alert(error.message || "Failed to create activity. Please try again.");
+        }
+    };
+
+    const submitSection = async (data: { name: string; summary: string }) => {
+        const token = localStorage.getItem("access");
+        if (!token) {
+            window.location.href = "/login";
+            return;
+        }
+
+        try {
+            const newSection = await createCourseSection(token, courseId, {
+                name: data.name,
+                summary: data.summary,
+                section_number: courseData?.length + 1,
+            });
+
+            console.log("Section created successfully:", newSection);
+            window.location.reload();
+
+        } catch (error: any) {
+            console.error("Error creating section:", error);
+            alert(error.message || "Failed to create section. Please try again.");
+        }
+    };
+
+    const handleUpdatePage = async (data: { name: string; content: string }) => {
+        const token = localStorage.getItem("access");
+        if (!token) {
+            window.location.href = "/login";
+            return;
+        }
+
+        try {
+            const result = await updateCoursePage(token, courseId, content.id, data);
+            console.log("Page updated:", result);
+
+            // Update the content state with the new data
+            setContent({ ...content, ...data });
+
+            // Optional: Show success message
+            // toast.success("Page updated successfully");
+
+        } catch (error: any) {
+            console.error("Error updating page:", error);
+            alert(error.message || "Failed to update page");
+        }
+    };
 
     const onSubmit = (answers: { [questionId: number]: { value: string, sequencecheck: number } }, finished: number) => {
         const token = localStorage.getItem("token");
@@ -108,7 +199,6 @@ export default function CourseDetailPage({ params }) {
             return;
         }
 
-        // Get the attempt ID from selected quiz attempt
         const attemptid = selectedQuizAttempt?.attempts?.[0]?.id || selectedQuizAttempt?.attempt?.id;
 
         const formatedAnswers: any = [];
@@ -128,12 +218,38 @@ export default function CourseDetailPage({ params }) {
         if (finished)
             setCurrentQuiz(null);
 
-        console.log("Formatted Answers:", formatedAnswers); // For debugging
-        console.log("Answer Submition Response:", res); // For debugging
+        console.log("Formatted Answers:", formatedAnswers);
+        console.log("Answer Submition Response:", res);
     };
 
     const handleReply = () => {
         setRefresh(!refresh);
+    };
+
+    const handleUpdateSectionName = async (section: any, newName: string) => {
+        const token = localStorage.getItem("access");
+        if (!token) {
+            window.location.href = "/login";
+            return;
+        }
+
+        try {
+            const result = await updateSectionName(
+                token,
+                courseId,
+                section.section,
+                newName
+            );
+
+            console.log("Section name updated:", result);
+
+            // Refresh course data to show updated name
+            window.location.reload();
+
+        } catch (error: any) {
+            console.error("Error updating section name:", error);
+            alert(error.message || "Failed to update section name");
+        }
     };
 
     useEffect(() => {
@@ -240,7 +356,7 @@ export default function CourseDetailPage({ params }) {
                 });
         }
 
-        let user = localStorage.getItem("user"); // or wherever you store the token
+        let user = localStorage.getItem("user");
         if (user)
             user = JSON.parse(user);
         fetchModuleActivityCompletion(token, courseId, user?.userid)
@@ -266,7 +382,7 @@ export default function CourseDetailPage({ params }) {
         console.log("selectedAssignment", selectedAssignment)
     }, [selectedModule, content]);
 
-    if (isLoading || loading) return <Loading />; // Show loading state
+    if (isLoading || loading) return <Loading />;
 
     return (
         <div className="flex flex-1 overflow-y-auto hide-scrollbar">
@@ -277,6 +393,8 @@ export default function CourseDetailPage({ params }) {
                 toggleSection={toggleSection}
                 handleModuleClick={handleModuleClick}
                 addSection={openAddSectionModal}
+                addActivity={openAddActivityModal}
+                updateSectionName={handleUpdateSectionName}
             />
             {/* Main Content (Right Side) */}
             <div className="flex-1 overflow-y-auto hide-scrollbar p-8">
@@ -299,12 +417,27 @@ export default function CourseDetailPage({ params }) {
                     onSubmit={onSubmit}
                     course={course}
                     courseGrade={courseGrade}
+                    courseId={courseId}
+                    onUpdatePage={handleUpdatePage}
                 />
             </div>
             <AddSectionModal
                 open={isSectionModalOpen}
                 onClose={() => setIsSectionModalOpen(false)}
                 onSubmit={submitSection}
+            />
+            <AddActivityModal
+                open={isActivityModalOpen}
+                onClose={() => {
+                    setIsActivityModalOpen(false);
+                    setSelectedSectionNumber(undefined);
+                }}
+                onSubmit={submitActivity}
+                sections={courseData?.map((section: any) => ({
+                    id: section.section_number || section.id,
+                    name: section.name,
+                    section_number: section.section_number || section.id
+                }))}
             />
         </div>
     );

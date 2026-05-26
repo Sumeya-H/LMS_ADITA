@@ -195,9 +195,17 @@ export default function DashboardPage() {
     //    );
     //}
 
-    const overallProgress = Math.round(
-        courses.reduce((total, course) => total + course.progress, 0) / courses.length
-    );
+    const coursesArray = Array.isArray(courses) ? courses : [];
+
+    const overallProgress =
+        coursesArray.length > 0
+            ? Math.round(
+                coursesArray.reduce(
+                    (total, course) => total + (course.progress || 0),
+                    0
+                ) / coursesArray.length
+            )
+            : 0;
 
     if (isLoading) {
         return <Loading />;

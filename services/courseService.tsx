@@ -159,3 +159,157 @@ export const approveManagementRegistration = async (id: string) => {
 
     return res.json();
 }
+
+export async function fetchAllCourses() {
+    const token = localStorage.getItem("access")
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/`, {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    })
+
+    if (!response.ok) {
+        throw new Error("Failed to fetch courses")
+    }
+
+    return response.json()
+}
+
+export async function fetchCourseById(courseId: string) {
+    const token = localStorage.getItem("access")
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/${courseId}/`, {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    })
+
+    if (!response.ok) {
+        throw new Error("Failed to fetch course")
+    }
+
+    return response.json()
+}
+
+export async function createCourse(formData: FormData) {
+    const token = localStorage.getItem("access")
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/manage/create/`, {
+        method: "POST",
+        headers: {
+            Authorization: `Bearer ${token}`
+        },
+        body: formData
+    })
+
+    const data = await response.json()
+
+    if (!response.ok) {
+        throw new Error(data.error || data.message || "Failed to create course")
+    }
+
+    return data
+}
+
+export async function updateCourse(courseId: string, formData: FormData) {
+    const token = localStorage.getItem("access")
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/${courseId}/update/`, {
+        method: "PUT",
+        headers: {
+            Authorization: `Bearer ${token}`
+        },
+        body: formData
+    })
+
+    const data = await response.json()
+
+    if (!response.ok) {
+        throw new Error(data.error || data.message || "Failed to update course")
+    }
+
+    return data
+}
+
+export async function deleteCourse(courseId: string) {
+    const token = localStorage.getItem("access")
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/${courseId}/delete/`, {
+        method: "DELETE",
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    })
+
+    if (!response.ok) {
+        throw new Error("Failed to delete course")
+    }
+
+    return response.json()
+}
+
+export async function fetchCoursesByInstructor(instructorId: string) {
+    const token = localStorage.getItem("access")
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/?instructor=${instructorId}`, {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    })
+
+    if (!response.ok) {
+        throw new Error("Failed to fetch courses")
+    }
+
+    return response.json()
+}
+
+export async function fetchCourseCategories() {
+    const token = localStorage.getItem("access")
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/categories/`, {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    })
+
+    if (!response.ok) {
+        throw new Error("Failed to fetch categories")
+    }
+
+    return response.json()
+}
+
+export const getCourseById = async (courseId: string) => {
+    try {
+        const token = localStorage.getItem("access")
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/${courseId}/`, {
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        })
+
+        if (!response.ok) {
+            throw new Error("Failed to fetch course")
+        }
+
+        return await response.json()
+    } catch (error) {
+        console.error("Error fetching course:", error)
+        throw error
+    }
+}
+
+export const getAllCourses = async () => {
+    try {
+        const token = localStorage.getItem("access")
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses`, {
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        })
+
+        if (!response.ok) {
+            throw new Error("Failed to fetch courses")
+        }
+
+        return await response.json()
+    } catch (error) {
+        console.error("Error fetching courses:", error)
+        throw error
+    }
+}

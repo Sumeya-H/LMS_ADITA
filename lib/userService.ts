@@ -819,3 +819,115 @@ export async function getAssignmentGrades(token: string, assignmentId: number) {
         throw new Error(error.response?.data?.error || "Failed to fetch grades");
     }
 }
+
+export async function getQuizQuestions(token: string, quizId: number) {
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/quizzes/${quizId}/questions/`;
+
+    try {
+        const response = await axios.get(url, {
+            headers: { "Authorization": `Bearer ${token}` },
+        });
+        return response.data;
+    } catch (error: any) {
+        console.error("Failed to fetch quiz questions:", error);
+        throw new Error(error.response?.data?.error || "Failed to fetch questions");
+    }
+}
+
+export async function addQuizQuestion(token: string, quizId: number, questionData: any) {
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/quizzes/${quizId}/questions/`;
+
+    try {
+        const response = await axios.post(url, questionData, {
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json",
+            },
+        });
+        return response.data;
+    } catch (error: any) {
+        console.error("Failed to add quiz question:", error);
+        throw new Error(error.response?.data?.error || "Failed to add question");
+    }
+}
+
+export async function updateQuizQuestion(token: string, quizId: number, questionId: number, questionData: any) {
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/quizzes/${quizId}/questions/${questionId}/`;
+
+    try {
+        const response = await axios.put(url, questionData, {
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json",
+            },
+        });
+        return response.data;
+    } catch (error: any) {
+        console.error("Failed to update quiz question:", error);
+        throw new Error(error.response?.data?.error || "Failed to update question");
+    }
+}
+
+export async function deleteQuizQuestion(token: string, quizId: number, questionId: number) {
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/quizzes/${quizId}/questions/${questionId}/`;
+
+    try {
+        const response = await axios.delete(url, {
+            headers: { "Authorization": `Bearer ${token}` },
+        });
+        return response.data;
+    } catch (error: any) {
+        console.error("Failed to delete quiz question:", error);
+        throw new Error(error.response?.data?.error || "Failed to delete question");
+    }
+}
+
+// Quiz Submissions
+export async function getQuizSubmissions(token: string, quizId: number) {
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/quizzes/${quizId}/submissions/`;
+
+    try {
+        const response = await axios.get(url, {
+            headers: { "Authorization": `Bearer ${token}` },
+        });
+        return response.data;
+    } catch (error: any) {
+        console.error("Failed to fetch quiz submissions:", error);
+        throw new Error(error.response?.data?.error || "Failed to fetch submissions");
+    }
+}
+
+export async function getQuizSubmissionDetails(token: string, quizId: number, submissionId: number) {
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/quizzes/${quizId}/submissions/${submissionId}/`;
+
+    try {
+        const response = await axios.get(url, {
+            headers: { "Authorization": `Bearer ${token}` },
+        });
+        return response.data;
+    } catch (error: any) {
+        console.error("Failed to fetch submission details:", error);
+        throw new Error(error.response?.data?.error || "Failed to fetch submission details");
+    }
+}
+
+export async function gradeEssayQuestion(token: string, quizId: number, attemptId: number, questionId: number, score: number, feedback: string) {
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/courses/quizzes/${quizId}/attempts/${attemptId}/grade/`;
+
+    try {
+        const response = await axios.post(url, {
+            question_id: questionId,
+            score: score,
+            feedback: feedback,
+        }, {
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json",
+            },
+        });
+        return response.data;
+    } catch (error: any) {
+        console.error("Failed to grade essay question:", error);
+        throw new Error(error.response?.data?.error || "Failed to grade question");
+    }
+}

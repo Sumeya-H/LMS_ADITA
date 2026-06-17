@@ -11,27 +11,85 @@ import { ArrowRight, ArrowRightLeft } from "lucide-react"
 import { useEffect, useState } from "react"
 import { fetchCourses } from "@/services/courseService"
 
+// Empty State Component
+function EmptyState({ message, description }) {
+    return (
+        <div className="col-span-full flex flex-col items-center justify-center py-12 text-center">
+            <div className="rounded-full bg-muted p-4 mb-4">
+                <svg
+                    className="h-10 w-10 text-muted-foreground"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                </svg>
+            </div>
+            <h3 className="text-lg font-semibold">{message || "No courses found"}</h3>
+            <p className="text-sm text-muted-foreground mt-1 max-w-md">
+                {description || "Try adjusting your filters or check back later for new programs."}
+            </p>
+        </div>
+    )
+}
+
+// Loading State Component
+function LoadingState() {
+    return (
+        <div className="col-span-full flex flex-col items-center justify-center py-12">
+            <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent"></div>
+            <p className="mt-4 text-muted-foreground">Loading programs...</p>
+        </div>
+    )
+}
+
+// Helper function to render program grid
+function renderProgramGrid(programs, categoryName = "", isLoading = false) {
+    if (isLoading) {
+        return <LoadingState />
+    }
+
+    if (programs.length === 0) {
+        return (
+            <EmptyState
+                message={categoryName ? `No ${categoryName} programs found` : "No programs found"}
+                description="Try adjusting your filters or check back later for new programs."
+            />
+        )
+    }
+
+    return programs.map((program) => (
+        <ProgramCard key={program.id} program={program} />
+    ))
+}
+
 export default function ProgramsPage() {
     const [filteredCourses, setFilteredCourses] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const loadCourses = async () => {
             try {
-                const data = await fetchCourses()
-                setFilteredCourses(data)
+                setIsLoading(true);
+                const data = await fetchCourses();
+                setFilteredCourses(data);
             } catch (error) {
-                console.error(error)
+                console.error(error);
+            } finally {
+                setIsLoading(false);
             }
         }
 
-        loadCourses()
+        loadCourses();
     }, []);
 
     const handleApplyFilters = (filters) => {
-        const result = programs.filter((course) => {
-            //const [min, max] = filters.priceRange
-            //const price = Number(course.price.replace("$", ""))
-
+        const result = filteredCourses.filter((course) => {
             const matchesDuration =
                 filters.duration.length === 0 ||
                 filters.duration.some((dur) => {
@@ -49,9 +107,6 @@ export default function ProgramsPage() {
                 filters.format.length === 0 ||
                 filters.format.some((f) => course.format.toLowerCase().includes(f))
 
-            // const matchesPrice = price >= min && price <= max
-
-            //return matchesDuration && matchesLevel && matchesFormat && matchesPrice
             return matchesDuration && matchesLevel && matchesFormat
         })
 
@@ -67,41 +122,53 @@ export default function ProgramsPage() {
                 </p>
             </div>
 
-            {/* <div className="mx-auto mt-8 max-w-2xl">
-        <ProgramSearch programs={programs} />
-      </div> */}
-
-            {/* <AudienceSelector /> */}
-
             <div className="mt-12">
                 <Tabs defaultValue="all">
-                    <div className="flex justify-center">
-                        <TabsList className="mb-8">
-                            <TabsTrigger value="all">All Programs</TabsTrigger>
-                            <TabsTrigger value="artificial-intelligence">Artificial Intelligence</TabsTrigger>
-                            <TabsTrigger value="development">Development</TabsTrigger>
-                            <TabsTrigger value="digital-literacy">Digital Literacy</TabsTrigger>
-                            <TabsTrigger value="data-science">Data Science</TabsTrigger>
-                            <TabsTrigger value="entrepreneurship">Entrepreneurship</TabsTrigger>
-                            <TabsTrigger value="cybersecurity">Cybersecurity</TabsTrigger>
-                            <TabsTrigger value="civic-tech">Tech for Governance</TabsTrigger>
-                            <TabsTrigger value="design">Design</TabsTrigger>
-                            <TabsTrigger value="emerging-tech">Emerging Technology</TabsTrigger>
-                            <TabsTrigger value="digital-marketing">Digital Marketing</TabsTrigger>
-                            <TabsTrigger value="soft-skills">Soft Skills</TabsTrigger>
-                            <TabsTrigger value="iso-training">Specialized</TabsTrigger>
+                    <div className="flex justify-center overflow-x-auto pb-4">
+                        <TabsList className="flex flex-wrap gap-2 justify-center bg-transparent h-auto">
+                            <TabsTrigger value="all" className="rounded-full px-4 py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground bg-accent hover:bg-secondary/80 transition-all">
+                                All Programs
+                            </TabsTrigger>
+                            <TabsTrigger value="artificial-intelligence" className="rounded-full px-4 py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground bg-accent hover:bg-secondary/80 transition-all">
+                                Artificial Intelligence
+                            </TabsTrigger>
+                            <TabsTrigger value="development" className="rounded-full px-4 py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground bg-accent hover:bg-secondary/80 transition-all">
+                                Development
+                            </TabsTrigger>
+                            <TabsTrigger value="digital-literacy" className="rounded-full px-4 py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground bg-accent hover:bg-secondary/80 transition-all">
+                                Digital Literacy
+                            </TabsTrigger>
+                            <TabsTrigger value="data-science" className="rounded-full px-4 py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground bg-accent hover:bg-secondary/80 transition-all">
+                                Data Science
+                            </TabsTrigger>
+                            <TabsTrigger value="entrepreneurship" className="rounded-full px-4 py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground bg-accent hover:bg-secondary/80 transition-all">
+                                Entrepreneurship
+                            </TabsTrigger>
+                            <TabsTrigger value="cybersecurity" className="rounded-full px-4 py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground bg-accent hover:bg-secondary/80 transition-all">
+                                Cybersecurity
+                            </TabsTrigger>
+                            <TabsTrigger value="civic-tech" className="rounded-full px-4 py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground bg-accent hover:bg-secondary/80 transition-all">
+                                Tech for Governance
+                            </TabsTrigger>
+                            <TabsTrigger value="design" className="rounded-full px-4 py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground bg-accent hover:bg-secondary/80 transition-all">
+                                Design
+                            </TabsTrigger>
+                            <TabsTrigger value="emerging-tech" className="rounded-full px-4 py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground bg-accent hover:bg-secondary/80 transition-all">
+                                Emerging Technology
+                            </TabsTrigger>
+                            <TabsTrigger value="digital-marketing" className="rounded-full px-4 py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground bg-accent hover:bg-secondary/80 transition-all">
+                                Digital Marketing
+                            </TabsTrigger>
+                            <TabsTrigger value="soft-skills" className="rounded-full px-4 py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground bg-accent hover:bg-secondary/80 transition-all">
+                                Soft Skills
+                            </TabsTrigger>
+                            <TabsTrigger value="iso-training" className="rounded-full px-4 py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground bg-accent hover:bg-secondary/80 transition-all">
+                                Specialized
+                            </TabsTrigger>
                         </TabsList>
                     </div>
 
-                    {/* <div className="flex justify-end">
-            <Button variant="outline" size="sm" asChild className="mb-4">
-              <Link href="/programs/compare" className="flex items-center gap-2">
-                <ArrowRightLeft className="h-4 w-4" /> Compare Programs
-              </Link>
-            </Button>
-          </div> */}
-
-                    <div className="grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-5">
+                    <div className="grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-5 mt-8">
                         <div className="md:col-span-1">
                             <ProgramFilters onApply={handleApplyFilters} />
                         </div>
@@ -109,117 +176,127 @@ export default function ProgramsPage() {
                         <div className="md:col-span-3 lg:col-span-4">
                             <TabsContent value="all" className="mt-0">
                                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                                    {filteredCourses.map((program) => (
-                                        <ProgramCard key={program.id} program={program} />
-                                    ))}
+                                    {renderProgramGrid(filteredCourses, "", isLoading)}
                                 </div>
                             </TabsContent>
 
                             <TabsContent value="artificial-intelligence" className="mt-0">
                                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                                    {filteredCourses
-                                        .filter((program) => program.type === "artificial-intelligence")
-                                        .map((program) => (
-                                            <ProgramCard key={program.id} program={program} />
-                                        ))}
-                                </div>
-                            </TabsContent>
-
-                            <TabsContent value="digital-literacy" className="mt-0">
-                                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                                    {filteredCourses
-                                        .filter((program) => program.type === "digital-literacy")
-                                        .map((program) => (
-                                            <ProgramCard key={program.id} program={program} />
-                                        ))}
+                                    {renderProgramGrid(
+                                        filteredCourses.filter((program) => program.type === "artificial-intelligence"),
+                                        "AI",
+                                        isLoading
+                                    )}
                                 </div>
                             </TabsContent>
 
                             <TabsContent value="development" className="mt-0">
                                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                                    {filteredCourses
-                                        .filter((program) => program.type === "development")
-                                        .map((program) => (
-                                            <ProgramCard key={program.id} program={program} />
-                                        ))}
+                                    {renderProgramGrid(
+                                        filteredCourses.filter((program) => program.type === "development"),
+                                        "development",
+                                        isLoading
+                                    )}
                                 </div>
                             </TabsContent>
 
-                            <TabsContent value="entrepreneurship" className="mt-0">
+                            <TabsContent value="digital-literacy" className="mt-0">
                                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                                    {filteredCourses
-                                        .filter((program) => program.type === "entrepreneurship")
-                                        .map((program) => (
-                                            <ProgramCard key={program.id} program={program} />
-                                        ))}
-                                </div>
-                            </TabsContent>
-
-                            <TabsContent value="cybersecurity" className="mt-0">
-                                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                                    {filteredCourses
-                                        .filter((program) => program.type === "cybersecurity")
-                                        .map((program) => (
-                                            <ProgramCard key={program.id} program={program} />
-                                        ))}
+                                    {renderProgramGrid(
+                                        filteredCourses.filter((program) => program.type === "digital-literacy"),
+                                        "digital literacy",
+                                        isLoading
+                                    )}
                                 </div>
                             </TabsContent>
 
                             <TabsContent value="data-science" className="mt-0">
                                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                                    {filteredCourses
-                                        .filter((program) => program.type === "data-science")
-                                        .map((program) => (
-                                            <ProgramCard key={program.id} program={program} />
-                                        ))}
+                                    {renderProgramGrid(
+                                        filteredCourses.filter((program) => program.type === "data-science"),
+                                        "data science",
+                                        isLoading
+                                    )}
+                                </div>
+                            </TabsContent>
+
+                            <TabsContent value="entrepreneurship" className="mt-0">
+                                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                                    {renderProgramGrid(
+                                        filteredCourses.filter((program) => program.type === "entrepreneurship"),
+                                        "entrepreneurship",
+                                        isLoading
+                                    )}
+                                </div>
+                            </TabsContent>
+
+                            <TabsContent value="cybersecurity" className="mt-0">
+                                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                                    {renderProgramGrid(
+                                        filteredCourses.filter((program) => program.type === "cybersecurity"),
+                                        "cybersecurity",
+                                        isLoading
+                                    )}
                                 </div>
                             </TabsContent>
 
                             <TabsContent value="civic-tech" className="mt-0">
                                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                                    {filteredCourses
-                                        .filter((program) => program.type === "civic-tech")
-                                        .map((program) => (
-                                            <ProgramCard key={program.id} program={program} />
-                                        ))}
+                                    {renderProgramGrid(
+                                        filteredCourses.filter((program) => program.type === "civic-tech"),
+                                        "civic tech",
+                                        isLoading
+                                    )}
                                 </div>
                             </TabsContent>
 
                             <TabsContent value="design" className="mt-0">
                                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                                    {filteredCourses
-                                        .filter((program) => program.type === "design")
-                                        .map((program) => (
-                                            <ProgramCard key={program.id} program={program} />
-                                        ))}
-                                </div>
-                            </TabsContent>
-                            <TabsContent value="soft-skills" className="mt-0">
-                                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                                    {filteredCourses
-                                        .filter((program) => program.type === "soft-skills")
-                                        .map((program) => (
-                                            <ProgramCard key={program.id} program={program} />
-                                        ))}
+                                    {renderProgramGrid(
+                                        filteredCourses.filter((program) => program.type === "design"),
+                                        "design",
+                                        isLoading
+                                    )}
                                 </div>
                             </TabsContent>
 
                             <TabsContent value="emerging-tech" className="mt-0">
                                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                                    {filteredCourses
-                                        .filter((program) => program.type === "emerging-tech")
-                                        .map((program) => (
-                                            <ProgramCard key={program.id} program={program} />
-                                        ))}
+                                    {renderProgramGrid(
+                                        filteredCourses.filter((program) => program.type === "emerging-tech"),
+                                        "emerging technology",
+                                        isLoading
+                                    )}
                                 </div>
                             </TabsContent>
+
+                            <TabsContent value="digital-marketing" className="mt-0">
+                                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                                    {renderProgramGrid(
+                                        filteredCourses.filter((program) => program.type === "digital-marketing"),
+                                        "digital marketing",
+                                        isLoading
+                                    )}
+                                </div>
+                            </TabsContent>
+
+                            <TabsContent value="soft-skills" className="mt-0">
+                                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                                    {renderProgramGrid(
+                                        filteredCourses.filter((program) => program.type === "soft-skills"),
+                                        "soft skills",
+                                        isLoading
+                                    )}
+                                </div>
+                            </TabsContent>
+
                             <TabsContent value="iso-training" className="mt-0">
                                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                                    {filteredCourses
-                                        .filter((program) => program.type === "iso-training")
-                                        .map((program) => (
-                                            <ProgramCard key={program.id} program={program} />
-                                        ))}
+                                    {renderProgramGrid(
+                                        filteredCourses.filter((program) => program.type === "iso-training"),
+                                        "specialized",
+                                        isLoading
+                                    )}
                                 </div>
                             </TabsContent>
                         </div>
@@ -254,14 +331,8 @@ function ProgramCard({ program }) {
                 <div className="flex items-center justify-between">
                     <div>
                         <p className="text-sm text-muted-foreground">Target Audience:</p>
-                        <p className="text-sm font-medium">{program.audience.join(", ")}</p>
+                        <p className="text-sm font-medium">{program.audience?.join(", ") || "All learners"}</p>
                     </div>
-                    {/*program.price && (
-                        <div className="text-right">
-                            <p className="text-lg font-bold text-primary">{program.price}</p>
-                            {program.pricePeriod && <p className="text-xs text-muted-foreground">{program.pricePeriod}</p>}
-                        </div>
-                    )*/}
                 </div>
             </CardContent>
             <CardFooter className="flex gap-2">
@@ -270,13 +341,6 @@ function ProgramCard({ program }) {
                         View Details <ArrowRight className="h-4 w-4" />
                     </Link>
                 </Button>
-                {/*
-                <Button variant="outline" size="icon" asChild title="Add to comparison">
-                    <Link href={`/programs/compare?add=${program.id}`}>
-                        <ArrowRightLeft className="h-4 w-4" />
-                        <span className="sr-only">Compare</span>
-                    </Link>
-                </Button>*/}
             </CardFooter>
         </Card>
     )

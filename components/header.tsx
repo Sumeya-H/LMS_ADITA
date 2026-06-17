@@ -65,7 +65,7 @@ export default function Header() {
         >
             <div className="container flex h-16 items-center justify-between px-4">
                 {/* Logo */}
-                <Link href={!token ? "/" : user.Is_student ? "/student/dashboard" : "/instructor/dashboard"} className="flex items-center gap-3">
+                <Link href={!token ? "/" : user.is_student ? "/student/dashboard" : user.is_instructor ? "/instructor/dashboard" : user.is_finance ? "/finance" : user.is_manager ? "/manager" : "/admin"} className="flex items-center gap-3">
                     <div className="relative h-10 w-10 overflow-hidden rounded-full flex items-center justify-center">
                         <Image
                             src="/adita-logo.png"

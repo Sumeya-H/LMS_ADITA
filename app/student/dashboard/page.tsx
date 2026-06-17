@@ -59,7 +59,7 @@ export default function DashboardPage() {
                     const approvedCourses = [];
                     const pending = [];
 
-                    console.log(coursesData);
+                    console.log("course Data", coursesData);
                     coursesData.forEach((courseData) => {
                         if (courseData.status !== "pending")
                             approvedCourses.push(courseData);
